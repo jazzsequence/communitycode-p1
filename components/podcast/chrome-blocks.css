@@ -1,0 +1,295 @@
+/*
+ * Styles for the site chrome and the supporting content blocks (header, footer,
+ * host, subscribe, search, guest grid). Tokens only, no raw colours: the
+ * `--cc-*` custom properties are defined on `.cc-root` in app/podcast.css, and
+ * every block renders inside it. Kept next to the components (not in
+ * podcast.css) so this stays a separate file from the shared design system.
+ */
+
+/* --- skip link ------------------------------------------------------------ */
+
+.cc-chrome-skip {
+  position: absolute;
+  left: var(--cc-space-4);
+  top: -6rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 var(--cc-space-5);
+  border-radius: 999px;
+  background: var(--cc-accent);
+  color: var(--cc-accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.cc-chrome-skip:focus {
+  top: var(--cc-space-3);
+}
+
+/* --- header --------------------------------------------------------------- */
+
+.cc-chrome-header {
+  position: relative;
+  background: var(--cc-bg);
+  border-bottom: 1px solid var(--cc-border);
+}
+.cc-chrome-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--cc-space-2) var(--cc-space-4);
+  padding-block: var(--cc-space-3);
+}
+.cc-chrome-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cc-space-3);
+  min-height: 2.75rem;
+  color: var(--cc-text);
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-text-lg);
+  font-weight: 650;
+  text-decoration: none;
+}
+.cc-chrome-logo {
+  display: block;
+  height: 2rem;
+  width: auto;
+  max-width: 8rem;
+  object-fit: contain;
+}
+.cc-chrome-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cc-space-1) var(--cc-space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cc-chrome-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 var(--cc-space-3);
+  border-radius: var(--cc-radius-sm);
+  color: var(--cc-text);
+  text-decoration: none;
+}
+.cc-chrome-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+/* Not colour alone: the current page also gets weight and an underline bar. */
+.cc-chrome-link[aria-current="page"] {
+  color: var(--cc-accent);
+  font-weight: 650;
+  box-shadow: inset 0 -3px 0 var(--cc-accent);
+  border-radius: 0;
+}
+.cc-chrome-toggle {
+  display: none;
+}
+
+/* Before hydration the nav is just a visible list; the collapse only applies once
+   the button exists (is-enhanced), so mobile never loses its navigation. */
+@media (max-width: 47.99rem) {
+  .cc-chrome-header.is-enhanced .cc-chrome-toggle {
+    display: inline-flex;
+  }
+  .cc-chrome-nav {
+    flex-basis: 100%;
+  }
+  .cc-chrome-header .cc-chrome-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cc-chrome-header.is-enhanced:not(.is-open) .cc-chrome-nav {
+    display: none;
+  }
+}
+
+/* --- footer --------------------------------------------------------------- */
+
+.cc-chrome-footer {
+  border-top: 1px solid var(--cc-border);
+  padding-block: var(--cc-space-7);
+}
+.cc-chrome-footer-grid {
+  display: grid;
+  gap: var(--cc-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+.cc-chrome-footer-title {
+  font-size: var(--cc-text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cc-muted);
+  font-weight: 600;
+  margin: 0 0 var(--cc-space-2);
+  font-family: var(--cc-font-body);
+}
+.cc-chrome-footer .cc-chrome-list {
+  flex-direction: column;
+  gap: 0;
+}
+.cc-chrome-footer .cc-chrome-link {
+  padding-inline: 0;
+  color: var(--cc-link);
+}
+.cc-chrome-copy {
+  margin: var(--cc-space-6) 0 0;
+  font-size: var(--cc-text-sm);
+}
+
+/* --- avatar (guest + host) ------------------------------------------------ */
+
+.cc-avatar {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--cc-surface-2);
+  color: var(--cc-text);
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-text-xl);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+.cc-avatar-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* --- host ----------------------------------------------------------------- */
+
+.cc-host {
+  display: grid;
+  gap: var(--cc-space-6);
+  align-items: start;
+}
+.cc-host-media {
+  width: min(100%, 16rem);
+  border-radius: var(--cc-radius);
+  overflow: hidden;
+  border: 1px solid var(--cc-border);
+}
+@media (min-width: 48rem) {
+  .cc-host {
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  }
+  .cc-host--right {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 16rem);
+  }
+  .cc-host--right .cc-host-media {
+    order: 2;
+  }
+}
+.cc-host-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cc-space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- subscribe ------------------------------------------------------------ */
+
+.cc-subscribe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cc-space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cc-subscribe-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cc-space-3);
+}
+.cc-subscribe-fallback {
+  max-width: 32rem;
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-sm);
+}
+
+/* --- search --------------------------------------------------------------- */
+
+.cc-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cc-space-3);
+}
+.cc-search-form .cc-field {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+.cc-search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--cc-space-2);
+}
+.cc-search-item {
+  display: block;
+  padding: var(--cc-space-3) var(--cc-space-4);
+  min-height: 2.75rem;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius-sm);
+  background: var(--cc-surface);
+  color: var(--cc-text);
+  text-decoration: none;
+}
+.cc-search-item:hover {
+  border-color: var(--cc-accent);
+}
+.cc-search-item-title {
+  display: block;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* --- guest grid ----------------------------------------------------------- */
+
+.cc-guest-grid {
+  display: grid;
+  gap: var(--cc-space-5);
+  grid-template-columns: minmax(0, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 30rem) {
+  .cc-guest-grid {
+    grid-template-columns: repeat(min(var(--cc-guest-cols, 3), 2), minmax(0, 1fr));
+  }
+}
+@media (min-width: 60rem) {
+  .cc-guest-grid {
+    grid-template-columns: repeat(var(--cc-guest-cols, 3), minmax(0, 1fr));
+  }
+}
+.cc-guest-body {
+  padding: var(--cc-space-4);
+}
+.cc-guest-name {
+  font-size: var(--cc-text-lg);
+}
+.cc-guest-eps {
+  list-style: none;
+  margin: var(--cc-space-2) 0 0;
+  padding: 0;
+}
+.cc-guest-eps a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
