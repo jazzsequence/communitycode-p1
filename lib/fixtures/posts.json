@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1243,
+    "slug": "jacquie-capur-on-turning-a-fear-of-public-speaking-into-a-career-and-whimsy",
+    "link": "https://communitycode.dev/2026/10/jacquie-capur-on-turning-a-fear-of-public-speaking-into-a-career-and-whimsy/",
+    "date_gmt": "2026-10-16T17:00:00",
+    "title": {
+      "rendered": "Jacquie Capur on turning a fear of public speaking into a career and whimsy"
+    },
+    "excerpt": {
+      "rendered": "<p>Jacquie Capur on beating stage fright, a CodeTV live-coding show, why DevRel is so hard to measure, and how AI brought the joy back to building things</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1239,
+          "source_url": "https://communitycode.dev/app/uploads/2026/10/communitycode-video-thumb-jacquie-capur.png",
+          "alt_text": "",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/10/communitycode-video-thumb-jacquie-capur-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/10/communitycode-video-thumb-jacquie-capur-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1236,
+    "slug": "pj-hagerty-on-punk-rock-open-source-and-not-letting-ai-tell-you-what-to-do",
+    "link": "https://communitycode.dev/2026/10/pj-hagerty-on-punk-rock-open-source-and-not-letting-ai-tell-you-what-to-do/",
+    "date_gmt": "2026-10-03T05:00:00",
+    "title": {
+      "rendered": "PJ Hagerty on punk rock, open source, and not letting AI tell you what to do"
+    },
+    "excerpt": {
+      "rendered": "<p>DevRel pioneer PJ Hagerty on why open source needs a punk rock attitude, how AI is reshaping developer communities, and why mentorship still matters most.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1234,
+          "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-pj-hagerty.png",
+          "alt_text": "",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-pj-hagerty-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-pj-hagerty-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1228,
+    "slug": "maciek-palmowski-and-the-five-hour-zero-day",
+    "link": "https://communitycode.dev/2026/09/maciek-palmowski-and-the-five-hour-zero-day/",
+    "date_gmt": "2026-09-18T17:00:00",
+    "title": {
+      "rendered": "Maciek Palmowski and the five-hour zero-day"
+    },
+    "excerpt": {
+      "rendered": "<p>Patchstack&#8217;s Maciek Palmowski explains why &#8220;WordPress core is secure&#8221; stopped being true, and what AI-driven vulnerability research means for site owners now.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1225,
+          "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-maciek-palmowski.png",
+          "alt_text": "Community + Code: Episode 34 - Maciek Palmowski",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-maciek-palmowski-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-maciek-palmowski-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1215,
+    "slug": "jonathan-wold-on-curiosity-permission-and-the-operating-system-of-the-web",
+    "link": "https://communitycode.dev/2026/09/jonathan-wold-on-curiosity-permission-and-the-operating-system-of-the-web/",
+    "date_gmt": "2026-09-04T17:33:00",
+    "title": {
+      "rendered": "Jonathan Wold on curiosity, permission and the operating system of the web"
+    },
+    "excerpt": {
+      "rendered": "<p>Homeschooling gave Jonathan Wold something school might have quashed: it never occurs to him not to ask. On curiosity, WordPress ecosystems, and permission.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1217,
+          "source_url": "https://communitycode.dev/app/uploads/2026/08/communitycode-video-thumb-jonathan-wold.png",
+          "alt_text": "Community + podcast, Episode 33 with guest Jonathan Wold",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/08/communitycode-video-thumb-jonathan-wold-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/08/communitycode-video-thumb-jonathan-wold-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1150,
+    "slug": "bud-kraus-on-bringing-the-human-value-ai-cant-fake",
+    "link": "https://communitycode.dev/2026/08/bud-kraus-on-bringing-the-human-value-ai-cant-fake/",
+    "date_gmt": "2026-08-08T17:06:00",
+    "title": {
+      "rendered": "Bud Kraus on bringing the human value AI can&#8217;t fake"
+    },
+    "excerpt": {
+      "rendered": "<p>Bud Kraus on the WordCamp Uber ride that sparked his podcast, why WordPress feels like it&#8217;s yours, and the authentic human value that AI can&#8217;t replace.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1147,
+          "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-bud-kraus.png",
+          "alt_text": "Episode 32: Bud Kraus — Community + podcast thumbnail featuring Bud Kraus wearing glasses and a cap",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-bud-kraus-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-bud-kraus-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1115,
+    "slug": "brent-toderash-on-sharing-sunk-costs-and-the-software-supply-chain",
+    "link": "https://communitycode.dev/2026/07/brent-toderash-on-sharing-sunk-costs-and-the-software-supply-chain/",
+    "date_gmt": "2026-07-24T16:58:30",
+    "title": {
+      "rendered": "Brent Toderash on sharing, sunk costs, and the software supply chain"
+    },
+    "excerpt": {
+      "rendered": "<p>How the FAIR project reimagines the software supply chain, plus Brent Toderash on AI, the sunk-cost fallacy, and coming to WordPress through open source first.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1118,
+          "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-brent-toderash.png",
+          "alt_text": "",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-brent-toderash-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-brent-toderash-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1089,
+    "slug": "miriam-goldman-on-wordpress-drupal-and-website-therapy",
+    "link": "https://communitycode.dev/2026/07/miriam-goldman-on-wordpress-drupal-and-website-therapy/",
+    "date_gmt": "2026-07-10T17:05:00",
+    "title": {
+      "rendered": "Miriam Goldman on WordPress, Drupal and website therapy"
+    },
+    "excerpt": {
+      "rendered": "<p>A church band, a Green Power Ranger, and 20 years of WordPress — Miriam Goldman on becoming a &#8220;website therapist&#8221; at Pantheon.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1086,
+          "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-miriam-goldman.png",
+          "alt_text": "Community + code podcast, Episode 30: Miriam Goldman",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-miriam-goldman-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-miriam-goldman-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1068,
+    "slug": "robert-abela-on-old-school-hacking-and-why-wordpress-gets-blamed-for-the-wrong-things",
+    "link": "https://communitycode.dev/2026/06/robert-abela-on-old-school-hacking-and-why-wordpress-gets-blamed-for-the-wrong-things/",
+    "date_gmt": "2026-06-26T17:00:00",
+    "title": {
+      "rendered": "Robert Abela on old-school hacking and why WordPress gets blamed for the wrong things"
+    },
+    "excerpt": {
+      "rendered": "<p>Melapress CEO Robert Abela on WordPress security myths, AI-powered phishing, plugin trust, and why users are the real security risk — not the software.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1065,
+          "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-robert-abela.png",
+          "alt_text": "Episode 29: Robert Abela — Community + Code podcast thumbnail featuring a man wearing headphones and glasses at a microphone",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-robert-abela-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-robert-abela-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1052,
+    "slug": "carrie-dils-on-fair-and-wordpress-education",
+    "link": "https://communitycode.dev/2026/06/carrie-dils-on-fair-and-wordpress-education/",
+    "date_gmt": "2026-06-12T17:00:00",
+    "title": {
+      "rendered": "Carrie Dils on FAIR and WordPress education"
+    },
+    "excerpt": {
+      "rendered": "<p>Carrie Dils on a career spanning Starbucks, LinkedIn Learning, and co-chairing the FAIR project to fix WordPress plugin supply chain security.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1049,
+          "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-carrie-dils.png",
+          "alt_text": "Community + Code Episode 28 Carrie Dils",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-carrie-dils-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-carrie-dils-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 1035,
+    "slug": "miriam-schwab-from-a-folding-table-to-21-million-installs",
+    "link": "https://communitycode.dev/2026/05/miriam-schwab-from-a-folding-table-to-21-million-installs/",
+    "date_gmt": "2026-05-30T17:08:39",
+    "title": {
+      "rendered": "Miriam Schwab from a folding table to 21 million installs"
+    },
+    "excerpt": {
+      "rendered": "<p>Miriam Schwab built an agency, founded a startup, got acquired by Elementor, and became the WordPress ecosystem&#8217;s unofficial ambassador. Here&#8217;s the full story.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "_embedded": {
+      "author": [
+        {
+          "id": 1,
+          "name": "chris"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "id": 1037,
+          "source_url": "https://communitycode.dev/app/uploads/2026/05/communitycode-video-thumb-miriam-schwab.png",
+          "alt_text": "",
+          "media_details": {
+            "width": 1920,
+            "height": 1080,
+            "sizes": {
+              "medium_large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/05/communitycode-video-thumb-miriam-schwab-768x432.png",
+                "width": 768,
+                "height": 432
+              },
+              "large": {
+                "source_url": "https://communitycode.dev/app/uploads/2026/05/communitycode-video-thumb-miriam-schwab-1024x576.png",
+                "width": 1024,
+                "height": 576
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]
