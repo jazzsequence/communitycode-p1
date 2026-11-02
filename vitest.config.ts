@@ -10,6 +10,9 @@ export default defineConfig({
     // touching an installed block fails to resolve rather than to assert.
     alias: {
       "@/": `${fileURLToPath(new URL(".", import.meta.url))}`,
+      // `server-only` throws unless resolved under the react-server condition,
+      // which vitest isn't. Tests import server modules directly.
+      "server-only": fileURLToPath(new URL("./__tests__/stubs/server-only.ts", import.meta.url)),
     },
   },
   test: {
