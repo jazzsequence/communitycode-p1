@@ -1,0 +1,55 @@
+{
+  "name": "communitycode-p1",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "blocks:sync": "p1-next-sdk sync-blocks",
+    "build": "next build",
+    "clean": "rm -rf .next out *.tsbuildinfo node_modules/.vite",
+    "dev": "next dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "next start",
+    "sync:registry": "tsx scripts/sync-puck-registry.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pantheon-systems/cpub-react-sdk": "^5.2.1",
+    "@pantheon-systems/css-client": "^0.25.0",
+    "@pantheon-systems/p1-media": "^0.5.2",
+    "@pantheon-systems/p1-next-sdk": "^0.25.0",
+    "@pantheon-systems/pds-toolkit-react": "2.0.0-alpha.92",
+    "@pantheon-systems/puck-css": "^0.25.0",
+    "@puckeditor/core": "^0.21.1",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "classnames": "^2.5.1",
+    "next": "^16.3.3",
+    "postcss": "^8.5.25",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-markdown": "^10.1.0",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.30",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.5",
+    "eslint": "^9.27.0",
+    "tsx": "^4.23.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.5",
+    "@eslint/js": "^9.27.0",
+    "typescript-eslint": "^8.32.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.1.0"
+  },
+  "p1": {
+    "templateVersion": "0.25.0"
+  }
+}

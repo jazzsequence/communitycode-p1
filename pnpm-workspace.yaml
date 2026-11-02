@@ -1,0 +1,6 @@
+allowBuilds:
+  browser-tabs-lock: true
+  core-js-pure: true
+  esbuild: true
+  sharp: true
+  workerd: true
