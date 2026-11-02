@@ -1,0 +1,102 @@
+# communitycode-p1
+
+A P1 (Pantheon's AI-native web composition layer) frontend for the **Community + Code** podcast
+(communitycode.dev). Next.js 16 App Router + Puck blocks, scaffolded from
+`@pantheon-systems/create-p1-starter-kit` 0.25.0. It is a *virtual interface for the real show*, not a
+copy: WordPress stays the CMS (episodes, uploads, blog) and show.fm is wired in as an episode source.
+
+## Commands
+
+Node **24** (`nvm use 24`). npm, not pnpm.
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Dev server (editor at `/p1`). Use `npx next dev -p <port>` if 3000 is taken. |
+| `npm run build` | Production build. Do not run it while a dev server is up: they share `.next`. |
+| `npm run lint` | ESLint |
+| `npx tsc --noEmit` | Typecheck |
+| `npm test` | Vitest (`npx vitest run <file>` for one) |
+
+Run lint, tsc, tests and build before presenting changes.
+
+## Where things live
+
+- **Code** (blocks, routes, styles) is in this repo. **Page content** lives in P1's backend (CCR), keyed by
+  site ID + workstream, edited at `/p1`. Blocks must be registered in `puck.config.tsx` to appear.
+- `lib/episodes/` is the data layer. Everything reads the source-agnostic `Episode` type, never a vendor payload.
+  - `wordpress.ts` / `wordpress-parse.ts`: PowerPress feed joined to WP REST `episodes` on permalink.
+  - `showfm.ts`: show.fm public API, plus keyed `/v1/me/*` for show notes HTML. Server-only.
+  - `index.ts`: `composite()` **merges** show.fm and WordPress (`EPISODE_SOURCE=auto`).
+  - `filter.ts`: offset-cursor pagination + season/type/text filtering over the merged list.
+- `app/api/episodes[/slug]`: what client blocks call. Keys and tokens never reach the browser.
+- `components/puck/podcast/`: the blocks. `index.ts` is the barrel (ids + categories).
+- `app/podcast.css`: the design system. `lib/format.ts`: shared date/duration formatting.
+
+## Non-obvious decisions (read before changing the data layer)
+
+- **show.fm is external-hosted for this show.** Its API only holds episodes created in show.fm; the 38-episode
+  back catalogue shows in show.fm's UI as a read-only RSS list and is *not* in the API. Hence the merge:
+  WordPress supplies the archive, show.fm adds/overrides. On a match (same season+number), show.fm wins, WP
+  fills gaps (audio, transcript, show notes), and the **WP slug is kept** so `/episodes/{slug}` URLs don't change.
+- **Both sources are needed for one episode.** REST has no audio/season/duration (PowerPress keeps them out of
+  it); the feed has no show notes HTML/slug. Joined on permalink.
+- **communitycode.dev is behind Pantheon next-gen GCDN bot protection.** Unknown clients get a 403 managed
+  challenge (`cf-mitigated: challenge`), even for the feed, REST and `.vtt` files (MP3s pass). Server-side fetches
+  send `x-pantheon-bot-bypass` from `PANTHEON_BOT_BYPASS_TOKEN` (`terminus gcdn:bot-bypass communitycodedev`,
+  the `current` row). Bypass tokens need the *client* to send a header, which is why show.fm's own importer
+  can't read the feed without a user-agent allowlist from Pantheon.
+- **The feed is cached at the edge for a week** (`max-age=604800`) and stays stale after PowerPress changes.
+  Fetches append `?cb=<5-minute bucket>` to force an origin read without defeating caching.
+- **`_embed` needs `_links` in `_fields`.** Omit it and WordPress silently drops embedded featured images.
+- **Guests come from titles** ("Episode 36: Jacquie Capur"), not a field. `parseGuestsFromTitle`; non-episode
+  items have none. show.fm `people` replaces them when present.
+- **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
+  styles into its editor canvas iframe. Never put tokens on `body`/`:root`.
+- `tsconfig` is `strict: false`, so boolean-discriminated unions don't narrow: use `"error" in x`.
+- `server-only` is aliased to a stub in `vitest.config.ts` (it throws outside RSC).
+- npm 11 crashed ("Invalid Version") on a stale lockfile with Tailwind's bundled wasm package; regenerating
+  `package-lock.json` fixed it. If it recurs, do that.
+
+## Generic and reusable: nothing site-specific is hardcoded
+
+The components are meant to be reused for other shows and data sources, so **no endpoint, URL, hostname or site
+name is baked into component or library code**.
+
+- **Server** (`lib/config.ts`): all site-specific values come from env through `getConfig()` (WordPress base URL,
+  feed path, show.fm slug/API base, transcript host allowlist). A backend whose variables are unset is *disabled*,
+  not defaulted: `getEpisodeSource()` builds only what is configured and throws `ConfigError` if nothing is
+  (routes answer 501 for that, 502 for real upstream failures). `isAllowedTranscriptUrl` is the SSRF guard.
+- **Blocks** (`lib/block-config.ts`, client-safe): every API endpoint and link pattern is an editable Puck field.
+  The defaults live only in `DEFAULT_ENDPOINTS` / `DEFAULT_LINKS`; render uses the *prop* through
+  `safeUrl(prop, default)`, `expandTemplate("/episodes/{slug}", {...})` (null when a value is missing, so no
+  `/episodes/undefined` links) and `withQuery(url, params)` (endpoint may already carry a `?`). A block works
+  against any endpoint that returns the documented response shape (documented in a comment above each block).
+- **Site identity** (`content/site.ts`): env-driven (`NEXT_PUBLIC_SITE_NAME`, `_TAGLINE`, `_FEED_URL`,
+  `_APPLE_PODCASTS_URL`, `_SITE_NAV` JSON) with neutral defaults. `NEXT_PUBLIC_*` are baked at build time.
+- Fixtures and tests may contain real Community + Code data. Code may not.
+
+## Block conventions
+
+- A block is a Puck component config: `{ label, fields, defaultProps, render }`. The key in `podcastBlocks` is
+  the id **stored in page content**: never rename a shipped one.
+- Blocks that need data are client components that `fetch("/api/...")`. Handle loading, empty, and error states.
+- Use `cc-*` classes and tokens from `app/podcast.css`. No raw colours. Min 44px touch targets, visible focus,
+  `prefers-reduced-motion` honoured, WCAG AA contrast.
+- Render only sanitised HTML (`Episode.showNotesHtml` is sanitised server-side). Transcript text is untrusted:
+  render as text, never HTML.
+- Fields named `image`/`logo`/`thumbnail`/`*ImageUrl` get P1's media picker.
+- Tests: Vitest. Pure logic in plain tests; interactive blocks with Testing Library
+  (`// @vitest-environment jsdom` at the top of the file).
+
+## Environment
+
+`.env.local` is git-ignored. See `.env.example`. Never print, log, commit or `NEXT_PUBLIC_`-prefix
+`SHOWFM_API_KEY` or `PANTHEON_BOT_BYPASS_TOKEN`.
+
+## Status
+
+Built: data layer (types, both adapters, merge, filters, params), `/api/episodes`, design system, format helpers,
+block stubs + wiring. See the block status in `components/puck/podcast/*.tsx` (a file that still says
+"not built yet" is a stub).
+
+Not yet done: P1 site, GitHub repo, Pantheon front-end site, secrets, deploy (all need explicit go-ahead).
