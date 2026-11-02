@@ -1,0 +1,1066 @@
+[
+ {
+  "id": 1245,
+  "slug": "community-code-announcement",
+  "link": "https://communitycode.dev/episodes/community-code-announcement/",
+  "title": {
+   "rendered": "Community + Code announcement"
+  },
+  "content": {
+   "rendered": "\n\n\n\n\n\n<p class=\"wp-block-paragraph\"><ul>We interrupt this program for this special announcement&#8230;</ul></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Community + Code will be taking a break after the next episode. We&#8217;ll see you in 2027. In the interim, get in touch if you want to be a guest!</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/zlpkSFV4c0w"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/10/communitycode-video-thumb-end-of-season-break.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1238,
+  "slug": "episode-36-jacquie-capur",
+  "link": "https://communitycode.dev/episodes/episode-36-jacquie-capur/",
+  "title": {
+   "rendered": "Episode 36: Jacquie Capur"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 36 - Jacquie Capur\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/-eKwLvIl728?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://sessionize.com/jacquie-grindrod\">Jacquie on Sessionize</a></li>\n\n\n\n<li><a href=\"https://hashicorp.com/en/blog/authors/jacquie-grindrod\">HashiCorp author page</a></li>\n\n\n\n<li><a href=\"https://nebius.com\">Nebius</a></li>\n\n\n\n<li><a href=\"https://www.hashicorp.com\">HashiCorp</a></li>\n\n\n\n<li><a href=\"https://codetv.dev/series/the-full-stack/s1\">The Full Stack</a> (reality TV show)\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.codetv.dev\">CodeTV</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://strudel.cc\">Strudel</a></li>\n\n\n\n<li><a href=\"https://www.twitch.tv/devopsjacquie\">@devopsjacquie on Twitch</a></li>\n\n\n\n<li><a href=\"https://developerrelations.com/devrelcon/\">DevRelCon</a></li>\n\n\n\n<li><a href=\"https://x.com/devopsjacquie\">@devopsjacquie on X</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/jacquie-capur/\">Jacquie on LinkedIn</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Jacquie Capur went from music major to DevOps to DevRel, with a CodeTV live-coding show, stage fright, and AI-fueled whimsy along the way.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/-eKwLvIl728"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/10/communitycode-video-thumb-jacquie-capur.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1214,
+  "slug": "episode-35-pj-hagerty",
+  "link": "https://communitycode.dev/episodes/episode-35-pj-hagerty/",
+  "title": {
+   "rendered": "Episode 35: PJ Hagerty"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 35: PJ Hagerty\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/clkrp6Iz05w?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://devrelate.io\">DevRelate.io</a></li>\n\n\n\n<li><a href=\"https://aspleenic.medium.com/\">PJ Hagerty on Medium</a></li>\n\n\n\n<li><a href=\"https://github.com/aspleenic\">PJ Hagerty on GitHub</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/pjhagerty/\">PJ Hagerty on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://sessionize.com/pj-hagerty/\">PJ Hagerty&#8217;s Sessionize profile</a></li>\n\n\n\n<li><a href=\"https://developerrelations.com/devrelcon/\">DevRelCon</a></li>\n\n\n\n<li><a href=\"https://thewpocc.org/\">The WP Open Community Collective</a></li>\n\n\n\n<li><a href=\"https://osmhhelp.org/\">Open Sourcing Mental Health</a></li>\n\n\n\n<li><a href=\"https://en.wikipedia.org/wiki/Developer_relations\">Developer relations \u2014 Wikipedia</a></li>\n\n\n\n<li><a href=\"https://x.com/aspleenic\">X</a> / <a href=\"https://bsky.app/profile/aspleenic.bsky.social\">Bluesky</a> / <a href=\"https://mastodon.social/@aspleenic@hachyderm.io\">Mastodon</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>PJ Hagerty, who helped coin the term &#8220;developer relations,&#8221; joins Chris to talk punk rock ethics, open source&#8217;s future, and AI&#8217;s toll on dev communities.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/clkrp6Iz05w"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-pj-hagerty.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1213,
+  "slug": "episode-34-maciek-palmowski",
+  "link": "https://communitycode.dev/episodes/episode-34-maciek-palmowski/",
+  "title": {
+   "rendered": "Episode 34: Maciek Palmowski"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 34 - Maciek Palmoski\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/E8F2IIWcgFc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://maciekpalmowski.dev/\">Maciek Palmowski&#8217;s website</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/maciekpalmowski/\">Maciek Palmowski on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://bsky.app/profile/maciekpalmowski.dev\">Maciek Palmowski on Bluesky</a></li>\n\n\n\n<li><a href=\"https://patchstack.com\">Patchstack</a></li>\n\n\n\n<li><a href=\"https://cmsconf.com\">CMS Conf</a></li>\n\n\n\n<li><a href=\"https://www.therepository.email/polish-wordcamp-organizers-launch-cms-conf-a-new-cross-platform-conference\">The Repository: CMS Conf launch coverage</a> </li>\n\n\n\n<li><a href=\"https://statamic.com/\">Statamic</a> </li>\n\n\n\n<li><a href=\"https://wptavern.com/podcast/227-maciek-palmowski-on-testing-secure-wordpress-hosting-does-the-marketing-match-reality\">#227 \u2013 Maciek Palmowski on Testing Secure WordPress Hosting</a> (WP Tavern Jukebox)</li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Patchstack&#8217;s Maciek Palmowski on WordPress core&#8217;s first real vulnerabilities, AI cutting exploit time to five hours, and a fractured plugin ecosystem.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/E8F2IIWcgFc"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/09/communitycode-video-thumb-maciek-palmowski.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1212,
+  "slug": "episode-33-jonathan-wold",
+  "link": "https://communitycode.dev/episodes/episode-33-jonathan-wold/",
+  "title": {
+   "rendered": "Episode 33: Jonathan Wold"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 33 - Jonathan Wold\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/K8LCjbpiYy4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://jonathanwold.com/\">Jonathan Wold</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/sirjonathan/\">Jonathan on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/jonathanwold/\">Jonathan on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://crossword.fm/\">Crossword</a></li>\n\n\n\n<li><a href=\"https://convesio.com\">Convesio</a></li>\n\n\n\n<li><a href=\"https://guildenberg.com/\">Guildenberg</a></li>\n\n\n\n<li><a href=\"https://communitycode.dev/episodes/episode-10-tammie-lister/\" data-type=\"episodes\" data-id=\"382\">Tammie Lister</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/lukecarbis/\">Luke Carbis</a></li>\n\n\n\n<li><a href=\"https://communitycode.dev/episodes/episode-26-courtney-robertson/\" data-type=\"episodes\" data-id=\"285\">Courtney Robertson</a></li>\n\n\n\n<li><a href=\"https://automattic.com\">Automattic</a></li>\n\n\n\n<li><a href=\"https://woocommerce.com\">WooCommerce</a></li>\n\n\n\n<li><a href=\"https://us.wordcamp.org/2026/\">WordCamp US 2026</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://us.wordcamp.org/2026/session/the-handshake-is-the-roadmap-product-partnerships-and-the-loop-between-them/\">Jonathan &amp; Tammie&#8217;s talk</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://techcrunch.com/2019/09/19/automattic-ceo-matt-mullenweg-about-raising-300-million-and-the-open-web/\">Matt Mullenweg on building the operating system of the web</a> (TechCrunch)</li>\n\n\n\n<li><a href=\"https://pressconf.events/\">PressConf</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Jonathan Wold joins Chris to talk homeschooling, curiosity, and why calling WordPress the operating system of the web was never really about the software.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/K8LCjbpiYy4"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/08/communitycode-video-thumb-jonathan-wold.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1146,
+  "slug": "episode-32-bud-kraus",
+  "link": "https://communitycode.dev/episodes/episode-32-bud-kraus/",
+  "title": {
+   "rendered": "Episode 32: Bud Kraus"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 32: Bud Kraus\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/VOg9N5ToRJk?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://seriouslybud.com/\"><em>Seriously</em>, BUD? podcast</a></li>\n\n\n\n<li><a href=\"https://joyofwp.com/\">Joy of WP</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/trynet/\">Bud Kraus on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://x.com/joyofwp\">Bud Kraus on X/Twitter (@joyofwp)</a></li>\n\n\n\n<li><a href=\"https://joyofwp.com/about-bud-kraus-wordpress-technical-writer-podcaster-funny-guy/\">About Bud Kraus</a> </li>\n\n\n\n<li><a href=\"https://openchannels.fm/host/bob-dunn/\">Bob Dunn</a> (<a href=\"https://openchannels.fm/\">OpenChannels.fm</a>) </li>\n\n\n\n<li><a href=\"https://communitycode.dev/episodes/episode-27-miriam-schwab/\" data-type=\"episodes\" data-id=\"971\">Miriam Schwab</a> (<a href=\"https://elementor.com/\">Elementor</a> / <a href=\"https://elementor.com/products/angie-ai-for-wordpress/\">Angie</a>)</li>\n\n\n\n<li><a href=\"https://ma.tt\">Matt Mullenweg</a></li>\n\n\n\n<li><a href=\"https://learn.wordpress.org/course/wordpress-credits/\">WP Credits program</a></li>\n\n\n\n<li><a href=\"https://wisprflow.ai/\">Wisper Flow</a><ul><br></ul></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>WordPress educator Bud Kraus on his Uber-born podcast, teleporters, Star Trek, and why AI making him dumber and smarter still can&#8217;t fake real human value.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/VOg9N5ToRJk"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-bud-kraus.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 1006,
+  "slug": "episode-31-brent-toderash",
+  "link": "https://communitycode.dev/episodes/episode-31-brent-toderash/",
+  "title": {
+   "rendered": "Episode 31: Brent Toderash"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 31: Brent Toderash\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/Lfs9E13Ozbc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"http://toderash.net/\">toderash.net</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/toderash/\">Brent on WordPress.org</a> </li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/brenttoderash/\">Brent on LinkedIn</a> </li>\n\n\n\n<li><a href=\"https://x.com/toderash\">Brent on X (@toderash)</a> </li>\n\n\n\n<li><a href=\"https://fair.pm/\">FAIR project</a> </li>\n\n\n\n<li><a href=\"https://aspirepress.org/\">AspirePress</a> </li>\n\n\n\n<li><a href=\"http://www.catb.org/~esr/writings/cathedral-bazaar/\">The Cathedral and the Bazaar</a> </li>\n\n\n\n<li><a href=\"https://typo3.org/\">TYPO3</a> </li>\n\n\n\n<li><a href=\"https://next.jazzsequence.com/posts/i-dont-miss-not-writing-code\">I don&#8217;t miss not writing code</a></li>\n\n\n\n<li><a href=\"https://jazzsequence.github.io/Invert/\">Invert</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Brent Toderash on building the FAIR project, why open source came before the profit motive, and how AI is reviving the old joy of writing code just to share it.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/Lfs9E13Ozbc"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-brent-toderash.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 994,
+  "slug": "episode-30-miriam-goldman",
+  "link": "https://communitycode.dev/episodes/episode-30-miriam-goldman/",
+  "title": {
+   "rendered": "Episode 30: Miriam Goldman"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\nhttps://youtu.be/SXyG-AxjypU\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://miriamgoldman.ca/\">miriamgoldman.ca</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/miriamgoldman/\">Miriam on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://github.com/miriamgoldman\">Miriam&#8217;s GitHub</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/miriamgoldman/\">Miriam on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://canada.wordcamp.org/2025/organizer/miriam-goldman/\">WordCamp Canada 2025 organizer page</a></li>\n\n\n\n<li><a href=\"https://canada.wordcamp.org/2024/speaker/miriam-goldman/\">WordCamp Canada 2024 speaker page</a></li>\n\n\n\n<li><a href=\"https://rochester.wordcamp.org/2024/speaker/miriam-goldman/\">WordCamp Rochester, NY speaker page</a></li>\n\n\n\n<li><a href=\"https://pantheon.io\">Pantheon</a></li>\n\n\n\n<li><a href=\"https://kanopi.com/\">Kanopi Studios</a></li>\n\n\n\n<li><a href=\"https://events.drupal.org/\">DrupalCon</a></li>\n\n\n\n<li><a href=\"https://drupalcampottawa.com/en\">DrupalCamp Ottawa</a></li>\n\n\n\n<li><a href=\"https://www.sonarsource.com/products/sonarqube/\">SonarQube</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Miriam Goldman on WordPress vs. Drupal culture, WordCamp organizing, karate katas, and switching between clarinet and percussion on the regular.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/07/communitycode-video-thumb-miriam-goldman.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 993,
+  "slug": "episode-29-robert-abela",
+  "link": "https://communitycode.dev/episodes/episode-29-robert-abela/",
+  "title": {
+   "rendered": "Episode 29 &#8211; Robert Abela"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 29 - Robert Abela\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/jTaJ7TerhpU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://melapress.com\">Melapress</a></li>\n\n\n\n<li><a href=\"https://melapress.com/wordpress-activity-log/\">WP Activity Log</a></li>\n\n\n\n<li><a href=\"https://melapress.com/wordpress-2fa/\">WP 2FA</a></li>\n\n\n\n<li><a href=\"https://melapress.com/wordpress-login-security/\">Melapress Login Security</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/robertabela/\">Robert Abela on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://robertabela.me\">Robert Abela&#8217;s website</a></li>\n\n\n\n<li><a href=\"https://haveibeenpwned.com\">Have I Been Pwned</a></li>\n\n\n\n<li><a href=\"https://www.amazon.com/Ghost-Wires-Adventures-Worlds-Wanted/dp/0316037729\">Ghost in the Wires by Kevin Mitnick</a></li>\n\n\n\n<li><a href=\"https://patchstack.com\">PatchStack</a> </li>\n\n\n\n<li><a href=\"https://www.cloudfest.com/\">CloudFest</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><em>Intro music: nqt provided by mobygratis. Outro music: Conspire provided by mobygratis.</em></p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Intro music: nqt provided by mobygratis. Outro music: Conspire provided by mobygratis.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/jTaJ7TerhpU"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-robert-abela.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 992,
+  "slug": "episode-28-carrie-dils",
+  "link": "https://communitycode.dev/episodes/episode-28-carrie-dils/",
+  "title": {
+   "rendered": "Episode 28 &#8211; Carrie Dils"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 28 - Carrie Dils\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/czdljy6qrig?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://carriedils.com/\">Carrie Dils</a></li>\n\n\n\n<li><a href=\"https://bsky.app/profile/carriedils.com\">Carrie on Bluesky</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/carriedils/\">Carrie on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/learning/\">LinkedIn Learning</a></li>\n\n\n\n<li><a href=\"https://poststatus.com/club/\">Post Status</a></li>\n\n\n\n<li><a href=\"https://fair.pm/\">FAIR Project</a></li>\n\n\n\n<li><a href=\"https://www.linuxfoundation.org/press/linux-foundation-announces-the-fair-package-manager-project-for-open-source-content-management-system-stability\">Linux Foundation FAIR announcement</a></li>\n\n\n\n<li><a href=\"https://typo3.org/\">TYPO3</a></li>\n\n\n\n<li><a href=\"https://roots.io/\">Roots</a></li>\n\n\n\n<li><a href=\"https://github.com/cedaro/satispress\">SatisPress</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Carrie Dils on a decade of LinkedIn Learning courses, the FAIR package manager project, WordPress supply chain security, and a detour through Starbucks.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/czdljy6qrig"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/06/communitycode-video-thumb-carrie-dils.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 971,
+  "slug": "episode-27-miriam-schwab",
+  "link": "https://communitycode.dev/episodes/episode-27-miriam-schwab/",
+  "title": {
+   "rendered": "Episode 27: Miriam Schwab"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 27 - Miriam Schwab\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/_Tmz9qsXJvo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://miriamschwab.me/\">miriamschwab.me</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/miriamschwab/\">Miriam Schwab on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://twitter.com/illuminea\">Miriam Schwab on Twitter/X (@illuminea)</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/illuminea/\">Miriam on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://elementor.com/\">Elementor</a></li>\n\n\n\n<li><a href=\"https://www.strattic.com/\">Strattic</a></li>\n\n\n\n<li><a href=\"https://make.wordpress.org/chat/\">Make WordPress Slack </a></li>\n\n\n\n<li><a href=\"https://poststatus.com\">Post Status</a></li>\n\n\n\n<li><a href=\"https://wpcommunitycollective.com/\">WP Community Collective</a></li>\n\n\n\n<li><a href=\"https://www.netlify.com/\">Netlify</a><ul><br></ul></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Miriam Schwab \u2014 Head of WordPress at Elementor \u2014 on building a community presence inside a 21-million-install product and why open source contribution is a brand play.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/_Tmz9qsXJvo"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/05/communitycode-video-thumb-miriam-schwab.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 285,
+  "slug": "episode-26-courtney-robertson",
+  "link": "https://communitycode.dev/episodes/episode-26-courtney-robertson/",
+  "title": {
+   "rendered": "Episode 26: Courtney Robertson"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 26 - Courtney Robertson\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/cfkRuYJN3lM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://courtneyr.dev/\">CourtneyR.dev</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/courane01/\">Courtney on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://github.com/courtneyr-dev\">Courtney on GitHub</a></li>\n\n\n\n<li><a href=\"https://www.godaddy.com/pro\">GoDaddy Pro</a></li>\n\n\n\n<li><a href=\"https://wpcommunitycollective.com/\">WP Community Collective</a></li>\n\n\n\n<li><a href=\"https://fair.pm/\">FAIR.pm</a></li>\n\n\n\n<li><a href=\"https://learn.wordpress.org/\">learn.wordpress.org</a></li>\n\n\n\n<li><a href=\"https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/\" type=\"episodes\" id=\"831\">Juliette Reinders Folmer episode</a> \n<ul class=\"wp-block-list\">\n<li><a href=\"https://github.com/PHPCSStandards/PHP_CodeSniffer\">PHPCS on GitHub</a></li>\n\n\n\n<li><a href=\"https://github.com/WordPress/WordPress-Coding-Standards\">WPCS on GitHub</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://opensource.org/\">opensource.org</a></li>\n\n\n\n<li><a href=\"https://www.descript.com/\">Descript</a></li>\n\n\n\n<li><a href=\"https://readwise.io/\">Readwise</a></li>\n\n\n\n<li><a href=\"https://obsidian.md/\">Obsidian</a></li>\n\n\n\n<li><a href=\"https://penpot.app/\">Penpot</a></li>\n\n\n\n<li><a href=\"https://www.activepieces.com/\">ActivePieces</a></li>\n\n\n\n<li><a href=\"https://wordpress.org/plugins/activitypub/\">ActivityPub plugin</a></li>\n\n\n\n<li><a href=\"https://www.bigorangeheart.org/\">Big Orange Heart</a></li>\n\n\n\n<li><a href=\"https://www.godaddy.com/airo\">GoDaddy Airo (Aero AI Builder)</a></li>\n\n\n\n<li><a href=\"https://pantheon.io/\">Pantheon</a></li>\n\n\n\n<li><a href=\"https://github.com/jazzsequence/ash-nazg\">Ash Nazg plugin</a></li>\n\n\n\n<li><a href=\"https://www.devrelbook.com/\">Developer Relations book</a></li>\n\n\n\n<li><a href=\"https://blocktober.fun\">Blocktober</a></li>\n</ul>\n\n\n\n<figure class=\"wp-block-image size-full\"><img loading=\"lazy\" decoding=\"async\" width=\"795\" height=\"994\" src=\"https://communitycode.dev/app/uploads/2026/05/devrel-framework.jpg\" alt=\"\" class=\"wp-image-1019\" srcset=\"https://communitycode.dev/app/uploads/2026/05/devrel-framework.jpg 795w, https://communitycode.dev/app/uploads/2026/05/devrel-framework-240x300.jpg 240w, https://communitycode.dev/app/uploads/2026/05/devrel-framework-768x960.jpg 768w\" sizes=\"auto, (max-width: 795px) 100vw, 795px\" /></figure>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Courtney Robertson on doing DevRel inside GoDaddy, AI coding workflows, open source licensing risks, and vibe-coding WordPress plugins with Claude Code.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/cfkRuYJN3lM"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/05/communitycode-video-thumb-courtney-robertson.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 834,
+  "slug": "episode-25-jill-binder",
+  "link": "https://communitycode.dev/episodes/episode-25-jill-binder/",
+  "title": {
+   "rendered": "Episode 25: Jill Binder"
+  },
+  "content": {
+   "rendered": "\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://speaktechconfidently.com/\">Speak Tech Confidently</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://speaktechconfidently.com/blueprint\">Tech speaker blueprint</a> \u2014 free 10-step speaker readiness self-diagnostic</li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://jillbinder.com\">jillbinder.com</a></li>\n\n\n\n<li><a href=\"https://linkedin.com/in/jillbinder\">Jill Binder on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://mastodon.social/@jillbinder\">Jill on Mastodon: @jillbinder</a></li>\n\n\n\n<li><a href=\"https://x.com/jillbinder/\">Jill on X: @jillbinder</a></li>\n\n\n\n<li><a href=\"https://wordpress.tv/speakers/jill-binder/\">WordPress.tv \u2014 Jill Binder talks</a></li>\n\n\n\n<li><a href=\"https://wordpress.org/news/2019/12/people-of-wordpress-jill-binder/\">People of WordPress: Jill Binder</a></li>\n\n\n\n<li><a href=\"https://canada.wordcamp.org\">WordCamp Canada</a></li>\n\n\n\n<li><a href=\"https://alterconf.com/\">AlterConf</a></li>\n\n\n\n<li><a href=\"https://anildash.com\">Anil Dash</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Jill Binder ran diversity speaker training in 50 countries for 5 years. Now she&#8217;s coaching all voices in tech to find their stage presence.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/SZNThB0salY"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/04/communitycode-video-thumb-jill-binder.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 833,
+  "slug": "episode-24-natalie-maclees",
+  "link": "https://communitycode.dev/episodes/episode-24-natalie-maclees/",
+  "title": {
+   "rendered": "Episode 24: Natalie MacLees"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 24 - Natalie MacLees\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/yVxwfQn71SM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://aaardvarkaccessibility.com/\">AAArdvark Accessibility</a></li>\n\n\n\n<li><a href=\"https://nataliemac.com/\">nataliemac.com</a></li>\n\n\n\n<li><a href=\"https://wordpress.org/plugins/website-accessibility-audit-checker/\">AAArdvark Accessibility plugin on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/nataliemac/\">Natalie on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://practical-accessibility.today/\">Practical Accessibility with Sara Soueidan</a></li>\n\n\n\n<li><a href=\"https://www.coursera.org/learn/web-accessibility\">Web Accessibility (Google/Coursera)</a></li>\n\n\n\n<li><a href=\"https://pressconf.events/\">PressConf</a></li>\n\n\n\n<li><a href=\"https://nsquared.io/products/\">nsquared plugins</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Natalie MacLees, founder of AAArdvark, talks accessibility myths, AI&#8217;s role in testing, WordPress themes, and why we&#8217;re all on the disability spectrum.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/yVxwfQn71SM"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/04/communitycode-video-thumb-natalie-maclees.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 832,
+  "slug": "episode-23-steve-burge",
+  "link": "https://communitycode.dev/episodes/episode-23-steve-burge/",
+  "title": {
+   "rendered": "Episode 23: Steve Burge"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 23 - Steve Burge\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/UrML01JuY8U?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://publishpress.com\">PublishPress</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/steveburge/\">Steve Burge on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://steveburge.com\">steveburge.com</a></li>\n\n\n\n<li><a href=\"https://rambleventures.com\">Ramble Ventures</a></li>\n\n\n\n<li><a href=\"https://metaslider.com\">MetaSlider</a></li>\n\n\n\n<li><a href=\"https://taxopress.com\">TaxoPress</a></li>\n\n\n\n<li><a href=\"https://logtivity.io\">Logtivity</a></li>\n\n\n\n<li><a href=\"https://mississippitoday.org\">Mississippi Today</a></li>\n\n\n\n<li><a href=\"https://ghost.org\">Ghost</a></li>\n\n\n\n<li><a href=\"https://www.beehiiv.com\">Beehiiv</a></li>\n\n\n\n<li><a href=\"https://pantheon.io\">Pantheon</a></li>\n\n\n\n<li><a href=\"https://pluralsight.com\">Pluralsight</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Steve Burge built PublishPress by reading every single support ticket. He tells us how Drupal 7 pushed the whole industry toward WordPress.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/UrML01JuY8U"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/04/communitycode-video-thumb-steve-burge.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 835,
+  "slug": "episode-22-the-wp-community-collective",
+  "link": "https://communitycode.dev/episodes/episode-22-the-wp-community-collective/",
+  "title": {
+   "rendered": "Episode 22: The WP Community Collective"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 22 - The WPCC\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/i4r7yazj4r8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.thewpcommunitycollective.com/\">The WP Community Collective</a></li>\n\n\n\n<li><a href=\"https://podcasthon.org/\">Podcastathon</a></li>\n\n\n\n<li><a href=\"https://courtneyr.dev/\">Courtney Robertson</a></li>\n\n\n\n<li><a href=\"https://sereedmedia.com/\">S\u00e9 Reed</a></li>\n\n\n\n<li><a href=\"https://www.jonoalderson.com/\">Jono Alderson</a></li>\n\n\n\n<li><a href=\"https://jazzsequence.com\">Chris Reynolds</a></li>\n\n\n\n<li><a href=\"https://fair.pm/\">FAIR (Federated and Independent Repositories)</a></li>\n\n\n\n<li><a href=\"https://yoast.com/\">Yoast</a></li>\n\n\n\n<li><a href=\"https://www.godaddy.com/resources/news/godaddy-five-for-the-future-contributors\">GoDaddy Five for the Future Contributors</a></li>\n\n\n\n<li><a href=\"https://pantheon.io\">Pantheon</a></li>\n\n\n\n<li><a href=\"https://wordpressfoundation.org/projects/kim-parsell-memorial-scholarship/\">Kim Parsell Memorial Scholarship</a> (WordPress Foundation)</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Four members of the WPCC board discuss open source sustainability, contributor burnout, and what the WP Community Collective is building.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/i4r7yazj4r8"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/03/communitycode-video-thumb-wpcc.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 831,
+  "slug": "episode-21-juliette-reinders-folmer",
+  "link": "https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/",
+  "title": {
+   "rendered": "Episode 21: Juliette Reinders Folmer"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 21 - Juliette Reinders Folmer\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/aVVjsfza8aA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://github.com/PHPCSStandards/PHP_CodeSniffer\">PHP CodeSniffer (PHPCSStandards)</a></li>\n\n\n\n<li><a href=\"https://github.com/jrfnl\">Juliette on GitHub (@jrfnl)</a></li>\n\n\n\n<li><a href=\"https://github.com/PHPCompatibility/PHPCompatibility\">PHPCompatibility</a></li>\n\n\n\n<li><a href=\"https://github.com/WordPress/WordPress-Coding-Standards\">WordPress Coding Standards</a></li>\n\n\n\n<li><a href=\"https://github.com/Yoast/PHPUnit-Polyfills\">PHPUnit Polyfills</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/jrf/\">Juliette on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/julietterf/\">Juliette on LinkedIn</a> </li>\n\n\n\n<li><a href=\"https://phpc.social/@phpcs\">PHPCS on Mastodon</a> </li>\n\n\n\n<li><a href=\"https://x.com/PHP_CodeSniffer\">PHP_CodeSniffer on X</a></li>\n\n\n\n<li><a href=\"https://phpc.social/@jrf_nl\">Juliette on Mastodon</a></li>\n\n\n\n<li><a href=\"https://x.com/jrf_nl\">Juliette on X</a></li>\n\n\n\n<li><a href=\"https://opensourcepledge.com/\">Open Source Pledge</a></li>\n\n\n\n<li><a href=\"https://tidelift.com/\">Tidelift</a></li>\n\n\n\n<li><a href=\"https://thanks.dev/\">ThanksDev</a></li>\n\n\n\n<li><a href=\"https://github.com/sponsors\">GitHub Sponsors</a></li>\n\n\n\n<li><a href=\"https://thephp.foundation/\">PHP Foundation</a></li>\n\n\n\n<li><a href=\"https://github.com/squizlabs/PHP_CodeSniffer\">Squizlabs (original PHPCS org)</a></li>\n\n\n\n<li><a href=\"https://joplinapp.org/\">Joplin (open source note-taking app)</a></li>\n\n\n\n<li><a href=\"https://www.irfanview.com/\">Irfanview</a></li>\n\n\n\n<li><a href=\"https://suno.com/\">Suno (AI music, mentioned in conversation)</a></li>\n\n\n\n<li>Sponsor the work Juliette is doing at <a href=\"https://opencollective.com/php_codesniffer\">OpenCollective</a> or <a href=\"https://github.com/sponsors/PHPCSStandards\">GitHub Sponsorships</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>PHP maintainer Juliette Reinders Folmer on open source sustainability, AI&#8217;s threat to maintainers, and why funding the tools you use matters.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/aVVjsfza8aA"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/03/communitycode-video-thumb-juliette.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 830,
+  "slug": "episode-20-fons-vandamme",
+  "link": "https://communitycode.dev/episodes/episode-20-fons-vandamme/",
+  "title": {
+   "rendered": "Episode 20: Fons Vandamme"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 20 - Fons Vandamme\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/q96WU2j9URA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://fonsvandamme.com/\">fonsvandamme.com</a></li>\n\n\n\n<li><a href=\"https://webhaven.io/\">Webhaven</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/u/f0ns\">Fons&#8217; Drupal.org profile</a></li>\n\n\n\n<li><a href=\"https://github.com/f0ns\">Fons&#8217; GitHub profile</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/fonsvandamme/\">Fons on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://x.com/fonsvandamme\">Fons on X</a></li>\n\n\n\n<li><a href=\"https://talkingdrupal.com/534\">Talking Drupal #534 &#8211; Webhaven.io</a></li>\n\n\n\n<li><a href=\"https://www.thedroptimes.com/interview/54767/how-fons-vandamme-built-webhaven-simplify-drupal-project-development\">The Drop Times: How Fons Vandamme Built Webhaven to Simplify Drupal Project Development</a></li>\n\n\n\n<li><a href=\"https://communitycode.dev/episodes/episode-14-mike-herchel/\" type=\"episodes\" id=\"553\">Episode 14: Mike Hershcel</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/project/canvas\">Drupal Canvas</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/entityone\">EntityOne on Drupal.org</a></li>\n\n\n\n<li><a href=\"https://jazzsequence.com/series/artificial-intelligence/\">My AI musings (including The Lovecraft Test)</a></li>\n</ul>\n\n\n\n<figure class=\"wp-block-image size-large\"><img loading=\"lazy\" decoding=\"async\" width=\"1024\" height=\"623\" src=\"https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1024x623.jpg\" alt=\"\" class=\"wp-image-900\" srcset=\"https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1024x623.jpg 1024w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-300x183.jpg 300w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-768x467.jpg 768w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1536x935.jpg 1536w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-2048x1247.jpg 2048w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1320x803.jpg 1320w\" sizes=\"auto, (max-width: 1024px) 100vw, 1024px\" /><figcaption class=\"wp-element-caption\">Fons and his first Macintosh</figcaption></figure>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Fons Vandamme on building Webhaven, getting ruthlessly honest AI feedback, and why Drupal&#8217;s moment might finally be now.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/q96WU2j9URA"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/02/communitycode-fons-vandamme-thumb.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 829,
+  "slug": "episode-19-carl-alexander",
+  "link": "https://communitycode.dev/episodes/episode-19-carl-alexander/",
+  "title": {
+   "rendered": "Episode 19: Carl Alexander"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code - Episode 19: Carl Alexander\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/o9BYKPuxlSY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://carlalexander.ca\">carlalexander.ca</a></li>\n\n\n\n<li><a href=\"https://ymirapp.com/\">Ymir</a></li>\n\n\n\n<li><em><a href=\"https://carlalexander.ca/object-oriented-programming-wordpress/\">Discover object-oriented programming using WordPress</a></em></li>\n\n\n\n<li><a href=\"https://poststatus.com/\">Post Status</a></li>\n\n\n\n<li><a href=\"https://asia.wordcamp.org/2023/speaker/carl-alexander/\">Carl&#8217;s WP Asia 2023 speaker bio</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/carlalexander/\">Carl&#8217;s WordPress profile</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/carlalexandereng/\">Carl on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://pressconf.events\">PressConf</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><ul><br></ul></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Carl Alexander talks about his two \u201cacts\u201d in WordPress\u2014object oriented and now serverless. Plus the real cost of servers, scaling, and marketing burnout, and why \u201cdeploy, scale, sleep\u201d is the future people actually want.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/o9BYKPuxlSY"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/02/communitycode-video-thumb-carl-alexander.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 828,
+  "slug": "episode-18-john-hawkins",
+  "link": "https://communitycode.dev/episodes/episode-18-john-hawkins/",
+  "title": {
+   "rendered": "Episode 18: John Hawkins"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 18 - John Hawkins\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/Af20eIqYQpw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://vegasgeek.com/\">VegasGeek</a></li>\n\n\n\n<li><a href=\"https://9seeds.com/\">9seeds</a></li>\n\n\n\n<li><a href=\"https://wordpress.tv/speakers/john-hawkins/\">John Hawkins on WordPress.tv</a></li>\n\n\n\n<li><a href=\"https://github.com/vegasgeek\">VegasGeek on GitHub</a></li>\n\n\n\n<li><a href=\"https://profiles.wordpress.org/vegasgeek/\">John Hawkins on WordPress.org</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>John Hawkins (VegasGeek) talks WordCamps, teaching, and the long-tail \u201creturn on connection\u201d that shapes WordPress careers\u2014plus what it took to step back, come back, and build a sustainable agency again.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/Af20eIqYQpw"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/01/communitycode-video-thumb-john-hawkins.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 703,
+  "slug": "episode-17-tearyne-almendariz",
+  "link": "https://communitycode.dev/episodes/episode-17-tearyne-almendariz/",
+  "title": {
+   "rendered": "Episode 17: Tearyne Almendariz"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 17 - Tearyne Almendariz\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/B2zZi5LG1f4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.nlbcworks.com/\">NLBC Works</a></li>\n\n\n\n<li><a href=\"https://www.lullabot.com/\">Lullabot</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/sugaroverflow/\">Fatima Sarah Khalid</a> (LinkedIn)</li>\n\n\n\n<li><a href=\"https://sessionize.com/tearyne-almendariz/\">Tearyne&#8217;s speaker profile on Sessionize</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/u/ninelivesblackcat\">Tearyne on Drupal.org (NineLivesBlackCat)</a></li>\n\n\n\n<li><a href=\"https://old.midcamp.org/2025/topic-proposal/building-strong-business-case-web-accessibility\">Building a Strong Business Case for Web Accessibility &#8211; MidCamp 2025</a></li>\n\n\n\n<li><a href=\"https://www.twitch.tv/ninelivesblackcat\">NineLivesBlackCat on Twitch</a></li>\n\n\n\n<li><a href=\"https://supersweetbot.cc/about/\">Super Sweet Bot</a></li>\n\n\n\n<li><a href=\"https://youtu.be/4v3tGz7B-OA?si=jNHWiJGz_UN-AYtR\">Meet Nine &#8211; Olympia</a></li>\n\n\n\n<li><a href=\"https://youtu.be/eDk7ttf1cHM?si=QEOryoLzH2mdL02y\">Agent Nine &#8211; Meet Me &#8211; Destination Mole</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Season 2 begins with Tearyne Almendariz on identity, DevRel as \u201ctherapy,\u201d accessibility realities, and building a cozy co-working community on Twitch.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/B2zZi5LG1f4"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2026/01/communitycode-tearyne-almendariz.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 593,
+  "slug": "episode-16-dee-teal",
+  "link": "https://communitycode.dev/episodes/episode-16-dee-teal/",
+  "title": {
+   "rendered": "Episode 16: Dee Teal"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 16 - Dee Teal\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/T2BDAvcBbyw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://deeteal.com/\">DeeTeal.com</a></li>\n\n\n\n<li><a href=\"https://wpincludes.me/\">WP Includes</a></li>\n\n\n\n<li><a href=\"https://futureofteam.com/\">Future of Team podcast</a></li>\n\n\n\n<li><a href=\"https://canada.wordcamp.org/2025/\">WordCamp Canada 2025</a></li>\n\n\n\n<li><a href=\"https://wordpress.tv/2025/11/10/cultural-algorithms-the-innovation-multiplier/\">Cultural Algorithms: The Innovation Multiplier</a> (WordPress.tv)</li>\n\n\n\n<li><a href=\"https://humanmade.com\">Human Made</a></li>\n\n\n\n<li><a href=\"https://webdevstudios.com\">WebDevStudios</a></li>\n\n\n\n<li><a href=\"https://wordpress.tv/2025/11/18/from-canada-to-the-world-10-lessons-from-working-with-50-countries/\">From Canada to the World: 10 Lessons From Working With 50 Countries</a> (WordPress.tv)</li>\n\n\n\n<li><a href=\"https://www.tessitura.com/\">Tessitura</a></li>\n\n\n\n<li><a href=\"https://craftcms.com/\">Craft CMS</a></li>\n\n\n\n<li><a href=\"https://bsky.app/profile/jazzsequence.com/post/3lgeu6wb4ks2q\">Chris&#8217; Bluesky post</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Chris talks with project manager and community leader Dee Teal about cultural algorithms, implicit bias, WP Includes, and why open-source communities thrive on abundance, not competition.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/T2BDAvcBbyw"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/12/dee-teal-communitycode-video-thumb.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 592,
+  "slug": "episode-15-troy-chaplin",
+  "link": "https://communitycode.dev/episodes/episode-15-troy-chaplin/",
+  "title": {
+   "rendered": "Episode 15: Troy Chaplin"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 15 - Troy Chaplin\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/6yn47XObyXA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://troychaplin.ca/\">troychaplin.ca</a></li>\n\n\n\n<li><a href=\"https://blockaccessibilitychecks.com/\">Block Accessibility Checks</a></li>\n\n\n\n<li><a href=\"https://carleton.ca/\">Carleton University</a></li>\n\n\n\n<li><a href=\"https://canada.wordcamp.org/2025/\">WordCamp Canada 2025</a></li>\n\n\n\n<li><a href=\"https://humanmade.com/resources/the-state-of-wordpress-in-higher-education-research-report/\">The State of WordPress in Higher Education</a> (Human Made)</li>\n\n\n\n<li><a href=\"https://poststatus.com/\">Post Status</a></li>\n\n\n\n<li><a href=\"https://deployhq.com/\">DeployHQ</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Front-end developer and WordCamp Canada organizer Troy Chaplin joins Community + Code to talk higher-ed WordPress, building an accessibility validation API for Gutenberg, and unwinding with JRPGs.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/6yn47XObyXA"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/12/troy-chaplin-communitycode-video-thumb.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 553,
+  "slug": "episode-14-mike-herchel",
+  "link": "https://communitycode.dev/episodes/episode-14-mike-herchel/",
+  "title": {
+   "rendered": "Episode 14: Mike Herchel"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 14 - Mike Herchel\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/vEaN-j1q2hs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://dripyard.com\">Dripyard</a></li>\n\n\n\n<li><a href=\"https://herchel.com/\">Herchel.com</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/about/starshot/faq\">Drupal CMS and Starshot FAQ</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/project/canvas\">Drupal Canvas</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/docs/develop/theming-drupal/using-single-directory-components\">Single Directory Components</a></li>\n\n\n\n<li><a href=\"https://www.drupal.org/project/olivero\">Olivero theme</a></li>\n\n\n\n<li><a href=\"https://wordpress.org/documentation/article/wordpress-block-editor/\">Gutenberg (WordPress Block Editor)</a></li>\n\n\n\n<li><a href=\"https://webflow.com/\">Webflow</a></li>\n\n\n\n<li><a href=\"https://www.wix.com/\">Wix</a></li>\n\n\n\n<li><a href=\"https://www.squarespace.com/\">Squarespace</a></li>\n\n\n\n<li><a href=\"https://business.adobe.com/products/experience-manager/adobe-experience-manager.html\">Adobe Experience Manager (AEM)</a></li>\n\n\n\n<li><a href=\"https://themeforest.net/\">ThemeForest / Envato Market</a></li>\n\n\n\n<li><a href=\"https://events.drupal.org/\">DrupalCon</a></li>\n\n\n\n<li><a href=\"https://www.badcamp.org/\">BADCamp</a></li>\n\n\n\n<li><a href=\"https://us.wordcamp.org\">WordCamp US</a></li>\n\n\n\n<li><a href=\"https://fldrupal.camp/\">Florida Drupal Camp</a></li>\n\n\n\n<li><a href=\"https://en.wikipedia.org/wiki/Adobe_Fireworks\">Macromedia / Adobe Fireworks</a> (Wikipedia)</li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Mike Herchel talks about the future of Drupal theming, the rise of Drupal CMS and Canvas, and how the community is navigating its first real push toward a commercial theme marketplace. A candid look at collaboration, open-source culture, and Dripyard\u2019s role in Drupal\u2019s next chapter.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/vEaN-j1q2hs"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/12/communitycode-video-thumb-mike-herchel.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 552,
+  "slug": "episode-13-mike-demo",
+  "link": "https://communitycode.dev/episodes/episode-13-mike-demo/",
+  "title": {
+   "rendered": "Episode 13: Mike Demo"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 13 -  Mike Demo\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/4lSvZJbBgBQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://mikedemo.com/\">MikeDemo.com</a></li>\n\n\n\n<li><a href=\"https://x.com/MPMike\">Mike on X</a></li>\n\n\n\n<li><a href=\"https://www.joomla.org/\">Joomla</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://en.wikipedia.org/wiki/Mambo_(software)\">Mambo</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://www.drupal.org/\">Drupal</a></li>\n\n\n\n<li><a href=\"https://www.concretecms.com/\">Concrete CMS</a></li>\n\n\n\n<li><a href=\"https://typo3.org/\">Typo3</a></li>\n\n\n\n<li><a href=\"https://plone.org/\">Plone</a></li>\n\n\n\n<li><a href=\"https://contao.org/en/\">Contao</a></li>\n\n\n\n<li><a href=\"https://www.cms-garden.org/en\">CMS Garden</a></li>\n\n\n\n<li><a href=\"https://allthingsopen.org/\">All Things Open</a></li>\n\n\n\n<li><a href=\"https://us.wordcamp.org\">WordCamp US</a></li>\n\n\n\n<li><a href=\"https://ca.wordcamp.org/2025\">WordCamp Canada 2025</a></li>\n\n\n\n<li><a href=\"https://central.wordcamp.org/\">WordCamp Central</a></li>\n\n\n\n<li><a href=\"https://events.drupal.org/\">DrupalCon</a></li>\n\n\n\n<li><a href=\"https://www.badcamp.org/\">BADCamp</a></li>\n\n\n\n<li><a href=\"https://docs.joomla.org/Pizza,_Bugs_%26_Fun\">Joomla &#8220;Pizza, Bugs and Fun&#8221;</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Mike Demo joins Community + Code to talk about building bridges across open-source communities, his journey from Joomla to WordPress, and why collaboration\u2014not competition\u2014is the future of the open web.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/11/communitycode-video-thumb-mike-demo.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 410,
+  "slug": "episode-12-christos-paloukas",
+  "link": "https://communitycode.dev/episodes/episode-12-christos-paloukas/",
+  "title": {
+   "rendered": "Episode 12: Christos Paloukas"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 12 - Christos Paloukas\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/8Usn17pFuA8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://pressidium.com/\">Pressidium</a></li>\n\n\n\n<li><a href=\"https://athens.wordcamp.org/2025/\">WordCamp Athens</a></li>\n\n\n\n<li><a href=\"https://uncachedpodcast.buzzsprout.com/\">Uncached Podcast</a></li>\n\n\n\n<li><a href=\"https://creators.spotify.com/pod/profile/pressidium/\">The 3Q Interview Podcast</a></li>\n\n\n\n<li><a href=\"https://fair.pm\">FAIR</a> (fair.pm)</li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/paloukas/\">Christos on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://bsky.app/profile/paloukas.com\">Christos on Bluesky</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Christos Paloukas joins Community + Code to talk about his life as a performance engineer at Pressidium and what it takes to make WordPress fast. We also dig into WordCamp Athens, the balance between community and commerce in open source events, and his surprising adventures camping with cats across the Greek islands.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/8Usn17pFuA8"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/10/communitycode-video-thumb-christos-paloukas.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 490,
+  "slug": "episode-11-kim-maida",
+  "link": "https://communitycode.dev/episodes/episode-11-kim-maida/",
+  "title": {
+   "rendered": "Episode 11: Kim Maida"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 11   Kim Maida\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/BeFod8OBvYo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://fusionauth.io/\">FusionAuth</a></li>\n\n\n\n<li><a href=\"https://auth0.com/\">Auth0</a></li>\n\n\n\n<li><a href=\"https://www.okta.com/\">Okta</a></li>\n\n\n\n<li><a href=\"https://www.digitalocean.com/\">DigitalOcean</a></li>\n\n\n\n<li><a href=\"https://en.wikipedia.org/wiki/Identity_and_access_management\">Identity and Access Management</a></li>\n\n\n\n<li><a href=\"https://maida.kim/\">maida.kim</a></li>\n\n\n\n<li><a href=\"https://mihi-mini.studio/\">Mihi Mini Studio</a></li>\n\n\n\n<li><a href=\"https://bsky.app/profile/maida.kim\">Kim on Bluesky</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/kimmaida/\">Kim on LinkedIn</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Senior Director of Developer Relations at FusionAuth, Kim Maida, joins Community + Code to talk about her journey through DevRel, what makes identity work rewarding, and finding balance through art and community. From burnout to belonging, Kim shares how empathy and creativity sustain her work in tech.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": "https://youtu.be/BeFod8OBvYo"
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/10/communitycode-video-thumb-kim-maida.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 382,
+  "slug": "episode-10-tammie-lister",
+  "link": "https://communitycode.dev/episodes/episode-10-tammie-lister/",
+  "title": {
+   "rendered": "Episode 10: Tammie Lister"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 10   Tammie Lister\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/-S0EF2wGRjc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://guildenberg.com\">Guildenberg</a></li>\n\n\n\n<li><a href=\"https://make.wordpress.org/core/\">WordPress Core Development blog</a></li>\n\n\n\n<li><a href=\"https://wordpress.org/gutenberg/\">Gutenberg</a></li>\n\n\n\n<li><a href=\"https://automattic.com/benefits/sabbatical/\">Automattic Sabbatical Benefit</a></li>\n\n\n\n<li><a href=\"https://en.wikipedia.org/wiki/Acorn_Electron\">Acorn Electron</a> (Wikipedia)</li>\n\n\n\n<li><a href=\"https://www.nintendo.com/en-gb/Misc-/Nintendo-Classic-Mini-Nintendo-Entertainment-System/Nintendo-Classic-Mini-Nintendo-Entertainment-System-1124287.html\">Nintendo Classic Mini</a></li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Chris talks with Tammie Lister, co-founder of Guildenberg and longtime WordPress contributor, about product engineering, open source, burnout, and finding creativity in community.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/10/communitycode-video-thumb-tammie.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 457,
+  "slug": "episode-9-raquel-manriquez",
+  "link": "https://communitycode.dev/episodes/episode-9-raquel-manriquez/",
+  "title": {
+   "rendered": "Episode 9: Raquel Manriquez"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 9 - Raquel Manriquez\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/Pl59SIyoJws?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.linkedin.com/in/raquel-karina/\">Raquel on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://raquelkarina.com/\">Raquel&#8217;s blog</a></li>\n\n\n\n<li><a href=\"https://x.com/raquel__karina\">Raquel on X/Twitter</a></li>\n\n\n\n<li><a href=\"https://x.com/WondrlndCurious\">WonderlandCurious on X/Twitter</a></li>\n\n\n\n<li><a href=\"https://www.instagram.com/raque_l/\">Raquel on Instagram</a></li>\n\n\n\n<li><a href=\"https://www.elegantthemes.com/\">Elegant Themes</a></li>\n\n\n\n<li><a href=\"https://pressconf.events/\">PressConf</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/09/communitycode-video-thumb-raquel-manriquez.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 277,
+  "slug": "episode-8-brendan-oleary",
+  "link": "https://communitycode.dev/episodes/episode-8-brendan-oleary/",
+  "title": {
+   "rendered": "Episode 8: Brendan O&#8217;Leary"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code: Episode 8 - Brendan O&#039;Leary\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/VGM2hVPOQzA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://kilocode.ai/\">Kilo Code</a></li>\n\n\n\n<li><a href=\"https://boleary.dev/\">boleary.dev</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/olearycrew/\">Brendan O&#8217;Leary on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://x.com/olearycrew\">Brendan O&#8217;Leary on X</a></li>\n\n\n\n<li><a href=\"https://bsky.app/profile/brendan.fyi\">Brendan O&#8217;Leary on Bluesky</a></li>\n\n\n\n<li><a href=\"https://code.visualstudio.com/\">VS Code</a></li>\n\n\n\n<li><a href=\"https://chatgpt.com/\">ChatGPT</a> (OpenAI)</li>\n\n\n\n<li><a href=\"https://www.anthropic.com/claude\">Claude</a> (Anthropic)</li>\n\n\n\n<li><a href=\"https://gemini.google.com/app\">Gemini</a> (Google)</li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Brendan O\u2019Leary of KiloCode joins Community + Code to talk about the evolving role of developer relations, building community around AI tools, and his journey from engineering into DevRel.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/09/communitycode-video-thumb-brendan-oleary.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 362,
+  "slug": "episode-7-queen-carolyn-of-ladonia",
+  "link": "https://communitycode.dev/episodes/episode-7-queen-carolyn-of-ladonia/",
+  "title": {
+   "rendered": "Episode 7: Queen Carolyn of Ladonia"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code   Episode 7: Queen Carolyn of Ladonia\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/A3LzLZeybKs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.ladonia.org/\">Ladonia.org</a></li>\n\n\n\n<li><a href=\"https://us.wordcamp.org/2025/attendees/\">WordCamp US Attendees</a></li>\n\n\n\n<li><a href=\"https://en.wikipedia.org/wiki/Micronation\">Micronations</a> (Wikipedia)</li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/cshel/\">Queen Carolyn on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://yoast.com/about-us/team/carolyn-shelby/\">Queen Carolyn&#8217;s profile on Yoast.com</a></li>\n\n\n\n<li><a href=\"https://ladoniaherald.com/\">Ladonia Herald</a></li>\n\n\n\n<li><a href=\"https://www.ladonia.org/shop/\">Ladonia Store</a></li>\n\n\n\n<li><a href=\"https://www.ladonia.org/citizenship/\">Apply for Ladonian citizenship!</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Queen Carolyn of Ladonia joins Community + Code to share her journey as monarch of a micronation, her balance between royal duties and a career in tech, and what community leadership looks like when crowns meet code.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/08/communitycode-video-thumb-queen-carolyn.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 150,
+  "slug": "episode-6-will-klein",
+  "link": "https://communitycode.dev/episodes/episode-6-will-klein/",
+  "title": {
+   "rendered": "Episode 6: Will Klein"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\nhttps://youtu.be/RvA_wMRUhEY\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.willklein.co/\">willklein.co</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://bsky.app/profile/willkle.in\">Bluesky</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/willklein/\">LinkedIn</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://developer.north.com/\">North Developer Portal</a></li>\n\n\n\n<li><a href=\"https://weyweyweb.com/\">WeyWeyWeb</a></li>\n\n\n\n<li><a href=\"https://www.youtube.com/@alterconf\">AlterConf</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Developer advocate Will Klein shares his journey from full-stack engineering to DevRel, his battles with social anxiety and burnout, and why community and curiosity are essential to a healthy career in tech.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/08/communitycode-video-thumb-will-klein.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 246,
+  "slug": "episode-5-zach-hendershot",
+  "link": "https://communitycode.dev/episodes/episode-5-zach-hendershot/",
+  "title": {
+   "rendered": "Episode 5: Zach Hendershot"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 5: Zach Hendershot\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/rgHYFVDGpSM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.miruni.io/\">Miruni</a></li>\n\n\n\n<li><a href=\"https://new.drupal.org/docs/drupal-cms/get-to-know-drupal-cms/ai-tools-in-drupal-cms\">AI in Drupal CMS</a></li>\n\n\n\n<li><a href=\"https://chatgpt.com/\">ChatGPT</a></li>\n\n\n\n<li><a href=\"https://claude.ai/\">Claude</a></li>\n\n\n\n<li><a href=\"https://lovable.dev/\">Lovable</a></li>\n\n\n\n<li><a href=\"https://www.youtube.com/watch?v=XNDubWJU0aU\">Cher closet scene in <em>Clueless</em></a></li>\n\n\n\n<li><a href=\"https://jazzsequence.com/2025/03/the-lovecraft-test-gemini/\">Lovecraft test</a> (jazzsequence.com)</li>\n\n\n\n<li><a href=\"https://www.forbes.com/sites/corneliawalther/2025/06/09/intelligence-illusion-what-apples-ai-study-reveals-about-reasoning/\">Intelligence Illusion: What Apple\u2019s AI Study Reveals About Reasoning</a> (Forbes)</li>\n\n\n\n<li><a href=\"https://www.media.mit.edu/projects/your-brain-on-chatgpt/overview/\">Your Brain on ChatGPT</a> (MIT)</li>\n\n\n\n<li><a href=\"https://www.linuxfoundation.org/press/linux-foundation-announces-the-fair-package-manager-project-for-open-source-content-management-system-stability\">Linux Foundation Announces the FAIR Package Manager Project for Open Source Content Management System Stability</a> (Linux Foundation)</li>\n\n\n\n<li><a href=\"https://www.linkedin.com/in/zhendershot/\">Zach Hendershot on LinkedIn</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Zach Hendershot talks about building Miruni, using AI to automate site updates, and why good AI design still needs a human in the loop.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/07/communitycode-video-thumb-zach-hendershot.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 149,
+  "slug": "episode-4-patrick-rauland",
+  "link": "https://communitycode.dev/episodes/episode-4-patrick-rauland/",
+  "title": {
+   "rendered": "Episode 4: Patrick Rauland"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 4: Patrick Rauland\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/NUPWfKvnsEE?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://plugin.fm/\">Plugin.fm</a></li>\n\n\n\n<li><a href=\"https://xeroshoes.com/\">Xero Shoes</a></li>\n\n\n\n<li><a href=\"https://www.linkedin.com/learning/instructors/patrick-rauland?u=126937978\">Patrick&#8217;s courses on LinkedIn Learning</a></li>\n\n\n\n<li><a href=\"https://freemius.com/\">Freemius</a></li>\n\n\n\n<li>Podcast sidebar\n<ul class=\"wp-block-list\">\n<li><a href=\"https://binaryjazz.com\">Binary Jazz</a></li>\n\n\n\n<li><a href=\"https://critrole.com/\">Critical Role</a></li>\n\n\n\n<li><a href=\"https://snafumedia.com/\">SNAFU</a></li>\n\n\n\n<li><a href=\"https://www.marcfennell.com/nutjobs\">Nut Jobs</a></li>\n\n\n\n<li><a href=\"https://www.youtube.com/playlist?list=PL7atuZxmT956cWFGxqSyRdn6GWhBxiAwE\">Wil Wheton&#8217;s Tabletop</a></li>\n\n\n\n<li><a href=\"https://www.dropout.tv/parlor-room\">Parlor Room</a> (Dropout)</li>\n</ul>\n</li>\n\n\n\n<li>Board game sidebar\n<ul class=\"wp-block-list\">\n<li><a href=\"https://indieboardgamedesigners.com/\">Indie Board Game Designers podcast</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/248956/fry-thief\">Fry Thief</a> (BoardGameGeek)</li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/291508/tiny-epic-dinosaurs\">Tiny Epic Dinosaurs</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://boardgamegeek.com/boardgamefamily/25072/series-tiny-epic-gamelyn-games\">Tiny Epic Games</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/165633/slap-45\">Slap .45</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/45/perudo\">Liar&#8217;s Dice</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/316554/dune-imperium\">Dune: Imperium</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/266192/wingspan\">Wingspan</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/410201/wyrmspan\">Wyrmspan</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/256317/guild-master\">Guild Master</a></li>\n\n\n\n<li><a href=\"https://boardgamegeek.com/boardgame/110327/lords-of-waterdeep\">Lords of Waterdeep</a></li>\n\n\n\n<li><a href=\"https://github.com/jazzsequence/games-collector\">Games Collector plugin</a></li>\n</ul>\n</li>\n\n\n\n<li><a href=\"https://www.speakinginbytes.com/\">Speaking in Bytes</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Patrick Rauland joins to discuss WooCommerce, Plugin.fm, Xero Shoes, product marketing, podcasting, and our shared love of tabletop games.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/07/communitycode-video-thumb-patrick-rauland.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 148,
+  "slug": "episode-3-se-reed",
+  "link": "https://communitycode.dev/episodes/episode-3-se-reed/",
+  "title": {
+   "rendered": "Episode 3: S\u00e8 Reed"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 3   Se Reed\" width=\"500\" height=\"375\" src=\"https://www.youtube.com/embed/b_PIQIbP_8M?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://communitycode.dev/2025/04/28/community-code-manifesto/\">Community + Code manifesto</a></li>\n\n\n\n<li><a href=\"https://www.thewpcommunitycollective.com/\">WP Community Collective</a></li>\n\n\n\n<li><a href=\"https://www.gimp.org/\">GNU Image Manipulation Program</a> (GIMP)</li>\n\n\n\n<li><a href=\"https://www.wpwatercooler.com/\">WPwatercooler</a></li>\n\n\n\n<li><a href=\"https://wptavern.com/matt-mullenweg-proposes-wordpress-growth-council\">Matt Mullenweg Proposes WordPress Growth Council</a> (WPTavern)</li>\n\n\n\n<li><a href=\"https://wordpressfoundation.org/\">WordPress Foundation</a></li>\n\n\n\n<li><a href=\"https://opencollective.com/foundation\">Open Collective Foundation</a></li>\n\n\n\n<li><a href=\"https://europe.wordcamp.org/2025/\">WordCamp Europe 2025</a></li>\n\n\n\n<li><a href=\"https://altctrl.org/\">AltCtrl.org</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://youtu.be/O9uQg4Aq89s?si=kOJ606v1ihgE7zzg\">S\u00e8 Reed on The Heart of Open Source at AltCtrlOrg</a></li>\n\n\n\n<li><a href=\"https://youtu.be/eeSpgEKcHlQ?si=L5AKGbSJ81c6Yxm7\">Panel Discussion \u201cThe Future of WordPress\u201d with Francesca Marano, Joost de Valk and S\u00e9 Reed at AltCtrlOrg</a></li>\n</ul>\n</li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>S\u00e8 Reed joins Community + Code to share her WordPress origin story, the founding of WPwatercooler, and how the WP Community Collective is rethinking sustainability and compensation in open source.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/07/communitycode-video-thumb-se-reed.png"
+    }
+   ]
+  }
+ },
+ {
+  "id": 147,
+  "slug": "episode-2-roger-williams",
+  "link": "https://communitycode.dev/episodes/episode-2-roger-williams/",
+  "title": {
+   "rendered": "Episode 2: Roger Williams"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 2: Roger Williams\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/rB9KMGMRMCA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://www.linkedin.com/in/rogerwilliamsmedia/\">Roger Williams on LinkedIn</a></li>\n\n\n\n<li><a href=\"https://pressconf.events/\">PressConf</a></li>\n\n\n\n<li><a href=\"https://kinsta.com/\">Kinsta</a></li>\n\n\n\n<li><a href=\"https://www.youtube.com/playlist?list=PLhYfuAN3YCfxLV7E6_q_8lClVU-TPyRBS\">Kinsta Talks</a> (YouTube)</li>\n\n\n\n<li><a href=\"https://www.uea.ac.uk/en/\">University of East Anglia</a></li>\n\n\n\n<li><a href=\"https://en.wikipedia.org/wiki/Norwich\">Norwich, England</a> (Wikipedia)</li>\n\n\n\n<li><a href=\"https://us.wordcamp.org/2025/\">WordCamp US 2025</a></li>\n\n\n\n<li><a href=\"https://rogerwilliamsmedia.com/\">rogerwilliamsmedia.com</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Roger Williams shares his journey from studying abroad at UEA to building community at Kinsta, dives into early internet culture, and reflects on remote work, AI, and the importance of human connection in open source.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/06/communitycode-video-thumb-roger-williams.jpg"
+    }
+   ]
+  }
+ },
+ {
+  "id": 146,
+  "slug": "episode-1-michelle-frechette",
+  "link": "https://communitycode.dev/episodes/episode-1-michelle-frechette/",
+  "title": {
+   "rendered": "Episode 1: Michelle Frechette"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Episode 1: Michelle Frechette\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/Lh1JWEIo1dE?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<ul class=\"wp-block-list\">\n<li><a href=\"https://profiles.wordpress.org/michelleames/\">Michelle Frechette on WordPress.org</a></li>\n\n\n\n<li><a href=\"https://wordpress.org/plugins/hello-beautiful/\">Hello Beautiful plugin</a> (WordPress.org)</li>\n\n\n\n<li><a href=\"https://poststatus.com/\">Post Status</a></li>\n\n\n\n<li><a href=\"https://wordpress.tv/speakers/michelle-frechette/\">Michelle&#8217;s WordCamp presentations</a> (WordPress.tv)</li>\n\n\n\n<li><a href=\"https://givewp.com/\">GiveWP</a></li>\n\n\n\n<li><a href=\"https://wpcareerpages.com/\">WPCareerPages.com</a></li>\n\n\n\n<li><a href=\"https://www.underrepresentedintech.com/\">Underrepresented in Tech</a></li>\n\n\n\n<li><a href=\"https://wpspeakers.com/\">WPSpeakers</a></li>\n\n\n\n<li><a href=\"https://poststatus.com/category/wp-speakers-virtual-stage-series/\">Post Status WPSpeakers Virtual Stage Series</a>\n<ul class=\"wp-block-list\">\n<li><a href=\"https://poststatus.com/composable-wordpress/\">Composable WordPress</a> by Chris Reynolds</li>\n</ul>\n</li>\n\n\n\n<li><em><a href=\"https://www.amazon.com/Good-Firm-Handshake-Essential-Business/dp/1973985098\">A Good Firm Handshake</a></em> (Amazon.com)</li>\n\n\n\n<li><a href=\"https://speednetworkonline.com/\">Speed Network Online</a></li>\n\n\n\n<li><a href=\"https://sponsormewp.com/\">SponsorMeWP</a></li>\n\n\n\n<li><a href=\"https://us.wordcamp.org/2025/\">WordCamp US 2025</a></li>\n\n\n\n<li><a href=\"https://www.cloudfest.com/usa/\">CloudFest US 2025</a></li>\n\n\n\n<li><a href=\"https://meetmichelle.online/\">MeetMichelle.online</a></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>In this episode of Community + Code, Michelle Frechette shares her journey from discovering WordPress to becoming a powerhouse of community-building\u2014covering her work with Post Status, WordCamps, and initiatives like WPCareerPages and Underrepresented in Tech.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/06/communitycode-video-thumb-michelle-frechette.jpg"
+    }
+   ]
+  }
+ },
+ {
+  "id": 91,
+  "slug": "episode-0-community-code",
+  "link": "https://communitycode.dev/episodes/episode-0-community-code/",
+  "title": {
+   "rendered": "Episode 0: Community + Code"
+  },
+  "content": {
+   "rendered": "\n<figure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube\"><div class=\"wp-block-embed__wrapper\">\n<iframe loading=\"lazy\" title=\"Community + Code Podcast Trailer\" width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/mwBjvAV6emw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>\n</div></figure>\n\n\n\n\n\n\n<p class=\"wp-block-paragraph\">A new tech podcast about people rather than code. Join us on our journey to reveal the human stories behind the tech communities we love.</p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>A new tech podcast about people rather than code. Join us on our journey to reveal the human stories behind the tech communities we love.</p>\n",
+   "protected": false
+  },
+  "meta": {
+   "wpai_generated_summary": "",
+   "ep_exclude_from_search": false,
+   "youtube_url": ""
+  },
+  "_embedded": {
+   "wp:featuredmedia": [
+    {
+     "source_url": "https://communitycode.dev/app/uploads/2025/05/community-code-banner.png"
+    }
+   ]
+  }
+ }
+]
