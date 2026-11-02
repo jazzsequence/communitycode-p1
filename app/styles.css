@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/inter";
+@import "./podcast.css";
 @plugin "@tailwindcss/typography";
 
 /* Scoped via :has() rather than a bare `body {...}` selector so this reset
