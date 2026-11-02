@@ -95,8 +95,28 @@ name is baked into component or library code**.
 
 ## Status
 
-Built: data layer (types, both adapters, merge, filters, params), `/api/episodes`, design system, format helpers,
-block stubs + wiring. See the block status in `components/puck/podcast/*.tsx` (a file that still says
-"not built yet" is a stub).
+Built, tested and committed on `feat/podcast-frontend`. Verified against the live site (production build):
+every `/api/*` route and `/episodes/[slug]`; 38 episodes, 36 guests, 1408 transcript cues, secrets absent from
+every response. **Not verified: anything visual** (layout, contrast, focus, real audio playback, the Puck
+editor at `/p1`); nobody has looked at it in a browser.
 
-Not yet done: P1 site, GitHub repo, Pantheon front-end site, secrets, deploy (all need explicit go-ahead).
+| Area | Where |
+|---|---|
+| Episode data (merge, filters, params) | `lib/episodes/`, `app/api/episodes/**` |
+| Blog (headless WordPress REST) | `lib/posts.ts`, `app/api/posts` |
+| Transcripts (server-side VTT, SSRF-guarded) | `lib/transcript.ts`, `app/api/episodes/[slug]/transcript` |
+| Guests (aggregated; host roles filtered in the block) | `lib/guests.ts`, `app/api/guests` |
+| Newsletter (**501 until `NEWSLETTER_ENDPOINT` is set**; MailPoet side is an untested sketch) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
+| Detail page | `app/episodes/[slug]`, `components/podcast/episode-detail.tsx` |
+| Blocks | `components/puck/podcast/*` (12), client bodies in `components/podcast/*` |
+
+Known gaps / decisions pending:
+- No `/blog/[slug]` route: blog cards link out to the post on the WordPress host. The nav's `/blog`, `/about`,
+  `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor).
+- Skip link target: P1 pages have no `<main id="main-content">`; the root can't wrap it without putting the
+  header inside `<main>`.
+- show.fm contributes nothing until episodes exist in show.fm (the show is externally hosted; its API is
+  empty). The merge is built and unit-tested but not exercised against real show.fm episodes yet.
+- `show.fm` can't read the WordPress feed: Pantheon bot protection challenges its fetcher. Needs Pantheon to
+  allowlist show.fm's user agent (their UA string is not documented; ask show.fm).
+- Not done, each needs an explicit go-ahead: P1 site, GitHub repo, Pantheon front-end site, secrets, deploy.
