@@ -3,8 +3,9 @@
 The `ContactForm` block posts to `POST /api/contact` on this site, which
 validates and forwards server-side to a small endpoint **the WordPress side
 provides** (`CONTACT_ENDPOINT`), which sends the message by mail. Same shape as
-the newsletter (`docs/newsletter-mailpoet.md`). **The WordPress endpoint is a
-separate repo/branch.** Until it exists and both env vars below are set,
+the newsletter (`docs/newsletter-mailpoet.md`). **The WordPress endpoint lives in the
+WordPress repo** (`cc-p1-forms` mu-plugin; contract and secret names in its
+`docs/p1-forms-endpoints.md`). Until it is deployed and both env vars below are set,
 `POST /api/contact` answers `501` and the form tells the visitor it isn't
 available. It never reports a fake success.
 
@@ -18,12 +19,12 @@ Browser ──POST /api/contact──▶ Next.js route ──POST CONTACT_ENDPOI
 
 | Var | Purpose |
 |---|---|
-| `CONTACT_ENDPOINT` | Full http(s) URL of the WordPress route, e.g. `https://example.com/wp-json/cc/v1/contact` |
+| `CONTACT_ENDPOINT` | Full http(s) URL of the WordPress route, e.g. `https://example.com/wp-json/community-code/v1/contact` |
 | `CONTACT_SECRET` | Shared secret, sent as `Authorization: Bearer <secret>` |
 
 If either is missing, or the endpoint isn't an http(s) URL, the route returns
-501. Store the same secret on the WordPress side (a Pantheon secret read with
-`pantheon_get_secret()`, or an uncommitted `wp-config.php` constant).
+501. Store the same secret on the WordPress side as the Pantheon secret
+`cc_p1_contact_secret` (read with `pantheon_get_secret()`).
 
 ## Browser to Next.js: `POST /api/contact`
 

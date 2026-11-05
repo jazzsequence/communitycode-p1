@@ -141,7 +141,7 @@ editor at `/p1`); nobody has looked at it in a browser.
 | Blog (headless WordPress REST) | `lib/posts.ts`, `app/api/posts` |
 | Transcripts (server-side VTT, SSRF-guarded) | `lib/transcript.ts`, `app/api/episodes/[slug]/transcript` |
 | Guests (aggregated; host roles filtered in the block) | `lib/guests.ts`, `app/api/guests` |
-| Newsletter (**501 until `NEWSLETTER_ENDPOINT` is set**; MailPoet side is an untested sketch) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
+| Newsletter (**501 until `NEWSLETTER_ENDPOINT` is set**; the MailPoet endpoint exists in the WordPress repo, written from MailPoet's source but never run against a real signup) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
 | Contact form (**501 until `CONTACT_ENDPOINT` + `CONTACT_SECRET` are set**; the WordPress endpoint is a separate repo/branch; block never viewed in a browser) | `app/api/contact`, `components/puck/podcast/contact-form.tsx`, `docs/contact-wordpress.md` |
 | Shared form-route helpers (capped body, rate limit keyed per form, upstream URL check, WP-host-only UA/bypass headers) | `lib/forms/` |
 | Detail page | `app/episodes/[slug]`, `components/podcast/episode-detail.tsx` |
