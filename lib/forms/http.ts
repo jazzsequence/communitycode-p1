@@ -117,3 +117,21 @@ export function isTimeout(e: unknown): boolean {
   const name = (e as { name?: string } | null)?.name;
   return name === "TimeoutError" || name === "AbortError";
 }
+
+/**
+ * Did the WordPress endpoint really accept this? A 2xx alone is not proof: an
+ * edge cache, a maintenance page or a rewrite can answer 200 with a normal HTML
+ * page where the route should be, and the visitor would be told their message was
+ * sent when nothing ran. The endpoints promise `{"ok":true}` as JSON, so require
+ * exactly that. Never throws; reads the body only to check that flag.
+ */
+export async function upstreamConfirmed(res: Response): Promise<boolean> {
+  if (!res.ok) return false;
+  if (!(res.headers.get("content-type") ?? "").toLowerCase().includes("json")) return false;
+  try {
+    const body: unknown = await res.json();
+    return typeof body === "object" && body !== null && (body as { ok?: unknown }).ok === true;
+  } catch {
+    return false;
+  }
+}

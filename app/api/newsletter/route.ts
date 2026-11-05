@@ -1,5 +1,13 @@
 import type { NextRequest } from "next/server";
-import { isTimeout, readJsonObject, reply, UPSTREAM_TIMEOUT_MS, upstreamUrl, wordpressBypassHeaders } from "@/lib/forms/http";
+import {
+  isTimeout,
+  readJsonObject,
+  reply,
+  UPSTREAM_TIMEOUT_MS,
+  upstreamConfirmed,
+  upstreamUrl,
+  wordpressBypassHeaders,
+} from "@/lib/forms/http";
 
 /**
  * POST /api/newsletter   { email, firstName?, website? }
@@ -73,8 +81,11 @@ export async function POST(req: NextRequest) {
     });
     if (res.ok) {
       // "Already subscribed" is a success from the WordPress side too, so the
-      // form can't be used to find out who is on the list.
-      return reply({ ok: true }, 200);
+      // form can't be used to find out who is on the list. But a 2xx alone is
+      // not proof (an HTML page can answer 200): require the endpoint's {"ok":true}.
+      if (await upstreamConfirmed(res)) return reply({ ok: true }, 200);
+      console.error("[api/newsletter] upstream 2xx without a confirmed JSON body");
+      return reply({ error: "We couldn't sign you up right now. Please try again later." }, 502);
     }
     // Status only: never the body (could echo the address) or the URL.
     console.error("[api/newsletter] upstream status", res.status);

@@ -1,5 +1,13 @@
 import type { NextRequest } from "next/server";
-import { isTimeout, readJsonObject, reply, UPSTREAM_TIMEOUT_MS, upstreamUrl, wordpressBypassHeaders } from "@/lib/forms/http";
+import {
+  isTimeout,
+  readJsonObject,
+  reply,
+  UPSTREAM_TIMEOUT_MS,
+  upstreamConfirmed,
+  upstreamUrl,
+  wordpressBypassHeaders,
+} from "@/lib/forms/http";
 
 /**
  * POST /api/contact   { name, email, message, website? }
@@ -78,12 +86,13 @@ export async function POST(req: NextRequest) {
       redirect: "error",
       signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     });
-    if (res.ok) return reply({ ok: true }, 200);
+    // 2xx is not enough: only the endpoint's own {"ok":true} counts as sent.
+    if (await upstreamConfirmed(res)) return reply({ ok: true }, 200);
     // Status only: never the body (could echo the message) or the URL. Every
     // upstream failure, including its 400, is ours to report generically: the
     // route already validated, so a 400 here is a contract mismatch, not
     // something the visitor can fix.
-    console.error("[api/contact] upstream status", res.status);
+    console.error("[api/contact] upstream status", res.status, res.ok ? "(2xx without a confirmed JSON body)" : "");
     return reply({ error: SEND_FAILED }, 502);
   } catch (e) {
     console.error("[api/contact] upstream", isTimeout(e) ? "timeout" : "unreachable");
