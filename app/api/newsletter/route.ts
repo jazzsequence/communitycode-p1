@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { getConfig } from "@/lib/config";
+import { DEFAULT_WP_USER_AGENT, getConfig } from "@/lib/config";
 import { checkRateLimit } from "./rate-limit";
 
 /**
@@ -133,10 +133,13 @@ export async function POST(req: NextRequest) {
   } catch {
     // ConfigError: treated as "WordPress not configured".
   }
-  const bypass =
-    wp?.bypassToken && url.hostname === new URL(wp.baseUrl).hostname
-      ? { "x-pantheon-bot-bypass": wp.bypassToken }
-      : {};
+  const toWordPress = !!wp && url.hostname === new URL(wp.baseUrl).hostname;
+  const bypass: Record<string, string> = {};
+  if (wp && toWordPress) {
+    // Same identity as wpFetch: the allowlisted User-Agent, and the token if set.
+    bypass["User-Agent"] = wp.userAgent || DEFAULT_WP_USER_AGENT;
+    if (wp.bypassToken) bypass["x-pantheon-bot-bypass"] = wp.bypassToken;
+  }
 
   try {
     const res = await fetch(url, {

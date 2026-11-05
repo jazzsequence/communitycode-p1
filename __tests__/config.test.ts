@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ConfigError, isAllowedTranscriptUrl, loadConfig } from "@/lib/config";
+import { ConfigError, DEFAULT_WP_USER_AGENT, isAllowedTranscriptUrl, loadConfig } from "@/lib/config";
 
 describe("loadConfig", () => {
   it("disables backends that are not configured", () => {
@@ -14,10 +14,25 @@ describe("loadConfig", () => {
       SHOWFM_PODCAST_SLUG: "my-show",
       SHOWFM_API_KEY: "k",
     });
-    expect(c.wordpress).toEqual({ baseUrl: "https://example.org", feedPath: "/podcast.xml", bypassToken: "tok" });
+    expect(c.wordpress).toEqual({
+      baseUrl: "https://example.org",
+      feedPath: "/podcast.xml",
+      userAgent: DEFAULT_WP_USER_AGENT,
+      bypassToken: "tok",
+    });
     expect(c.showfm).toEqual({ apiBase: "https://api.show.fm/v1", podcastSlug: "my-show", apiKey: "k" });
     // WordPress host + show.fm's media CDN (show.fm is configured).
     expect(c.transcriptHosts).toEqual(["example.org", "m.cdn.media"]);
+  });
+
+  it("sends an allowlistable User-Agent, overridable with WP_USER_AGENT", () => {
+    expect(loadConfig({ WP_BASE_URL: "https://a.test" }).wordpress?.userAgent).toBe(DEFAULT_WP_USER_AGENT);
+    expect(loadConfig({ WP_BASE_URL: "https://a.test", WP_USER_AGENT: " my-site/2.0 " }).wordpress?.userAgent).toBe(
+      "my-site/2.0",
+    );
+    expect(loadConfig({ WP_BASE_URL: "https://a.test", WP_USER_AGENT: "  " }).wordpress?.userAgent).toBe(
+      DEFAULT_WP_USER_AGENT,
+    );
   });
 
   it("uses PowerPress's standard feed path only as a generic default", () => {
