@@ -73,7 +73,7 @@ Content-Type: application/json
 
 | Status | Meaning |
 |---|---|
-| 200 / 201 | Subscribed, **or already subscribed**. Both must be 2xx so the form can't be used to discover who is on the list. |
+| 200 / 201 with `Content-Type: application/json` and body `{"ok":true}` | Subscribed, **or already subscribed**. Both must look identical so the form can't be used to discover who is on the list. A 2xx without that JSON body (for example an HTML page) is **not** treated as success: Next.js answers 502. |
 | 400 / 422 | Address rejected. Next.js shows "That email address wasn't accepted." |
 | 401 / 403 | Bad or missing secret. Shown to visitors as a generic failure (502); logged. |
 | 429 | Rate limited |
