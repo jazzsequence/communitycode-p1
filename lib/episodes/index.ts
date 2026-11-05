@@ -20,27 +20,67 @@ export type { Episode, EpisodePage, EpisodeSource, ListParams, Guest, EpisodeTyp
  * WordPress fills any gaps (audio, transcript, show notes).
  */
 
-/** Same episode in both systems? Season+number is the stable key; slug the fallback. */
-function sameEpisode(a: Episode, b: Episode): boolean {
-  if (a.season !== null && a.number !== null && b.season !== null && b.number !== null) {
-    return a.season === b.season && a.number === b.number;
-  }
-  return a.slug === b.slug;
+const normTitle = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+/** show.fm suffixes imported slugs with 6 random characters ("episode-36-x-a98avk"). */
+const stripSlugSuffix = (slug: string) => slug.replace(/-[a-z0-9]{6}$/, "");
+
+/**
+ * Pair show.fm episodes with WordPress episodes. Real data forced three passes:
+ *  1. Exact normalised title. Titles carry the episode number and guest, so they
+ *     are the strongest key, and season+number alone is NOT unique: the WordPress
+ *     archive has two episodes numbered S1 E7.
+ *  2. Season+number, only when exactly one candidate remains (survives a retitle).
+ *  3. Slug with show.fm's random suffix stripped.
+ * Each WordPress episode is used at most once.
+ */
+function pairEpisodes(showfm: Episode[], wp: Episode[]): Map<Episode, Episode> {
+  const pairs = new Map<Episode, Episode>();
+  const free = new Set(wp);
+
+  const pass = (key: (e: Episode) => string | null) => {
+    const byKey = new Map<string, Episode[]>();
+    for (const w of free) {
+      const k = key(w);
+      if (k !== null) byKey.set(k, [...(byKey.get(k) ?? []), w]);
+    }
+    for (const s of showfm) {
+      if (pairs.has(s)) continue;
+      const k = key(s);
+      const candidates = k === null ? undefined : byKey.get(k);
+      if (candidates?.length === 1) {
+        pairs.set(s, candidates[0]);
+        free.delete(candidates[0]);
+      }
+    }
+  };
+
+  pass((e) => normTitle(e.title) || null);
+  pass((e) => (e.season !== null && e.number !== null ? `${e.season}:${e.number}` : null));
+  pass((e) => stripSlugSuffix(e.slug));
+  return pairs;
 }
 
-/** show.fm record wins; WordPress supplies what show.fm lacks. The URL slug stays
- *  WordPress's so existing /episodes/{slug} links keep working. */
+/**
+ * show.fm wins on identity and media (id, audio, transcript, artwork). WordPress
+ * wins on editorial text: show.fm's imported description is the flattened show
+ * notes, and the CMS the host actually edits is WordPress. The WP slug is kept so
+ * existing /episodes/{slug} URLs hold.
+ */
 export function mergeEpisode(showfm: Episode, wp: Episode): Episode {
   return {
     ...wp,
     ...showfm,
     slug: wp.slug,
-    description: showfm.description || wp.description,
-    showNotesHtml: showfm.showNotesHtml ?? wp.showNotesHtml,
+    title: wp.title || showfm.title,
+    description: wp.description || showfm.description,
+    showNotesHtml: wp.showNotesHtml ?? showfm.showNotesHtml,
     durationSeconds: showfm.durationSeconds ?? wp.durationSeconds,
     audio: showfm.audio ?? wp.audio,
     artworkUrl: showfm.artworkUrl ?? wp.artworkUrl,
     transcript: showfm.transcript ?? wp.transcript,
+    season: showfm.season ?? wp.season,
+    number: showfm.number ?? wp.number,
     guests: showfm.guests.length ? showfm.guests : wp.guests,
     links: { ...wp.links, ...showfm.links },
     origin: "showfm",
@@ -48,14 +88,13 @@ export function mergeEpisode(showfm: Episode, wp: Episode): Episode {
 }
 
 export function mergeEpisodes(showfm: Episode[], wp: Episode[]): Episode[] {
-  const unmatched = [...wp];
+  const pairs = pairEpisodes(showfm, wp);
+  const paired = new Set(pairs.values());
   const merged = showfm.map((s) => {
-    const i = unmatched.findIndex((w) => sameEpisode(s, w));
-    if (i === -1) return s;
-    const [w] = unmatched.splice(i, 1);
-    return mergeEpisode(s, w);
+    const w = pairs.get(s);
+    return w ? mergeEpisode(s, w) : s;
   });
-  return [...merged, ...unmatched].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  return [...merged, ...wp.filter((w) => !paired.has(w))].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 }
 
 export function composite(primary: EpisodeSource, fallback: EpisodeSource): EpisodeSource {

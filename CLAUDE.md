@@ -38,6 +38,16 @@ Run lint, tsc, tests and build before presenting changes.
   back catalogue shows in show.fm's UI as a read-only RSS list and is *not* in the API. Hence the merge:
   WordPress supplies the archive, show.fm adds/overrides. On a match (same season+number), show.fm wins, WP
   fills gaps (audio, transcript, show notes), and the **WP slug is kept** so `/episodes/{slug}` URLs don't change.
+- **The show moved to show.fm hosting** (`hosting_type` went `external` -> `podcasterplus`, 38 episodes imported), so
+  the merge is now exercised for real and audio/transcripts come from show.fm's CDN (`m.cdn.media`, allowed
+  automatically for transcripts). Real-data findings that shaped the merge (`__tests__/episodes-real-merge.test.ts`
+  runs on real snapshots of both sides):
+  - show.fm's imported slugs get 6 random characters (`episode-36-x-a98avk`); the site keeps the WordPress slug.
+  - Pairing is title -> unambiguous season+number -> slug-minus-suffix. Season+number alone is NOT unique
+    (WordPress has two S1 E7) and show.fm lacks it for 4 episodes.
+  - show.fm's imported `description` is the flattened show-notes link list + "appeared first on" footer, and
+    `show_notes_html` is empty, so **WordPress owns editorial text** (description, show notes); show.fm owns
+    identity and media. Its public `people` are empty, so guests still come from WordPress titles.
 - **Both sources are needed for one episode.** REST has no audio/season/duration (PowerPress keeps them out of
   it); the feed has no show notes HTML/slug. Joined on permalink.
 - **communitycode.dev is behind Pantheon next-gen GCDN bot protection.** Unknown clients get a 403 managed
@@ -115,8 +125,6 @@ Known gaps / decisions pending:
   `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor).
 - Skip link target: P1 pages have no `<main id="main-content">`; the root can't wrap it without putting the
   header inside `<main>`.
-- show.fm contributes nothing until episodes exist in show.fm (the show is externally hosted; its API is
-  empty). The merge is built and unit-tested but not exercised against real show.fm episodes yet.
-- `show.fm` can't read the WordPress feed: Pantheon bot protection challenges its fetcher. Needs Pantheon to
-  allowlist show.fm's user agent (their UA string is not documented; ask show.fm).
+- show.fm's `links.embed` (a `<showfm-player>` iframe) is available now that the show is hosted there; the player
+  block still uses a native `<audio>` on the CDN MP3. Switching is an option, not done.
 - Not done, each needs an explicit go-ahead: P1 site, GitHub repo, Pantheon front-end site, secrets, deploy.

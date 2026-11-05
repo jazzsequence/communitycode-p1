@@ -16,7 +16,8 @@ describe("loadConfig", () => {
     });
     expect(c.wordpress).toEqual({ baseUrl: "https://example.org", feedPath: "/podcast.xml", bypassToken: "tok" });
     expect(c.showfm).toEqual({ apiBase: "https://api.show.fm/v1", podcastSlug: "my-show", apiKey: "k" });
-    expect(c.transcriptHosts).toEqual(["example.org"]);
+    // WordPress host + show.fm's media CDN (show.fm is configured).
+    expect(c.transcriptHosts).toEqual(["example.org", "m.cdn.media"]);
   });
 
   it("uses PowerPress's standard feed path only as a generic default", () => {
@@ -25,6 +26,11 @@ describe("loadConfig", () => {
 
   it("keeps a WordPress install in a subdirectory", () => {
     expect(loadConfig({ WP_BASE_URL: "https://a.test/blog/" }).wordpress?.baseUrl).toBe("https://a.test/blog");
+  });
+
+  it("allows show.fm's media CDN only when show.fm is configured", () => {
+    expect(loadConfig({ WP_BASE_URL: "https://a.test" }).transcriptHosts).toEqual(["a.test"]);
+    expect(loadConfig({ SHOWFM_PODCAST_SLUG: "s" }).transcriptHosts).toEqual(["m.cdn.media"]);
   });
 
   it("merges extra transcript hosts, lowercased and de-duplicated", () => {

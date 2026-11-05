@@ -57,3 +57,11 @@ export function toPlainText(html: string | null | undefined): string {
     .replace(/\s+/g, " ")
     .trim();
 }
+
+/**
+ * Descriptions imported from a WordPress feed end with "The post X appeared
+ * first on Y." Strip it from plain text (show.fm's import keeps it verbatim).
+ */
+export function cleanDescription(text: string | null | undefined): string {
+  return (text ?? "").replace(/\s*The post\b.*?\bappeared first on\b.*$/is, "").replace(/\s+/g, " ").trim();
+}
