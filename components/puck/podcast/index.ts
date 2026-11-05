@@ -35,6 +35,7 @@ export const podcastBlocks = {
 
 export const podcastCategories = {
   episodes: { title: "Episodes", components: ["LatestEpisodeHero", "EpisodeArchive", "EpisodePlayer", "TranscriptViewer", "GuestGrid"] },
-  content: { title: "Content", components: ["BlogArchive", "HostAbout", "SubscribeLinks", "NewsletterSignup", "SiteSearch"] },
+  // Keyed `show`, not `content`: the P1 block kit has a `content` category and the later spread would replace this one.
+  show: { title: "Show & community", components: ["BlogArchive", "HostAbout", "SubscribeLinks", "NewsletterSignup", "SiteSearch"] },
   site: { title: "Site", components: ["SiteHeader", "SiteFooter"] },
 } satisfies NonNullable<Config["categories"]>;
