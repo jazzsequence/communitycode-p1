@@ -74,7 +74,7 @@ Expected replies:
 
 | Status | Body | Next.js does |
 |---|---|---|
-| 200 | `{"ok":true}` | Replies `200 {"ok":true}` |
+| 200 | `{"ok":true}` | Replies `200 {"ok":true}` as JSON. Next.js counts a 2xx as sent **only** with that body: an HTML page or any other 2xx answers 502, so a CMS or edge serving a page where the route should be can't make a message look sent. |
 | 400 | `{"error":"..."}` | Replies 502 generic (Next.js already validated, so this is a contract mismatch). Logs the status. |
 | 401 / 403 | any | Bad secret or bot challenge: 502 generic, logged |
 | 5xx | any | 502 generic, logged |

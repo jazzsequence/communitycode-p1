@@ -258,6 +258,14 @@ describe("upstream failures", () => {
     ["a 400", async () => Response.json({ error: `bad ${EMAIL}` }, { status: 400 })],
     ["a 429", async () => new Response("", { status: 429 })],
     [
+      "a 200 HTML page instead of the endpoint (an edge or CMS answering for it)",
+      async () => new Response(`<!DOCTYPE html><html><body>${EMAIL} ${MESSAGE}</body></html>`, { status: 200, headers: { "content-type": "text/html; charset=UTF-8" } }),
+    ],
+    ["a 200 JSON body without ok:true", async () => Response.json({ sent: true })],
+    ["a 200 JSON body with ok:false", async () => Response.json({ ok: false })],
+    ["a 200 with an empty body", async () => new Response("", { status: 200 })],
+    ["a 200 JSON content-type with a non-JSON body", async () => new Response("not json", { status: 200, headers: { "content-type": "application/json" } })],
+    [
       "a network error",
       async () => {
         throw new TypeError(`fetch failed ${ENDPOINT} ${SECRET} ${EMAIL}`);
