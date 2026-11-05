@@ -12,7 +12,7 @@ import "server-only";
 export class ConfigError extends Error {}
 
 export interface AppConfig {
-  wordpress: { baseUrl: string; feedPath: string; bypassToken?: string } | null;
+  wordpress: { baseUrl: string; feedPath: string; userAgent?: string; bypassToken?: string } | null;
   showfm: { apiBase: string; podcastSlug: string; apiKey?: string } | null;
   /**
    * Hostnames server-side code may fetch transcripts from (an SSRF guard, since
@@ -40,6 +40,12 @@ function httpUrl(name: string, value: string): URL {
 
 export const DEFAULT_SHOWFM_API_BASE = "https://api.show.fm/v1";
 export const DEFAULT_FEED_PATH = "/feed/podcast/"; // PowerPress's standard path
+/**
+ * Sent to WordPress. Pantheon's `gcdn:ua-bypass` matches the full string exactly
+ * (case-sensitive, version included), so whatever is allowlisted must equal this.
+ * Override with WP_USER_AGENT.
+ */
+export const DEFAULT_WP_USER_AGENT = "communitycode-p1/1.0";
 /** show.fm serves hosted audio and transcripts from here. Part of the vendor, not the site. */
 export const SHOWFM_MEDIA_HOSTS = ["m.cdn.media"];
 
@@ -66,6 +72,7 @@ export function loadConfig(env: Env = process.env): AppConfig {
       ? {
           baseUrl: wpUrl.origin + wpUrl.pathname.replace(/\/+$/, ""),
           feedPath: feedPath.startsWith("/") ? feedPath : `/${feedPath}`,
+          userAgent: env.WP_USER_AGENT?.trim() || DEFAULT_WP_USER_AGENT,
           bypassToken: env.PANTHEON_BOT_BYPASS_TOKEN?.trim() || undefined,
         }
       : null,

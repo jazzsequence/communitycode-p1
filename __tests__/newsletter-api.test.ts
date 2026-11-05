@@ -4,7 +4,7 @@ import { POST } from "@/app/api/newsletter/route";
 import { checkRateLimit, resetRateLimit } from "@/app/api/newsletter/rate-limit";
 
 // WordPress config comes from getConfig(); control it per test.
-const wp = vi.hoisted(() => ({ value: null as null | { baseUrl: string; feedPath: string; bypassToken?: string } }));
+const wp = vi.hoisted(() => ({ value: null as null | { baseUrl: string; feedPath: string; userAgent?: string; bypassToken?: string } }));
 vi.mock("@/lib/config", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/lib/config")>()),
   getConfig: () => ({ wordpress: wp.value, showfm: null, transcriptHosts: [] }),
@@ -85,6 +85,18 @@ describe("POST /api/newsletter: happy path", () => {
     process.env.NEWSLETTER_ENDPOINT = "https://other.example.org/subscribe";
     await send({ email: EMAIL });
     expect((fetchMock.mock.calls[1][1] as RequestInit).headers).not.toHaveProperty("x-pantheon-bot-bypass");
+  });
+
+  it("sends the allowlisted User-Agent, with no token, only to the WordPress host", async () => {
+    wp.value = { baseUrl: "https://example.com", feedPath: "/feed/", userAgent: "site-ua/1.0" };
+    await send({ email: EMAIL });
+    const sent = (fetchMock.mock.calls[0][1] as RequestInit).headers as Record<string, string>;
+    expect(sent["User-Agent"]).toBe("site-ua/1.0");
+    expect(sent).not.toHaveProperty("x-pantheon-bot-bypass");
+
+    process.env.NEWSLETTER_ENDPOINT = "https://other.example.org/subscribe";
+    await send({ email: EMAIL });
+    expect((fetchMock.mock.calls[1][1] as RequestInit).headers).not.toHaveProperty("User-Agent");
   });
 
   it("works with WordPress unconfigured (no bypass header, still forwards)", async () => {

@@ -51,10 +51,14 @@ Run lint, tsc, tests and build before presenting changes.
 - **Both sources are needed for one episode.** REST has no audio/season/duration (PowerPress keeps them out of
   it); the feed has no show notes HTML/slug. Joined on permalink.
 - **communitycode.dev is behind Pantheon next-gen GCDN bot protection.** Unknown clients get a 403 managed
-  challenge (`cf-mitigated: challenge`), even for the feed, REST and `.vtt` files (MP3s pass). Server-side fetches
-  send `x-pantheon-bot-bypass` from `PANTHEON_BOT_BYPASS_TOKEN` (`terminus gcdn:bot-bypass communitycodedev`,
-  the `current` row). Bypass tokens need the *client* to send a header, which is why show.fm's own importer
-  can't read the feed without a user-agent allowlist from Pantheon.
+  challenge (`cf-mitigated: challenge`), even for the feed, REST and `.vtt` files (MP3s pass). Server-side
+  fetches get through by **User-Agent allowlist**: `terminus gcdn:ua-bypass:add <site>.<env> <host> "<ua>"`
+  with the exact string in `WP_USER_AGENT` (default `communitycode-p1/1.0`; matching is exact, so change both
+  together). Verified live: that UA gets 200 on the feed and REST with no token, while a near-miss UA is
+  challenged. The alternative is `PANTHEON_BOT_BYPASS_TOKEN`, but it **rotates** (current/next, ~6 months), so
+  never store it in a file that outlives it: read it with `terminus gcdn:bot-bypass communitycodedev`.
+  `wpFetch` names both fixes when it sees a challenge. Bypass needs the *client* to send the UA/header, which is
+  why show.fm's importer needed its own allowlist entries.
 - **The feed is cached at the edge for a week** (`max-age=604800`) and stays stale after PowerPress changes.
   Fetches append `?cb=<5-minute bucket>` to force an origin read without defeating caching.
 - **`_embed` needs `_links` in `_fields`.** Omit it and WordPress silently drops embedded featured images.

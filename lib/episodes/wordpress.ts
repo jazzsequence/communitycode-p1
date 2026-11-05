@@ -1,5 +1,5 @@
 import "server-only";
-import { ConfigError, getConfig } from "../config";
+import { ConfigError, DEFAULT_WP_USER_AGENT, getConfig } from "../config";
 import { pageOf, seasonsOf } from "./filter";
 import { buildEpisodes, parseFeed, type RestEpisode } from "./wordpress-parse";
 import type { Episode, EpisodeSource, ListParams } from "./types";
@@ -10,9 +10,12 @@ import type { Episode, EpisodeSource, ListParams } from "./types";
  * feed; show notes and the slug only in REST.
  *
  * communitycode.dev sits behind Pantheon's next-gen GCDN bot protection, which
- * challenges unrecognised clients with a 403. Server-side requests send the
- * site's bot-bypass token (`terminus gcdn:bot-bypass communitycodedev`) in
- * `x-pantheon-bot-bypass`. The token is a secret: env only, never logged.
+ * challenges unrecognised clients with a 403. Server-side requests get past it
+ * one of two ways:
+ *  - a User-Agent allowlisted with `terminus gcdn:ua-bypass:add` (WP_USER_AGENT;
+ *    exact match, nothing to rotate), or
+ *  - the site's bot-bypass token (`terminus gcdn:bot-bypass <site>`) in
+ *    `x-pantheon-bot-bypass`. It rotates, and is a secret: env only, never logged.
  */
 
 const REVALIDATE_SECONDS = 300;
@@ -21,6 +24,8 @@ export const EPISODES_TAG = "episodes";
 export interface WordPressConfig {
   baseUrl: string;
   feedPath: string;
+  /** Must equal the `gcdn:ua-bypass` entry exactly. Defaults to DEFAULT_WP_USER_AGENT. */
+  userAgent?: string;
   bypassToken?: string;
 }
 
@@ -43,7 +48,7 @@ function cacheBust(): string {
 export function wpHeaders(cfg: WordPressConfig, accept: string): HeadersInit {
   return {
     Accept: accept,
-    "User-Agent": "communitycode-p1/0.1 (+https://communitycode.dev)",
+    "User-Agent": cfg.userAgent || DEFAULT_WP_USER_AGENT,
     ...(cfg.bypassToken ? { "x-pantheon-bot-bypass": cfg.bypassToken } : {}),
   };
 }
@@ -58,7 +63,9 @@ export async function wpFetch(cfg: WordPressConfig, url: string, accept: string)
   if (res.status === 403 && res.headers.get("cf-mitigated") === "challenge") {
     throw new Error(
       `WordPress request blocked by Pantheon bot protection (${new URL(url).pathname}). ` +
-        `Set PANTHEON_BOT_BYPASS_TOKEN (terminus gcdn:bot-bypass <site>).`,
+        `Allowlist the User-Agent "${cfg.userAgent || DEFAULT_WP_USER_AGENT}" ` +
+        `(terminus gcdn:ua-bypass:add <site>.<env> <host> "<user agent>"), or set a current ` +
+        `PANTHEON_BOT_BYPASS_TOKEN (terminus gcdn:bot-bypass <site>); bypass tokens expire.`,
     );
   }
   if (!res.ok) throw new Error(`WordPress request failed: ${res.status} ${new URL(url).pathname}`);
