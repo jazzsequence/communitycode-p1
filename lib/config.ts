@@ -16,8 +16,8 @@ export interface AppConfig {
   showfm: { apiBase: string; podcastSlug: string; apiKey?: string } | null;
   /**
    * Hostnames server-side code may fetch transcripts from (an SSRF guard, since
-   * the URL comes from a third-party feed). The WordPress host is included
-   * automatically; add others (e.g. show.fm's media host) via
+   * the URL comes from a third-party feed). The WordPress host and, when show.fm
+   * is configured, show.fm's media CDN are included automatically; add others via
    * TRANSCRIPT_ALLOWED_HOSTS.
    */
   transcriptHosts: string[];
@@ -40,6 +40,8 @@ function httpUrl(name: string, value: string): URL {
 
 export const DEFAULT_SHOWFM_API_BASE = "https://api.show.fm/v1";
 export const DEFAULT_FEED_PATH = "/feed/podcast/"; // PowerPress's standard path
+/** show.fm serves hosted audio and transcripts from here. Part of the vendor, not the site. */
+export const SHOWFM_MEDIA_HOSTS = ["m.cdn.media"];
 
 export function loadConfig(env: Env = process.env): AppConfig {
   const wpRaw = env.WP_BASE_URL?.trim();
@@ -68,7 +70,13 @@ export function loadConfig(env: Env = process.env): AppConfig {
         }
       : null,
     showfm: slug ? { apiBase, podcastSlug: slug, apiKey: env.SHOWFM_API_KEY?.trim() || undefined } : null,
-    transcriptHosts: [...new Set([...(wpUrl ? [wpUrl.hostname.toLowerCase()] : []), ...extraHosts])],
+    transcriptHosts: [
+      ...new Set([
+        ...(wpUrl ? [wpUrl.hostname.toLowerCase()] : []),
+        ...(slug ? SHOWFM_MEDIA_HOSTS : []),
+        ...extraHosts,
+      ]),
+    ],
   };
 }
 
