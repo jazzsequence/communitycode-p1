@@ -64,6 +64,9 @@ Run lint, tsc, tests and build before presenting changes.
 - **`_embed` needs `_links` in `_fields`.** Omit it and WordPress silently drops embedded featured images.
 - **Guests come from titles** ("Episode 36: Jacquie Capur"), not a field. `parseGuestsFromTitle`; non-episode
   items have none. show.fm `people` replaces them when present.
+- **The theme is always dark; it is not tied to the OS.** The P1 editor canvas reports a light color scheme on a
+  dark OS, so a `prefers-color-scheme` switch showed editors a cream page visitors never see. Light exists as an
+  opt-in `data-theme="light"` on `.cc-root` (nothing sets it today).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
   styles into its editor canvas iframe. Never put tokens on `body`/`:root`.
 - `tsconfig` is `strict: false`, so boolean-discriminated unions don't narrow: use `"error" in x`.

@@ -7,7 +7,10 @@
  * only the page tree renders keeps the two apart. See app/styles.css.
  *
  * Re-theme by editing the token block only. Components below use tokens, never
- * raw colours. Dark by default; light follows the OS.
+ * raw colours. Always dark. A light variant exists but is opt-in
+ * (`data-theme="light"` on `.cc-root`), NOT tied to the OS: the P1 editor canvas
+ * reports a light color scheme even on a dark OS, which showed editors a cream
+ * page that visitors never see.
  */
 
 .cc-root {
@@ -50,7 +53,7 @@
 
   /*
    * show.fm embeds (<showfm-player>, <showfm-transcript>) read these hooks, so
-   * they follow the site's tokens, including the light/dark switch below. They
+   * they follow the site's tokens, including the optional light variant below. They
    * are plain custom properties: they inherit into the elements' shadow DOM.
    */
   --showfm-accent: var(--cc-accent);
@@ -73,7 +76,7 @@
 /*
  * P1 block kit (generic page blocks: Heading, Hero, Columns, ...) styles itself
  * from --p1-* tokens, grayscale by default. Point them at the site's tokens so
- * those blocks look like Community + Code, in dark and light alike. Declared on
+ * those blocks look like Community + Code, in the dark theme and the optional light one. Declared on
  * .cc-root, so the kit's :root defaults still apply anywhere outside it.
  */
 .cc-root {
@@ -101,20 +104,19 @@
   --p1-container-default: var(--cc-content);
 }
 
-@media (prefers-color-scheme: light) {
-  .cc-root {
-    --cc-bg: #faf8f4;
-    --cc-surface: #ffffff;
-    --cc-surface-2: #f1ede5;
-    --cc-border: #e0d9cc;
-    --cc-text: #14181f;
-    --cc-muted: #566170;
-    --cc-accent: #b45309;
-    --cc-accent-ink: #ffffff;
-    --cc-link: #0b5cad;
-    --cc-danger: #b42318;
-    --cc-focus: #b45309;
-  }
+/* Opt-in light variant. Nothing sets it today. */
+.cc-root[data-theme="light"] {
+  --cc-bg: #faf8f4;
+  --cc-surface: #ffffff;
+  --cc-surface-2: #f1ede5;
+  --cc-border: #e0d9cc;
+  --cc-text: #14181f;
+  --cc-muted: #566170;
+  --cc-accent: #b45309;
+  --cc-accent-ink: #ffffff;
+  --cc-link: #0b5cad;
+  --cc-danger: #b42318;
+  --cc-focus: #b45309;
 }
 
 .cc-root *,
