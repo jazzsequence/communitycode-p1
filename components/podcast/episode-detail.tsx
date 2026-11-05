@@ -1,10 +1,13 @@
 import { SiteFooterView, SiteHeaderView } from "@/components/podcast/chrome";
 import { AudioPlayer } from "@/components/podcast/audio-player";
+import { ShowfmPlayer } from "@/components/podcast/showfm-player";
+import { ShowfmTranscript } from "@/components/podcast/showfm-transcript";
 import { TranscriptViewer } from "@/components/podcast/transcript-view";
 import { site } from "@/content/site";
 import { DEFAULT_LINKS, expandTemplate } from "@/lib/block-config";
 import type { Episode } from "@/lib/episodes/types";
 import { formatDate, formatDuration, formatEpisodeLabel } from "@/lib/format";
+import { canOfferShowfmTranscript, isShowfmHosted } from "@/lib/showfm-embed";
 
 /** Path of an episode page: the shared link pattern (lib/block-config.ts), which is also this route's own path. */
 export function episodePath(episode: Pick<Episode, "slug">): string {
@@ -141,7 +144,11 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
             </header>
 
             <section aria-label="Listen" style={{ marginTop: "var(--cc-space-6)" }}>
-              {episode.audio ? (
+              {episode.audio && isShowfmHosted(episode) ? (
+                // show.fm hosts this episode: its player, with the documented fallback
+                // (link + <audio>) in the server HTML for no-JS visitors and crawlers.
+                <ShowfmPlayer episode={episode} />
+              ) : episode.audio ? (
                 <AudioPlayer
                   src={episode.audio.url}
                   title={episode.title}
@@ -169,7 +176,11 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
                 <h2 id="transcript-heading" style={{ fontSize: "var(--cc-text-xl)", marginBottom: "var(--cc-space-4)" }}>
                   Transcript
                 </h2>
-                <TranscriptViewer slug={episode.slug} />
+                {canOfferShowfmTranscript(episode) ? (
+                  <ShowfmTranscript episode={episode} />
+                ) : (
+                  <TranscriptViewer slug={episode.slug} />
+                )}
               </section>
             ) : null}
           </div>

@@ -222,8 +222,9 @@ describe("Puck blocks", () => {
   });
 
   it("exposes every endpoint as a text field, defaulted from lib/block-config.ts", () => {
-    expect(Object.keys(episodePlayerBlock.fields)).toEqual(["episodeSlug", "episodeEndpoint", "episodesEndpoint"]);
-    expect(Object.keys(transcriptViewerBlock.fields)).toEqual([
+    // The original fields keep their ids and order; the show.fm options are appended.
+    expect(Object.keys(episodePlayerBlock.fields).slice(0, 3)).toEqual(["episodeSlug", "episodeEndpoint", "episodesEndpoint"]);
+    expect(Object.keys(transcriptViewerBlock.fields).slice(0, 5)).toEqual([
       "episodeSlug",
       "showSearch",
       "transcriptEndpoint",
@@ -240,8 +241,9 @@ describe("Puck blocks", () => {
       transcriptEndpoint: DEFAULT_ENDPOINTS.transcript,
     });
     for (const f of [...Object.values(episodePlayerBlock.fields), ...Object.values(transcriptViewerBlock.fields)]) {
-      expect(["text", "radio"]).toContain(f.type);
+      expect(["text", "radio", "select", "number"]).toContain(f.type);
     }
+    for (const k of ["episodeEndpoint", "episodesEndpoint"] as const) expect(episodePlayerBlock.fields[k].type).toBe("text");
   });
 
   it("renders with no props at all (defaults are merged inside render)", async () => {
