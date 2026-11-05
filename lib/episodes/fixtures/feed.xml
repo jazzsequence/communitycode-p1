@@ -1,0 +1,2953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:podcast="https://podcastindex.org/namespace/1.0"
+xmlns:rawvoice="https://blubrry.com/developer/rawvoice-rss/"
+>
+<channel>
+	<title>Community + Code</title>
+	<atom:link href="https://communitycode.dev/episodes/feed/episodes/?snap=1793659432" rel="self" type="application/rss+xml" />
+	<link>https://communitycode.dev/episodes/</link>
+	<description>This podcast is for anyone who believes that people are the heart of technology. It&#8217;s a show about the human stories behind the code—the passion, struggles, and triumphs of the individuals who build the digital world. Join host Chris Reynolds as he steps away from the screen to talk with developers, creators, and community leaders, revealing that the real innovation isn&#8217;t in the software, but in the people who create it together.</description>
+	<lastBuildDate>Thu, 29 Oct 2026 17:00:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+		<generator>https://wordpress.org/?v=7.1.2</generator>
+
+<image>
+	<url>https://communitycode.dev/app/uploads/2025/04/cropped-community-code-logo-favicon-white-1-32x32.png</url>
+	<title>Community + Code</title>
+	<link>https://communitycode.dev/episodes/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+	<podcast:locked owner="chris@jazzsequence.com">yes</podcast:locked>
+	<itunes:author>Community + Code</itunes:author>
+	<itunes:explicit>true</itunes:explicit>
+	<itunes:image href="https://communitycode.dev/app/uploads/2025/05/community-code-show-artwork.png" />
+	<itunes:type>episodic</itunes:type>
+	<itunes:owner>
+		<itunes:name>Community + Code</itunes:name>
+		<itunes:email>chris@jazzsequence.com</itunes:email>
+	</itunes:owner>
+	<podcast:medium>podcast</podcast:medium>
+	<image>
+		<title>Community + Code</title>
+		<url>https://communitycode.dev/app/uploads/2025/05/community-code-show-artwork.png</url>
+		<link>https://communitycode.dev/blog/</link>
+	</image>
+	<itunes:category text="Technology" />
+	<itunes:category text="Society &amp; Culture" />
+	<itunes:category text="Education" />
+	<podcast:updateFrequency rrule="FREQ=WEEKLY;INTERVAL=1">Weekly</podcast:updateFrequency>
+	<rawvoice:frequency>Weekly</rawvoice:frequency>
+	<podcast:person role="Host" img="https://www.dropbox.com/scl/fi/nzr343ggk0sqze46sn2il/chris-hiking-dall-e-2021-1024x1024.png?rlkey=cm07oreth7dntb9337x5tsokv&#038;amp;amp;amp;amp;amp;amp;st=8aki5fhh&#038;amp;amp;amp;amp;amp;amp;raw=1" href="https://jazzsequence.com">Chris Reynolds</podcast:person>
+	<podcast:podping usesPodping="true" />
+	<podcast:guid>ae04bed5-4ccf-5763-a514-45c587e917ac</podcast:guid>
+	<rawvoice:subscribe feed="https://communitycode.dev/episodes/feed/episodes/?snap=1793659432" html="https://communitycode.dev/subscribe/" itunes="https://podcasts.apple.com/us/podcast/community-+-code/id1813475905" spotify="https://open.spotify.com/show/3sYpqgXqzg2DQUHSU4oZg9" pcindex="https://podcastindex.org/podcast/7328822" pandora="https://www.pandora.com/podcast/community-code/PC:1001109027" deezer="https://www.deezer.com/us/show/1002206801" youtube="https://www.youtube.com/playlist?list=PLpVrczrFtTQLxTdcyf7jB-PnC3i26jpOQ"></rawvoice:subscribe>
+	<item>
+		<title>Community + Code announcement</title>
+		<link>https://communitycode.dev/episodes/community-code-announcement/</link>
+		<pubDate>Thu, 29 Oct 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1245</guid>
+		<comments>https://communitycode.dev/episodes/community-code-announcement/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/community-code-announcement/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[podcast]]></category>
+		<description><![CDATA[
+
+
+
+
+
+<p class="wp-block-paragraph"><ul>We interrupt this program for this special announcement&#8230;</ul></p>
+<p>The post <a href="https://communitycode.dev/episodes/community-code-announcement/">Community + Code announcement</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/10/end-of-season-break.mp3" length="991059" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:title>Community + Code special announcement</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>1:02</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/10/end-of-season-break.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 36: Jacquie Capur</title>
+		<link>https://communitycode.dev/episodes/episode-36-jacquie-capur/</link>
+		<pubDate>Wed, 14 Oct 2026 16:57:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1238</guid>
+		<comments>https://communitycode.dev/episodes/episode-36-jacquie-capur/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-36-jacquie-capur/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[speaking]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Community + Code: Episode 36 - Jacquie Capur" width="500" height="375" src="https://www.youtube.com/embed/-eKwLvIl728?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://sessionize.com/jacquie-grindrod">Jacquie on Sessionize</a></li>
+
+
+
+<li><a href="https://hashicorp.com/en/blog/authors/jacquie-grindrod">HashiCorp author page</a></li>
+
+
+
+<li><a href="https://nebius.com">Nebius</a></li>
+
+
+
+<li><a href="https://www.hashicorp.com">HashiCorp</a></li>
+
+
+
+<li><a href="https://codetv.dev/series/the-full-stack/s1">The Full Stack</a> (reality TV show)
+<ul class="wp-block-list">
+<li><a href="https://www.codetv.dev">CodeTV</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://strudel.cc">Strudel</a></li>
+
+
+
+<li><a href="https://www.twitch.tv/devopsjacquie">@devopsjacquie on Twitch</a></li>
+
+
+
+<li><a href="https://developerrelations.com/devrelcon/">DevRelCon</a></li>
+
+
+
+<li><a href="https://x.com/devopsjacquie">@devopsjacquie on X</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/jacquie-capur/">Jacquie on LinkedIn</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-36-jacquie-capur/">Episode 36: Jacquie Capur</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/10/s02e36-jacquie-capur.mp3" length="62598918" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>36</itunes:episode>
+		<podcast:episode display="S02E36">36</podcast:episode>
+		<itunes:title>Episode 36: Jacquie Capur</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>43:28</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/10/jacquie-capur.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 35: PJ Hagerty</title>
+		<link>https://communitycode.dev/episodes/episode-35-pj-hagerty/</link>
+		<pubDate>Wed, 30 Sep 2026 17:14:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1214</guid>
+		<comments>https://communitycode.dev/episodes/episode-35-pj-hagerty/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-35-pj-hagerty/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[mental health]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[speaking]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Episode 35: PJ Hagerty" width="500" height="375" src="https://www.youtube.com/embed/clkrp6Iz05w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://devrelate.io">DevRelate.io</a></li>
+
+
+
+<li><a href="https://aspleenic.medium.com/">PJ Hagerty on Medium</a></li>
+
+
+
+<li><a href="https://github.com/aspleenic">PJ Hagerty on GitHub</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/pjhagerty/">PJ Hagerty on LinkedIn</a></li>
+
+
+
+<li><a href="https://sessionize.com/pj-hagerty/">PJ Hagerty&#8217;s Sessionize profile</a></li>
+
+
+
+<li><a href="https://developerrelations.com/devrelcon/">DevRelCon</a></li>
+
+
+
+<li><a href="https://thewpocc.org/">The WP Open Community Collective</a></li>
+
+
+
+<li><a href="https://osmhhelp.org/">Open Sourcing Mental Health</a></li>
+
+
+
+<li><a href="https://en.wikipedia.org/wiki/Developer_relations">Developer relations — Wikipedia</a></li>
+
+
+
+<li><a href="https://x.com/aspleenic">X</a> / <a href="https://bsky.app/profile/aspleenic.bsky.social">Bluesky</a> / <a href="https://mastodon.social/@aspleenic@hachyderm.io">Mastodon</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-35-pj-hagerty/">Episode 35: PJ Hagerty</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/09/s02e35-pj-hagerty.mp3" length="69875170" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>35</itunes:episode>
+		<podcast:episode display="S2E35">35</podcast:episode>
+		<itunes:title>Episode 35: PJ Hagerty</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>48:31</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/09/pj-hagerty.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 34: Maciek Palmowski</title>
+		<link>https://communitycode.dev/episodes/episode-34-maciek-palmowski/</link>
+		<pubDate>Wed, 16 Sep 2026 17:01:22 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1213</guid>
+		<comments>https://communitycode.dev/episodes/episode-34-maciek-palmowski/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-34-maciek-palmowski/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Community + Code: Episode 34 - Maciek Palmoski" width="500" height="281" src="https://www.youtube.com/embed/E8F2IIWcgFc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://maciekpalmowski.dev/">Maciek Palmowski&#8217;s website</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/maciekpalmowski/">Maciek Palmowski on LinkedIn</a></li>
+
+
+
+<li><a href="https://bsky.app/profile/maciekpalmowski.dev">Maciek Palmowski on Bluesky</a></li>
+
+
+
+<li><a href="https://patchstack.com">Patchstack</a></li>
+
+
+
+<li><a href="https://cmsconf.com">CMS Conf</a></li>
+
+
+
+<li><a href="https://www.therepository.email/polish-wordcamp-organizers-launch-cms-conf-a-new-cross-platform-conference">The Repository: CMS Conf launch coverage</a> </li>
+
+
+
+<li><a href="https://statamic.com/">Statamic</a> </li>
+
+
+
+<li><a href="https://wptavern.com/podcast/227-maciek-palmowski-on-testing-secure-wordpress-hosting-does-the-marketing-match-reality">#227 – Maciek Palmowski on Testing Secure WordPress Hosting</a> (WP Tavern Jukebox)</li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-34-maciek-palmowski/">Episode 34: Maciek Palmowski</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/09/s02e34-maciek-palmowski.mp3" length="74626284" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>34</itunes:episode>
+		<podcast:episode display="S02E34">34</podcast:episode>
+		<itunes:title>Episode 34: Maciek Palmowski</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>51:49</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/09/maciek-palmowski.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 33: Jonathan Wold</title>
+		<link>https://communitycode.dev/episodes/episode-33-jonathan-wold/</link>
+		<pubDate>Wed, 02 Sep 2026 17:09:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1212</guid>
+		<comments>https://communitycode.dev/episodes/episode-33-jonathan-wold/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-33-jonathan-wold/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 33 - Jonathan Wold" width="500" height="281" src="https://www.youtube.com/embed/K8LCjbpiYy4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://jonathanwold.com/">Jonathan Wold</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/sirjonathan/">Jonathan on WordPress.org</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/jonathanwold/">Jonathan on LinkedIn</a></li>
+
+
+
+<li><a href="https://crossword.fm/">Crossword</a></li>
+
+
+
+<li><a href="https://convesio.com">Convesio</a></li>
+
+
+
+<li><a href="https://guildenberg.com/">Guildenberg</a></li>
+
+
+
+<li><a href="https://communitycode.dev/episodes/episode-10-tammie-lister/" data-type="episodes" data-id="382">Tammie Lister</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/lukecarbis/">Luke Carbis</a></li>
+
+
+
+<li><a href="https://communitycode.dev/episodes/episode-26-courtney-robertson/" data-type="episodes" data-id="285">Courtney Robertson</a></li>
+
+
+
+<li><a href="https://automattic.com">Automattic</a></li>
+
+
+
+<li><a href="https://woocommerce.com">WooCommerce</a></li>
+
+
+
+<li><a href="https://us.wordcamp.org/2026/">WordCamp US 2026</a>
+<ul class="wp-block-list">
+<li><a href="https://us.wordcamp.org/2026/session/the-handshake-is-the-roadmap-product-partnerships-and-the-loop-between-them/">Jonathan &amp; Tammie&#8217;s talk</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://techcrunch.com/2019/09/19/automattic-ceo-matt-mullenweg-about-raising-300-million-and-the-open-web/">Matt Mullenweg on building the operating system of the web</a> (TechCrunch)</li>
+
+
+
+<li><a href="https://pressconf.events/">PressConf</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-33-jonathan-wold/">Episode 33: Jonathan Wold</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/08/s02e33-jonathan-wold.mp3" length="67200022" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>33</itunes:episode>
+		<podcast:episode display="S02E33">33</podcast:episode>
+		<itunes:title>Episode 33: Jonathan Wold</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>46:40</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/08/jonathan-wold.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 32: Bud Kraus</title>
+		<link>https://communitycode.dev/episodes/episode-32-bud-kraus/</link>
+		<pubDate>Wed, 05 Aug 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1146</guid>
+		<comments>https://communitycode.dev/episodes/episode-32-bud-kraus/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-32-bud-kraus/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[podcast]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 32: Bud Kraus" width="500" height="375" src="https://www.youtube.com/embed/VOg9N5ToRJk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://seriouslybud.com/"><em>Seriously</em>, BUD? podcast</a></li>
+
+
+
+<li><a href="https://joyofwp.com/">Joy of WP</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/trynet/">Bud Kraus on WordPress.org</a></li>
+
+
+
+<li><a href="https://x.com/joyofwp">Bud Kraus on X/Twitter (@joyofwp)</a></li>
+
+
+
+<li><a href="https://joyofwp.com/about-bud-kraus-wordpress-technical-writer-podcaster-funny-guy/">About Bud Kraus</a> </li>
+
+
+
+<li><a href="https://openchannels.fm/host/bob-dunn/">Bob Dunn</a> (<a href="https://openchannels.fm/">OpenChannels.fm</a>) </li>
+
+
+
+<li><a href="https://communitycode.dev/episodes/episode-27-miriam-schwab/" data-type="episodes" data-id="971">Miriam Schwab</a> (<a href="https://elementor.com/">Elementor</a> / <a href="https://elementor.com/products/angie-ai-for-wordpress/">Angie</a>)</li>
+
+
+
+<li><a href="https://ma.tt">Matt Mullenweg</a></li>
+
+
+
+<li><a href="https://learn.wordpress.org/course/wordpress-credits/">WP Credits program</a></li>
+
+
+
+<li><a href="https://wisprflow.ai/">Wisper Flow</a><ul><br></ul></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-32-bud-kraus/">Episode 32: Bud Kraus</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/07/s02e32-bud-kraus.mp3" length="73120832" type="audio/mpeg" />
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>50:47</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/07/bud-kraus.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 31: Brent Toderash</title>
+		<link>https://communitycode.dev/episodes/episode-31-brent-toderash/</link>
+		<pubDate>Wed, 22 Jul 2026 17:01:29 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=1006</guid>
+		<comments>https://communitycode.dev/episodes/episode-31-brent-toderash/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-31-brent-toderash/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 31: Brent Toderash" width="500" height="281" src="https://www.youtube.com/embed/Lfs9E13Ozbc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="http://toderash.net/">toderash.net</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/toderash/">Brent on WordPress.org</a> </li>
+
+
+
+<li><a href="https://www.linkedin.com/in/brenttoderash/">Brent on LinkedIn</a> </li>
+
+
+
+<li><a href="https://x.com/toderash">Brent on X (@toderash)</a> </li>
+
+
+
+<li><a href="https://fair.pm/">FAIR project</a> </li>
+
+
+
+<li><a href="https://aspirepress.org/">AspirePress</a> </li>
+
+
+
+<li><a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">The Cathedral and the Bazaar</a> </li>
+
+
+
+<li><a href="https://typo3.org/">TYPO3</a> </li>
+
+
+
+<li><a href="https://next.jazzsequence.com/posts/i-dont-miss-not-writing-code">I don&#8217;t miss not writing code</a></li>
+
+
+
+<li><a href="https://jazzsequence.github.io/Invert/">Invert</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-31-brent-toderash/">Episode 31: Brent Toderash</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/07/s02e31-brent-toderash.mp3" length="87529766" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>31</itunes:episode>
+		<podcast:episode display="S02E31">31</podcast:episode>
+		<itunes:title>Episode 31: Brent Toderash</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>1:00:47</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/07/brent-toderash.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 30: Miriam Goldman</title>
+		<link>https://communitycode.dev/episodes/episode-30-miriam-goldman/</link>
+		<pubDate>Wed, 08 Jul 2026 17:04:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=994</guid>
+		<comments>https://communitycode.dev/episodes/episode-30-miriam-goldman/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-30-miriam-goldman/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+https://youtu.be/SXyG-AxjypU
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://miriamgoldman.ca/">miriamgoldman.ca</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/miriamgoldman/">Miriam on LinkedIn</a></li>
+
+
+
+<li><a href="https://github.com/miriamgoldman">Miriam&#8217;s GitHub</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/miriamgoldman/">Miriam on WordPress.org</a></li>
+
+
+
+<li><a href="https://canada.wordcamp.org/2025/organizer/miriam-goldman/">WordCamp Canada 2025 organizer page</a></li>
+
+
+
+<li><a href="https://canada.wordcamp.org/2024/speaker/miriam-goldman/">WordCamp Canada 2024 speaker page</a></li>
+
+
+
+<li><a href="https://rochester.wordcamp.org/2024/speaker/miriam-goldman/">WordCamp Rochester, NY speaker page</a></li>
+
+
+
+<li><a href="https://pantheon.io">Pantheon</a></li>
+
+
+
+<li><a href="https://kanopi.com/">Kanopi Studios</a></li>
+
+
+
+<li><a href="https://events.drupal.org/">DrupalCon</a></li>
+
+
+
+<li><a href="https://drupalcampottawa.com/en">DrupalCamp Ottawa</a></li>
+
+
+
+<li><a href="https://www.sonarsource.com/products/sonarqube/">SonarQube</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-30-miriam-goldman/">Episode 30: Miriam Goldman</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/07/s02e30-miriam-goldman.mp3" length="69518442" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>30</itunes:episode>
+		<podcast:episode display="S02E30">30</podcast:episode>
+		<itunes:title>Episode 30: Miriam Goldman</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>48:16</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/07/miriam-goldman.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 29 &#8211; Robert Abela</title>
+		<link>https://communitycode.dev/episodes/episode-29-robert-abela/</link>
+		<pubDate>Thu, 25 Jun 2026 16:27:50 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=993</guid>
+		<comments>https://communitycode.dev/episodes/episode-29-robert-abela/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-29-robert-abela/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 29 - Robert Abela" width="500" height="281" src="https://www.youtube.com/embed/jTaJ7TerhpU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://melapress.com">Melapress</a></li>
+
+
+
+<li><a href="https://melapress.com/wordpress-activity-log/">WP Activity Log</a></li>
+
+
+
+<li><a href="https://melapress.com/wordpress-2fa/">WP 2FA</a></li>
+
+
+
+<li><a href="https://melapress.com/wordpress-login-security/">Melapress Login Security</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/robertabela/">Robert Abela on LinkedIn</a></li>
+
+
+
+<li><a href="https://robertabela.me">Robert Abela&#8217;s website</a></li>
+
+
+
+<li><a href="https://haveibeenpwned.com">Have I Been Pwned</a></li>
+
+
+
+<li><a href="https://www.amazon.com/Ghost-Wires-Adventures-Worlds-Wanted/dp/0316037729">Ghost in the Wires by Kevin Mitnick</a></li>
+
+
+
+<li><a href="https://patchstack.com">PatchStack</a> </li>
+
+
+
+<li><a href="https://www.cloudfest.com/">CloudFest</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"><em>Intro music: nqt provided by mobygratis. Outro music: Conspire provided by mobygratis.</em></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-29-robert-abela/">Episode 29 &#8211; Robert Abela</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/06/s02e29-robert-abela.mp3" length="76901273" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>29</itunes:episode>
+		<podcast:episode display="S02E29">29</podcast:episode>
+		<itunes:title>Episode 29: Robert Abela</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>53:24</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/06/robert-abela.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 28 &#8211; Carrie Dils</title>
+		<link>https://communitycode.dev/episodes/episode-28-carrie-dils/</link>
+		<pubDate>Wed, 10 Jun 2026 17:02:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=992</guid>
+		<comments>https://communitycode.dev/episodes/episode-28-carrie-dils/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-28-carrie-dils/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[fair]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 28 - Carrie Dils" width="500" height="281" src="https://www.youtube.com/embed/czdljy6qrig?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://carriedils.com/">Carrie Dils</a></li>
+
+
+
+<li><a href="https://bsky.app/profile/carriedils.com">Carrie on Bluesky</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/carriedils/">Carrie on LinkedIn</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/learning/">LinkedIn Learning</a></li>
+
+
+
+<li><a href="https://poststatus.com/club/">Post Status</a></li>
+
+
+
+<li><a href="https://fair.pm/">FAIR Project</a></li>
+
+
+
+<li><a href="https://www.linuxfoundation.org/press/linux-foundation-announces-the-fair-package-manager-project-for-open-source-content-management-system-stability">Linux Foundation FAIR announcement</a></li>
+
+
+
+<li><a href="https://typo3.org/">TYPO3</a></li>
+
+
+
+<li><a href="https://roots.io/">Roots</a></li>
+
+
+
+<li><a href="https://github.com/cedaro/satispress">SatisPress</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-28-carrie-dils/">Episode 28 &#8211; Carrie Dils</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/06/s02e28-carrie-dils.mp3" length="70231898" type="audio/mpeg" />
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>48:46</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/06/carrie-dils.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 27: Miriam Schwab</title>
+		<link>https://communitycode.dev/episodes/episode-27-miriam-schwab/</link>
+		<pubDate>Wed, 27 May 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=971</guid>
+		<comments>https://communitycode.dev/episodes/episode-27-miriam-schwab/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-27-miriam-schwab/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 27 - Miriam Schwab" width="500" height="281" src="https://www.youtube.com/embed/_Tmz9qsXJvo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://miriamschwab.me/">miriamschwab.me</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/miriamschwab/">Miriam Schwab on LinkedIn</a></li>
+
+
+
+<li><a href="https://twitter.com/illuminea">Miriam Schwab on Twitter/X (@illuminea)</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/illuminea/">Miriam on WordPress.org</a></li>
+
+
+
+<li><a href="https://elementor.com/">Elementor</a></li>
+
+
+
+<li><a href="https://www.strattic.com/">Strattic</a></li>
+
+
+
+<li><a href="https://make.wordpress.org/chat/">Make WordPress Slack </a></li>
+
+
+
+<li><a href="https://poststatus.com">Post Status</a></li>
+
+
+
+<li><a href="https://wpcommunitycollective.com/">WP Community Collective</a></li>
+
+
+
+<li><a href="https://www.netlify.com/">Netlify</a><ul><br></ul></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-27-miriam-schwab/">Episode 27: Miriam Schwab</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/05/s02e27-miriam-schwab.mp3" length="74154654" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>27</itunes:episode>
+		<podcast:episode display="S02E27">27</podcast:episode>
+		<itunes:title>Episode 27: Miriam Schwab</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>51:30</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/05/miriam-schwab.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 26: Courtney Robertson</title>
+		<link>https://communitycode.dev/episodes/episode-26-courtney-robertson/</link>
+		<pubDate>Wed, 13 May 2026 17:00:42 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=285</guid>
+		<comments>https://communitycode.dev/episodes/episode-26-courtney-robertson/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-26-courtney-robertson/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[fair]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 26 - Courtney Robertson" width="500" height="281" src="https://www.youtube.com/embed/cfkRuYJN3lM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://courtneyr.dev/">CourtneyR.dev</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/courane01/">Courtney on WordPress.org</a></li>
+
+
+
+<li><a href="https://github.com/courtneyr-dev">Courtney on GitHub</a></li>
+
+
+
+<li><a href="https://www.godaddy.com/pro">GoDaddy Pro</a></li>
+
+
+
+<li><a href="https://wpcommunitycollective.com/">WP Community Collective</a></li>
+
+
+
+<li><a href="https://fair.pm/">FAIR.pm</a></li>
+
+
+
+<li><a href="https://learn.wordpress.org/">learn.wordpress.org</a></li>
+
+
+
+<li><a href="https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/" type="episodes" id="831">Juliette Reinders Folmer episode</a> 
+<ul class="wp-block-list">
+<li><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer">PHPCS on GitHub</a></li>
+
+
+
+<li><a href="https://github.com/WordPress/WordPress-Coding-Standards">WPCS on GitHub</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://opensource.org/">opensource.org</a></li>
+
+
+
+<li><a href="https://www.descript.com/">Descript</a></li>
+
+
+
+<li><a href="https://readwise.io/">Readwise</a></li>
+
+
+
+<li><a href="https://obsidian.md/">Obsidian</a></li>
+
+
+
+<li><a href="https://penpot.app/">Penpot</a></li>
+
+
+
+<li><a href="https://www.activepieces.com/">ActivePieces</a></li>
+
+
+
+<li><a href="https://wordpress.org/plugins/activitypub/">ActivityPub plugin</a></li>
+
+
+
+<li><a href="https://www.bigorangeheart.org/">Big Orange Heart</a></li>
+
+
+
+<li><a href="https://www.godaddy.com/airo">GoDaddy Airo (Aero AI Builder)</a></li>
+
+
+
+<li><a href="https://pantheon.io/">Pantheon</a></li>
+
+
+
+<li><a href="https://github.com/jazzsequence/ash-nazg">Ash Nazg plugin</a></li>
+
+
+
+<li><a href="https://www.devrelbook.com/">Developer Relations book</a></li>
+
+
+
+<li><a href="https://blocktober.fun">Blocktober</a></li>
+</ul>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="795" height="994" src="https://communitycode.dev/app/uploads/2026/05/devrel-framework.jpg" alt="" class="wp-image-1019" srcset="https://communitycode.dev/app/uploads/2026/05/devrel-framework.jpg 795w, https://communitycode.dev/app/uploads/2026/05/devrel-framework-240x300.jpg 240w, https://communitycode.dev/app/uploads/2026/05/devrel-framework-768x960.jpg 768w" sizes="auto, (max-width: 795px) 100vw, 795px" /></figure>
+<p>The post <a href="https://communitycode.dev/episodes/episode-26-courtney-robertson/">Episode 26: Courtney Robertson</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/05/s02e26-courtney-robertson.mp3" length="80645978" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>26</itunes:episode>
+		<podcast:episode display="S02E26">26</podcast:episode>
+		<itunes:title>Episode 26: Courtney Robertson</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>56:00</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/05/courtney-robertson.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 25: Jill Binder</title>
+		<link>https://communitycode.dev/episodes/episode-25-jill-binder/</link>
+		<pubDate>Wed, 29 Apr 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=834</guid>
+		<comments>https://communitycode.dev/episodes/episode-25-jill-binder/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-25-jill-binder/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[deib]]></category>
+		<category><![CDATA[speaking]]></category>
+		<category><![CDATA[underrepresented]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://speaktechconfidently.com/">Speak Tech Confidently</a>
+<ul class="wp-block-list">
+<li><a href="https://speaktechconfidently.com/blueprint">Tech speaker blueprint</a> — free 10-step speaker readiness self-diagnostic</li>
+</ul>
+</li>
+
+
+
+<li><a href="https://jillbinder.com">jillbinder.com</a></li>
+
+
+
+<li><a href="https://linkedin.com/in/jillbinder">Jill Binder on LinkedIn</a></li>
+
+
+
+<li><a href="https://mastodon.social/@jillbinder">Jill on Mastodon: @jillbinder</a></li>
+
+
+
+<li><a href="https://x.com/jillbinder/">Jill on X: @jillbinder</a></li>
+
+
+
+<li><a href="https://wordpress.tv/speakers/jill-binder/">WordPress.tv — Jill Binder talks</a></li>
+
+
+
+<li><a href="https://wordpress.org/news/2019/12/people-of-wordpress-jill-binder/">People of WordPress: Jill Binder</a></li>
+
+
+
+<li><a href="https://canada.wordcamp.org">WordCamp Canada</a></li>
+
+
+
+<li><a href="https://alterconf.com/">AlterConf</a></li>
+
+
+
+<li><a href="https://anildash.com">Anil Dash</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-25-jill-binder/">Episode 25: Jill Binder</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/04/s02e25-jill-binder.mp3" length="72086383" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>25</itunes:episode>
+		<podcast:episode display="S02E25">25</podcast:episode>
+		<itunes:title>Episode 25: Jill Binder</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>50:03</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/04/jill-binder.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 24: Natalie MacLees</title>
+		<link>https://communitycode.dev/episodes/episode-24-natalie-maclees/</link>
+		<pubDate>Wed, 15 Apr 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=833</guid>
+		<comments>https://communitycode.dev/episodes/episode-24-natalie-maclees/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-24-natalie-maclees/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[accessibility]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 24 - Natalie MacLees" width="500" height="281" src="https://www.youtube.com/embed/yVxwfQn71SM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://aaardvarkaccessibility.com/">AAArdvark Accessibility</a></li>
+
+
+
+<li><a href="https://nataliemac.com/">nataliemac.com</a></li>
+
+
+
+<li><a href="https://wordpress.org/plugins/website-accessibility-audit-checker/">AAArdvark Accessibility plugin on WordPress.org</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/nataliemac/">Natalie on LinkedIn</a></li>
+
+
+
+<li><a href="https://practical-accessibility.today/">Practical Accessibility with Sara Soueidan</a></li>
+
+
+
+<li><a href="https://www.coursera.org/learn/web-accessibility">Web Accessibility (Google/Coursera)</a></li>
+
+
+
+<li><a href="https://pressconf.events/">PressConf</a></li>
+
+
+
+<li><a href="https://nsquared.io/products/">nsquared plugins</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-24-natalie-maclees/">Episode 24: Natalie MacLees</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/04/s02e24-natalie-maclees.mp3" length="5242880" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>24</itunes:episode>
+		<podcast:episode display="S02E24">24</podcast:episode>
+		<itunes:title>Natalie MacLees</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+	</item>
+	<item>
+		<title>Episode 23: Steve Burge</title>
+		<link>https://communitycode.dev/episodes/episode-23-steve-burge/</link>
+		<pubDate>Wed, 01 Apr 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=832</guid>
+		<comments>https://communitycode.dev/episodes/episode-23-steve-burge/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-23-steve-burge/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[product development]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 23 - Steve Burge" width="500" height="281" src="https://www.youtube.com/embed/UrML01JuY8U?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://publishpress.com">PublishPress</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/steveburge/">Steve Burge on LinkedIn</a></li>
+
+
+
+<li><a href="https://steveburge.com">steveburge.com</a></li>
+
+
+
+<li><a href="https://rambleventures.com">Ramble Ventures</a></li>
+
+
+
+<li><a href="https://metaslider.com">MetaSlider</a></li>
+
+
+
+<li><a href="https://taxopress.com">TaxoPress</a></li>
+
+
+
+<li><a href="https://logtivity.io">Logtivity</a></li>
+
+
+
+<li><a href="https://mississippitoday.org">Mississippi Today</a></li>
+
+
+
+<li><a href="https://ghost.org">Ghost</a></li>
+
+
+
+<li><a href="https://www.beehiiv.com">Beehiiv</a></li>
+
+
+
+<li><a href="https://pantheon.io">Pantheon</a></li>
+
+
+
+<li><a href="https://pluralsight.com">Pluralsight</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-23-steve-burge/">Episode 23: Steve Burge</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/04/s02e23-steve-burge.mp3" length="77792780" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>23</itunes:episode>
+		<podcast:episode display="S02E23">23</podcast:episode>
+		<itunes:title>Episode 23: Steve Burge</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>54:01</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/04/steve-burge.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 22: The WP Community Collective</title>
+		<link>https://communitycode.dev/episodes/episode-22-the-wp-community-collective/</link>
+		<pubDate>Fri, 20 Mar 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=835</guid>
+		<comments>https://communitycode.dev/episodes/episode-22-the-wp-community-collective/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-22-the-wp-community-collective/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[burnout]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 22 - The WPCC" width="500" height="375" src="https://www.youtube.com/embed/i4r7yazj4r8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.thewpcommunitycollective.com/">The WP Community Collective</a></li>
+
+
+
+<li><a href="https://podcasthon.org/">Podcastathon</a></li>
+
+
+
+<li><a href="https://courtneyr.dev/">Courtney Robertson</a></li>
+
+
+
+<li><a href="https://sereedmedia.com/">Sé Reed</a></li>
+
+
+
+<li><a href="https://www.jonoalderson.com/">Jono Alderson</a></li>
+
+
+
+<li><a href="https://jazzsequence.com">Chris Reynolds</a></li>
+
+
+
+<li><a href="https://fair.pm/">FAIR (Federated and Independent Repositories)</a></li>
+
+
+
+<li><a href="https://yoast.com/">Yoast</a></li>
+
+
+
+<li><a href="https://www.godaddy.com/resources/news/godaddy-five-for-the-future-contributors">GoDaddy Five for the Future Contributors</a></li>
+
+
+
+<li><a href="https://pantheon.io">Pantheon</a></li>
+
+
+
+<li><a href="https://wordpressfoundation.org/projects/kim-parsell-memorial-scholarship/">Kim Parsell Memorial Scholarship</a> (WordPress Foundation)</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-22-the-wp-community-collective/">Episode 22: The WP Community Collective</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/03/s02e22-the-wpcc.mp3" length="84536133" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>22</itunes:episode>
+		<podcast:episode display="S02E22">22</podcast:episode>
+		<itunes:title>Episode 22: The WP Community Collective</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>58:42</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/03/the-wpcc.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 21: Juliette Reinders Folmer</title>
+		<link>https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/</link>
+		<pubDate>Wed, 11 Mar 2026 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=831</guid>
+		<comments>https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[burnout]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 21 - Juliette Reinders Folmer" width="500" height="375" src="https://www.youtube.com/embed/aVVjsfza8aA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://github.com/PHPCSStandards/PHP_CodeSniffer">PHP CodeSniffer (PHPCSStandards)</a></li>
+
+
+
+<li><a href="https://github.com/jrfnl">Juliette on GitHub (@jrfnl)</a></li>
+
+
+
+<li><a href="https://github.com/PHPCompatibility/PHPCompatibility">PHPCompatibility</a></li>
+
+
+
+<li><a href="https://github.com/WordPress/WordPress-Coding-Standards">WordPress Coding Standards</a></li>
+
+
+
+<li><a href="https://github.com/Yoast/PHPUnit-Polyfills">PHPUnit Polyfills</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/jrf/">Juliette on WordPress.org</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/julietterf/">Juliette on LinkedIn</a> </li>
+
+
+
+<li><a href="https://phpc.social/@phpcs">PHPCS on Mastodon</a> </li>
+
+
+
+<li><a href="https://x.com/PHP_CodeSniffer">PHP_CodeSniffer on X</a></li>
+
+
+
+<li><a href="https://phpc.social/@jrf_nl">Juliette on Mastodon</a></li>
+
+
+
+<li><a href="https://x.com/jrf_nl">Juliette on X</a></li>
+
+
+
+<li><a href="https://opensourcepledge.com/">Open Source Pledge</a></li>
+
+
+
+<li><a href="https://tidelift.com/">Tidelift</a></li>
+
+
+
+<li><a href="https://thanks.dev/">ThanksDev</a></li>
+
+
+
+<li><a href="https://github.com/sponsors">GitHub Sponsors</a></li>
+
+
+
+<li><a href="https://thephp.foundation/">PHP Foundation</a></li>
+
+
+
+<li><a href="https://github.com/squizlabs/PHP_CodeSniffer">Squizlabs (original PHPCS org)</a></li>
+
+
+
+<li><a href="https://joplinapp.org/">Joplin (open source note-taking app)</a></li>
+
+
+
+<li><a href="https://www.irfanview.com/">Irfanview</a></li>
+
+
+
+<li><a href="https://suno.com/">Suno (AI music, mentioned in conversation)</a></li>
+
+
+
+<li>Sponsor the work Juliette is doing at <a href="https://opencollective.com/php_codesniffer">OpenCollective</a> or <a href="https://github.com/sponsors/PHPCSStandards">GitHub Sponsorships</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-21-juliette-reinders-folmer/">Episode 21: Juliette Reinders Folmer</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/03/s2e21-juliette-reinders-folmer.mp3" length="71907705" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>21</itunes:episode>
+		<podcast:episode display="S02E21">21</podcast:episode>
+		<itunes:title>Episode 21: Juliette Reinders Folmer</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>49:56</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/03/juliette-reinders-folmer.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 20: Fons Vandamme</title>
+		<link>https://communitycode.dev/episodes/episode-20-fons-vandamme/</link>
+		<pubDate>Wed, 25 Feb 2026 18:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=830</guid>
+		<comments>https://communitycode.dev/episodes/episode-20-fons-vandamme/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-20-fons-vandamme/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[open source]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 20 - Fons Vandamme" width="500" height="281" src="https://www.youtube.com/embed/q96WU2j9URA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://fonsvandamme.com/">fonsvandamme.com</a></li>
+
+
+
+<li><a href="https://webhaven.io/">Webhaven</a></li>
+
+
+
+<li><a href="https://www.drupal.org/u/f0ns">Fons&#8217; Drupal.org profile</a></li>
+
+
+
+<li><a href="https://github.com/f0ns">Fons&#8217; GitHub profile</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/fonsvandamme/">Fons on LinkedIn</a></li>
+
+
+
+<li><a href="https://x.com/fonsvandamme">Fons on X</a></li>
+
+
+
+<li><a href="https://talkingdrupal.com/534">Talking Drupal #534 &#8211; Webhaven.io</a></li>
+
+
+
+<li><a href="https://www.thedroptimes.com/interview/54767/how-fons-vandamme-built-webhaven-simplify-drupal-project-development">The Drop Times: How Fons Vandamme Built Webhaven to Simplify Drupal Project Development</a></li>
+
+
+
+<li><a href="https://communitycode.dev/episodes/episode-14-mike-herchel/" type="episodes" id="553">Episode 14: Mike Hershcel</a></li>
+
+
+
+<li><a href="https://www.drupal.org/project/canvas">Drupal Canvas</a></li>
+
+
+
+<li><a href="https://www.drupal.org/entityone">EntityOne on Drupal.org</a></li>
+
+
+
+<li><a href="https://jazzsequence.com/series/artificial-intelligence/">My AI musings (including The Lovecraft Test)</a></li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="623" src="https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1024x623.jpg" alt="" class="wp-image-900" srcset="https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1024x623.jpg 1024w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-300x183.jpg 300w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-768x467.jpg 768w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1536x935.jpg 1536w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-2048x1247.jpg 2048w, https://communitycode.dev/app/uploads/2026/02/fons-first-computer-1320x803.jpg 1320w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Fons and his first Macintosh</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-20-fons-vandamme/">Episode 20: Fons Vandamme</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/02/s02e20-fons-vandamme.mp3" length="71907705" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>20</itunes:episode>
+		<podcast:episode display="S02E20">20</podcast:episode>
+		<itunes:title>Episode 20: Fons Vandamme</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>49:56</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/02/fons-vandamme.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 19: Carl Alexander</title>
+		<link>https://communitycode.dev/episodes/episode-19-carl-alexander/</link>
+		<pubDate>Wed, 11 Feb 2026 18:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=829</guid>
+		<comments>https://communitycode.dev/episodes/episode-19-carl-alexander/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-19-carl-alexander/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[mental health]]></category>
+		<category><![CDATA[speaking]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code - Episode 19: Carl Alexander" width="500" height="281" src="https://www.youtube.com/embed/o9BYKPuxlSY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://carlalexander.ca">carlalexander.ca</a></li>
+
+
+
+<li><a href="https://ymirapp.com/">Ymir</a></li>
+
+
+
+<li><em><a href="https://carlalexander.ca/object-oriented-programming-wordpress/">Discover object-oriented programming using WordPress</a></em></li>
+
+
+
+<li><a href="https://poststatus.com/">Post Status</a></li>
+
+
+
+<li><a href="https://asia.wordcamp.org/2023/speaker/carl-alexander/">Carl&#8217;s WP Asia 2023 speaker bio</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/carlalexander/">Carl&#8217;s WordPress profile</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/carlalexandereng/">Carl on LinkedIn</a></li>
+
+
+
+<li><a href="https://pressconf.events">PressConf</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"><ul><br></ul></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-19-carl-alexander/">Episode 19: Carl Alexander</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/02/s02e19-carl-alexander.mp3" length="66950500" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>19</itunes:episode>
+		<podcast:episode display="S2E19">19</podcast:episode>
+		<itunes:title>Episode 19: Carl Alexander</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>46:29</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/02/carl-alexander.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 18: John Hawkins</title>
+		<link>https://communitycode.dev/episodes/episode-18-john-hawkins/</link>
+		<pubDate>Wed, 28 Jan 2026 18:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=828</guid>
+		<comments>https://communitycode.dev/episodes/episode-18-john-hawkins/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-18-john-hawkins/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[burnout]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[speaking]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 18 - John Hawkins" width="500" height="375" src="https://www.youtube.com/embed/Af20eIqYQpw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://vegasgeek.com/">VegasGeek</a></li>
+
+
+
+<li><a href="https://9seeds.com/">9seeds</a></li>
+
+
+
+<li><a href="https://wordpress.tv/speakers/john-hawkins/">John Hawkins on WordPress.tv</a></li>
+
+
+
+<li><a href="https://github.com/vegasgeek">VegasGeek on GitHub</a></li>
+
+
+
+<li><a href="https://profiles.wordpress.org/vegasgeek/">John Hawkins on WordPress.org</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-18-john-hawkins/">Episode 18: John Hawkins</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/01/s02e18-john-hawkins.mp3" length="68931000" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>18</itunes:episode>
+		<podcast:episode display="S02E18">18</podcast:episode>
+		<itunes:title>Episode 18: John Hawkins</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>47:52</itunes:duration>
+	</item>
+	<item>
+		<title>Episode 17: Tearyne Almendariz</title>
+		<link>https://communitycode.dev/episodes/episode-17-tearyne-almendariz/</link>
+		<pubDate>Wed, 14 Jan 2026 18:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=703</guid>
+		<comments>https://communitycode.dev/episodes/episode-17-tearyne-almendariz/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-17-tearyne-almendariz/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[accessibility]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[deib]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[mental health]]></category>
+		<category><![CDATA[speaking]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 17 - Tearyne Almendariz" width="500" height="281" src="https://www.youtube.com/embed/B2zZi5LG1f4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.nlbcworks.com/">NLBC Works</a></li>
+
+
+
+<li><a href="https://www.lullabot.com/">Lullabot</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/sugaroverflow/">Fatima Sarah Khalid</a> (LinkedIn)</li>
+
+
+
+<li><a href="https://sessionize.com/tearyne-almendariz/">Tearyne&#8217;s speaker profile on Sessionize</a></li>
+
+
+
+<li><a href="https://www.drupal.org/u/ninelivesblackcat">Tearyne on Drupal.org (NineLivesBlackCat)</a></li>
+
+
+
+<li><a href="https://old.midcamp.org/2025/topic-proposal/building-strong-business-case-web-accessibility">Building a Strong Business Case for Web Accessibility &#8211; MidCamp 2025</a></li>
+
+
+
+<li><a href="https://www.twitch.tv/ninelivesblackcat">NineLivesBlackCat on Twitch</a></li>
+
+
+
+<li><a href="https://supersweetbot.cc/about/">Super Sweet Bot</a></li>
+
+
+
+<li><a href="https://youtu.be/4v3tGz7B-OA?si=jNHWiJGz_UN-AYtR">Meet Nine &#8211; Olympia</a></li>
+
+
+
+<li><a href="https://youtu.be/eDk7ttf1cHM?si=QEOryoLzH2mdL02y">Agent Nine &#8211; Meet Me &#8211; Destination Mole</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-17-tearyne-almendariz/">Episode 17: Tearyne Almendariz</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2026/01/s02e17-tearyne-almendariz-1.mp3" length="68519728" type="audio/mpeg" />
+		<itunes:season>2</itunes:season>
+		<podcast:season>2</podcast:season>
+		<itunes:episode>17</itunes:episode>
+		<podcast:episode display="S2E17">17</podcast:episode>
+		<itunes:title>Episode 17: Tearyne Almendariz</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>47:35</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2026/01/tearyne-almendariz.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 16: Dee Teal</title>
+		<link>https://communitycode.dev/episodes/episode-16-dee-teal/</link>
+		<pubDate>Wed, 31 Dec 2025 18:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=593</guid>
+		<comments>https://communitycode.dev/episodes/episode-16-dee-teal/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-16-dee-teal/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[deib]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[remote work]]></category>
+		<category><![CDATA[speaking]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 16 - Dee Teal" width="500" height="281" src="https://www.youtube.com/embed/T2BDAvcBbyw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://deeteal.com/">DeeTeal.com</a></li>
+
+
+
+<li><a href="https://wpincludes.me/">WP Includes</a></li>
+
+
+
+<li><a href="https://futureofteam.com/">Future of Team podcast</a></li>
+
+
+
+<li><a href="https://canada.wordcamp.org/2025/">WordCamp Canada 2025</a></li>
+
+
+
+<li><a href="https://wordpress.tv/2025/11/10/cultural-algorithms-the-innovation-multiplier/">Cultural Algorithms: The Innovation Multiplier</a> (WordPress.tv)</li>
+
+
+
+<li><a href="https://humanmade.com">Human Made</a></li>
+
+
+
+<li><a href="https://webdevstudios.com">WebDevStudios</a></li>
+
+
+
+<li><a href="https://wordpress.tv/2025/11/18/from-canada-to-the-world-10-lessons-from-working-with-50-countries/">From Canada to the World: 10 Lessons From Working With 50 Countries</a> (WordPress.tv)</li>
+
+
+
+<li><a href="https://www.tessitura.com/">Tessitura</a></li>
+
+
+
+<li><a href="https://craftcms.com/">Craft CMS</a></li>
+
+
+
+<li><a href="https://bsky.app/profile/jazzsequence.com/post/3lgeu6wb4ks2q">Chris&#8217; Bluesky post</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-16-dee-teal/">Episode 16: Dee Teal</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/12/s01e16-dee-teal.mp3" length="69375500" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>16</itunes:episode>
+		<podcast:episode display="S1E16">16</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>48:10</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/12/dee-teal.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 15: Troy Chaplin</title>
+		<link>https://communitycode.dev/episodes/episode-15-troy-chaplin/</link>
+		<pubDate>Wed, 17 Dec 2025 18:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=592</guid>
+		<comments>https://communitycode.dev/episodes/episode-15-troy-chaplin/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-15-troy-chaplin/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[accessibility]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 15 - Troy Chaplin" width="500" height="281" src="https://www.youtube.com/embed/6yn47XObyXA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://troychaplin.ca/">troychaplin.ca</a></li>
+
+
+
+<li><a href="https://blockaccessibilitychecks.com/">Block Accessibility Checks</a></li>
+
+
+
+<li><a href="https://carleton.ca/">Carleton University</a></li>
+
+
+
+<li><a href="https://canada.wordcamp.org/2025/">WordCamp Canada 2025</a></li>
+
+
+
+<li><a href="https://humanmade.com/resources/the-state-of-wordpress-in-higher-education-research-report/">The State of WordPress in Higher Education</a> (Human Made)</li>
+
+
+
+<li><a href="https://poststatus.com/">Post Status</a></li>
+
+
+
+<li><a href="https://deployhq.com/">DeployHQ</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-15-troy-chaplin/">Episode 15: Troy Chaplin</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/12/s01e15-troy-chaplin.mp3" length="67734801" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>15</itunes:episode>
+		<podcast:episode display="S1E15">15</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>47:02</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/12/troy-chaplin.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 14: Mike Herchel</title>
+		<link>https://communitycode.dev/episodes/episode-14-mike-herchel/</link>
+		<pubDate>Wed, 03 Dec 2025 18:03:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=553</guid>
+		<comments>https://communitycode.dev/episodes/episode-14-mike-herchel/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-14-mike-herchel/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 14 - Mike Herchel" width="500" height="375" src="https://www.youtube.com/embed/vEaN-j1q2hs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://dripyard.com">Dripyard</a></li>
+
+
+
+<li><a href="https://herchel.com/">Herchel.com</a></li>
+
+
+
+<li><a href="https://www.drupal.org/about/starshot/faq">Drupal CMS and Starshot FAQ</a></li>
+
+
+
+<li><a href="https://www.drupal.org/project/canvas">Drupal Canvas</a></li>
+
+
+
+<li><a href="https://www.drupal.org/docs/develop/theming-drupal/using-single-directory-components">Single Directory Components</a></li>
+
+
+
+<li><a href="https://www.drupal.org/project/olivero">Olivero theme</a></li>
+
+
+
+<li><a href="https://wordpress.org/documentation/article/wordpress-block-editor/">Gutenberg (WordPress Block Editor)</a></li>
+
+
+
+<li><a href="https://webflow.com/">Webflow</a></li>
+
+
+
+<li><a href="https://www.wix.com/">Wix</a></li>
+
+
+
+<li><a href="https://www.squarespace.com/">Squarespace</a></li>
+
+
+
+<li><a href="https://business.adobe.com/products/experience-manager/adobe-experience-manager.html">Adobe Experience Manager (AEM)</a></li>
+
+
+
+<li><a href="https://themeforest.net/">ThemeForest / Envato Market</a></li>
+
+
+
+<li><a href="https://events.drupal.org/">DrupalCon</a></li>
+
+
+
+<li><a href="https://www.badcamp.org/">BADCamp</a></li>
+
+
+
+<li><a href="https://us.wordcamp.org">WordCamp US</a></li>
+
+
+
+<li><a href="https://fldrupal.camp/">Florida Drupal Camp</a></li>
+
+
+
+<li><a href="https://en.wikipedia.org/wiki/Adobe_Fireworks">Macromedia / Adobe Fireworks</a> (Wikipedia)</li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-14-mike-herchel/">Episode 14: Mike Herchel</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/12/s01e14-mike-herchel.mp3" length="78969544" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>14</itunes:episode>
+		<podcast:episode>14</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>54:50</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/12/mike-herchel.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 13: Mike Demo</title>
+		<link>https://communitycode.dev/episodes/episode-13-mike-demo/</link>
+		<pubDate>Wed, 19 Nov 2025 18:02:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=552</guid>
+		<comments>https://communitycode.dev/episodes/episode-13-mike-demo/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-13-mike-demo/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[joomla]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 13 -  Mike Demo" width="500" height="375" src="https://www.youtube.com/embed/4lSvZJbBgBQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://mikedemo.com/">MikeDemo.com</a></li>
+
+
+
+<li><a href="https://x.com/MPMike">Mike on X</a></li>
+
+
+
+<li><a href="https://www.joomla.org/">Joomla</a>
+<ul class="wp-block-list">
+<li><a href="https://en.wikipedia.org/wiki/Mambo_(software)">Mambo</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://www.drupal.org/">Drupal</a></li>
+
+
+
+<li><a href="https://www.concretecms.com/">Concrete CMS</a></li>
+
+
+
+<li><a href="https://typo3.org/">Typo3</a></li>
+
+
+
+<li><a href="https://plone.org/">Plone</a></li>
+
+
+
+<li><a href="https://contao.org/en/">Contao</a></li>
+
+
+
+<li><a href="https://www.cms-garden.org/en">CMS Garden</a></li>
+
+
+
+<li><a href="https://allthingsopen.org/">All Things Open</a></li>
+
+
+
+<li><a href="https://us.wordcamp.org">WordCamp US</a></li>
+
+
+
+<li><a href="https://ca.wordcamp.org/2025">WordCamp Canada 2025</a></li>
+
+
+
+<li><a href="https://central.wordcamp.org/">WordCamp Central</a></li>
+
+
+
+<li><a href="https://events.drupal.org/">DrupalCon</a></li>
+
+
+
+<li><a href="https://www.badcamp.org/">BADCamp</a></li>
+
+
+
+<li><a href="https://docs.joomla.org/Pizza,_Bugs_%26_Fun">Joomla &#8220;Pizza, Bugs and Fun&#8221;</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-13-mike-demo/">Episode 13: Mike Demo</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/11/s01e13-mike-demo.mp3" length="67699065" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>13</itunes:episode>
+		<podcast:episode>13</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>47:01</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/11/mike-demo.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 12: Christos Paloukas</title>
+		<link>https://communitycode.dev/episodes/episode-12-christos-paloukas/</link>
+		<pubDate>Wed, 05 Nov 2025 18:00:01 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=410</guid>
+		<comments>https://communitycode.dev/episodes/episode-12-christos-paloukas/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-12-christos-paloukas/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[deib]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[performance]]></category>
+		<category><![CDATA[remote work]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 12 - Christos Paloukas" width="500" height="281" src="https://www.youtube.com/embed/8Usn17pFuA8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://pressidium.com/">Pressidium</a></li>
+
+
+
+<li><a href="https://athens.wordcamp.org/2025/">WordCamp Athens</a></li>
+
+
+
+<li><a href="https://uncachedpodcast.buzzsprout.com/">Uncached Podcast</a></li>
+
+
+
+<li><a href="https://creators.spotify.com/pod/profile/pressidium/">The 3Q Interview Podcast</a></li>
+
+
+
+<li><a href="https://fair.pm">FAIR</a> (fair.pm)</li>
+
+
+
+<li><a href="https://www.linkedin.com/in/paloukas/">Christos on LinkedIn</a></li>
+
+
+
+<li><a href="https://bsky.app/profile/paloukas.com">Christos on Bluesky</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-12-christos-paloukas/">Episode 12: Christos Paloukas</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/10/s01e12-christos-paloukas.mp3" length="74975317" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>12</itunes:episode>
+		<podcast:episode>12</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>52:04</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/10/christos-paloukas.vtt" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 11: Kim Maida</title>
+		<link>https://communitycode.dev/episodes/episode-11-kim-maida/</link>
+		<pubDate>Wed, 22 Oct 2025 16:55:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=490</guid>
+		<comments>https://communitycode.dev/episodes/episode-11-kim-maida/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-11-kim-maida/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[remote work]]></category>
+		<category><![CDATA[speaking]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 11   Kim Maida" width="500" height="281" src="https://www.youtube.com/embed/BeFod8OBvYo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://fusionauth.io/">FusionAuth</a></li>
+
+
+
+<li><a href="https://auth0.com/">Auth0</a></li>
+
+
+
+<li><a href="https://www.okta.com/">Okta</a></li>
+
+
+
+<li><a href="https://www.digitalocean.com/">DigitalOcean</a></li>
+
+
+
+<li><a href="https://en.wikipedia.org/wiki/Identity_and_access_management">Identity and Access Management</a></li>
+
+
+
+<li><a href="https://maida.kim/">maida.kim</a></li>
+
+
+
+<li><a href="https://mihi-mini.studio/">Mihi Mini Studio</a></li>
+
+
+
+<li><a href="https://bsky.app/profile/maida.kim">Kim on Bluesky</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/kimmaida/">Kim on LinkedIn</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-11-kim-maida/">Episode 11: Kim Maida</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/10/s01e11-kim-maida.mp3" length="59210941" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>11</itunes:episode>
+		<podcast:episode>11</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>41:07</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/10/kim-maida.vtt" language="en-US" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 10: Tammie Lister</title>
+		<link>https://communitycode.dev/episodes/episode-10-tammie-lister/</link>
+		<pubDate>Wed, 08 Oct 2025 17:00:46 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=382</guid>
+		<comments>https://communitycode.dev/episodes/episode-10-tammie-lister/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-10-tammie-lister/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[burnout]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[speaking]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 10   Tammie Lister" width="500" height="281" src="https://www.youtube.com/embed/-S0EF2wGRjc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://guildenberg.com">Guildenberg</a></li>
+
+
+
+<li><a href="https://make.wordpress.org/core/">WordPress Core Development blog</a></li>
+
+
+
+<li><a href="https://wordpress.org/gutenberg/">Gutenberg</a></li>
+
+
+
+<li><a href="https://automattic.com/benefits/sabbatical/">Automattic Sabbatical Benefit</a></li>
+
+
+
+<li><a href="https://en.wikipedia.org/wiki/Acorn_Electron">Acorn Electron</a> (Wikipedia)</li>
+
+
+
+<li><a href="https://www.nintendo.com/en-gb/Misc-/Nintendo-Classic-Mini-Nintendo-Entertainment-System/Nintendo-Classic-Mini-Nintendo-Entertainment-System-1124287.html">Nintendo Classic Mini</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph"></p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-10-tammie-lister/">Episode 10: Tammie Lister</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/10/s01e10-tammie-lister.mp3" length="74760904" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>10</itunes:episode>
+		<podcast:episode>10</podcast:episode>
+		<itunes:title>Episode 10: Tammie Lister</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>51:55</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/10/tammie-lister.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 9: Raquel Manriquez</title>
+		<link>https://communitycode.dev/episodes/episode-9-raquel-manriquez/</link>
+		<pubDate>Wed, 24 Sep 2025 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=457</guid>
+		<comments>https://communitycode.dev/episodes/episode-9-raquel-manriquez/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-9-raquel-manriquez/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 9 - Raquel Manriquez" width="500" height="281" src="https://www.youtube.com/embed/Pl59SIyoJws?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.linkedin.com/in/raquel-karina/">Raquel on LinkedIn</a></li>
+
+
+
+<li><a href="https://raquelkarina.com/">Raquel&#8217;s blog</a></li>
+
+
+
+<li><a href="https://x.com/raquel__karina">Raquel on X/Twitter</a></li>
+
+
+
+<li><a href="https://x.com/WondrlndCurious">WonderlandCurious on X/Twitter</a></li>
+
+
+
+<li><a href="https://www.instagram.com/raque_l/">Raquel on Instagram</a></li>
+
+
+
+<li><a href="https://www.elegantthemes.com/">Elegant Themes</a></li>
+
+
+
+<li><a href="https://pressconf.events/">PressConf</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-9-raquel-manriquez/">Episode 9: Raquel Manriquez</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/09/s01e09-raquel-manriquez.mp3" length="73727082" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>9</itunes:episode>
+		<podcast:episode>9</podcast:episode>
+		<itunes:title>Episode 9: Raquel Manriquez</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:duration>51:12</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/09/raquel-manriquez-transcript.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 8: Brendan O&#8217;Leary</title>
+		<link>https://communitycode.dev/episodes/episode-8-brendan-oleary/</link>
+		<pubDate>Wed, 10 Sep 2025 17:00:43 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=277</guid>
+		<comments>https://communitycode.dev/episodes/episode-8-brendan-oleary/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-8-brendan-oleary/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[open source]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code: Episode 8 - Brendan O&#039;Leary" width="500" height="375" src="https://www.youtube.com/embed/VGM2hVPOQzA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://kilocode.ai/">Kilo Code</a></li>
+
+
+
+<li><a href="https://boleary.dev/">boleary.dev</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/olearycrew/">Brendan O&#8217;Leary on LinkedIn</a></li>
+
+
+
+<li><a href="https://x.com/olearycrew">Brendan O&#8217;Leary on X</a></li>
+
+
+
+<li><a href="https://bsky.app/profile/brendan.fyi">Brendan O&#8217;Leary on Bluesky</a></li>
+
+
+
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+
+
+
+<li><a href="https://chatgpt.com/">ChatGPT</a> (OpenAI)</li>
+
+
+
+<li><a href="https://www.anthropic.com/claude">Claude</a> (Anthropic)</li>
+
+
+
+<li><a href="https://gemini.google.com/app">Gemini</a> (Google)</li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-8-brendan-oleary/">Episode 8: Brendan O&#8217;Leary</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/09/s01e08-brendan-oleary.mp3" length="70124691" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>8</itunes:episode>
+		<podcast:episode>8</podcast:episode>
+		<itunes:title>Episode 8: Brendan O&#039;Leary</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>48:42</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/09/brendan-oleary-transcript.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 7: Queen Carolyn of Ladonia</title>
+		<link>https://communitycode.dev/episodes/episode-7-queen-carolyn-of-ladonia/</link>
+		<pubDate>Wed, 27 Aug 2025 17:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=362</guid>
+		<comments>https://communitycode.dev/episodes/episode-7-queen-carolyn-of-ladonia/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-7-queen-carolyn-of-ladonia/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code   Episode 7: Queen Carolyn of Ladonia" width="500" height="281" src="https://www.youtube.com/embed/A3LzLZeybKs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.ladonia.org/">Ladonia.org</a></li>
+
+
+
+<li><a href="https://us.wordcamp.org/2025/attendees/">WordCamp US Attendees</a></li>
+
+
+
+<li><a href="https://en.wikipedia.org/wiki/Micronation">Micronations</a> (Wikipedia)</li>
+
+
+
+<li><a href="https://www.linkedin.com/in/cshel/">Queen Carolyn on LinkedIn</a></li>
+
+
+
+<li><a href="https://yoast.com/about-us/team/carolyn-shelby/">Queen Carolyn&#8217;s profile on Yoast.com</a></li>
+
+
+
+<li><a href="https://ladoniaherald.com/">Ladonia Herald</a></li>
+
+
+
+<li><a href="https://www.ladonia.org/shop/">Ladonia Store</a></li>
+
+
+
+<li><a href="https://www.ladonia.org/citizenship/">Apply for Ladonian citizenship!</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-7-queen-carolyn-of-ladonia/">Episode 7: Queen Carolyn of Ladonia</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/08/s01e07-queen-carolyn.mp3" length="74083810" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>7</itunes:episode>
+		<podcast:episode>7</podcast:episode>
+		<itunes:title>Episode 7: Queen Carolyn of Ladonia</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>51:27</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/08/Queen-Carolyn-of-Ladonia.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 6: Will Klein</title>
+		<link>https://communitycode.dev/episodes/episode-6-will-klein/</link>
+		<pubDate>Wed, 13 Aug 2025 17:01:07 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=150</guid>
+		<comments>https://communitycode.dev/episodes/episode-6-will-klein/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-6-will-klein/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[burnout]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[remote work]]></category>
+		<category><![CDATA[speaking]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+https://youtu.be/RvA_wMRUhEY
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.willklein.co/">willklein.co</a>
+<ul class="wp-block-list">
+<li><a href="https://bsky.app/profile/willkle.in">Bluesky</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/in/willklein/">LinkedIn</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://developer.north.com/">North Developer Portal</a></li>
+
+
+
+<li><a href="https://weyweyweb.com/">WeyWeyWeb</a></li>
+
+
+
+<li><a href="https://www.youtube.com/@alterconf">AlterConf</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-6-will-klein/">Episode 6: Will Klein</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/08/s01e06-will-klein.mp3" length="82073518" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>6</itunes:episode>
+		<podcast:episode>6</podcast:episode>
+		<itunes:title>Episode 6: Will Klein</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>57:00</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/08/Will-Klein.txt" language="en" type="text/plain" />
+	</item>
+	<item>
+		<title>Episode 5: Zach Hendershot</title>
+		<link>https://communitycode.dev/episodes/episode-5-zach-hendershot/</link>
+		<pubDate>Wed, 30 Jul 2025 17:00:29 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=246</guid>
+		<comments>https://communitycode.dev/episodes/episode-5-zach-hendershot/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-5-zach-hendershot/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 5: Zach Hendershot" width="500" height="375" src="https://www.youtube.com/embed/rgHYFVDGpSM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.miruni.io/">Miruni</a></li>
+
+
+
+<li><a href="https://new.drupal.org/docs/drupal-cms/get-to-know-drupal-cms/ai-tools-in-drupal-cms">AI in Drupal CMS</a></li>
+
+
+
+<li><a href="https://chatgpt.com/">ChatGPT</a></li>
+
+
+
+<li><a href="https://claude.ai/">Claude</a></li>
+
+
+
+<li><a href="https://lovable.dev/">Lovable</a></li>
+
+
+
+<li><a href="https://www.youtube.com/watch?v=XNDubWJU0aU">Cher closet scene in <em>Clueless</em></a></li>
+
+
+
+<li><a href="https://jazzsequence.com/2025/03/the-lovecraft-test-gemini/">Lovecraft test</a> (jazzsequence.com)</li>
+
+
+
+<li><a href="https://www.forbes.com/sites/corneliawalther/2025/06/09/intelligence-illusion-what-apples-ai-study-reveals-about-reasoning/">Intelligence Illusion: What Apple’s AI Study Reveals About Reasoning</a> (Forbes)</li>
+
+
+
+<li><a href="https://www.media.mit.edu/projects/your-brain-on-chatgpt/overview/">Your Brain on ChatGPT</a> (MIT)</li>
+
+
+
+<li><a href="https://www.linuxfoundation.org/press/linux-foundation-announces-the-fair-package-manager-project-for-open-source-content-management-system-stability">Linux Foundation Announces the FAIR Package Manager Project for Open Source Content Management System Stability</a> (Linux Foundation)</li>
+
+
+
+<li><a href="https://www.linkedin.com/in/zhendershot/">Zach Hendershot on LinkedIn</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-5-zach-hendershot/">Episode 5: Zach Hendershot</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/07/s01e05-zach-hendershot.mp3" length="69804326" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>5</itunes:episode>
+		<podcast:episode>5</podcast:episode>
+		<itunes:title>Episode 5: Zach Hendershot</itunes:title>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>48:28</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/07/Zach-Hendershot.txt" language="en" type="text/plain" />
+	</item>
+	<item>
+		<title>Episode 4: Patrick Rauland</title>
+		<link>https://communitycode.dev/episodes/episode-4-patrick-rauland/</link>
+		<pubDate>Wed, 16 Jul 2025 16:55:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=149</guid>
+		<comments>https://communitycode.dev/episodes/episode-4-patrick-rauland/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-4-patrick-rauland/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ecommerce]]></category>
+		<category><![CDATA[marketing]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[podcast]]></category>
+		<category><![CDATA[remote work]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 4: Patrick Rauland" width="500" height="375" src="https://www.youtube.com/embed/NUPWfKvnsEE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://plugin.fm/">Plugin.fm</a></li>
+
+
+
+<li><a href="https://xeroshoes.com/">Xero Shoes</a></li>
+
+
+
+<li><a href="https://www.linkedin.com/learning/instructors/patrick-rauland?u=126937978">Patrick&#8217;s courses on LinkedIn Learning</a></li>
+
+
+
+<li><a href="https://freemius.com/">Freemius</a></li>
+
+
+
+<li>Podcast sidebar
+<ul class="wp-block-list">
+<li><a href="https://binaryjazz.com">Binary Jazz</a></li>
+
+
+
+<li><a href="https://critrole.com/">Critical Role</a></li>
+
+
+
+<li><a href="https://snafumedia.com/">SNAFU</a></li>
+
+
+
+<li><a href="https://www.marcfennell.com/nutjobs">Nut Jobs</a></li>
+
+
+
+<li><a href="https://www.youtube.com/playlist?list=PL7atuZxmT956cWFGxqSyRdn6GWhBxiAwE">Wil Wheton&#8217;s Tabletop</a></li>
+
+
+
+<li><a href="https://www.dropout.tv/parlor-room">Parlor Room</a> (Dropout)</li>
+</ul>
+</li>
+
+
+
+<li>Board game sidebar
+<ul class="wp-block-list">
+<li><a href="https://indieboardgamedesigners.com/">Indie Board Game Designers podcast</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/248956/fry-thief">Fry Thief</a> (BoardGameGeek)</li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/291508/tiny-epic-dinosaurs">Tiny Epic Dinosaurs</a>
+<ul class="wp-block-list">
+<li><a href="https://boardgamegeek.com/boardgamefamily/25072/series-tiny-epic-gamelyn-games">Tiny Epic Games</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/165633/slap-45">Slap .45</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/45/perudo">Liar&#8217;s Dice</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/316554/dune-imperium">Dune: Imperium</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/266192/wingspan">Wingspan</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/410201/wyrmspan">Wyrmspan</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/256317/guild-master">Guild Master</a></li>
+
+
+
+<li><a href="https://boardgamegeek.com/boardgame/110327/lords-of-waterdeep">Lords of Waterdeep</a></li>
+
+
+
+<li><a href="https://github.com/jazzsequence/games-collector">Games Collector plugin</a></li>
+</ul>
+</li>
+
+
+
+<li><a href="https://www.speakinginbytes.com/">Speaking in Bytes</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-4-patrick-rauland/">Episode 4: Patrick Rauland</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/07/s01e04-patrick-rauland.mp3" length="75902559" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>7</itunes:episode>
+		<podcast:episode>7</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>52:42</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/07/Patrick-Rauland.txt" language="en" type="text/plain" />
+	</item>
+	<item>
+		<title>Episode 3: Sè Reed</title>
+		<link>https://communitycode.dev/episodes/episode-3-se-reed/</link>
+		<pubDate>Wed, 02 Jul 2025 16:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=148</guid>
+		<comments>https://communitycode.dev/episodes/episode-3-se-reed/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-3-se-reed/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[sustainability]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 3   Se Reed" width="500" height="375" src="https://www.youtube.com/embed/b_PIQIbP_8M?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://communitycode.dev/2025/04/28/community-code-manifesto/">Community + Code manifesto</a></li>
+
+
+
+<li><a href="https://www.thewpcommunitycollective.com/">WP Community Collective</a></li>
+
+
+
+<li><a href="https://www.gimp.org/">GNU Image Manipulation Program</a> (GIMP)</li>
+
+
+
+<li><a href="https://www.wpwatercooler.com/">WPwatercooler</a></li>
+
+
+
+<li><a href="https://wptavern.com/matt-mullenweg-proposes-wordpress-growth-council">Matt Mullenweg Proposes WordPress Growth Council</a> (WPTavern)</li>
+
+
+
+<li><a href="https://wordpressfoundation.org/">WordPress Foundation</a></li>
+
+
+
+<li><a href="https://opencollective.com/foundation">Open Collective Foundation</a></li>
+
+
+
+<li><a href="https://europe.wordcamp.org/2025/">WordCamp Europe 2025</a></li>
+
+
+
+<li><a href="https://altctrl.org/">AltCtrl.org</a>
+<ul class="wp-block-list">
+<li><a href="https://youtu.be/O9uQg4Aq89s?si=kOJ606v1ihgE7zzg">Sè Reed on The Heart of Open Source at AltCtrlOrg</a></li>
+
+
+
+<li><a href="https://youtu.be/eeSpgEKcHlQ?si=L5AKGbSJ81c6Yxm7">Panel Discussion “The Future of WordPress” with Francesca Marano, Joost de Valk and Sé Reed at AltCtrlOrg</a></li>
+</ul>
+</li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-3-se-reed/">Episode 3: Sè Reed</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/06/s01e03-SeReed.mp3" length="83998847" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>3</itunes:episode>
+		<podcast:episode>3</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>58:20</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/06/Se-Reed.txt" language="en" type="text/plain" />
+	</item>
+	<item>
+		<title>Episode 2: Roger Williams</title>
+		<link>https://communitycode.dev/episodes/episode-2-roger-williams/</link>
+		<pubDate>Wed, 18 Jun 2025 16:00:00 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=147</guid>
+		<comments>https://communitycode.dev/episodes/episode-2-roger-williams/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-2-roger-williams/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[blogging]]></category>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[devrel]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[remote work]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 2: Roger Williams" width="500" height="281" src="https://www.youtube.com/embed/rB9KMGMRMCA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://www.linkedin.com/in/rogerwilliamsmedia/">Roger Williams on LinkedIn</a></li>
+
+
+
+<li><a href="https://pressconf.events/">PressConf</a></li>
+
+
+
+<li><a href="https://kinsta.com/">Kinsta</a></li>
+
+
+
+<li><a href="https://www.youtube.com/playlist?list=PLhYfuAN3YCfxLV7E6_q_8lClVU-TPyRBS">Kinsta Talks</a> (YouTube)</li>
+
+
+
+<li><a href="https://www.uea.ac.uk/en/">University of East Anglia</a></li>
+
+
+
+<li><a href="https://en.wikipedia.org/wiki/Norwich">Norwich, England</a> (Wikipedia)</li>
+
+
+
+<li><a href="https://us.wordcamp.org/2025/">WordCamp US 2025</a></li>
+
+
+
+<li><a href="https://rogerwilliamsmedia.com/">rogerwilliamsmedia.com</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-2-roger-williams/">Episode 2: Roger Williams</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/05/s01e02-RogerWilliams.mp3" length="94448662" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>2</itunes:episode>
+		<podcast:episode>2</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>1:05:35</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/05/Roger-Williams.txt" language="en" type="text/plain" />
+	</item>
+	<item>
+		<title>Episode 1: Michelle Frechette</title>
+		<link>https://communitycode.dev/episodes/episode-1-michelle-frechette/</link>
+		<pubDate>Wed, 04 Jun 2025 16:09:42 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=146</guid>
+		<comments>https://communitycode.dev/episodes/episode-1-michelle-frechette/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-1-michelle-frechette/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<category><![CDATA[community]]></category>
+		<category><![CDATA[deib]]></category>
+		<category><![CDATA[events]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[post status]]></category>
+		<category><![CDATA[speaking]]></category>
+		<category><![CDATA[wordpress]]></category>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Episode 1: Michelle Frechette" width="500" height="281" src="https://www.youtube.com/embed/Lh1JWEIo1dE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://profiles.wordpress.org/michelleames/">Michelle Frechette on WordPress.org</a></li>
+
+
+
+<li><a href="https://wordpress.org/plugins/hello-beautiful/">Hello Beautiful plugin</a> (WordPress.org)</li>
+
+
+
+<li><a href="https://poststatus.com/">Post Status</a></li>
+
+
+
+<li><a href="https://wordpress.tv/speakers/michelle-frechette/">Michelle&#8217;s WordCamp presentations</a> (WordPress.tv)</li>
+
+
+
+<li><a href="https://givewp.com/">GiveWP</a></li>
+
+
+
+<li><a href="https://wpcareerpages.com/">WPCareerPages.com</a></li>
+
+
+
+<li><a href="https://www.underrepresentedintech.com/">Underrepresented in Tech</a></li>
+
+
+
+<li><a href="https://wpspeakers.com/">WPSpeakers</a></li>
+
+
+
+<li><a href="https://poststatus.com/category/wp-speakers-virtual-stage-series/">Post Status WPSpeakers Virtual Stage Series</a>
+<ul class="wp-block-list">
+<li><a href="https://poststatus.com/composable-wordpress/">Composable WordPress</a> by Chris Reynolds</li>
+</ul>
+</li>
+
+
+
+<li><em><a href="https://www.amazon.com/Good-Firm-Handshake-Essential-Business/dp/1973985098">A Good Firm Handshake</a></em> (Amazon.com)</li>
+
+
+
+<li><a href="https://speednetworkonline.com/">Speed Network Online</a></li>
+
+
+
+<li><a href="https://sponsormewp.com/">SponsorMeWP</a></li>
+
+
+
+<li><a href="https://us.wordcamp.org/2025/">WordCamp US 2025</a></li>
+
+
+
+<li><a href="https://www.cloudfest.com/usa/">CloudFest US 2025</a></li>
+
+
+
+<li><a href="https://meetmichelle.online/">MeetMichelle.online</a></li>
+</ul>
+<p>The post <a href="https://communitycode.dev/episodes/episode-1-michelle-frechette/">Episode 1: Michelle Frechette</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/05/s01e01MichelleFrechette.mp3" length="71480133" type="audio/mpeg" />
+		<itunes:season>1</itunes:season>
+		<podcast:season>1</podcast:season>
+		<itunes:episode>1</itunes:episode>
+		<podcast:episode>1</podcast:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>49:38</itunes:duration>
+		<podcast:transcript url="https://communitycode.dev/app/uploads/2025/05/Michelle-Frechette.vtt" language="en" type="text/vtt" rel="captions" />
+	</item>
+	<item>
+		<title>Episode 0: Community + Code</title>
+		<link>https://communitycode.dev/episodes/episode-0-community-code/</link>
+		<pubDate>Fri, 09 May 2025 20:25:01 +0000</pubDate>
+		<guid isPermaLink="false">https://communitycode.dev/?post_type=episodes&#038;p=91</guid>
+		<comments>https://communitycode.dev/episodes/episode-0-community-code/#respond</comments>
+		<wfw:commentRss>https://communitycode.dev/episodes/episode-0-community-code/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<description><![CDATA[
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Community + Code Podcast Trailer" width="500" height="281" src="https://www.youtube.com/embed/mwBjvAV6emw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+
+
+
+
+
+
+<p class="wp-block-paragraph">A new tech podcast about people rather than code. Join us on our journey to reveal the human stories behind the tech communities we love.</p>
+<p>The post <a href="https://communitycode.dev/episodes/episode-0-community-code/">Episode 0: Community + Code</a> appeared first on <a href="https://communitycode.dev">Community + Code</a>.</p>]]></description>
+		<enclosure url="https://communitycode.dev/app/uploads/2025/05/Community-Code-podcast-trailer.mp3" length="2887463" type="audio/mpeg" />
+		<itunes:episodeType>full</itunes:episodeType>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:duration>1:28</itunes:duration>
+	</item>
+</channel>
+</rss>

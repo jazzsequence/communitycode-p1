@@ -1,0 +1,241 @@
+/*
+ * Community + Code design system.
+ *
+ * Tokens live on `.cc-root` (applied by components/puck/root.tsx), NOT on
+ * <body> or :root. Puck copies every host stylesheet into its editor canvas
+ * iframe, and the canvas must keep its own chrome; scoping to a wrapper that
+ * only the page tree renders keeps the two apart. See app/styles.css.
+ *
+ * Re-theme by editing the token block only. Components below use tokens, never
+ * raw colours. Dark by default; light follows the OS.
+ */
+
+.cc-root {
+  --cc-font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --cc-font-body: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cc-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* colour: midnight broadcast */
+  --cc-bg: #0e1116;
+  --cc-surface: #161b22;
+  --cc-surface-2: #1d242d;
+  --cc-border: #2a323d;
+  --cc-text: #eceff4;
+  --cc-muted: #9aa5b4;
+  --cc-accent: #ffb454;
+  --cc-accent-ink: #1a1203;
+  --cc-link: #7cc4ff;
+  --cc-danger: #ff7b72;
+  --cc-focus: #ffb454;
+
+  /* scale */
+  --cc-text-xs: 0.8125rem;
+  --cc-text-sm: 0.9375rem;
+  --cc-text-md: 1.0625rem;
+  --cc-text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --cc-text-xl: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
+  --cc-text-2xl: clamp(2.1rem, 1.5rem + 2.6vw, 3.5rem);
+  --cc-space-1: 0.25rem;
+  --cc-space-2: 0.5rem;
+  --cc-space-3: 0.75rem;
+  --cc-space-4: 1rem;
+  --cc-space-5: 1.5rem;
+  --cc-space-6: 2rem;
+  --cc-space-7: 3rem;
+  --cc-space-8: 4.5rem;
+  --cc-radius: 0.75rem;
+  --cc-radius-sm: 0.5rem;
+  --cc-content: 72rem;
+  --cc-measure: 68ch;
+
+  background: var(--cc-bg);
+  color: var(--cc-text);
+  font-family: var(--cc-font-body);
+  font-size: var(--cc-text-md);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: light) {
+  .cc-root {
+    --cc-bg: #faf8f4;
+    --cc-surface: #ffffff;
+    --cc-surface-2: #f1ede5;
+    --cc-border: #e0d9cc;
+    --cc-text: #14181f;
+    --cc-muted: #566170;
+    --cc-accent: #b45309;
+    --cc-accent-ink: #ffffff;
+    --cc-link: #0b5cad;
+    --cc-danger: #b42318;
+    --cc-focus: #b45309;
+  }
+}
+
+.cc-root *,
+.cc-root *::before,
+.cc-root *::after {
+  box-sizing: border-box;
+}
+
+.cc-root :where(h1, h2, h3, h4) {
+  font-family: var(--cc-font-display);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.cc-root :where(a) {
+  color: var(--cc-link);
+  text-underline-offset: 0.2em;
+}
+
+/* One visible focus treatment everywhere; never remove an outline without it. */
+.cc-root :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--cc-focus);
+  outline-offset: 2px;
+  border-radius: var(--cc-radius-sm);
+}
+
+/* --- layout ------------------------------------------------------------- */
+
+.cc-container {
+  width: 100%;
+  max-width: var(--cc-content);
+  margin-inline: auto;
+  padding-inline: var(--cc-space-5);
+}
+
+.cc-section {
+  padding-block: var(--cc-space-7);
+}
+
+.cc-stack > * + * {
+  margin-top: var(--cc-space-4);
+}
+
+.cc-grid {
+  display: grid;
+  gap: var(--cc-space-5);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
+
+/* --- type --------------------------------------------------------------- */
+
+.cc-eyebrow {
+  font-size: var(--cc-text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cc-accent);
+  font-weight: 600;
+}
+
+.cc-muted {
+  color: var(--cc-muted);
+}
+
+/* --- components --------------------------------------------------------- */
+
+.cc-card {
+  background: var(--cc-surface);
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius);
+  overflow: hidden;
+}
+
+.cc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--cc-space-2);
+  min-height: 2.75rem; /* 44px touch target */
+  padding: 0 var(--cc-space-5);
+  border-radius: 999px;
+  border: 1px solid var(--cc-border);
+  background: var(--cc-surface-2);
+  color: var(--cc-text);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cc-btn:hover {
+  border-color: var(--cc-accent);
+}
+
+.cc-btn--primary {
+  background: var(--cc-accent);
+  border-color: var(--cc-accent);
+  color: var(--cc-accent-ink);
+}
+
+.cc-btn[disabled],
+.cc-btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cc-pill {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: var(--cc-surface-2);
+  border: 1px solid var(--cc-border);
+  font-size: var(--cc-text-xs);
+  color: var(--cc-muted);
+}
+
+.cc-field {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 var(--cc-space-4);
+  border-radius: var(--cc-radius-sm);
+  border: 1px solid var(--cc-border);
+  background: var(--cc-surface);
+  color: var(--cc-text);
+  font: inherit;
+}
+
+/* Rich HTML from WordPress/show.fm show notes (already sanitised server-side). */
+.cc-prose {
+  max-width: var(--cc-measure);
+}
+.cc-prose > * + * {
+  margin-top: var(--cc-space-4);
+}
+.cc-prose :where(ul, ol) {
+  padding-left: var(--cc-space-5);
+}
+.cc-prose :where(iframe) {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: var(--cc-radius);
+}
+.cc-prose :where(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+.cc-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-root * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

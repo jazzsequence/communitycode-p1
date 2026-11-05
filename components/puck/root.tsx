@@ -34,7 +34,9 @@ export const puckRoot = {
   render: (props: { children?: ReactNode; title?: string }) => {
     const { children } = props;
     return (
-      <div className="font-sans antialiased">
+      // Tokens are scoped to this wrapper, not <body>: Puck copies host styles
+      // into its editor canvas. See app/podcast.css.
+      <div className="cc-root">
         {children}
       </div>
     );
