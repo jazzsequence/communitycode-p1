@@ -1,6 +1,6 @@
 import { XMLParser } from "fast-xml-parser";
 import { episodeNumberFromTitle, parseGuestsFromTitle } from "./guest";
-import { sanitizeShowNotes, toPlainText } from "./sanitize";
+import { cleanDescription, sanitizeShowNotes, toPlainText } from "./sanitize";
 import type { Episode, EpisodeType } from "./types";
 
 /**
@@ -120,7 +120,7 @@ export function mapFeedItem(
     id: postId ? `wp-${postId}` : `wp-${slugFromLink(link)}`,
     slug: rest?.slug ?? slugFromLink(link),
     title,
-    description: toPlainText(rest?.excerpt?.rendered) || toPlainText(item.description).slice(0, 280),
+    description: toPlainText(rest?.excerpt?.rendered) || cleanDescription(toPlainText(item.description)).slice(0, 280),
     showNotesHtml: sanitizeShowNotes(showNotesSource),
     publishedAt:
       publishedAt && !Number.isNaN(publishedAt.getTime()) ? publishedAt.toISOString() : new Date(0).toISOString(),

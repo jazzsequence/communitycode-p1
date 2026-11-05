@@ -1,0 +1,1138 @@
+{
+ "data": [
+  {
+   "id": "8270b747-ea6f-4302-935a-294c12672851",
+   "slug": "community-code-announcement-a98awc",
+   "title": "Community + Code announcement",
+   "description": "We interrupt this program for this special announcement\u2026 The post Community + Code announcement appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": null,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-10-29T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8270b747-ea6f-4302-935a-294c12672851/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 62,
+    "size_bytes": 991059
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/community-code-announcement-a98awc",
+    "embed": "https://embed.cdn.media/ep/8270b747-ea6f-4302-935a-294c12672851"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8270b747-ea6f-4302-935a-294c12672851/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "7496ca06-0b66-476e-b407-b6b0c225f89a",
+   "slug": "episode-36-jacquie-capur-a98avk",
+   "title": "Episode 36: Jacquie Capur",
+   "description": "Jacquie on Sessionize HashiCorp author page Nebius HashiCorp The Full Stack (reality TV show) CodeTV Strudel @devopsjacquie on Twitch DevRelCon @devopsjacquie on X Jacquie on LinkedIn The post Episode 36: Jacquie Capur appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 36,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-10-14T16:57:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7496ca06-0b66-476e-b407-b6b0c225f89a/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2608,
+    "size_bytes": 62598918
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-36-jacquie-capur-a98avk",
+    "embed": "https://embed.cdn.media/ep/7496ca06-0b66-476e-b407-b6b0c225f89a"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7496ca06-0b66-476e-b407-b6b0c225f89a/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "6f5f755a-0473-41d6-993d-7a4ceb557a43",
+   "slug": "episode-35-pj-hagerty-a98atq",
+   "title": "Episode 35: PJ Hagerty",
+   "description": "DevRelate.io PJ Hagerty on Medium PJ Hagerty on GitHub PJ Hagerty on LinkedIn PJ Hagerty\u2019s Sessionize profile DevRelCon The WP Open Community Collective Open Sourcing Mental Health Developer relations \u2014 Wikipedia X / Bluesky / Mastodon The post Episode 35: PJ Hagerty appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 35,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-09-30T17:14:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/6f5f755a-0473-41d6-993d-7a4ceb557a43/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2911,
+    "size_bytes": 69875170
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-35-pj-hagerty-a98atq",
+    "embed": "https://embed.cdn.media/ep/6f5f755a-0473-41d6-993d-7a4ceb557a43"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/6f5f755a-0473-41d6-993d-7a4ceb557a43/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "bc4fe681-4084-4d14-b215-dbcdce7f5632",
+   "slug": "episode-34-maciek-palmowski-a98atp",
+   "title": "Episode 34: Maciek Palmowski",
+   "description": "Maciek Palmowski\u2019s website Maciek Palmowski on LinkedIn Maciek Palmowski on Bluesky Patchstack CMS Conf The Repository: CMS Conf launch coverage Statamic #227 \u2013 Maciek Palmowski on Testing Secure WordPress Hosting (WP Tavern Jukebox) The post Episode 34: Maciek Palmowski appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 34,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-09-16T17:01:22.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/bc4fe681-4084-4d14-b215-dbcdce7f5632/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3109,
+    "size_bytes": 74626284
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-34-maciek-palmowski-a98atp",
+    "embed": "https://embed.cdn.media/ep/bc4fe681-4084-4d14-b215-dbcdce7f5632"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/bc4fe681-4084-4d14-b215-dbcdce7f5632/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "b36dc8f5-fe71-4eac-9c7e-3f39bf69b29a",
+   "slug": "episode-33-jonathan-wold-a98ato",
+   "title": "Episode 33: Jonathan Wold",
+   "description": "Jonathan Wold Jonathan on WordPress.org Jonathan on LinkedIn Crossword Convesio Guildenberg Tammie Lister Luke Carbis Courtney Robertson Automattic WooCommerce WordCamp US 2026 Jonathan & Tammie\u2019s talk Matt Mullenweg on building the operating system of the web (TechCrunch) PressConf The post Episode 33: Jonathan Wold appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 33,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-09-02T17:09:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/b36dc8f5-fe71-4eac-9c7e-3f39bf69b29a/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2800,
+    "size_bytes": 67200022
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-33-jonathan-wold-a98ato",
+    "embed": "https://embed.cdn.media/ep/b36dc8f5-fe71-4eac-9c7e-3f39bf69b29a"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/b36dc8f5-fe71-4eac-9c7e-3f39bf69b29a/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "8fccd1bb-98e6-4c56-a851-b400b16e5ed3",
+   "slug": "episode-32-bud-kraus-a98a5o",
+   "title": "Episode 32: Bud Kraus",
+   "description": "Seriously, BUD? podcast Joy of WP Bud Kraus on WordPress.org Bud Kraus on X/Twitter (@joyofwp) About Bud Kraus Bob Dunn (OpenChannels.fm) Miriam Schwab (Elementor / Angie) Matt Mullenweg WP Credits program Wisper Flow The post Episode 32: Bud Kraus appeared first on Community + Code.",
+   "season_number": null,
+   "episode_number": null,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-08-05T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8fccd1bb-98e6-4c56-a851-b400b16e5ed3/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3047,
+    "size_bytes": 73120832
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-32-bud-kraus-a98a5o",
+    "embed": "https://embed.cdn.media/ep/8fccd1bb-98e6-4c56-a851-b400b16e5ed3"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8fccd1bb-98e6-4c56-a851-b400b16e5ed3/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "ef51057a-981f-4831-a8fb-afd808ea0744",
+   "slug": "episode-31-brent-toderash-a989bj",
+   "title": "Episode 31: Brent Toderash",
+   "description": "toderash.net Brent on WordPress.org Brent on LinkedIn Brent on X (@toderash) FAIR project AspirePress The Cathedral and the Bazaar TYPO3 I don\u2019t miss not writing code Invert The post Episode 31: Brent Toderash appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 31,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-07-22T17:01:29.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/ef51057a-981f-4831-a8fb-afd808ea0744/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3647,
+    "size_bytes": 87529766
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-31-brent-toderash-a989bj",
+    "embed": "https://embed.cdn.media/ep/ef51057a-981f-4831-a8fb-afd808ea0744"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/ef51057a-981f-4831-a8fb-afd808ea0744/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "8abf8796-0d6a-4218-a396-57e8dbcd6d0d",
+   "slug": "episode-30-miriam-goldman-tgf75i",
+   "title": "Episode 30: Miriam Goldman",
+   "description": "https://youtu.be/SXyG-AxjypU miriamgoldman.ca Miriam on LinkedIn Miriam\u2019s GitHub Miriam on WordPress.org WordCamp Canada 2025 organizer page WordCamp Canada 2024 speaker page WordCamp Rochester, NY speaker page Pantheon Kanopi Studios DrupalCon DrupalCamp Ottawa SonarQube The post Episode 30: Miriam Goldman appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 30,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-07-08T17:04:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8abf8796-0d6a-4218-a396-57e8dbcd6d0d/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2896,
+    "size_bytes": 69518442
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-30-miriam-goldman-tgf75i",
+    "embed": "https://embed.cdn.media/ep/8abf8796-0d6a-4218-a396-57e8dbcd6d0d"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8abf8796-0d6a-4218-a396-57e8dbcd6d0d/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "7f3a96c1-dd64-4dc3-a33b-c69070e1790f",
+   "slug": "episode-29-robert-abela-tgf75j",
+   "title": "Episode 29 \u2013 Robert Abela",
+   "description": "Melapress WP Activity Log WP 2FA Melapress Login Security Robert Abela on LinkedIn Robert Abela\u2019s website Have I Been Pwned Ghost in the Wires by Kevin Mitnick PatchStack CloudFest Intro music: nqt provided by mobygratis. Outro music: Conspire provided by mobygratis. The post Episode 29 \u2013 Robert Abela appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 29,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-06-25T16:27:50.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7f3a96c1-dd64-4dc3-a33b-c69070e1790f/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3204,
+    "size_bytes": 76901273
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-29-robert-abela-tgf75j",
+    "embed": "https://embed.cdn.media/ep/7f3a96c1-dd64-4dc3-a33b-c69070e1790f"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7f3a96c1-dd64-4dc3-a33b-c69070e1790f/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "943c3148-0054-4bbb-8e4f-8f9e05e40a77",
+   "slug": "episode-28-carrie-dils-tgf75k",
+   "title": "Episode 28 \u2013 Carrie Dils",
+   "description": "Carrie Dils Carrie on Bluesky Carrie on LinkedIn LinkedIn Learning Post Status FAIR Project Linux Foundation FAIR announcement TYPO3 Roots SatisPress The post Episode 28 \u2013 Carrie Dils appeared first on Community + Code.",
+   "season_number": null,
+   "episode_number": null,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-06-10T17:02:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/943c3148-0054-4bbb-8e4f-8f9e05e40a77/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2926,
+    "size_bytes": 70231898
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-28-carrie-dils-tgf75k",
+    "embed": "https://embed.cdn.media/ep/943c3148-0054-4bbb-8e4f-8f9e05e40a77"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/943c3148-0054-4bbb-8e4f-8f9e05e40a77/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "7041afe6-2918-4c27-99c7-ab24d9939aae",
+   "slug": "episode-27-miriam-schwab-tgf77b",
+   "title": "Episode 27: Miriam Schwab",
+   "description": "miriamschwab.me Miriam Schwab on LinkedIn Miriam Schwab on Twitter/X (@illuminea) Miriam on WordPress.org Elementor Strattic Make WordPress Slack Post Status WP Community Collective Netlify The post Episode 27: Miriam Schwab appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 27,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-05-27T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7041afe6-2918-4c27-99c7-ab24d9939aae/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3090,
+    "size_bytes": 74154654
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-27-miriam-schwab-tgf77b",
+    "embed": "https://embed.cdn.media/ep/7041afe6-2918-4c27-99c7-ab24d9939aae"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7041afe6-2918-4c27-99c7-ab24d9939aae/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "42c89d90-cf82-4467-8f23-127810f23278",
+   "slug": "episode-26-courtney-robertson-tgfcd7",
+   "title": "Episode 26: Courtney Robertson",
+   "description": "CourtneyR.dev Courtney on WordPress.org Courtney on GitHub GoDaddy Pro WP Community Collective FAIR.pm learn.wordpress.org Juliette Reinders Folmer episode PHPCS on GitHub WPCS on GitHub opensource.org Descript Readwise Obsidian Penpot ActivePieces ActivityPub plugin Big Orange Heart GoDaddy Airo (Aero AI Builder) Pantheon Ash Nazg plugin Developer Relations book Blocktober The post Episode 26: Courtney Robertson appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 26,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-05-13T17:00:42.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/42c89d90-cf82-4467-8f23-127810f23278/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3360,
+    "size_bytes": 80645978
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-26-courtney-robertson-tgfcd7",
+    "embed": "https://embed.cdn.media/ep/42c89d90-cf82-4467-8f23-127810f23278"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/42c89d90-cf82-4467-8f23-127810f23278/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "4fa232f9-36ee-4c1a-a4c7-b4ada9926ff9",
+   "slug": "episode-25-jill-binder-tgf81d",
+   "title": "Episode 25: Jill Binder",
+   "description": "Speak Tech Confidently Tech speaker blueprint \u2014 free 10-step speaker readiness self-diagnostic jillbinder.com Jill Binder on LinkedIn Jill on Mastodon: @jillbinder Jill on X: @jillbinder WordPress.tv \u2014 Jill Binder talks People of WordPress: Jill Binder WordCamp Canada AlterConf Anil Dash The post Episode 25: Jill Binder appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 25,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-04-29T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/4fa232f9-36ee-4c1a-a4c7-b4ada9926ff9/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3003,
+    "size_bytes": 72086383
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-25-jill-binder-tgf81d",
+    "embed": "https://embed.cdn.media/ep/4fa232f9-36ee-4c1a-a4c7-b4ada9926ff9"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/4fa232f9-36ee-4c1a-a4c7-b4ada9926ff9/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "6041f359-b76e-4d93-918f-4a64f069d4f5",
+   "slug": "episode-24-natalie-maclees-tgf81e",
+   "title": "Episode 24: Natalie MacLees",
+   "description": "AAArdvark Accessibility nataliemac.com AAArdvark Accessibility plugin on WordPress.org Natalie on LinkedIn Practical Accessibility with Sara Soueidan Web Accessibility (Google/Coursera) PressConf nsquared plugins The post Episode 24: Natalie MacLees appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 24,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-04-15T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/6041f359-b76e-4d93-918f-4a64f069d4f5/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": null,
+    "size_bytes": 72228698
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-24-natalie-maclees-tgf81e",
+    "embed": "https://embed.cdn.media/ep/6041f359-b76e-4d93-918f-4a64f069d4f5"
+   },
+   "people": [],
+   "transcript": null
+  },
+  {
+   "id": "638242f1-095a-4531-8ebc-faf9fdd352a8",
+   "slug": "episode-23-steve-burge-tgf81f",
+   "title": "Episode 23: Steve Burge",
+   "description": "PublishPress Steve Burge on LinkedIn steveburge.com Ramble Ventures MetaSlider TaxoPress Logtivity Mississippi Today Ghost Beehiiv Pantheon Pluralsight The post Episode 23: Steve Burge appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 23,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-04-01T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/638242f1-095a-4531-8ebc-faf9fdd352a8/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3241,
+    "size_bytes": 77792780
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-23-steve-burge-tgf81f",
+    "embed": "https://embed.cdn.media/ep/638242f1-095a-4531-8ebc-faf9fdd352a8"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/638242f1-095a-4531-8ebc-faf9fdd352a8/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "121e4fbf-f6e2-4883-98cd-0ab2349768b2",
+   "slug": "episode-22-the-wp-community-collective-tgf81c",
+   "title": "Episode 22: The WP Community Collective",
+   "description": "The WP Community Collective Podcastathon Courtney Robertson S\u00e9 Reed Jono Alderson Chris Reynolds FAIR (Federated and Independent Repositories) Yoast GoDaddy Five for the Future Contributors Pantheon Kim Parsell Memorial Scholarship (WordPress Foundation) The post Episode 22: The WP Community Collective appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 22,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-03-20T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/121e4fbf-f6e2-4883-98cd-0ab2349768b2/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3522,
+    "size_bytes": 84536133
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-22-the-wp-community-collective-tgf81c",
+    "embed": "https://embed.cdn.media/ep/121e4fbf-f6e2-4883-98cd-0ab2349768b2"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/121e4fbf-f6e2-4883-98cd-0ab2349768b2/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "8d7303ad-d9c3-4021-8991-33401a30c53f",
+   "slug": "episode-21-juliette-reinders-folmer-tgf81g",
+   "title": "Episode 21: Juliette Reinders Folmer",
+   "description": "PHP CodeSniffer (PHPCSStandards) Juliette on GitHub (@jrfnl) PHPCompatibility WordPress Coding Standards PHPUnit Polyfills Juliette on WordPress.org Juliette on LinkedIn PHPCS on Mastodon PHP_CodeSniffer on X Juliette on Mastodon Juliette on X Open Source Pledge Tidelift ThanksDev GitHub Sponsors PHP Foundation Squizlabs (original PHPCS org) Joplin (open source note-taking app) Irfanview Suno (AI music, mentioned in conversation) Sponsor the work Juliette is doing at OpenCollective or GitHub Sponsorships The post Episode 21: Juliette Reinders Folmer appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 21,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-03-11T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8d7303ad-d9c3-4021-8991-33401a30c53f/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2996,
+    "size_bytes": 71907705
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-21-juliette-reinders-folmer-tgf81g",
+    "embed": "https://embed.cdn.media/ep/8d7303ad-d9c3-4021-8991-33401a30c53f"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/8d7303ad-d9c3-4021-8991-33401a30c53f/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "2ffa85b6-e310-4370-8547-faf74a38f604",
+   "slug": "episode-20-fons-vandamme-tgf81h",
+   "title": "Episode 20: Fons Vandamme",
+   "description": "fonsvandamme.com Webhaven Fons\u2019 Drupal.org profile Fons\u2019 GitHub profile Fons on LinkedIn Fons on X Talking Drupal #534 \u2013 Webhaven.io The Drop Times: How Fons Vandamme Built Webhaven to Simplify Drupal Project Development Episode 14: Mike Hershcel Drupal Canvas EntityOne on Drupal.org My AI musings (including The Lovecraft Test) Fons and his first Macintosh The post Episode 20: Fons Vandamme appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 20,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-02-25T18:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/2ffa85b6-e310-4370-8547-faf74a38f604/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2996,
+    "size_bytes": 71907705
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-20-fons-vandamme-tgf81h",
+    "embed": "https://embed.cdn.media/ep/2ffa85b6-e310-4370-8547-faf74a38f604"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/2ffa85b6-e310-4370-8547-faf74a38f604/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "773c3539-246e-4b15-b261-78b1dff26245",
+   "slug": "episode-19-carl-alexander-tgf823",
+   "title": "Episode 19: Carl Alexander",
+   "description": "carlalexander.ca Ymir Discover object-oriented programming using WordPress Post Status Carl\u2019s WP Asia 2023 speaker bio Carl\u2019s WordPress profile Carl on LinkedIn PressConf The post Episode 19: Carl Alexander appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 19,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-02-11T18:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/773c3539-246e-4b15-b261-78b1dff26245/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2789,
+    "size_bytes": 66950500
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-19-carl-alexander-tgf823",
+    "embed": "https://embed.cdn.media/ep/773c3539-246e-4b15-b261-78b1dff26245"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/773c3539-246e-4b15-b261-78b1dff26245/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "66987884-d5c9-476f-89fc-1448b5be3ba8",
+   "slug": "episode-18-john-hawkins-tgf824",
+   "title": "Episode 18: John Hawkins",
+   "description": "VegasGeek 9seeds John Hawkins on WordPress.tv VegasGeek on GitHub John Hawkins on WordPress.org The post Episode 18: John Hawkins appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 18,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-01-28T18:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/66987884-d5c9-476f-89fc-1448b5be3ba8/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2872,
+    "size_bytes": 68931000
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-18-john-hawkins-tgf824",
+    "embed": "https://embed.cdn.media/ep/66987884-d5c9-476f-89fc-1448b5be3ba8"
+   },
+   "people": [],
+   "transcript": null
+  },
+  {
+   "id": "ecdea6b0-0780-4cb5-b78f-0742fc6b5e5a",
+   "slug": "episode-17-tearyne-almendariz-tgf8uo",
+   "title": "Episode 17: Tearyne Almendariz",
+   "description": "NLBC Works Lullabot Fatima Sarah Khalid (LinkedIn) Tearyne\u2019s speaker profile on Sessionize Tearyne on Drupal.org (NineLivesBlackCat) Building a Strong Business Case for Web Accessibility \u2013 MidCamp 2025 NineLivesBlackCat on Twitch Super Sweet Bot Meet Nine \u2013 Olympia Agent Nine \u2013 Meet Me \u2013 Destination Mole The post Episode 17: Tearyne Almendariz appeared first on Community + Code.",
+   "season_number": 2,
+   "episode_number": 17,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2026-01-14T18:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/ecdea6b0-0780-4cb5-b78f-0742fc6b5e5a/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2855,
+    "size_bytes": 68519728
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-17-tearyne-almendariz-tgf8uo",
+    "embed": "https://embed.cdn.media/ep/ecdea6b0-0780-4cb5-b78f-0742fc6b5e5a"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/ecdea6b0-0780-4cb5-b78f-0742fc6b5e5a/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "eaca1251-09eb-4f5e-86f9-66e7f3fd19c8",
+   "slug": "episode-16-dee-teal-tgfa4b",
+   "title": "Episode 16: Dee Teal",
+   "description": "DeeTeal.com WP Includes Future of Team podcast WordCamp Canada 2025 Cultural Algorithms: The Innovation Multiplier (WordPress.tv) Human Made WebDevStudios From Canada to the World: 10 Lessons From Working With 50 Countries (WordPress.tv) Tessitura Craft CMS Chris\u2019 Bluesky post The post Episode 16: Dee Teal appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 16,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-12-31T18:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/eaca1251-09eb-4f5e-86f9-66e7f3fd19c8/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2890,
+    "size_bytes": 69375500
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-16-dee-teal-tgfa4b",
+    "embed": "https://embed.cdn.media/ep/eaca1251-09eb-4f5e-86f9-66e7f3fd19c8"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/eaca1251-09eb-4f5e-86f9-66e7f3fd19c8/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "c0d7d48e-6f77-4050-896a-dcb9415d2860",
+   "slug": "episode-15-troy-chaplin-tgfa4c",
+   "title": "Episode 15: Troy Chaplin",
+   "description": "troychaplin.ca Block Accessibility Checks Carleton University WordCamp Canada 2025 The State of WordPress in Higher Education (Human Made) Post Status DeployHQ The post Episode 15: Troy Chaplin appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 15,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-12-17T18:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/c0d7d48e-6f77-4050-896a-dcb9415d2860/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2822,
+    "size_bytes": 67734801
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-15-troy-chaplin-tgfa4c",
+    "embed": "https://embed.cdn.media/ep/c0d7d48e-6f77-4050-896a-dcb9415d2860"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/c0d7d48e-6f77-4050-896a-dcb9415d2860/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "e7379c5a-088e-4d52-96dc-f3ba01339578",
+   "slug": "episode-14-mike-herchel-tgfa7r",
+   "title": "Episode 14: Mike Herchel",
+   "description": "Dripyard Herchel.com Drupal CMS and Starshot FAQ Drupal Canvas Single Directory Components Olivero theme Gutenberg (WordPress Block Editor) Webflow Wix Squarespace Adobe Experience Manager (AEM) ThemeForest / Envato Market DrupalCon BADCamp WordCamp US Florida Drupal Camp Macromedia / Adobe Fireworks (Wikipedia) The post Episode 14: Mike Herchel appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 14,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-12-03T18:03:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/e7379c5a-088e-4d52-96dc-f3ba01339578/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3290,
+    "size_bytes": 78969544
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-14-mike-herchel-tgfa7r",
+    "embed": "https://embed.cdn.media/ep/e7379c5a-088e-4d52-96dc-f3ba01339578"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/e7379c5a-088e-4d52-96dc-f3ba01339578/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "5ebc5649-5007-4cea-b72b-e710e4a804d5",
+   "slug": "episode-13-mike-demo-tgfa7s",
+   "title": "Episode 13: Mike Demo",
+   "description": "MikeDemo.com Mike on X Joomla Mambo Drupal Concrete CMS Typo3 Plone Contao CMS Garden All Things Open WordCamp US WordCamp Canada 2025 WordCamp Central DrupalCon BADCamp Joomla \u201cPizza, Bugs and Fun\u201d The post Episode 13: Mike Demo appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 13,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-11-19T18:02:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/5ebc5649-5007-4cea-b72b-e710e4a804d5/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2821,
+    "size_bytes": 67699065
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-13-mike-demo-tgfa7s",
+    "embed": "https://embed.cdn.media/ep/5ebc5649-5007-4cea-b72b-e710e4a804d5"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/5ebc5649-5007-4cea-b72b-e710e4a804d5/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "7ecd5966-cb8c-4c62-8e25-b624e76efd35",
+   "slug": "episode-12-christos-paloukas-tgfb1z",
+   "title": "Episode 12: Christos Paloukas",
+   "description": "Pressidium WordCamp Athens Uncached Podcast The 3Q Interview Podcast FAIR (fair.pm) Christos on LinkedIn Christos on Bluesky The post Episode 12: Christos Paloukas appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 12,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-11-05T18:00:01.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7ecd5966-cb8c-4c62-8e25-b624e76efd35/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3124,
+    "size_bytes": 74975317
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-12-christos-paloukas-tgfb1z",
+    "embed": "https://embed.cdn.media/ep/7ecd5966-cb8c-4c62-8e25-b624e76efd35"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7ecd5966-cb8c-4c62-8e25-b624e76efd35/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "1a767a81-43d2-4ca8-859b-be72435a09dc",
+   "slug": "episode-11-kim-maida-tgfav3",
+   "title": "Episode 11: Kim Maida",
+   "description": "FusionAuth Auth0 Okta DigitalOcean Identity and Access Management maida.kim Mihi Mini Studio Kim on Bluesky Kim on LinkedIn The post Episode 11: Kim Maida appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 11,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-10-22T16:55:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/1a767a81-43d2-4ca8-859b-be72435a09dc/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2467,
+    "size_bytes": 59210941
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-11-kim-maida-tgfav3",
+    "embed": "https://embed.cdn.media/ep/1a767a81-43d2-4ca8-859b-be72435a09dc"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/1a767a81-43d2-4ca8-859b-be72435a09dc/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "23dc02f7-a8e0-440f-a415-2c8af694f8af",
+   "slug": "episode-10-tammie-lister-tgfbml",
+   "title": "Episode 10: Tammie Lister",
+   "description": "Guildenberg WordPress Core Development blog Gutenberg Automattic Sabbatical Benefit Acorn Electron (Wikipedia) Nintendo Classic Mini The post Episode 10: Tammie Lister appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 10,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-10-08T17:00:46.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/23dc02f7-a8e0-440f-a415-2c8af694f8af/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3115,
+    "size_bytes": 74760904
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-10-tammie-lister-tgfbml",
+    "embed": "https://embed.cdn.media/ep/23dc02f7-a8e0-440f-a415-2c8af694f8af"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/23dc02f7-a8e0-440f-a415-2c8af694f8af/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "d2ae2af6-0716-49f1-885c-aa60f71b00a5",
+   "slug": "episode-9-raquel-manriquez-tgfayc",
+   "title": "Episode 9: Raquel Manriquez",
+   "description": "Raquel on LinkedIn Raquel\u2019s blog Raquel on X/Twitter WonderlandCurious on X/Twitter Raquel on Instagram Elegant Themes PressConf The post Episode 9: Raquel Manriquez appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 9,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-09-24T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/d2ae2af6-0716-49f1-885c-aa60f71b00a5/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3072,
+    "size_bytes": 73727082
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-9-raquel-manriquez-tgfayc",
+    "embed": "https://embed.cdn.media/ep/d2ae2af6-0716-49f1-885c-aa60f71b00a5"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/d2ae2af6-0716-49f1-885c-aa60f71b00a5/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "4b68e1a9-37ea-4c95-a4ad-4e822be3812f",
+   "slug": "episode-8-brendan-o-leary-tgfce0",
+   "title": "Episode 8: Brendan O\u2019Leary",
+   "description": "Kilo Code boleary.dev Brendan O\u2019Leary on LinkedIn Brendan O\u2019Leary on X Brendan O\u2019Leary on Bluesky VS Code ChatGPT (OpenAI) Claude (Anthropic) Gemini (Google) The post Episode 8: Brendan O\u2019Leary appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 8,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-09-10T17:00:43.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/4b68e1a9-37ea-4c95-a4ad-4e822be3812f/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2922,
+    "size_bytes": 70124691
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-8-brendan-o-leary-tgfce0",
+    "embed": "https://embed.cdn.media/ep/4b68e1a9-37ea-4c95-a4ad-4e822be3812f"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/4b68e1a9-37ea-4c95-a4ad-4e822be3812f/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "1d8a4502-7751-443d-b60f-68000f116b6a",
+   "slug": "episode-7-queen-carolyn-of-ladonia-tgfbob",
+   "title": "Episode 7: Queen Carolyn of Ladonia",
+   "description": "Ladonia.org WordCamp US Attendees Micronations (Wikipedia) Queen Carolyn on LinkedIn Queen Carolyn\u2019s profile on Yoast.com Ladonia Herald Ladonia Store Apply for Ladonian citizenship! The post Episode 7: Queen Carolyn of Ladonia appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 7,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-08-27T17:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/1d8a4502-7751-443d-b60f-68000f116b6a/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3087,
+    "size_bytes": 74083810
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-7-queen-carolyn-of-ladonia-tgfbob",
+    "embed": "https://embed.cdn.media/ep/1d8a4502-7751-443d-b60f-68000f116b6a"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/1d8a4502-7751-443d-b60f-68000f116b6a/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "568218c9-de38-472e-8bb6-de5fc5161331",
+   "slug": "episode-6-will-klein-tgfd6m",
+   "title": "Episode 6: Will Klein",
+   "description": "https://youtu.be/RvA_wMRUhEY willklein.co Bluesky LinkedIn North Developer Portal WeyWeyWeb AlterConf The post Episode 6: Will Klein appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 6,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-08-13T17:01:07.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/568218c9-de38-472e-8bb6-de5fc5161331/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3420,
+    "size_bytes": 82073518
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-6-will-klein-tgfd6m",
+    "embed": "https://embed.cdn.media/ep/568218c9-de38-472e-8bb6-de5fc5161331"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/568218c9-de38-472e-8bb6-de5fc5161331/transcript.txt",
+    "type": "text/plain"
+   }
+  },
+  {
+   "id": "c97f39bb-26ff-4e13-9fa3-a40df033acff",
+   "slug": "episode-5-zach-hendershot-tgfcgm",
+   "title": "Episode 5: Zach Hendershot",
+   "description": "Miruni AI in Drupal CMS ChatGPT Claude Lovable Cher closet scene in Clueless Lovecraft test (jazzsequence.com) Intelligence Illusion: What Apple\u2019s AI Study Reveals About Reasoning (Forbes) Your Brain on ChatGPT (MIT) Linux Foundation Announces the FAIR Package Manager Project for Open Source Content Management System Stability (Linux Foundation) Zach Hendershot on LinkedIn The post Episode 5: Zach Hendershot appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 5,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-07-30T17:00:29.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/c97f39bb-26ff-4e13-9fa3-a40df033acff/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2908,
+    "size_bytes": 69804326
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-5-zach-hendershot-tgfcgm",
+    "embed": "https://embed.cdn.media/ep/c97f39bb-26ff-4e13-9fa3-a40df033acff"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/c97f39bb-26ff-4e13-9fa3-a40df033acff/transcript.txt",
+    "type": "text/plain"
+   }
+  },
+  {
+   "id": "7c7a81d4-9e6d-407b-a616-7cc97fea12b4",
+   "slug": "episode-4-patrick-rauland-tgfd78",
+   "title": "Episode 4: Patrick Rauland",
+   "description": "Plugin.fm Xero Shoes Patrick\u2019s courses on LinkedIn Learning Freemius Podcast sidebar Binary Jazz Critical Role SNAFU Nut Jobs Wil Wheton\u2019s Tabletop Parlor Room (Dropout) Board game sidebar Indie Board Game Designers podcast Fry Thief (BoardGameGeek) Tiny Epic Dinosaurs Tiny Epic Games Slap .45 Liar\u2019s Dice Dune: Imperium Wingspan Wyrmspan Guild Master Lords of Waterdeep Games Collector plugin Speaking in Bytes The post Episode 4: Patrick Rauland appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 7,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-07-16T16:55:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7c7a81d4-9e6d-407b-a616-7cc97fea12b4/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3162,
+    "size_bytes": 75902559
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-4-patrick-rauland-tgfd78",
+    "embed": "https://embed.cdn.media/ep/7c7a81d4-9e6d-407b-a616-7cc97fea12b4"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/7c7a81d4-9e6d-407b-a616-7cc97fea12b4/transcript.txt",
+    "type": "text/plain"
+   }
+  },
+  {
+   "id": "5b2b932f-354f-4fad-8d68-23246be46d7b",
+   "slug": "episode-3-s-reed-tgfd79",
+   "title": "Episode 3: S\u00e8 Reed",
+   "description": "Community + Code manifesto WP Community Collective GNU Image Manipulation Program (GIMP) WPwatercooler Matt Mullenweg Proposes WordPress Growth Council (WPTavern) WordPress Foundation Open Collective Foundation WordCamp Europe 2025 AltCtrl.org S\u00e8 Reed on The Heart of Open Source at AltCtrlOrg Panel Discussion \u201cThe Future of WordPress\u201d with Francesca Marano, Joost de Valk and S\u00e9 Reed at AltCtrlOrg The post Episode 3: S\u00e8 Reed appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 3,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-07-02T16:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/5b2b932f-354f-4fad-8d68-23246be46d7b/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3500,
+    "size_bytes": 83998847
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-3-s-reed-tgfd79",
+    "embed": "https://embed.cdn.media/ep/5b2b932f-354f-4fad-8d68-23246be46d7b"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/5b2b932f-354f-4fad-8d68-23246be46d7b/transcript.txt",
+    "type": "text/plain"
+   }
+  },
+  {
+   "id": "80dac29c-5c5a-476a-adbd-b1bb3b9fcd0a",
+   "slug": "episode-2-roger-williams-tgfd7a",
+   "title": "Episode 2: Roger Williams",
+   "description": "Roger Williams on LinkedIn PressConf Kinsta Kinsta Talks (YouTube) University of East Anglia Norwich, England (Wikipedia) WordCamp US 2025 rogerwilliamsmedia.com The post Episode 2: Roger Williams appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 2,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-06-18T16:00:00.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/80dac29c-5c5a-476a-adbd-b1bb3b9fcd0a/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 3935,
+    "size_bytes": 94448662
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-2-roger-williams-tgfd7a",
+    "embed": "https://embed.cdn.media/ep/80dac29c-5c5a-476a-adbd-b1bb3b9fcd0a"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/80dac29c-5c5a-476a-adbd-b1bb3b9fcd0a/transcript.txt",
+    "type": "text/plain"
+   }
+  },
+  {
+   "id": "32beabeb-b962-4765-b05d-42c5933d49a3",
+   "slug": "episode-1-michelle-frechette-tgfd7b",
+   "title": "Episode 1: Michelle Frechette",
+   "description": "Michelle Frechette on WordPress.org Hello Beautiful plugin (WordPress.org) Post Status Michelle\u2019s WordCamp presentations (WordPress.tv) GiveWP WPCareerPages.com Underrepresented in Tech WPSpeakers Post Status WPSpeakers Virtual Stage Series Composable WordPress by Chris Reynolds A Good Firm Handshake (Amazon.com) Speed Network Online SponsorMeWP WordCamp US 2025 CloudFest US 2025 MeetMichelle.online The post Episode 1: Michelle Frechette appeared first on Community + Code.",
+   "season_number": 1,
+   "episode_number": 1,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-06-04T16:09:42.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/32beabeb-b962-4765-b05d-42c5933d49a3/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 2978,
+    "size_bytes": 71480133
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-1-michelle-frechette-tgfd7b",
+    "embed": "https://embed.cdn.media/ep/32beabeb-b962-4765-b05d-42c5933d49a3"
+   },
+   "people": [],
+   "transcript": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/32beabeb-b962-4765-b05d-42c5933d49a3/transcript.vtt",
+    "type": "text/vtt"
+   }
+  },
+  {
+   "id": "e75167da-4d3d-4969-809f-2d6ce261d04f",
+   "slug": "episode-0-community-code-jo6hr6",
+   "title": "Episode 0: Community + Code",
+   "description": "A new tech podcast about people rather than code. Join us on our journey to reveal the human stories behind the tech communities we love. The post Episode 0: Community + Code appeared first on Community + Code.",
+   "season_number": null,
+   "episode_number": null,
+   "episode_type": "full",
+   "explicit": false,
+   "published_at": "2025-05-09T20:25:01.000Z",
+   "audio": {
+    "url": "https://m.cdn.media/podcasts/a095e806-fe2f-4b6f-8206-c73199b3e4f9/e/e75167da-4d3d-4969-809f-2d6ce261d04f/audio/original.mp3",
+    "content_type": "audio/mpeg",
+    "duration_seconds": 88,
+    "size_bytes": 2887463
+   },
+   "artwork": {
+    "url": "https://m.cdn.media/imports/011d7063-3eee-4ea4-907c-16f5ba27175c/1d94e671-5319-4ac7-8619-5e47701e6d3f.png?v=1793381379460",
+    "own": false
+   },
+   "links": {
+    "listen": "https://communitycode.show.fm/e/episode-0-community-code-jo6hr6",
+    "embed": "https://embed.cdn.media/ep/e75167da-4d3d-4969-809f-2d6ce261d04f"
+   },
+   "people": [],
+   "transcript": null
+  }
+ ],
+ "pagination": {
+  "next_cursor": null
+ }
+}

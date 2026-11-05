@@ -1,7 +1,7 @@
 import "server-only";
 import { ConfigError, DEFAULT_SHOWFM_API_BASE, getConfig } from "../config";
 import { pageOf, seasonsOf } from "./filter";
-import { sanitizeShowNotes } from "./sanitize";
+import { cleanDescription, sanitizeShowNotes } from "./sanitize";
 import { clampLimit, type Episode, type EpisodePage, type EpisodeSource, type EpisodeType, type ListParams } from "./types";
 
 /**
@@ -85,7 +85,7 @@ export function mapEpisode(w: WireEpisode, showNotesHtml: string | null = null):
     id: w.id,
     slug: w.slug,
     title: w.title,
-    description: w.description ?? "",
+    description: cleanDescription(w.description),
     showNotesHtml: sanitizeShowNotes(showNotesHtml),
     publishedAt: w.published_at,
     season: w.season_number,
