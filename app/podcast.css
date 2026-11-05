@@ -48,6 +48,19 @@
   --cc-content: 72rem;
   --cc-measure: 68ch;
 
+  /*
+   * show.fm embeds (<showfm-player>, <showfm-transcript>) read these hooks, so
+   * they follow the site's tokens, including the light/dark switch below. They
+   * are plain custom properties: they inherit into the elements' shadow DOM.
+   */
+  --showfm-accent: var(--cc-accent);
+  --showfm-surface: var(--cc-surface);
+  --showfm-text: var(--cc-text);
+  --showfm-muted: var(--cc-muted);
+  --showfm-border: var(--cc-border);
+  --showfm-font: var(--cc-font-body);
+  --showfm-radius: var(--cc-radius);
+
   background: var(--cc-bg);
   color: var(--cc-text);
   font-family: var(--cc-font-body);

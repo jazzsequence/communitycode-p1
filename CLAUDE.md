@@ -125,6 +125,14 @@ Known gaps / decisions pending:
   `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor).
 - Skip link target: P1 pages have no `<main id="main-content">`; the root can't wrap it without putting the
   header inside `<main>`.
-- show.fm's `links.embed` (a `<showfm-player>` iframe) is available now that the show is hosted there; the player
-  block still uses a native `<audio>` on the CDN MP3. Switching is an option, not done.
+- **Player:** show.fm-hosted episodes use `<showfm-player>` and `<showfm-transcript>` from the vendor's
+  `@showfm/embed` (bundled from npm, so no third-party script at runtime). `lib/showfm-embed.ts` decides per
+  episode (`isShowfmHosted`: origin `showfm` + UUID id + audio on a show.fm media host, using the package's own
+  host rules); everything else keeps the native `<audio>` player and VTT viewer. Blocks have `playerMode`/`source`
+  = `auto` (default) | `showfm` | `native`. The embeds follow the site palette through `--showfm-*` hooks set on
+  `.cc-root` in `app/podcast.css`. Verified in server HTML only: **not confirmed in a browser** that the
+  elements upgrade, play audio or look right.
+- **show.fm import bug (reported separately): every imported episode guid keeps a literal `&#038;`** where
+  WordPress's feed has `&` (an undecoded XML character reference), so guids differ from the WordPress feed for
+  all 38 episodes. Do not switch Apple/Spotify to the show.fm feed or redirect the old one until show.fm fixes it.
 - Not done, each needs an explicit go-ahead: P1 site, GitHub repo, Pantheon front-end site, secrets, deploy.
