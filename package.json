@@ -24,6 +24,7 @@
     "@pantheon-systems/pds-toolkit-react": "2.0.0-alpha.92",
     "@pantheon-systems/puck-css": "^0.25.0",
     "@puckeditor/core": "^0.21.1",
+    "@showfm/embed": "^1.7.0",
     "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/typography": "^0.5.16",
     "classnames": "^2.5.1",
