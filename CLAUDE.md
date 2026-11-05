@@ -89,6 +89,27 @@ name is baked into component or library code**.
   `_APPLE_PODCASTS_URL`, `_SITE_NAV` JSON) with neutral defaults. `NEXT_PUBLIC_*` are baked at build time.
 - Fixtures and tests may contain real Community + Code data. Code may not.
 
+## Generic page blocks (P1 registry)
+
+Heading, Paragraph, Hero, Columns, Container, Button, CtaBanner, CardGrid, FeatureMedia, Figure, Image, List,
+Divider, Spacer, Faq, Callout and Embed come from P1's block registry (`components.p1.pantheon.io`), not from
+hand-written code, so they stay in step with the P1 editor. They live in `components/puck/blocks/` and are
+registered by `npm run blocks:sync` (do not edit between the `p1-blocks` markers).
+
+- **Add one:** `npx shadcn@latest add @p1/<name>`, then `npm run blocks:sync`. Install a named subset, never
+  `@p1/base` (192 files, the whole marketing kit).
+- **The shadcn CLI will try to use pnpm** in this npm repo: it creates `pnpm-lock.yaml` and `node_modules/.pnpm`,
+  and may bump `package.json` versions. After every install: delete those, `git checkout package.json`,
+  `npm install`, `git checkout package-lock.json` (npm rewrites optional flags), then `rm -rf .next` or a running
+  dev server keeps serving a cache that points at the deleted `.pnpm` paths (500s).
+- **Theming:** the kit reads `--p1-*` tokens. `app/podcast.css` maps them onto `--cc-*` on `.cc-root`, so retheme
+  there, not in `app/p1-tokens.css`.
+- **Category keys must not collide** with the kit's (`attention`, `content`, `convert`, `editorial`, `layout`,
+  `showcase`, `value`): `puck.config.tsx` spreads the kit's categories last. Podcast blocks use `episodes`,
+  `show`, `site`.
+- shadcn/ui's own components (`ui.shadcn.com`) are not used: their default style is not published for this
+  scaffold's `"style": "p1"`, and the generated files expect `lib/utils.ts`, which does not exist here.
+
 ## Block conventions
 
 - A block is a Puck component config: `{ label, fields, defaultProps, render }`. The key in `podcastBlocks` is

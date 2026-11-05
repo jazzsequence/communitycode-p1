@@ -2,6 +2,10 @@
 @import "@fontsource-variable/fraunces";
 @import "@fontsource-variable/inter";
 @import "./podcast.css";
+@import "./p1-tokens.css";
+@import "./p1-base.css";
+
+@custom-variant dark (&:is(.dark *));
 @plugin "@tailwindcss/typography";
 
 /* Scoped via :has() rather than a bare `body {...}` selector so this reset
@@ -35,4 +39,12 @@ body:has(> .p1-app-shell) {
 [class*="_Puck"] svg {
   display: inline-block;
   vertical-align: middle;
+}
+
+:root {
+  --p1-accent: oklch(0.2178 0 0);
+}
+
+@theme inline {
+  --color-p1-accent: var(--p1-accent);
 }

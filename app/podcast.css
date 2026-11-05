@@ -70,6 +70,37 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/*
+ * P1 block kit (generic page blocks: Heading, Hero, Columns, ...) styles itself
+ * from --p1-* tokens, grayscale by default. Point them at the site's tokens so
+ * those blocks look like Community + Code, in dark and light alike. Declared on
+ * .cc-root, so the kit's :root defaults still apply anywhere outside it.
+ */
+.cc-root {
+  --p1-surface-default: var(--cc-bg);
+  --p1-surface-subtle: var(--cc-surface);
+  --p1-surface-inverse: var(--cc-surface-2);
+  --p1-surface-dark: var(--cc-surface);
+  --p1-fg-default: var(--cc-text);
+  --p1-fg-muted: var(--cc-muted);
+  --p1-fg-inverse: var(--cc-text);
+  --p1-border: var(--cc-border);
+  --p1-border-strong: var(--cc-border);
+  --p1-border-subtle: var(--cc-border);
+  --p1-accent: var(--cc-accent);
+  --p1-accent-hover: var(--cc-accent);
+  --p1-on-accent: var(--cc-accent-ink);
+  --p1-cta-bg: var(--cc-accent);
+  --p1-cta-bg-hover: var(--cc-accent);
+  --p1-cta-fg: var(--cc-accent-ink);
+  --p1-critical: var(--cc-danger);
+  --p1-font-body: var(--cc-font-body);
+  --p1-font-heading: var(--cc-font-display);
+  --p1-radius-card: var(--cc-radius);
+  --p1-radius-sm: var(--cc-radius-sm);
+  --p1-container-default: var(--cc-content);
+}
+
 @media (prefers-color-scheme: light) {
   .cc-root {
     --cc-bg: #faf8f4;
