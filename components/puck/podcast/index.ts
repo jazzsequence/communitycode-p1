@@ -8,6 +8,7 @@ import { blogArchiveBlock } from "./blog-archive";
 import { hostAboutBlock } from "./host-about";
 import { subscribeLinksBlock } from "./subscribe-links";
 import { newsletterSignupBlock } from "./newsletter-signup";
+import { contactFormBlock } from "./contact-form";
 import { siteSearchBlock } from "./site-search";
 import { siteHeaderBlock } from "./site-header";
 import { siteFooterBlock } from "./site-footer";
@@ -28,6 +29,7 @@ export const podcastBlocks = {
   HostAbout: hostAboutBlock,
   SubscribeLinks: subscribeLinksBlock,
   NewsletterSignup: newsletterSignupBlock,
+  ContactForm: contactFormBlock,
   SiteSearch: siteSearchBlock,
   SiteHeader: siteHeaderBlock,
   SiteFooter: siteFooterBlock,
@@ -36,6 +38,6 @@ export const podcastBlocks = {
 export const podcastCategories = {
   episodes: { title: "Episodes", components: ["LatestEpisodeHero", "EpisodeArchive", "EpisodePlayer", "TranscriptViewer", "GuestGrid"] },
   // Keyed `show`, not `content`: the P1 block kit has a `content` category and the later spread would replace this one.
-  show: { title: "Show & community", components: ["BlogArchive", "HostAbout", "SubscribeLinks", "NewsletterSignup", "SiteSearch"] },
+  show: { title: "Show & community", components: ["BlogArchive", "HostAbout", "SubscribeLinks", "NewsletterSignup", "ContactForm", "SiteSearch"] },
   site: { title: "Site", components: ["SiteHeader", "SiteFooter"] },
 } satisfies NonNullable<Config["categories"]>;

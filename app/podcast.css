@@ -243,6 +243,83 @@
   font: inherit;
 }
 
+.cc-field--textarea {
+  padding-block: var(--cc-space-3);
+  min-height: 9rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.cc-field[aria-invalid="true"] {
+  border-color: var(--cc-danger);
+}
+
+/* --- forms (ContactForm) -------------------------------------------------- */
+
+.cc-form-card {
+  padding: var(--cc-space-6);
+  max-width: 40rem;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.cc-form-card__heading {
+  font-size: var(--cc-text-xl);
+  margin-bottom: var(--cc-space-3);
+}
+
+.cc-form-card__description {
+  margin-top: 0;
+  margin-bottom: var(--cc-space-5);
+}
+
+.cc-form-wrap {
+  position: relative;
+}
+
+.cc-form {
+  display: grid;
+  gap: var(--cc-space-4);
+}
+
+.cc-form__field {
+  display: grid;
+  gap: var(--cc-space-2);
+}
+
+.cc-form__label {
+  font-weight: 600;
+}
+
+.cc-form__error {
+  margin: 0;
+  color: var(--cc-danger);
+  font-weight: 600;
+}
+
+.cc-form__status {
+  outline: none;
+}
+
+.cc-form__success {
+  margin: 0;
+  padding: var(--cc-space-5);
+}
+
+.cc-form__hint {
+  margin: 0;
+  font-size: var(--cc-text-sm);
+}
+
+/* Honeypot: off-screen, not display:none (bots skip hidden fields). */
+.cc-form__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Rich HTML from WordPress/show.fm show notes (already sanitised server-side). */
 .cc-prose {
   max-width: var(--cc-measure);
