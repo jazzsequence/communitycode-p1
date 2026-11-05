@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { POST } from "@/app/api/newsletter/route";
-import { checkRateLimit, resetRateLimit } from "@/app/api/newsletter/rate-limit";
+import { checkRateLimit, resetRateLimit } from "@/lib/forms/rate-limit";
 
 // WordPress config comes from getConfig(); control it per test.
 const wp = vi.hoisted(() => ({ value: null as null | { baseUrl: string; feedPath: string; userAgent?: string; bypassToken?: string } }));

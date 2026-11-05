@@ -22,6 +22,8 @@ export const DEFAULT_ENDPOINTS = {
   guests: "/api/guests",
   /** POST { email, firstName?, website? } */
   newsletter: "/api/newsletter",
+  /** POST { name, email, message, website? } */
+  contact: "/api/contact",
 } as const;
 
 export const DEFAULT_LINKS = {

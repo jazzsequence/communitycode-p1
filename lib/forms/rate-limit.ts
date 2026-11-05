@@ -5,7 +5,10 @@
  * a restart resets it, so N instances allow up to N x the limit. That is enough
  * to blunt a naive script hammering the signup form; it is not a security
  * boundary. The WordPress endpoint must rate-limit too (see
- * docs/newsletter-mailpoet.md).
+ * docs/newsletter-mailpoet.md and docs/contact-wordpress.md).
+ *
+ * Shared by every form route. Callers namespace the key (`newsletter:<ip>`,
+ * `contact:<ip>`) so one form's traffic doesn't use up another's allowance.
  */
 
 const hits = new Map<string, number[]>();

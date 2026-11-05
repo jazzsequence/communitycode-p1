@@ -1,6 +1,5 @@
-import { NextResponse, type NextRequest } from "next/server";
-import { DEFAULT_WP_USER_AGENT, getConfig } from "@/lib/config";
-import { checkRateLimit } from "./rate-limit";
+import type { NextRequest } from "next/server";
+import { isTimeout, readJsonObject, reply, UPSTREAM_TIMEOUT_MS, upstreamUrl, wordpressBypassHeaders } from "@/lib/forms/http";
 
 /**
  * POST /api/newsletter   { email, firstName?, website? }
@@ -15,83 +14,15 @@ import { checkRateLimit } from "./rate-limit";
  */
 
 const MAX_BODY_BYTES = 2_048;
-const UPSTREAM_TIMEOUT_MS = 8_000;
 const MAX_EMAIL = 254;
 const MAX_FIRST_NAME = 80;
 // Deliberately loose: the real check is MailPoet's confirmation email.
 const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
 
-const NO_STORE = { "Cache-Control": "no-store" };
-
-function reply(body: Record<string, unknown>, status: number, headers: Record<string, string> = {}) {
-  return NextResponse.json(body, { status, headers: { ...NO_STORE, ...headers } });
-}
-
-function clientIp(req: NextRequest): string {
-  // Behind Pantheon's edge the first X-Forwarded-For hop is the client. It is
-  // client-controllable if the edge doesn't overwrite it, which is one more
-  // reason this limiter is only best-effort.
-  const xff = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return xff || req.headers.get("x-real-ip") || "unknown";
-}
-
-/** Read the body but stop at the cap, so a huge POST isn't buffered whole. */
-async function readCapped(req: NextRequest, max: number): Promise<string | null> {
-  const declared = Number(req.headers.get("content-length"));
-  if (Number.isFinite(declared) && declared > max) return null;
-  if (!req.body) return "";
-  const reader = req.body.getReader();
-  const decoder = new TextDecoder();
-  let received = 0;
-  let text = "";
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    received += value.byteLength;
-    if (received > max) {
-      await reader.cancel();
-      return null;
-    }
-    text += decoder.decode(value, { stream: true });
-  }
-  return text + decoder.decode();
-}
-
-function upstreamUrl(raw: string): URL | null {
-  try {
-    const u = new URL(raw);
-    return u.protocol === "https:" || u.protocol === "http:" ? u : null;
-  } catch {
-    return null;
-  }
-}
-
 export async function POST(req: NextRequest) {
-  if (!(req.headers.get("content-type") ?? "").toLowerCase().startsWith("application/json")) {
-    return reply({ error: "Send JSON." }, 415);
-  }
-
-  // Before parsing: rejected floods shouldn't cost anything.
-  const limit = checkRateLimit(clientIp(req));
-  if (!limit.allowed) {
-    return reply({ error: "Too many attempts. Please try again in a minute." }, 429, {
-      "Retry-After": String(limit.retryAfter),
-    });
-  }
-
-  const text = await readCapped(req, MAX_BODY_BYTES);
-  if (text === null) return reply({ error: "Request too large." }, 413);
-
-  let body: unknown;
-  try {
-    body = JSON.parse(text);
-  } catch {
-    return reply({ error: "Invalid request." }, 400);
-  }
-  if (typeof body !== "object" || body === null || Array.isArray(body)) {
-    return reply({ error: "Invalid request." }, 400);
-  }
-  const { email, firstName, website } = body as Record<string, unknown>;
+  const parsed = await readJsonObject(req, { maxBytes: MAX_BODY_BYTES, rateLimitKey: "newsletter" });
+  if ("response" in parsed) return parsed.response;
+  const { email, firstName, website } = parsed.body;
 
   // Honeypot: humans never see the field. Look successful to the bot, do nothing.
   if (typeof website === "string" && website.trim() !== "") return reply({ ok: true }, 200);
@@ -124,22 +55,7 @@ export async function POST(req: NextRequest) {
     return reply({ error: "Newsletter signup isn't configured yet." }, 501);
   }
 
-  // A WordPress host behind bot protection may challenge a server-to-server
-  // POST. The bypass token goes only to the configured WordPress host, never to
-  // an arbitrary endpoint. Invalid config just means no header.
-  let wp: ReturnType<typeof getConfig>["wordpress"] = null;
-  try {
-    wp = getConfig().wordpress;
-  } catch {
-    // ConfigError: treated as "WordPress not configured".
-  }
-  const toWordPress = !!wp && url.hostname === new URL(wp.baseUrl).hostname;
-  const bypass: Record<string, string> = {};
-  if (wp && toWordPress) {
-    // Same identity as wpFetch: the allowlisted User-Agent, and the token if set.
-    bypass["User-Agent"] = wp.userAgent || DEFAULT_WP_USER_AGENT;
-    if (wp.bypassToken) bypass["x-pantheon-bot-bypass"] = wp.bypassToken;
-  }
+  const bypass = wordpressBypassHeaders(url);
 
   try {
     const res = await fetch(url, {
@@ -170,8 +86,7 @@ export async function POST(req: NextRequest) {
     }
     return reply({ error: "We couldn't sign you up right now. Please try again later." }, 502);
   } catch (e) {
-    const name = (e as { name?: string } | null)?.name;
-    const timedOut = name === "TimeoutError" || name === "AbortError";
+    const timedOut = isTimeout(e);
     console.error("[api/newsletter] upstream", timedOut ? "timeout" : "unreachable");
     return reply(
       { error: timedOut ? "The signup service took too long. Please try again." : "We couldn't sign you up right now. Please try again later." },
