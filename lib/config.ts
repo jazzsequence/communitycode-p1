@@ -1,12 +1,14 @@
 import "server-only";
+import { siteConfig, type SiteConfig } from "@/site.config";
 
 /**
  * The single place site-specific values enter the server code. Nothing about
  * Community + Code (hostnames, slugs, feed paths) is hardcoded in the data
- * layer: point these env vars at another show and the same code serves it.
+ * layer: the values live in site.config.ts (non-secret, committed) and can be
+ * overridden by env vars, so the same code serves another show.
  *
- * A backend whose variables are unset is *disabled*, not defaulted: a
- * WordPress-less deployment just leaves WP_BASE_URL empty.
+ * A backend whose values are unset is *disabled*, not defaulted: a
+ * WordPress-less deployment just leaves wordpress.baseUrl empty.
  */
 
 export class ConfigError extends Error {}
@@ -49,17 +51,29 @@ export const DEFAULT_WP_USER_AGENT = "communitycode-p1/1.0";
 /** show.fm serves hosted audio and transcripts from here. Part of the vendor, not the site. */
 export const SHOWFM_MEDIA_HOSTS = ["m.cdn.media"];
 
-export function loadConfig(env: Env = process.env): AppConfig {
-  const wpRaw = env.WP_BASE_URL?.trim();
+/** The non-secret values from site.config.ts that this module layers under env. */
+export type FileConfig = Pick<SiteConfig, "wordpress" | "showfm">;
+
+/** env wins, then the site config file; blank counts as unset. */
+export function pick(envValue: string | undefined, fileValue: string | undefined): string | undefined {
+  return envValue?.trim() || fileValue?.trim() || undefined;
+}
+
+/**
+ * `file` defaults to empty so a call with only `env` is a pure function of env
+ * (what the tests rely on); `getConfig()` passes the real site.config.ts.
+ */
+export function loadConfig(env: Env = process.env, file: FileConfig = {}): AppConfig {
+  const wpRaw = pick(env.WP_BASE_URL, file.wordpress?.baseUrl);
   const wpUrl = wpRaw ? httpUrl("WP_BASE_URL", wpRaw) : null;
 
-  const feedPath = env.WP_FEED_PATH?.trim() || DEFAULT_FEED_PATH;
+  const feedPath = pick(env.WP_FEED_PATH, file.wordpress?.feedPath) || DEFAULT_FEED_PATH;
 
-  const slug = env.SHOWFM_PODCAST_SLUG?.trim();
+  const slug = pick(env.SHOWFM_PODCAST_SLUG, file.showfm?.podcastSlug);
   if (slug && !/^[a-z0-9][a-z0-9-]*$/i.test(slug)) {
     throw new ConfigError(`SHOWFM_PODCAST_SLUG must be a slug (letters, digits, dashes), got "${slug}"`);
   }
-  const apiBase = (env.SHOWFM_API_BASE?.trim() || DEFAULT_SHOWFM_API_BASE).replace(/\/+$/, "");
+  const apiBase = (pick(env.SHOWFM_API_BASE, file.showfm?.apiBase) || DEFAULT_SHOWFM_API_BASE).replace(/\/+$/, "");
   httpUrl("SHOWFM_API_BASE", apiBase);
 
   const extraHosts = (env.TRANSCRIPT_ALLOWED_HOSTS ?? "")
@@ -72,7 +86,7 @@ export function loadConfig(env: Env = process.env): AppConfig {
       ? {
           baseUrl: wpUrl.origin + wpUrl.pathname.replace(/\/+$/, ""),
           feedPath: feedPath.startsWith("/") ? feedPath : `/${feedPath}`,
-          userAgent: env.WP_USER_AGENT?.trim() || DEFAULT_WP_USER_AGENT,
+          userAgent: pick(env.WP_USER_AGENT, file.wordpress?.userAgent) || DEFAULT_WP_USER_AGENT,
           bypassToken: env.PANTHEON_BOT_BYPASS_TOKEN?.trim() || undefined,
         }
       : null,
@@ -91,7 +105,7 @@ let cached: AppConfig | undefined;
 
 /** Process-wide config. Throws ConfigError with a readable message when invalid. */
 export function getConfig(): AppConfig {
-  return (cached ??= loadConfig());
+  return (cached ??= loadConfig(process.env, siteConfig));
 }
 
 /** Is `url` an https URL on a host transcripts may be fetched from? */

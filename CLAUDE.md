@@ -79,8 +79,14 @@ Run lint, tsc, tests and build before presenting changes.
 The components are meant to be reused for other shows and data sources, so **no endpoint, URL, hostname or site
 name is baked into component or library code**.
 
-- **Server** (`lib/config.ts`): all site-specific values come from env through `getConfig()` (WordPress base URL,
-  feed path, show.fm slug/API base, transcript host allowlist). A backend whose variables are unset is *disabled*,
+- **`site.config.ts`** (repo root, committed) holds every **non-secret** site value: WordPress base URL/feed path,
+  show.fm slug, site name/tagline/feed/Apple links/nav, and the contact/newsletter endpoints. Env vars of the same
+  meaning override it (a preview pointing elsewhere). Only secrets (`*_SECRET`, `SHOWFM_API_KEY`, `CSS_API_KEY`,
+  `PANTHEON_BOT_BYPASS_TOKEN`) belong in Pantheon secrets: a public URL stored as a secret can't be read back and
+  is awkward to update. Another show edits this one file.
+- **Server** (`lib/config.ts`): site-specific values come from `site.config.ts` with env overrides, through
+  `getConfig()` (WordPress base URL, feed path, show.fm slug/API base; transcript hosts derive from them).
+  `loadConfig(env, file)` is pure: the file defaults to empty, so tests pass only env. A backend whose variables are unset is *disabled*,
   not defaulted: `getEpisodeSource()` builds only what is configured and throws `ConfigError` if nothing is
   (routes answer 501 for that, 502 for real upstream failures). `isAllowedTranscriptUrl` is the SSRF guard.
 - **Blocks** (`lib/block-config.ts`, client-safe): every API endpoint and link pattern is an editable Puck field.
@@ -88,8 +94,10 @@ name is baked into component or library code**.
   `safeUrl(prop, default)`, `expandTemplate("/episodes/{slug}", {...})` (null when a value is missing, so no
   `/episodes/undefined` links) and `withQuery(url, params)` (endpoint may already carry a `?`). A block works
   against any endpoint that returns the documented response shape (documented in a comment above each block).
-- **Site identity** (`content/site.ts`): env-driven (`NEXT_PUBLIC_SITE_NAME`, `_TAGLINE`, `_FEED_URL`,
-  `_APPLE_PODCASTS_URL`, `_SITE_NAV` JSON) with neutral defaults. `NEXT_PUBLIC_*` are baked at build time.
+- **Site identity** (`content/site.ts`): from `site.config.ts`, overridable by `NEXT_PUBLIC_SITE_NAME`, `_TAGLINE`,
+  `_FEED_URL`, `_APPLE_PODCASTS_URL`, `_SITE_NAV` (JSON). `NEXT_PUBLIC_*` are baked at build time.
+- **Form endpoints** (`lib/forms/endpoints.ts`): `formEndpoint("contact"|"newsletter")` = env override, else
+  `site.config.ts`. Route tests mock `@/site.config` so the real endpoints don't leak into env-driven cases.
 - Fixtures and tests may contain real Community + Code data. Code may not.
 
 ## Generic page blocks (P1 registry)
@@ -144,8 +152,8 @@ editor at `/p1`); nobody has looked at it in a browser.
 | Blog (headless WordPress REST) | `lib/posts.ts`, `app/api/posts` |
 | Transcripts (server-side VTT, SSRF-guarded) | `lib/transcript.ts`, `app/api/episodes/[slug]/transcript` |
 | Guests (aggregated; host roles filtered in the block) | `lib/guests.ts`, `app/api/guests` |
-| Newsletter (**501 until `NEWSLETTER_ENDPOINT` is set**; the MailPoet endpoint exists in the WordPress repo, written from MailPoet's source but never run against a real signup) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
-| Contact form (**501 until `CONTACT_ENDPOINT` + `CONTACT_SECRET` are set**; the WordPress endpoint is a separate repo/branch; block never viewed in a browser) | `app/api/contact`, `components/puck/podcast/contact-form.tsx`, `docs/contact-wordpress.md` |
+| Newsletter (**501 until `NEWSLETTER_SECRET` is set; the endpoint is in `site.config.ts`**; the MailPoet endpoint exists in the WordPress repo, written from MailPoet's source but never run against a real signup) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
+| Contact form (**501 until `CONTACT_SECRET` is set; the endpoint is in `site.config.ts`**; the WordPress endpoint is a separate repo/branch; block never viewed in a browser) | `app/api/contact`, `components/puck/podcast/contact-form.tsx`, `docs/contact-wordpress.md` |
 | Shared form-route helpers (capped body, rate limit keyed per form, upstream URL check, WP-host-only UA/bypass headers) | `lib/forms/` |
 | Detail page | `app/episodes/[slug]`, `components/podcast/episode-detail.tsx` |
 | Blocks | `components/puck/podcast/*` (13), client bodies in `components/podcast/*` |

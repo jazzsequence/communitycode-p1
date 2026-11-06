@@ -1,4 +1,5 @@
 import type { NextRequest } from "next/server";
+import { formEndpoint } from "@/lib/forms/endpoints";
 import {
   isTimeout,
   readJsonObject,
@@ -61,7 +62,7 @@ export async function POST(req: NextRequest) {
     return reply({ error: `Message must be ${MAX_MESSAGE} characters or fewer.` }, 400);
   }
 
-  const endpoint = process.env.CONTACT_ENDPOINT;
+  const endpoint = formEndpoint("contact");
   const secret = process.env.CONTACT_SECRET;
   // No endpoint or no secret means the WordPress side isn't wired up. The
   // upstream would reject an unauthenticated call anyway, so don't send one.

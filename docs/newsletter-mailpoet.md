@@ -17,10 +17,10 @@ Browser ──POST /api/newsletter──▶ Next.js route ──POST NEWSLETTER_
 
 | Var | Purpose |
 |---|---|
-| `NEWSLETTER_ENDPOINT` | Full URL of the WordPress route, e.g. `https://example.com/wp-json/community-code/v1/newsletter` |
-| `NEWSLETTER_SECRET` | Shared secret, sent as `Authorization: Bearer <secret>`. Server-only: never `NEXT_PUBLIC_`. |
+| `NEWSLETTER_SECRET` | Shared secret, sent as `Authorization: Bearer <secret>`. Server-only: never `NEXT_PUBLIC_`. The only secret. |
+| `NEWSLETTER_ENDPOINT` (optional) | Overrides `forms.newsletterEndpoint` in `site.config.ts`, the full URL of the WordPress route (e.g. `https://example.com/wp-json/community-code/v1/newsletter`). A public URL, so it lives in the committed file, not in Pantheon secrets. |
 
-If either is missing the route returns 501. Generate the secret once
+If the secret or the endpoint is missing the route returns 501. Generate the secret once
 (`openssl rand -base64 32`) and store it in both places: Pantheon Secrets
 (or the Next.js site env) and the WordPress side (a Pantheon secret read with
 `pantheon_get_secret()`, or a `wp-config.php` constant that is not committed).
@@ -99,9 +99,8 @@ what happens for already-subscribed, unconfirmed and unsubscribed addresses) are
 documented there, in `docs/p1-forms-endpoints.md`. It was written from MailPoet
 5.38.0's source, not from a live signup: do one real signup before relying on it.
 
-For this site set:
+For this site the endpoint is already in `site.config.ts`; set only the secret:
 
 ```
-NEWSLETTER_ENDPOINT=https://<wordpress host>/wp-json/community-code/v1/newsletter
 NEWSLETTER_SECRET=<the value stored as the cc_p1_newsletter_secret Pantheon secret>
 ```
