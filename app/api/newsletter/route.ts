@@ -1,4 +1,5 @@
 import type { NextRequest } from "next/server";
+import { formEndpoint } from "@/lib/forms/endpoints";
 import {
   isTimeout,
   readJsonObject,
@@ -50,7 +51,7 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  const endpoint = process.env.NEWSLETTER_ENDPOINT;
+  const endpoint = formEndpoint("newsletter");
   const secret = process.env.NEWSLETTER_SECRET;
   // No endpoint or no secret means the WordPress side isn't wired up. The
   // upstream would reject an unauthenticated call anyway, so don't send one.

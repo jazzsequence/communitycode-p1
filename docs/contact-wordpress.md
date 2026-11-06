@@ -19,11 +19,11 @@ Browser ──POST /api/contact──▶ Next.js route ──POST CONTACT_ENDPOI
 
 | Var | Purpose |
 |---|---|
-| `CONTACT_ENDPOINT` | Full http(s) URL of the WordPress route, e.g. `https://example.com/wp-json/community-code/v1/contact` |
-| `CONTACT_SECRET` | Shared secret, sent as `Authorization: Bearer <secret>` |
+| `CONTACT_SECRET` | Shared secret, sent as `Authorization: Bearer <secret>`. The only secret. |
+| `CONTACT_ENDPOINT` (optional) | Overrides `forms.contactEndpoint` in `site.config.ts`: the full http(s) URL of the WordPress route, e.g. `https://example.com/wp-json/community-code/v1/contact`. A public URL, so it lives in the committed file, not in Pantheon secrets. |
 
-If either is missing, or the endpoint isn't an http(s) URL, the route returns
-501. Store the same secret on the WordPress side as the Pantheon secret
+If the secret or the endpoint is missing, or the endpoint isn't an http(s) URL,
+the route returns 501. Store the same secret on the WordPress side as the Pantheon secret
 `cc_p1_contact_secret` (read with `pantheon_get_secret()`).
 
 ## Browser to Next.js: `POST /api/contact`

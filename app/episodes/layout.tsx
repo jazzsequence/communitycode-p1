@@ -1,8 +1,9 @@
 import "../styles.css";
 import type { Metadata } from "next";
 import { HtmlShell } from "../../components/html-shell";
+import { site } from "../../content/site";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = site.url;
 
 // The site (app/[[...puckPath]]) and editor are separate root layouts; code
 // routes such as /episodes/[slug] need their own. Pages set their own metadata.

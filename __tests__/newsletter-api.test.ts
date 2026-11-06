@@ -10,6 +10,9 @@ vi.mock("@/lib/config", async (importOriginal) => ({
   getConfig: () => ({ wordpress: wp.value, showfm: null, transcriptHosts: [] }),
 }));
 
+// The committed site.config.ts must not leak a real endpoint into these env-driven cases.
+vi.mock("@/site.config", () => ({ siteConfig: { site: { name: "T", nav: [] }, forms: {} } }));
+
 const ENDPOINT = "https://example.com/wp-json/cc/v1/subscribe";
 const SECRET = "shh-newsletter-secret";
 const EMAIL = "ada.lovelace@example.com";

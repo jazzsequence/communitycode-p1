@@ -1,9 +1,10 @@
 import "../styles.css";
 import type { Metadata } from "next";
 import { HtmlShell } from "../../components/html-shell";
+import { site } from "../../content/site";
 import { published } from "../published-pages";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = site.url;
 
 // A page-level openGraph replaces (not merges) this one, so buildPageMetadata
 // re-declares og:type and the env site-name fallback; this covers routes that
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   openGraph: {
     type: "website",
-    siteName: process.env.NEXT_PUBLIC_SITE_NAME,
+    siteName: site.name,
   },
 };
 
