@@ -1,0 +1,26 @@
+/*
+ * Storybook-only. Layout guides: when the toolbar toggle is on, draw the two
+ * lines the layout contract promises every block shares (see
+ * app/layout-contract.css): the content's left and right edges. If a block's text
+ * does not touch these lines, that block breaks the contract.
+ */
+.sb-root[data-guides="on"] {
+  position: relative;
+}
+.sb-root[data-guides="on"]::before,
+.sb-root[data-guides="on"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dashed #ff5ec4;
+  pointer-events: none;
+  z-index: 9999;
+}
+.sb-root[data-guides="on"]::before {
+  left: max(var(--cc-gutter), calc((100% - var(--cc-content)) / 2));
+}
+.sb-root[data-guides="on"]::after {
+  right: max(var(--cc-gutter), calc((100% - var(--cc-content)) / 2));
+}

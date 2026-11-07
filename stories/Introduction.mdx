@@ -1,0 +1,21 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Community + Code design system
+
+A dark, astigmatism-conscious system for the [Community + Code](https://communitycode.dev) podcast frontend. It keeps the live site's terminal character (Victor Mono headings, Source Sans 3 body, links that reveal on intent) and swaps Solarized for **warm graphite + apricot**.
+
+## How it is organised
+
+- **Foundations** are the tokens: [Colors](?path=/docs/foundations-colors--docs) (with a live contrast table), [Typography](?path=/docs/foundations-typography--docs), and [Spacing and layout](?path=/docs/foundations-spacing-and-layout--docs).
+- **Base components** are the `cc-*` primitives: buttons, fields, cards, pills.
+- **Podcast blocks** are the 13 Puck blocks that fetch show data. Their network is mocked, their CSS is real.
+- **Kit blocks** are P1's generic page blocks (Hero, Columns, CTA, FAQ…), held to the same layout contract by `app/layout-contract.css`.
+
+## The two rules that matter
+
+1. **One layout contract.** Every top-level block has the same gutter and content edge. Switch on **Layout guides** in the toolbar: block text must touch the magenta lines.
+2. **Never brighten text to fix contrast.** Past roughly APCA Lc 90, bright text on a dark ground blooms (halation), which is worst for people with astigmatism. `--cc-text` is deliberately about WCAG 13:1.
+
+Source of truth: `app/podcast.css` (tokens), `app/layout-contract.css` (kit overrides), `docs/design-system.md` (rationale).
