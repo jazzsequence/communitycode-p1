@@ -30,7 +30,7 @@ export function SiteFooterView({
       <div className="cc-container">
         <div className="cc-chrome-footer-grid">
           <div>
-            <p style={{ margin: 0, fontFamily: "var(--cc-font-display)", fontSize: "var(--cc-text-lg)", fontWeight: 650 }}>
+            <p style={{ margin: 0, fontFamily: "var(--cc-font-display)", fontSize: "var(--cc-text-lg)", fontWeight: 600 }}>
               {site.name}
             </p>
             {tagline.trim() ? (

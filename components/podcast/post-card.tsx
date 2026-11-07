@@ -65,8 +65,7 @@ export function PostCard({ post, layout, showImage, showExcerpt }: Props) {
         </a>
       ) : null}
       <div
-        className="cc-stack"
-        style={{ padding: "var(--cc-space-5)", flex: "1 1 16rem", display: "flex", flexDirection: "column", gap: "var(--cc-space-3)" }}
+        style={{ padding: "var(--cc-space-5)", flex: isList ? "1 1 16rem" : "1 1 auto", display: "flex", flexDirection: "column", gap: "var(--cc-space-3)" }}
       >
         {date ? (
           <p className="cc-eyebrow" style={{ margin: 0 }}>

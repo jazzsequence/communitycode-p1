@@ -143,7 +143,7 @@ export function NewsletterForm({ endpoint, buttonLabel, successMessage, collectF
       {status !== "success" ? (
         <form onSubmit={onSubmit} noValidate aria-busy={submitting} style={{ display: "grid", gap: "var(--cc-space-4)" }}>
           {/* Error summary: role="alert" is announced as soon as text appears. */}
-          <div role="alert" id={errorId} style={error ? { color: "var(--cc-danger)", fontWeight: 600 } : undefined}>
+          <div role="alert" id={errorId} style={error ? { color: "var(--cc-danger)", fontWeight: 600 } : { marginBlockEnd: "calc(-1 * var(--cc-space-4))" }}>
             {error}
           </div>
 

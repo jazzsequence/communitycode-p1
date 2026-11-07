@@ -30,7 +30,7 @@ export function NewsletterSignupView({ heading, description, ...form }: Newslett
     <section className="cc-container cc-section" aria-label={heading || "Newsletter signup"}>
       <div
         className="cc-card"
-        style={{ padding: "var(--cc-space-6)", maxWidth: "40rem", marginInline: "auto", overflow: "visible" }}
+        style={{ padding: "var(--cc-space-6)", maxWidth: "var(--cc-narrow)", marginInline: "auto", overflow: "visible" }}
       >
         {heading ? (
           <h2 style={{ fontSize: "var(--cc-text-xl)", marginBottom: "var(--cc-space-3)" }}>{heading}</h2>

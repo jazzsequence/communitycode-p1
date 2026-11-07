@@ -1,0 +1,228 @@
+/*
+ * Layout contract for the P1 kit blocks (components/puck/blocks/*).
+ *
+ * WHY THIS FILE EXISTS. The kit was built block-by-block, and each block
+ * hardcodes its own horizontal gutter and vertical padding: `.p1-block` pads 4rem,
+ * `.p1-columns` and `.p1-callout` pad 1.5rem, `.p1-hero` pads 1.5 / 2.5 / 4rem, the
+ * CTA and card-grid pad nothing but sit inside `.p1-block`, and nested blocks add a
+ * second gutter inside Columns/Container. Next to the podcast blocks (`.cc-container`)
+ * that put every block's left edge somewhere different. Editing 15 registry-owned
+ * blocks would be overwritten by the next `shadcn add`, so the contract is enforced
+ * here, once, by overriding. Tokens are in app/podcast.css (`--cc-gutter`,
+ * `--cc-section-y`, `--cc-block-y`, `--cc-content`, `--cc-narrow`).
+ *
+ * THE CONTRACT (podcast blocks follow it through `.cc-container` / `.cc-section`):
+ *   1. A top-level block has `padding-inline: var(--cc-gutter)`. Nothing else
+ *      insets content from the viewport.
+ *   2. Its content is capped at --cc-content (or --cc-narrow for reading width).
+ *      The cap applies to the content box, so the gutter is never eaten by it.
+ *   3. Vertical padding is `--cc-block-y` for small blocks and `--cc-section-y` for
+ *      sections (hero, CTA, card grid, feature media, FAQ).
+ *   4. A block nested in Columns/Container adds no gutter: the parent has one.
+ *
+ * The same file also holds the kit's THEMING overrides (below the contract): the kit
+ * assumes a bright accent behind white text and its own type scale, neither of which
+ * fits a dark, astigmatism-conscious theme.
+ *
+ * Doubled class selectors (`.cc-root.cc-root`) lift specificity above the kit's
+ * `.p1-hero[data-layout][data-height]` rules without `!important`.
+ */
+
+/* 1 + 3. Gutter and block rhythm for every top-level block ----------------- */
+.cc-root.cc-root :is(.p1-block, .p1-columns, .p1-divider, .p1-container) {
+  padding-inline: var(--cc-gutter);
+  padding-block: var(--cc-block-y);
+}
+.cc-root.cc-root .p1-image[data-width="contained"] {
+  padding-inline: var(--cc-gutter);
+  padding-block: var(--cc-block-y);
+}
+
+/* 2. Blocks that cap their own root (not an inner wrapper): cap the content box,
+   not the border box, so padding adds to the cap instead of eating it. */
+.cc-root.cc-root :is(.p1-figure, .p1-embed, .p1-divider) {
+  box-sizing: content-box;
+}
+.cc-root.cc-root .p1-image[data-width="contained"] {
+  box-sizing: content-box;
+  max-inline-size: var(--cc-content);
+}
+.cc-root.cc-root .p1-callout__inner {
+  padding-inline: 0; /* the root already carries the gutter */
+}
+
+/* 3. Sections ----------------------------------------------------------------- */
+.cc-root.cc-root :is(.p1-cta-banner, .p1-card-grid, .p1-feature-media, .p1-faq) {
+  padding-block: var(--cc-section-y);
+}
+.cc-root.cc-root .p1-hero.p1-block[data-layout] {
+  padding-inline: var(--cc-gutter);
+  padding-block: var(--cc-section-y);
+}
+.cc-root.cc-root .p1-hero.p1-block[data-layout][data-height="compact"] {
+  padding-block: var(--cc-space-7);
+}
+.cc-root.cc-root .p1-hero.p1-block[data-layout][data-height="tall"] {
+  padding-block: calc(var(--cc-section-y) * 1.5);
+}
+/* The flush image variant keeps its image edge-to-edge in the grid; only the copy
+   column is inset, and it uses the scale, not 3.5 / 5rem. */
+.cc-root.cc-root .p1-hero[data-imagefill="flush"] .p1-hero__copy-wrap {
+  padding: var(--cc-space-6);
+}
+@media (width >= 48rem) {
+  .cc-root.cc-root .p1-hero[data-imagefill="flush"] .p1-hero__copy-wrap {
+    padding: var(--cc-space-7);
+  }
+}
+
+/* Box padding inside Container, CTA: steps of the 8pt scale (kit uses 2.5rem). */
+.cc-root.cc-root .p1-container__box[data-pad="compact"] {
+  padding: var(--cc-space-5);
+}
+.cc-root.cc-root .p1-container__box[data-pad="regular"] {
+  padding: var(--cc-space-6);
+}
+.cc-root.cc-root .p1-container__box[data-pad="spacious"] {
+  padding: var(--cc-space-7);
+}
+.cc-root.cc-root .p1-cta__card[data-padding="compact"] {
+  padding: var(--cc-space-5);
+}
+.cc-root.cc-root .p1-cta__card[data-padding="regular"] {
+  padding: var(--cc-space-6);
+}
+.cc-root.cc-root .p1-cta__card[data-padding="spacious"] {
+  padding: var(--cc-space-7);
+}
+@media (width >= 48rem) {
+  .cc-root.cc-root .p1-container__box[data-pad="spacious"],
+  .cc-root.cc-root .p1-cta__card[data-padding="spacious"] {
+    padding: var(--cc-space-8);
+  }
+  .cc-root.cc-root .p1-cta__card[data-padding="regular"] {
+    padding: var(--cc-space-7);
+  }
+}
+
+/* Divider spacing options, on the same scale. */
+.cc-root.cc-root .p1-divider[data-spacing="small"] {
+  padding-block: var(--cc-block-y);
+}
+.cc-root.cc-root .p1-divider[data-spacing="medium"] {
+  padding-block: var(--cc-space-5);
+}
+.cc-root.cc-root .p1-divider[data-spacing="large"] {
+  padding-block: var(--cc-space-7);
+}
+.cc-root.cc-root .p1-divider {
+  max-inline-size: var(--cc-content);
+}
+
+/* 4. Nested blocks: no second gutter. Keep this LAST so it wins ties above. ---- */
+.cc-root.cc-root
+  :is(.p1-columns, .p1-container)
+  :is(.p1-block, .p1-columns, .p1-divider, .p1-container, .p1-image[data-width="contained"]) {
+  padding-inline: 0;
+}
+.cc-root.cc-root .p1-columns .p1-hero.p1-block[data-layout] {
+  padding-inline: 0;
+}
+
+/* 2b. Small blocks that sit on the root: cap and centre them like every other
+   block, or on wide screens their left edge (gutter only) drifts from the guides. */
+.cc-root.cc-root :is(.p1-heading, .p1-paragraph, .p1-button, .p1-list).p1-block {
+  box-sizing: content-box;
+  max-inline-size: var(--cc-content);
+  margin-inline: auto;
+}
+/* Nested in Columns/Container the parent caps them; centring would fight it. */
+.cc-root.cc-root :is(.p1-columns, .p1-container) :is(.p1-heading, .p1-paragraph, .p1-button, .p1-list).p1-block {
+  max-inline-size: none;
+  margin-inline: 0;
+}
+/* Full-width hero copy should start at the left edge, not shrink-wrap and centre. */
+.cc-root.cc-root .p1-hero__fullimg-content {
+  inline-size: 100%;
+}
+/* Flush hero image: the grid is capped like any other block (kit: 100%, which ran
+   past the right content edge). */
+.cc-root.cc-root .p1-hero[data-imagefill="flush"] .p1-hero__split-grid {
+  max-inline-size: var(--cc-content);
+}
+/* Full-bleed figure really bleeds; only its caption keeps the gutter. */
+.cc-root.cc-root .p1-figure[data-width="full bleed"] {
+  box-sizing: border-box;
+  padding-inline: 0;
+  max-inline-size: none;
+}
+.cc-root.cc-root .p1-figure[data-width="full bleed"] .p1-figure__caption {
+  padding-inline: var(--cc-gutter);
+  max-inline-size: calc(var(--cc-content) + 2 * var(--cc-gutter));
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================================
+ * Theming overrides
+ * ========================================================================= */
+
+/*
+ * Accent-toned surfaces. The kit paints "accent" and "yellow" tones as a solid
+ * bright field with light text, which assumes white-on-saturated. Here the accent
+ * is a light apricot: cream text on it is unreadable, a primary button (also
+ * apricot) vanishes, and a big bright slab on a dark page is exactly the glare
+ * (halation) the palette is built to avoid. So these tones become a quiet
+ * accent-tinted dark surface: cream text keeps its contrast, apricot stays an
+ * accent for buttons and eyebrows.
+ */
+.cc-root.cc-root :is(.p1-hero[data-tone="accent"], .p1-cta__card[data-tone="accent"], .p1-cta__card[data-tone="yellow"]) {
+  --p1-highlight: var(--cc-accent);
+  background-color: color-mix(in srgb, var(--cc-accent) 14%, var(--cc-surface));
+  color: var(--cc-text);
+}
+.cc-root.cc-root :is(.p1-cta__card[data-tone="accent"], .p1-cta__card[data-tone="yellow"]) {
+  border: 1px solid color-mix(in srgb, var(--cc-accent) 30%, var(--cc-border));
+}
+/* The kit's `purple` button is accent-filled with inverse (cream) text. */
+.cc-root.cc-root .p1-btn[data-variant="purple"] {
+  color: var(--cc-accent-ink);
+}
+/* A button boundary is a control boundary: 3:1, not the decorative border. */
+.cc-root.cc-root .p1-btn[data-variant="secondary"] {
+  border-color: var(--cc-border-strong);
+}
+/* Overlays are hardcoded indigo in hero.tsx (inline style); it tints the warm
+   graphite violet. Known gap, upstream: see docs/design-system.md. */
+
+/*
+ * Type. The kit's scale is proportional-face sized (H2 3.5rem, hero 3.75rem, Georgia
+ * lead). In a monospace face that is enormous and disagrees with the podcast blocks'
+ * h2 (--cc-text-xl). One scale, and no off-system font.
+ */
+.cc-root.cc-root .p1-heading[data-level="H1"] .p1-heading__text,
+.cc-root.cc-root .p1-hero__title {
+  font-size: var(--cc-text-2xl);
+}
+.cc-root.cc-root .p1-heading[data-level="H2"] .p1-heading__text,
+.cc-root.cc-root .p1-cta__title {
+  font-size: var(--cc-text-xl);
+}
+.cc-root.cc-root .p1-heading[data-level="H3"] .p1-heading__text {
+  font-size: var(--cc-text-lg);
+}
+.cc-root.cc-root .p1-heading[data-level="H4"] .p1-heading__text {
+  font-size: var(--cc-text-md);
+}
+.cc-root.cc-root :is(.p1-heading__text, .p1-hero__title, .p1-cta__title) {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.cc-root.cc-root .p1-hero__title,
+.cc-root.cc-root .p1-cta__title {
+  margin-block-end: var(--cc-space-3);
+}
+.cc-root.cc-root .p1-paragraph[data-style="lead"] .p1-paragraph__body {
+  font-family: var(--cc-font-body);
+}

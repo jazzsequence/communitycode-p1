@@ -1,9 +1,10 @@
 @import "tailwindcss";
-@import "@fontsource-variable/fraunces";
-@import "@fontsource-variable/inter";
+@import "@fontsource-variable/victor-mono";
+@import "@fontsource-variable/source-sans-3";
 @import "./podcast.css";
 @import "./p1-tokens.css";
 @import "./p1-base.css";
+@import "./layout-contract.css";
 
 @custom-variant dark (&:is(.dark *));
 @plugin "@tailwindcss/typography";
