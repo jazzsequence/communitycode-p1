@@ -14,46 +14,81 @@
  */
 
 .cc-root {
-  --cc-font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
-  --cc-font-body: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --cc-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --cc-font-display: "Victor Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --cc-font-body: "Source Sans 3 Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cc-font-mono: "Victor Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  /* colour: midnight broadcast */
-  --cc-bg: #0e1116;
-  --cc-surface: #161b22;
-  --cc-surface-2: #1d242d;
-  --cc-border: #2a323d;
-  --cc-text: #eceff4;
-  --cc-muted: #9aa5b4;
-  --cc-accent: #ffb454;
-  --cc-accent-ink: #1a1203;
-  --cc-link: #7cc4ff;
-  --cc-danger: #ff7b72;
-  --cc-focus: #ffb454;
+  /*
+   * Colour: warm graphite + apricot. Chosen for astigmatism comfort, not just
+   * "dark": halation (bright text blooming on a dark ground) is the failure mode.
+   *  - No pure black ground, no pure white text. Body text is ~WCAG 13:1 /
+   *    APCA Lc -86: readable, but under the ~Lc 90 ceiling the APCA dark-mode
+   *    work flags as glare-prone. Do not "fix" it by brightening --cc-text.
+   *  - Near-neutral, low-chroma surfaces; accents are desaturated ~15%.
+   *  - Muted text is held at >= Lc 61 on every surface; errors at >= Lc 60 (small secondary text).
+   *  - Decorative borders are subtle; input borders use --cc-border-strong
+   *    (>= 3:1, WCAG 1.4.11). Do not use --cc-border for form controls.
+   * Full contrast table: docs/design-system.md.
+   */
+  --cc-bg: #1c1a19;
+  --cc-surface: #262321;
+  --cc-surface-2: #2f2b29;
+  --cc-border: #413c38;
+  --cc-border-strong: #857c72;
+  --cc-text: #e5dfd6;
+  --cc-muted: #c2baaf;
+  --cc-accent: #e6ae7a;
+  --cc-accent-hover: #eebf93;
+  --cc-accent-ink: #1c1a19;
+  --cc-link: #9cbfd6;
+  --cc-danger: #eda79e;
+  --cc-focus: #e6ae7a;
 
-  /* scale */
+  /* type scale. Headings are monospace (wide glyphs), so the top end is modest. */
   --cc-text-xs: 0.8125rem;
   --cc-text-sm: 0.9375rem;
   --cc-text-md: 1.0625rem;
-  --cc-text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
-  --cc-text-xl: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
-  --cc-text-2xl: clamp(2.1rem, 1.5rem + 2.6vw, 3.5rem);
-  --cc-space-1: 0.25rem;
-  --cc-space-2: 0.5rem;
-  --cc-space-3: 0.75rem;
-  --cc-space-4: 1rem;
-  --cc-space-5: 1.5rem;
-  --cc-space-6: 2rem;
-  --cc-space-7: 3rem;
-  --cc-space-8: 4.5rem;
+  --cc-text-lg: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
+  --cc-text-xl: clamp(1.45rem, 1.2rem + 1vw, 1.9rem);
+  --cc-text-2xl: clamp(1.8rem, 1.3rem + 2vw, 2.75rem);
+
+  /*
+   * Spacing: ONE 8pt-based scale. Everything below is a step of it; nothing in
+   * the codebase should hold a raw rem/px margin or padding.
+   */
+  --cc-space-1: 0.25rem; /*  4 */
+  --cc-space-2: 0.5rem; /*  8 */
+  --cc-space-3: 0.75rem; /* 12 */
+  --cc-space-4: 1rem; /* 16 */
+  --cc-space-5: 1.5rem; /* 24 */
+  --cc-space-6: 2rem; /* 32 */
+  --cc-space-7: 3rem; /* 48 */
+  --cc-space-8: 4rem; /* 64 */
+  --cc-space-9: 6rem; /* 96 */
+
+  /*
+   * LAYOUT CONTRACT: the only three numbers that place content on the page.
+   * Every top-level block (podcast blocks and P1 kit blocks alike) gets the same
+   * side gutter, and its content is capped to the same widths, so every block's
+   * left edge lines up. See app/layout-contract.css for how kit blocks are held
+   * to it.
+   *   gutter     horizontal inset between viewport and content
+   *   section-y  vertical padding of a page section (hero, archive, CTA, ...)
+   *   block-y    vertical padding of a small content block (heading, paragraph)
+   * Two adjacent sections are 2 x section-y apart; two content blocks 2 x block-y.
+   */
+  --cc-gutter: var(--cc-space-4);
+  --cc-section-y: var(--cc-space-7);
+  --cc-block-y: var(--cc-space-3);
+  --cc-content: 72rem; /* content width, excluding the gutter */
+  --cc-narrow: 48rem; /* reading width for FAQs, callouts, forms */
+  --cc-measure: 68ch;
   --cc-radius: 0.75rem;
   --cc-radius-sm: 0.5rem;
-  --cc-content: 72rem;
-  --cc-measure: 68ch;
 
   /*
    * show.fm embeds (<showfm-player>, <showfm-transcript>) read these hooks, so
-   * they follow the site's tokens, including the optional light variant below. They
+   * they follow the site's tokens. They
    * are plain custom properties: they inherit into the elements' shadow DOM.
    */
   --showfm-accent: var(--cc-accent);
@@ -70,14 +105,33 @@
   font-size: var(--cc-text-md);
   line-height: 1.6;
   min-height: 100vh;
+  /* Native widgets (search clear button, scrollbars, date pickers) follow the theme. */
+  color-scheme: dark;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 40rem) {
+  .cc-root {
+    --cc-gutter: var(--cc-space-5);
+    --cc-section-y: var(--cc-space-8);
+    --cc-block-y: var(--cc-space-4);
+  }
+}
+
+@media (min-width: 64rem) {
+  .cc-root {
+    --cc-gutter: 2.5rem; /* 40 */
+    --cc-section-y: var(--cc-space-9);
+  }
 }
 
 /*
  * P1 block kit (generic page blocks: Heading, Hero, Columns, ...) styles itself
  * from --p1-* tokens, grayscale by default. Point them at the site's tokens so
- * those blocks look like Community + Code, in the dark theme and the optional light one. Declared on
- * .cc-root, so the kit's :root defaults still apply anywhere outside it.
+ * those blocks look like Community + Code. Declared on .cc-root, so the kit's
+ * :root defaults still apply anywhere outside it. Gutters, vertical padding and
+ * container widths are NOT remapped here: the kit hardcodes them per block, so
+ * app/layout-contract.css overrides the blocks themselves.
  */
 .cc-root {
   --p1-surface-default: var(--cc-bg);
@@ -88,35 +142,22 @@
   --p1-fg-muted: var(--cc-muted);
   --p1-fg-inverse: var(--cc-text);
   --p1-border: var(--cc-border);
-  --p1-border-strong: var(--cc-border);
+  --p1-border-strong: var(--cc-border-strong);
   --p1-border-subtle: var(--cc-border);
   --p1-accent: var(--cc-accent);
-  --p1-accent-hover: var(--cc-accent);
+  --p1-accent-hover: var(--cc-accent-hover);
   --p1-on-accent: var(--cc-accent-ink);
   --p1-cta-bg: var(--cc-accent);
-  --p1-cta-bg-hover: var(--cc-accent);
+  --p1-cta-bg-hover: var(--cc-accent-hover);
   --p1-cta-fg: var(--cc-accent-ink);
   --p1-critical: var(--cc-danger);
   --p1-font-body: var(--cc-font-body);
   --p1-font-heading: var(--cc-font-display);
   --p1-radius-card: var(--cc-radius);
   --p1-radius-sm: var(--cc-radius-sm);
+  --p1-container-narrow: var(--cc-narrow);
   --p1-container-default: var(--cc-content);
-}
-
-/* Opt-in light variant. Nothing sets it today. */
-.cc-root[data-theme="light"] {
-  --cc-bg: #faf8f4;
-  --cc-surface: #ffffff;
-  --cc-surface-2: #f1ede5;
-  --cc-border: #e0d9cc;
-  --cc-text: #14181f;
-  --cc-muted: #566170;
-  --cc-accent: #b45309;
-  --cc-accent-ink: #ffffff;
-  --cc-link: #0b5cad;
-  --cc-danger: #b42318;
-  --cc-focus: #b45309;
+  --p1-container-wide: var(--cc-content);
 }
 
 .cc-root *,
@@ -127,15 +168,40 @@
 
 .cc-root :where(h1, h2, h3, h4) {
   font-family: var(--cc-font-display);
-  font-weight: 650;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
+/*
+ * Links reveal on intent (the live site's pattern): the underline is there but
+ * transparent, and turns dotted on hover/focus. Zero specificity (:where) so any
+ * component that sets its own text-decoration (buttons, nav) still wins.
+ * Prose links are the exception: link colour vs. body colour is only ~1.4:1, so
+ * colour alone cannot carry them (WCAG 1.4.1). They keep a persistent dotted
+ * underline that goes solid on hover.
+ */
 .cc-root :where(a) {
   color: var(--cc-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: transparent;
   text-underline-offset: 0.2em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.cc-root :where(a):is(:hover, :focus-visible) {
+  color: var(--cc-text);
+  text-decoration-style: dotted;
+  text-decoration-color: var(--cc-muted);
+}
+.cc-root :where(.cc-prose, .p1-paragraph__body, .p1-list, .p1-faq__answer, .p1-callout__box, .cc-form-card) a {
+  text-decoration-style: dotted;
+  text-decoration-color: currentColor;
+}
+.cc-root :where(.cc-prose, .p1-paragraph__body, .p1-list, .p1-faq__answer, .p1-callout__box, .cc-form-card) a:is(:hover, :focus-visible) {
+  text-decoration-style: solid;
+  text-decoration-color: var(--cc-text);
 }
 
 /* One visible focus treatment everywhere; never remove an outline without it. */
@@ -147,15 +213,33 @@
 
 /* --- layout ------------------------------------------------------------- */
 
+/*
+ * Container: the gutter plus the content cap. max-width includes the gutters so
+ * the *content* is exactly --cc-content wide (border-box: padding is inside).
+ * Narrow variant for reading-width blocks (forms, FAQs, callouts).
+ */
 .cc-container {
   width: 100%;
-  max-width: var(--cc-content);
+  max-width: calc(var(--cc-content) + 2 * var(--cc-gutter));
   margin-inline: auto;
-  padding-inline: var(--cc-space-5);
+  padding-inline: var(--cc-gutter);
+}
+.cc-container--narrow {
+  max-width: calc(var(--cc-narrow) + 2 * var(--cc-gutter));
 }
 
 .cc-section {
-  padding-block: var(--cc-space-7);
+  padding-block: var(--cc-section-y);
+}
+
+/* A container/section nested in a layout block (Columns, Container) must not add
+   a second gutter: the parent already provides one. */
+.cc-root :is(.p1-columns, .p1-container) .cc-container {
+  max-width: none;
+  padding-inline: 0;
+}
+.cc-root :is(.p1-columns, .p1-container) .cc-section {
+  padding-block: var(--cc-block-y);
 }
 
 .cc-stack > * + * {
@@ -199,22 +283,30 @@
   min-height: 2.75rem; /* 44px touch target */
   padding: 0 var(--cc-space-5);
   border-radius: 999px;
-  border: 1px solid var(--cc-border);
+  border: 1px solid var(--cc-border-strong);
   background: var(--cc-surface-2);
   color: var(--cc-text);
   font: inherit;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .cc-btn:hover {
   border-color: var(--cc-accent);
+  color: var(--cc-text);
 }
 
 .cc-btn--primary {
   background: var(--cc-accent);
   border-color: var(--cc-accent);
+  color: var(--cc-accent-ink);
+}
+
+.cc-btn--primary:hover {
+  background: var(--cc-accent-hover);
+  border-color: var(--cc-accent-hover);
   color: var(--cc-accent-ink);
 }
 
@@ -226,7 +318,7 @@
 
 .cc-pill {
   display: inline-block;
-  padding: 0.1rem 0.6rem;
+  padding: var(--cc-space-1) var(--cc-space-3);
   border-radius: 999px;
   background: var(--cc-surface-2);
   border: 1px solid var(--cc-border);
@@ -239,7 +331,7 @@
   min-height: 2.75rem;
   padding: 0 var(--cc-space-4);
   border-radius: var(--cc-radius-sm);
-  border: 1px solid var(--cc-border);
+  border: 1px solid var(--cc-border-strong); /* >= 3:1: a control boundary, WCAG 1.4.11 */
   background: var(--cc-surface);
   color: var(--cc-text);
   font: inherit;
@@ -260,7 +352,7 @@
 
 .cc-form-card {
   padding: var(--cc-space-6);
-  max-width: 40rem;
+  max-width: var(--cc-narrow); /* narrow blocks are centred, like FAQ and callout */
   margin-inline: auto;
   overflow: visible;
 }
@@ -331,6 +423,51 @@
 }
 .cc-prose :where(ul, ol) {
   padding-left: var(--cc-space-5);
+}
+/* Tailwind's preflight strips list markers; show notes need them back. */
+.cc-prose :where(ul) {
+  list-style: disc;
+}
+.cc-prose :where(ol) {
+  list-style: decimal;
+}
+.cc-prose :where(li)::marker {
+  color: var(--cc-muted);
+}
+.cc-prose :where(li) + :where(li) {
+  margin-top: var(--cc-space-2);
+}
+.cc-prose :where(h2, h3, h4) {
+  margin-top: var(--cc-space-6);
+}
+.cc-prose :where(h1, h2, h3, h4) + * {
+  margin-top: var(--cc-space-3);
+}
+.cc-prose :where(blockquote) {
+  margin-inline: 0;
+  padding-left: var(--cc-space-4);
+  border-left: 3px solid var(--cc-border-strong);
+  color: var(--cc-muted);
+}
+.cc-prose :where(code, pre) {
+  font-family: var(--cc-font-mono);
+  font-size: 0.9em;
+}
+.cc-prose :where(code) {
+  padding: 0.1em var(--cc-space-1);
+  border-radius: var(--cc-space-1);
+  background: var(--cc-surface-2);
+}
+.cc-prose :where(pre) {
+  padding: var(--cc-space-4);
+  overflow-x: auto;
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius-sm);
+  background: var(--cc-surface);
+}
+.cc-prose :where(pre code) {
+  padding: 0;
+  background: none;
 }
 .cc-prose :where(iframe) {
   width: 100%;

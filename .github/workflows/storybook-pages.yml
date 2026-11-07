@@ -1,0 +1,70 @@
+# Builds Storybook and publishes it to GitHub Pages.
+#
+# One-time setup (a repo admin, in the browser: the API token used for development
+# cannot change this): Settings > Pages > Build and deployment > Source: "GitHub Actions".
+# Until that is set, the deploy job fails at `configure-pages` with a "Pages not enabled" error.
+#
+# Deploys only from `main`: the `github-pages` environment is restricted to the default
+# branch by default, so a manual run from a feature branch builds but cannot deploy.
+#
+# The site is served at https://<owner>.github.io/<repo>/ . Storybook's static output
+# uses relative paths, so no base-path configuration is needed.
+#
+# NOTE: for a private repo, a Pages site is still publicly reachable on plans without
+# Enterprise Cloud access control. Storybook here holds the design system plus sample
+# data only; no secrets or env files reach the build (CI has no .env.local).
+name: Storybook
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".storybook/**"
+      - "stories/**"
+      - "app/**/*.css"
+      - "components/**"
+      - "lib/**"
+      - "content/**"
+      - "site.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/storybook-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One Pages deployment at a time; a newer push supersedes a queued older one but never
+# cancels one mid-deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build-storybook
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          path: storybook-static
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

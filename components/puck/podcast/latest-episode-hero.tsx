@@ -116,11 +116,11 @@ export function LatestEpisodeHeroRender(props: Partial<LatestEpisodeHeroProps> &
             {[eyebrow, label].filter(Boolean).join(" · ")}
           </p>
           <h2 style={{ fontSize: "var(--cc-text-2xl)" }}>{episode.title}</h2>
-          <p className="cc-muted" style={{ margin: 0, display: "flex", flexWrap: "wrap", gap: "var(--cc-space-1) var(--cc-space-4)", fontSize: "var(--cc-text-sm)" }}>
+          <p className="cc-muted" style={{ display: "flex", flexWrap: "wrap", gap: "var(--cc-space-1) var(--cc-space-4)", fontSize: "var(--cc-text-sm)" }}>
             {date ? <time dateTime={episode.publishedAt}>{date}</time> : null}
             {duration ? <span>{duration}</span> : null}
           </p>
-          {guests.length > 0 ? <p style={{ margin: 0 }}>With {guests.join(", ")}</p> : null}
+          {guests.length > 0 ? <p>With {guests.join(", ")}</p> : null}
           {showDescription && episode.description ? (
             <p
               className="cc-muted"

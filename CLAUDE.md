@@ -16,6 +16,7 @@ Node **24** (`nvm use 24`). npm, not pnpm.
 | `npm run lint` | ESLint |
 | `npx tsc --noEmit` | Typecheck |
 | `npm test` | Vitest (`npx vitest run <file>` for one) |
+| `npm run storybook` | Design-system workshop on :6006 (`npm run build-storybook` to build). Independent of `.next`, so it can run beside `dev`/`build`. |
 
 Run lint, tsc, tests and build before presenting changes.
 
@@ -30,7 +31,8 @@ Run lint, tsc, tests and build before presenting changes.
   - `filter.ts`: offset-cursor pagination + season/type/text filtering over the merged list.
 - `app/api/episodes[/slug]`: what client blocks call. Keys and tokens never reach the browser.
 - `components/puck/podcast/`: the blocks. `index.ts` is the barrel (ids + categories).
-- `app/podcast.css`: the design system. `lib/format.ts`: shared date/duration formatting.
+- `app/podcast.css`: the design system (tokens + `cc-*` components). `app/layout-contract.css`: holds the P1 kit blocks to the
+  same gutter/rhythm. `docs/design-system.md`: the rationale. `stories/` + `.storybook/`: Storybook. `lib/format.ts`: date/duration formatting.
 
 ## Non-obvious decisions (read before changing the data layer)
 
@@ -64,9 +66,19 @@ Run lint, tsc, tests and build before presenting changes.
 - **`_embed` needs `_links` in `_fields`.** Omit it and WordPress silently drops embedded featured images.
 - **Guests come from titles** ("Episode 36: Jacquie Capur"), not a field. `parseGuestsFromTitle`; non-episode
   items have none. show.fm `people` replaces them when present.
-- **The theme is always dark; it is not tied to the OS.** The P1 editor canvas reports a light color scheme on a
-  dark OS, so a `prefers-color-scheme` switch showed editors a cream page visitors never see. Light exists as an
-  opt-in `data-theme="light"` on `.cc-root` (nothing sets it today).
+- **The theme is always dark; it is not tied to the OS, and there is no light variant.** The P1 editor canvas reports
+  a light color scheme on a dark OS, so a `prefers-color-scheme` switch showed editors a cream page visitors never see.
+- **The palette (warm graphite + apricot) is tuned for astigmatism, so do not "fix" contrast by brightening.** Body text is
+  WCAG 13:1 / APCA Lc -86, deliberately under the ~Lc 90 glare ceiling (halation). Muted text and errors are held at
+  Lc >= 60 on every surface; control borders use `--cc-border-strong` (>= 3:1), never `--cc-border`. The Storybook Colors
+  page computes the table live: if you touch a colour token, read it. Rationale and sources: `docs/design-system.md`.
+- **One layout contract (`--cc-gutter`, `--cc-section-y`, `--cc-block-y`, `--cc-content`, `--cc-narrow`) places every block.**
+  Podcast blocks get it from `.cc-container` / `.cc-section`; P1 kit blocks get it from `app/layout-contract.css`, which
+  overrides them (they are registry-owned and `shadcn add` overwrites edits). A stray margin on a kit block is fixed there.
+  Blocks add no outer margin of their own, and a block nested in Columns/Container adds no gutter. Use the `--cc-space-*`
+  scale; no raw rem/px spacing. Check with the Storybook **Layout guides** toolbar toggle.
+- **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
+  colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
   styles into its editor canvas iframe. Never put tokens on `body`/`:root`.
 - `tsconfig` is `strict: false`, so boolean-discriminated unions don't narrow: use `"error" in x`.

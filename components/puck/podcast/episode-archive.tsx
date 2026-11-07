@@ -115,6 +115,7 @@ export function EpisodeArchiveRender(props: Partial<EpisodeArchiveProps> & { id?
   const showList = episodes.length > 0;
   const filtered = season !== "all" || type !== defaultType;
 
+  const showEmpty = !loadingFirst && !initialError && !showList;
   let announcement = "";
   if (loadingFirst) announcement = "Loading episodes…";
   else if (loadingMore) announcement = "Loading more episodes…";
@@ -169,7 +170,8 @@ export function EpisodeArchiveRender(props: Partial<EpisodeArchiveProps> & { id?
         ) : null}
       </div>
 
-      <p className="cc-muted" role="status" aria-live="polite" style={{ margin: "0 0 var(--cc-space-4)", fontSize: "var(--cc-text-sm)", minHeight: "1.5em" }}>
+      {/* The empty message is also rendered visibly below, so the live region keeps announcing it but stops showing it twice. */}
+      <p className={showEmpty ? "cc-sr-only" : "cc-muted"} role="status" aria-live="polite" style={showEmpty ? undefined : { margin: "0 0 var(--cc-space-4)", fontSize: "var(--cc-text-sm)", minHeight: "1.5em" }}>
         {announcement}
       </p>
 
@@ -190,7 +192,7 @@ export function EpisodeArchiveRender(props: Partial<EpisodeArchiveProps> & { id?
         </div>
       ) : null}
 
-      {!loadingFirst && !initialError && !showList ? (
+      {showEmpty ? (
         <p className="cc-muted">{filtered ? "No episodes match these filters." : "No episodes yet"}</p>
       ) : null}
 

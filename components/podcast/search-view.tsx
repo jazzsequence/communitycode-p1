@@ -143,7 +143,7 @@ export function SiteSearchView({
             Search
           </button>
         </form>
-        <p id={hintId} className="cc-muted" style={{ margin: 0, fontSize: "var(--cc-text-sm)" }}>
+        <p id={hintId} className="cc-muted" style={{ margin: "var(--cc-space-2) 0 0", fontSize: "var(--cc-text-sm)" }}>
           Type at least {MIN_QUERY} characters. Matches titles, descriptions and guest names.
         </p>
 
