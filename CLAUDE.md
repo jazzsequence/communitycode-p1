@@ -101,10 +101,13 @@ Run lint, tsc, tests and build before presenting changes.
   `safeHref`, raw HTML shown as text). Not `richtext`: it would have broken saved plain-text bios.
 - **The kit Paragraph's rich-text toolbar is replaced** (`lib/rich-link-field.tsx`, swapped in `puck.config.tsx`, not in the
   kit file `shadcn add` overwrites). The kit's has no way to remove a link or clear formatting, so this adds **Remove link**
-  and **Clear formatting** buttons and turns typed `[words](https://…)` into a link (a tiptap input rule; address through
-  `safeHref`). Buttons only, no address form: a form inside Puck's toolbar submitted the page instead of the link. Puck does not
-  re-render the menu when only the selection moves, so the menu subscribes to the editor's transactions itself. Tested against
-  a real tiptap editor, but the toolbar only really proves out in the P1 editor: check it there after a Puck upgrade.
+  and **Clear formatting** buttons and turns typed `[words](https://…)` into a link (address through `safeHref`). Buttons
+  only, no address form: a form inside Puck's toolbar submitted the page instead of the link. **It imports nothing from
+  tiptap and the repo must not depend on `@tiptap/*`**: every tiptap package peer-pins the exact version of the others, so a
+  direct dependency of ours breaks the next Puck upgrade (npm ERESOLVE; `^` ranges resolve to the newest tiptap and conflict
+  with the locked family). It works through the `editor` Puck passes to the menu instead. Puck does not re-render the menu
+  when only the selection moves, so the menu subscribes to the editor itself. Tests build a real tiptap editor from Puck's own
+  packages; the toolbar only really proves out in the P1 editor, so re-check it there after a Puck upgrade.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useReducer } from "react";
-import { Extension, InputRule } from "@tiptap/core";
 import type { Field } from "@puckeditor/core";
 import { RichTextMenu } from "@puckeditor/core";
 import { richtextField } from "@pantheon-systems/puck-css/fields";
@@ -12,6 +11,10 @@ import { safeHref } from "@/lib/safe-link";
  * formatting back off. This is the same field with two one-click buttons added, Remove link and Clear
  * formatting, plus a way to ADD a link: type Markdown, `[words](https://…)`, and it becomes a link.
  *
+ * Deliberately imports nothing from tiptap. Every tiptap package peer-pins the exact version of the others,
+ * so a direct dependency of ours would have to move in lockstep with Puck's and breaks the next Puck
+ * upgrade (npm ERESOLVE). Everything here works through the `editor` Puck hands to the menu instead.
+ *
  * Buttons only (no address form): an earlier form-in-the-toolbar version submitted the page instead of
  * the link inside Puck's editor. Stored value is still HTML; `RichValue` sanitises it on render, and the
  * address typed here goes through `safeHref`, so a `javascript:` link is never created.
@@ -20,24 +23,29 @@ type RichtextField = Extract<Field, { type: "richtext" }>;
 type MenuProps = Parameters<NonNullable<RichtextField["renderMenu"]>>[0];
 type EditorLike = NonNullable<MenuProps["editor"]>;
 
-/** `[text](https://…)` typed in the editor becomes a link, so links can be added without a link UI. */
-export const MarkdownLink = Extension.create({
-  name: "markdownLink",
-  addInputRules() {
-    return [
-      new InputRule({
-        find: /\[([^\]\n]+)\]\(([^)\s]+)\)$/,
-        handler: ({ state, range, match }) => {
-          const link = state.schema.marks.link;
-          const href = safeHref(match[2]);
-          if (!link || !href) return null; // unsafe or no Link mark: leave the typed text alone
-          state.tr.replaceWith(range.from, range.to, state.schema.text(match[1], [link.create({ href })]));
-          state.tr.removeStoredMark(link); // what is typed next is not part of the link
-        },
-      }),
-    ];
-  },
-});
+const MARKDOWN_LINK = /\[([^\]\n]+)\]\(([^)\s]+)\)$/;
+
+/**
+ * If the text just before the caret is `[words](address)`, replace it with `words` as a link. Returns
+ * whether it did. An unsafe address (`javascript:` and friends) is left as typed text.
+ */
+export function convertMarkdownLink(editor: EditorLike): boolean {
+  const { selection } = editor.state;
+  const link = editor.schema.marks.link;
+  if (!selection.empty || !link) return false;
+  const { $from } = selection;
+  const before = $from.parent.textBetween(0, $from.parentOffset, undefined, "\ufffc");
+  if (!before.endsWith(")")) return false;
+  const m = MARKDOWN_LINK.exec(before);
+  const href = m ? safeHref(m[2]) : null;
+  if (!m || !href) return false;
+  const start = $from.start() + m.index;
+  return editor
+    .chain()
+    .deleteRange({ from: start, to: selection.from })
+    .insertContent({ type: "text", text: m[1], marks: [{ type: "link", attrs: { href } }] })
+    .run();
+}
 
 function hasLink(editor: EditorLike): boolean {
   const type = editor.schema.marks.link;
@@ -75,9 +83,16 @@ function Menu({ editor, withLists }: { editor: MenuProps["editor"]; withLists: b
   const [, refresh] = useReducer((n: number) => n + 1, 0);
   useEffect(() => {
     if (!editor) return;
+    // Typing the closing bracket of [words](https://…) makes it a link. Done after the keystroke lands,
+    // from the menu's own subscription, so no tiptap extension is needed.
+    const onUpdate = () => {
+      convertMarkdownLink(editor);
+    };
     editor.on("transaction", refresh);
+    editor.on("update", onUpdate);
     return () => {
       editor.off("transaction", refresh);
+      editor.off("update", onUpdate);
     };
   }, [editor]);
 
@@ -126,7 +141,6 @@ export const richtextLinkField: RichtextField = {
   ...(richtextField as RichtextField),
   // Clicking a link while editing should place the cursor, not navigate away from the editor.
   options: { ...(richtextField as RichtextField).options, link: { openOnClick: false } },
-  tiptap: { extensions: [MarkdownLink] },
   renderMenu: FullMenu,
   renderInlineMenu: InlineMenu,
 };

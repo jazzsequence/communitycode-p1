@@ -10,7 +10,7 @@ import { Link } from "@tiptap/extension-link";
 import { Paragraph } from "@tiptap/extension-paragraph";
 import { Text } from "@tiptap/extension-text";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { MarkdownLink, richtextLinkField } from "@/lib/rich-link-field";
+import { richtextLinkField } from "@/lib/rich-link-field";
 
 // Puck's real menu needs its editor context; the buttons here only need to be clickable.
 vi.mock("@puckeditor/core", () => {
@@ -37,7 +37,7 @@ afterEach(cleanup);
 const makeEditor = (html: string) =>
   new Editor({
     element: document.createElement("div"),
-    extensions: [Document, Paragraph, Text, Bold, Link.configure({ openOnClick: false }), MarkdownLink],
+    extensions: [Document, Paragraph, Text, Bold, Link.configure({ openOnClick: false })],
     content: html,
   });
 
@@ -46,12 +46,11 @@ function show(editor: Editor) {
   render(<Menu editor={editor} editorState={null} readOnly={false}>{null}</Menu>);
 }
 
-/** Type like a keyboard does, so ProseMirror's input rules run. */
+/** Type a character at a time. The menu must be mounted: it is what watches the editor. */
 function type(editor: Editor, text: string) {
   for (const ch of text) {
     const { from, to } = editor.state.selection;
-    const handled = editor.view.someProp("handleTextInput", (f) => f(editor.view, from, to, ch, () => editor.state.tr.insertText(ch, from, to)));
-    if (!handled) editor.view.dispatch(editor.state.tr.insertText(ch, from, to));
+    editor.view.dispatch(editor.state.tr.insertText(ch, from, to));
   }
 }
 
@@ -63,7 +62,6 @@ describe("richtextLinkField toolbar", () => {
     expect(richtextLinkField.renderMenu).toBeTypeOf("function");
     expect(richtextLinkField.renderInlineMenu).toBeTypeOf("function");
     expect(richtextLinkField.options?.link).toMatchObject({ openOnClick: false });
-    expect(richtextLinkField.tiptap?.extensions).toContain(MarkdownLink);
   });
 
   it("removes the whole link when the caret is inside it", () => {
@@ -118,6 +116,7 @@ describe("richtextLinkField toolbar", () => {
 describe("typing Markdown links", () => {
   it("turns [words](https://…) into a link as the closing bracket is typed", () => {
     const editor = makeEditor("<p></p>");
+    show(editor);
     editor.commands.focus("end");
     type(editor, "Read [the manifesto](https://communitycode.dev/m/) now");
     const dom = new DOMParser().parseFromString(editor.getHTML(), "text/html");
@@ -129,6 +128,7 @@ describe("typing Markdown links", () => {
 
   it("accepts a same-site path and mailto", () => {
     const editor = makeEditor("<p></p>");
+    show(editor);
     editor.commands.focus("end");
     type(editor, "[about](/about) [mail](mailto:a@b.test)");
     expect(editor.getHTML()).toContain('href="/about"');
@@ -137,6 +137,7 @@ describe("typing Markdown links", () => {
 
   it("does not turn an unsafe address into a link and leaves what was typed", () => {
     const editor = makeEditor("<p></p>");
+    show(editor);
     editor.commands.focus("end");
     type(editor, "[click](javascript:alert(1))");
     expect(editor.getHTML()).not.toContain("<a");
