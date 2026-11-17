@@ -84,7 +84,7 @@ Run lint, tsc, tests and build before presenting changes.
   scale; no raw rem/px spacing. Check with the Storybook **Layout guides** toolbar toggle.
 - **The header shows the `<&>` mark** (`site.config.ts` `site.logo`, file in `public/images/`; white on transparent, so it
   only reads on the dark theme). A blank `logo` field on the Site Header block means "the site logo", because saved
-  pages carry `logo: ""` from before it existed. The mark is the WordPress favicon, trimmed.
+  pages carry `logo: ""` from before it existed. The mark is the WordPress favicon, trimmed. On mobile the nav toggle is a hamburger icon (a cross while open), not the word "Menu"; its accessible name is still "Menu" (`aria-label`) and the icon is `aria-hidden`.
 - **The native player copies the show.fm player's layout** (`components/podcast/audio-player.tsx`, `.cc-player*` in
   `podcast.css`): cover, title, waveform, round controls, speed button. The waveform is decorative (seeded from the
   title, not the audio); the real control is a visually hidden range input over it, so keyboard and screen readers get a

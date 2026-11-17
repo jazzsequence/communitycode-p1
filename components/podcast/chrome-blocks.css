@@ -91,6 +91,12 @@
 .cc-chrome-toggle {
   display: none;
 }
+/* Icon-only: a square 44px hit area (the .cc-btn minimum) instead of text padding. */
+.cc-chrome-toggle {
+  padding: 0;
+  min-inline-size: 2.75rem;
+  justify-content: center;
+}
 /* Link padding is hit area, not layout: pull the list out by it so the last link's
    text ends on the content edge (desktop) and the open mobile menu starts on it. */
 @media (min-width: 48rem) {
