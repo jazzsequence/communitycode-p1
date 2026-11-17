@@ -74,7 +74,7 @@ Three numbers place all content on the page, and every top-level block (podcast 
 | `--cc-section-y` (hero, archive, CTA, FAQ, ...) | 48px | 64px | 96px |
 | `--cc-block-y` (heading, paragraph, button, ...) | 12px | 16px | 16px |
 
-Content is capped at `--cc-content` (72rem) or `--cc-narrow` (48rem), measured **excluding** the gutter.
+Content is capped at `--cc-content` (72rem) or `--cc-narrow` (56rem), measured **excluding** the gutter.
 Two adjacent sections sit `2 x section-y` apart; two small blocks `2 x block-y`. A block nested in Columns or
 Container adds no gutter of its own.
 

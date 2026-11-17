@@ -1,19 +1,13 @@
 // @vitest-environment jsdom
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { bioParagraphs, hostAboutBlock } from "@/components/puck/podcast/host-about";
+import { hostAboutBlock } from "@/components/puck/podcast/host-about";
 
 vi.mock("@/content/site", () => import("./stubs/site"));
+// The real field pulls in the Puck editor; only its type matters here.
+vi.mock("@/lib/rich-link-field", () => ({ richtextLinkField: { type: "richtext" } }));
 
 afterEach(cleanup);
-
-describe("bioParagraphs", () => {
-  it("splits on blank lines (any newline style / trailing spaces) and drops empties", () => {
-    expect(bioParagraphs("One.\n\nTwo.\r\n  \r\nThree.\n\n\n")).toEqual(["One.", "Two.", "Three."]);
-    expect(bioParagraphs(undefined)).toEqual([]);
-    expect(bioParagraphs("   ")).toEqual([]);
-  });
-});
 
 describe("HostAbout block", () => {
   it("renders neutral defaults with no person-specific text", () => {
@@ -26,7 +20,58 @@ describe("HostAbout block", () => {
     expect(document.querySelector(".cc-avatar")?.getAttribute("aria-hidden")).toBe("true");
   });
 
-  it("renders the bio as text, never HTML", () => {
+  it("is a rich-text field, so text can be linked from the editor", () => {
+    expect(hostAboutBlock.fields.bio.type).toBe("richtext");
+  });
+
+  it("renders stored rich-text HTML with its links, sanitised", () => {
+    const { container } = render(
+      hostAboutBlock.render({
+        name: "X",
+        bio: '<p>Works at <a href="https://pantheon.io">Pantheon</a> and <a href="javascript:alert(1)">bad</a><script>1</script></p><p>Second.</p>',
+      }),
+    );
+    const a = [...container.querySelectorAll(".cc-stack .p1-rich a[href]")] as HTMLAnchorElement[]; // an unsafe href is dropped, leaving inert text
+    expect(a.map((x) => x.getAttribute("href"))).toEqual(["https://pantheon.io"]);
+    expect(container.querySelector("script")).toBeNull();
+    expect(container.querySelectorAll(".cc-stack .p1-rich p")).toHaveLength(2);
+  });
+
+  it("renders the live node the editor passes while editing inline", () => {
+    const { container } = render(hostAboutBlock.render({ name: "X", bio: <p>Live <a href="/x">link</a></p> }));
+    expect(container.querySelector(".p1-rich a")?.getAttribute("href")).toBe("/x");
+  });
+
+  it("renders Markdown links, bold and italic in the bio", () => {
+    const { container } = render(
+      hostAboutBlock.render({
+        name: "X",
+        bio: "Hosts [WP Builds](https://wpbuilds.com), **loud**, *soft* and `code`.\n\nSee [about](/about) or [mail](mailto:a@b.test).",
+      }),
+    );
+    const links = [...container.querySelectorAll(".cc-stack > p.cc-prose a")] as HTMLAnchorElement[];
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(["https://wpbuilds.com", "/about", "mailto:a@b.test"]);
+    expect(links[0].getAttribute("rel")).toBe("noopener noreferrer");
+    expect(links[1].hasAttribute("rel")).toBe(false); // same-site link
+    expect(container.querySelector("strong")?.textContent).toBe("loud");
+    expect(container.querySelector("em")?.textContent).toBe("soft");
+    expect(container.querySelector("code")?.textContent).toBe("code");
+    expect(container.querySelectorAll(".cc-stack > p.cc-prose")).toHaveLength(2);
+  });
+
+  it("drops unsafe link targets but keeps their text, and ignores other Markdown", () => {
+    const { container } = render(
+      hostAboutBlock.render({
+        name: "X",
+        bio: "[click](javascript:alert(1)) and [also](data:text/html;base64,AAAA)\n\n# Heading\n\n![pic](https://x.test/a.png)",
+      }),
+    );
+    expect(container.querySelector("a")).toBeNull();
+    expect(container.textContent).toContain("click and also");
+    expect(container.querySelector("h1, img")).toBeNull();
+  });
+
+  it("renders raw HTML in the bio as text, never as markup", () => {
     const { container } = render(
       hostAboutBlock.render({ name: "X", bio: "<img src=x onerror=alert(1)> <b>bold</b>\n\nSecond <script>1</script>" }),
     );

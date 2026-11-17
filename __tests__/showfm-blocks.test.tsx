@@ -148,9 +148,16 @@ describe("TranscriptViewer block: source", () => {
     );
   });
 
-  it("auto: show.fm's transcript for a show.fm episode with both files on show.fm", async () => {
+  it("auto: the native viewer for a show.fm episode too, so every episode has the same transcript", async () => {
     serve(showfmEpisode);
     const { container } = render(transcriptViewerBlock.render({ episodeSlug: "s", source: "auto" }));
+    await waitFor(() => expect(fetchMock.mock.calls.some(([u]) => /\/transcript/.test(u))).toBe(true));
+    expect(container.querySelector("showfm-transcript")).toBeNull();
+  });
+
+  it("showfm (explicit): show.fm's transcript for a show.fm episode with both files on show.fm", async () => {
+    serve(showfmEpisode);
+    const { container } = render(transcriptViewerBlock.render({ episodeSlug: "s", source: "showfm" }));
     await waitFor(() => expect(container.querySelector("showfm-transcript")).not.toBeNull());
     const el = container.querySelector("showfm-transcript")!;
     expect(el.getAttribute("episode")).toBe(SHOWFM_UUID);

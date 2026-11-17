@@ -149,13 +149,17 @@ export function shouldUseShowfmPlayer(episode: EpisodeLike | null | undefined, m
   return isShowfmHosted(episode);
 }
 
-/** The transcript counterpart: `showfm` forces the element but needs a UUID and a transcript to follow. */
+/**
+ * The transcript counterpart. `auto` is the NATIVE transcript even for show.fm-hosted episodes, so every
+ * episode shows the same transcript (search, timestamps, follow along); `ShowfmPlayer` publishes onto the
+ * player channel so that transcript can still seek and follow the show.fm player. `showfm` forces the
+ * vendor element, which needs a UUID and a transcript to follow.
+ */
 export function shouldUseShowfmTranscript(
   episode: (EpisodeLike & Pick<Episode, "transcript">) | null | undefined,
   source: unknown,
 ): boolean {
   const m = embedMode(source);
-  if (!episode || m === "native") return false;
-  if (m === "showfm") return isUuid(episode.id) && !!episode.transcript;
-  return canOfferShowfmTranscript(episode);
+  if (!episode) return false;
+  return m === "showfm" && isUuid(episode.id) && !!episode.transcript;
 }

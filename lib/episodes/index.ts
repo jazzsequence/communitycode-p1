@@ -62,8 +62,8 @@ function pairEpisodes(showfm: Episode[], wp: Episode[]): Map<Episode, Episode> {
 }
 
 /**
- * show.fm wins on identity and media (id, audio, transcript, artwork). WordPress
- * wins on editorial text: show.fm's imported description is the flattened show
+ * show.fm wins on identity and media (id, audio, transcript). WordPress wins on
+ * editorial text and the image (its featured image; show.fm only has the show cover): show.fm's imported description is the flattened show
  * notes, and the CMS the host actually edits is WordPress. The WP slug is kept so
  * existing /episodes/{slug} URLs hold.
  */
@@ -77,7 +77,7 @@ export function mergeEpisode(showfm: Episode, wp: Episode): Episode {
     showNotesHtml: wp.showNotesHtml ?? showfm.showNotesHtml,
     durationSeconds: showfm.durationSeconds ?? wp.durationSeconds,
     audio: showfm.audio ?? wp.audio,
-    artworkUrl: showfm.artworkUrl ?? wp.artworkUrl,
+    artworkUrl: wp.artworkUrl ?? showfm.artworkUrl,
     transcript: showfm.transcript ?? wp.transcript,
     season: showfm.season ?? wp.season,
     number: showfm.number ?? wp.number,

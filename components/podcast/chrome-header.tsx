@@ -11,7 +11,7 @@ const noopSubscribe = () => () => {};
 export interface SiteHeaderProps {
   links?: readonly LabelledLink[];
   siteName?: string;
-  /** Optional logo image URL; the site name stays as the link's text. */
+  /** Logo image URL; blank uses the site logo. The site name stays as the link's text. */
   logo?: string;
   /** Where the brand link goes. */
   homeHref?: string;
@@ -58,7 +58,9 @@ export function SiteHeaderView({
     target.scrollIntoView?.();
   };
 
-  const logoSrc = safeImageUrl(logo);
+  // A blank field means "the site logo" (saved pages carry logo: "" from before there was one);
+  // an unsafe URL is dropped, not swapped for the default.
+  const logoSrc = safeImageUrl(logo?.trim() ? logo : site.logo);
   const name = siteName.trim() || site.name;
 
   return (

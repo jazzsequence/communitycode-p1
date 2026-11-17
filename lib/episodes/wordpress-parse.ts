@@ -32,7 +32,6 @@ interface FeedItem {
 }
 
 export interface ParsedFeed {
-  channelArtworkUrl: string | null;
   items: FeedItem[];
 }
 
@@ -66,7 +65,6 @@ export function parseFeed(xml: string): ParsedFeed {
   const channel = doc.rss?.channel;
   if (!channel) throw new Error("Not an RSS feed: no <rss><channel>");
   return {
-    channelArtworkUrl: channel["itunes:image"]?.["@_href"] ?? null,
     items: channel.item ?? [],
   };
 }
@@ -100,11 +98,7 @@ function postIdFromGuid(guid: FeedItem["guid"]): string | null {
   return m ? m[1] : null;
 }
 
-export function mapFeedItem(
-  item: FeedItem,
-  rest: RestEpisode | undefined,
-  channelArtworkUrl: string | null,
-): Episode | null {
+export function mapFeedItem(item: FeedItem, rest: RestEpisode | undefined): Episode | null {
   const link = item.link?.trim();
   const title = (rest?.title?.rendered ? toPlainText(rest.title.rendered) : item.title)?.trim();
   if (!link || !title) return null;
@@ -136,10 +130,8 @@ export function mapFeedItem(
           sizeBytes: toInt(enclosure["@_length"]),
         }
       : null,
-    artworkUrl:
-      rest?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
-      item["itunes:image"]?.["@_href"] ??
-      channelArtworkUrl,
+    // The featured image (16:9 video thumbnail), never the feed's square show cover.
+    artworkUrl: rest?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? null,
     guests: parseGuestsFromTitle(title),
     transcript: transcript?.["@_url"]
       ? { url: transcript["@_url"], type: transcript["@_type"] ?? "text/vtt" }
@@ -154,7 +146,7 @@ export function buildEpisodes(feed: ParsedFeed, rest: RestEpisode[]): Episode[] 
   const byLink = new Map(rest.map((r) => [r.link.replace(/\/+$/, ""), r]));
   return feed.items
     .map((item) =>
-      mapFeedItem(item, byLink.get(item.link?.replace(/\/+$/, "") ?? ""), feed.channelArtworkUrl),
+      mapFeedItem(item, byLink.get(item.link?.replace(/\/+$/, "") ?? "")),
     )
     .filter((e): e is Episode => e !== null)
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));

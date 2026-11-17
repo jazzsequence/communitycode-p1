@@ -135,6 +135,15 @@ describe("SiteHeaderView", () => {
     expect(document.activeElement).toBe(document.getElementById("main-content"));
   });
 
+  it("shows the site logo by default, and a blank logo field means the site logo", () => {
+    const { container, rerender } = render(<SiteHeaderView />);
+    expect(container.querySelector("img.cc-chrome-logo")?.getAttribute("src")).toBe(site.logo);
+    rerender(<SiteHeaderView logo="  " />);
+    expect(container.querySelector("img.cc-chrome-logo")?.getAttribute("src")).toBe(site.logo);
+    rerender(<SiteHeaderView logo="https://example.test/mark.png" />);
+    expect(container.querySelector("img.cc-chrome-logo")?.getAttribute("src")).toBe("https://example.test/mark.png");
+  });
+
   it("ignores an unsafe logo URL", () => {
     const { container } = render(<SiteHeaderView logo="javascript:alert(1)" />);
     expect(container.querySelector("img")).toBeNull();

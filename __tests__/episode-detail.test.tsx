@@ -63,7 +63,7 @@ describe("EpisodeDetail", () => {
     expect(out).toContain("no audio for this episode yet");
     expect(out).not.toContain("cc-prose");
     expect(out).not.toContain("Transcript</h2>");
-    expect(out).not.toContain("<img");
+    expect(out).not.toContain("cc-episode-img"); // the header logo is an <img> too
   });
 
   it("emits PodcastEpisode JSON-LD with its series", () => {

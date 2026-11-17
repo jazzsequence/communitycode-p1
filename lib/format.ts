@@ -17,6 +17,13 @@ export function formatDate(iso: string): string {
   return new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" }).format(d);
 }
 
+/** "Oct 14, 2026": the compact form for a player byline. */
+export function formatDateShort(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeZone: "UTC" }).format(d);
+}
+
 /** "S2 E36", "S2", "E36", or "". */
 export function formatEpisodeLabel(season: number | null, number: number | null): string {
   return [season !== null ? `S${season}` : "", number !== null ? `E${number}` : ""].filter(Boolean).join(" ");

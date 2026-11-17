@@ -1,13 +1,12 @@
 import { SiteFooterView, SiteHeaderView } from "@/components/podcast/chrome";
 import { AudioPlayer } from "@/components/podcast/audio-player";
 import { ShowfmPlayer } from "@/components/podcast/showfm-player";
-import { ShowfmTranscript } from "@/components/podcast/showfm-transcript";
 import { TranscriptViewer } from "@/components/podcast/transcript-view";
 import { site } from "@/content/site";
 import { DEFAULT_LINKS, expandTemplate } from "@/lib/block-config";
 import type { Episode } from "@/lib/episodes/types";
 import { formatDate, formatDuration, formatEpisodeLabel } from "@/lib/format";
-import { canOfferShowfmTranscript, isShowfmHosted } from "@/lib/showfm-embed";
+import { isShowfmHosted } from "@/lib/showfm-embed";
 
 /** Path of an episode page: the shared link pattern (lib/block-config.ts), which is also this route's own path. */
 export function episodePath(episode: Pick<Episode, "slug">): string {
@@ -128,14 +127,12 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
                 // Decorative: the title is the adjacent heading. A plain <img> keeps
                 // the WordPress URL as-is (no next/image remotePatterns to maintain).
                 <img
+                  className="cc-episode-img"
                   src={episode.artworkUrl}
                   alt=""
                   style={{
                     flex: "0 1 22rem",
-                    width: "100%",
                     maxWidth: "22rem",
-                    aspectRatio: "16 / 9",
-                    objectFit: "cover",
                     borderRadius: "var(--cc-radius)",
                     border: "1px solid var(--cc-border)",
                   }}
@@ -147,7 +144,7 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
               {episode.audio && isShowfmHosted(episode) ? (
                 // show.fm hosts this episode: its player, with the documented fallback
                 // (link + <audio>) in the server HTML for no-JS visitors and crawlers.
-                <ShowfmPlayer episode={episode} />
+                <ShowfmPlayer episode={episode} channelKey={episode.slug} />
               ) : episode.audio ? (
                 <AudioPlayer
                   src={episode.audio.url}
@@ -155,6 +152,7 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
                   channelKey={episode.slug}
                   durationHint={episode.durationSeconds}
                   youtubeUrl={episode.links.youtube}
+                  publishedAt={episode.publishedAt}
                 />
               ) : (
                 <p className="cc-muted">There is no audio for this episode yet.</p>
@@ -176,11 +174,8 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
                 <h2 id="transcript-heading" style={{ fontSize: "var(--cc-text-xl)", marginBottom: "var(--cc-space-4)" }}>
                   Transcript
                 </h2>
-                {canOfferShowfmTranscript(episode) ? (
-                  <ShowfmTranscript episode={episode} />
-                ) : (
-                  <TranscriptViewer slug={episode.slug} />
-                )}
+                {/* One transcript format for every episode; the show.fm player drives it through the player channel. */}
+                <TranscriptViewer slug={episode.slug} />
               </section>
             ) : null}
           </div>

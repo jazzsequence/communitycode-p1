@@ -40,10 +40,11 @@ function Artwork({ episode }: { episode: EpisodeCard }) {
   return episode.artworkUrl ? (
 
     <img
+      className="cc-episode-img"
       src={episode.artworkUrl}
       alt="" // decorative: the title is the adjacent heading
       decoding="async"
-      style={{ width: "100%", maxWidth: "26rem", aspectRatio: "1 / 1", objectFit: "cover", borderRadius: "var(--cc-radius)", background: "var(--cc-surface-2)" }}
+      style={{ borderRadius: "var(--cc-radius)" }}
     />
   ) : null;
 }
@@ -52,7 +53,7 @@ function HeroSkeleton({ showArtwork }: { showArtwork: boolean }) {
   const bar = (w: string, h = "1rem"): CSSProperties => ({ width: w, height: h, background: "var(--cc-surface-2)", borderRadius: "var(--cc-radius-sm)" });
   return (
     <div style={frame} aria-hidden="true">
-      {showArtwork ? <div style={{ ...bar("100%"), maxWidth: "26rem", aspectRatio: "1 / 1", height: "auto" }} /> : null}
+      {showArtwork ? <div style={{ ...bar("100%"), aspectRatio: "16 / 9", height: "auto" }} /> : null}
       <div className="cc-stack">
         <div style={bar("8rem", "0.8rem")} />
         <div style={bar("90%", "2.5rem")} />

@@ -141,6 +141,19 @@
   max-inline-size: none;
   margin-inline: 0;
 }
+/* 2c. Reading measure. The kit caps body text at 65ch and hero copy at 35rem, which on a
+   72rem content column leaves a narrow strip on the left and a wide empty right. All of
+   them use the shared tokens instead, so widening text is one number (--cc-measure). */
+.cc-root.cc-root :is(.p1-paragraph__body, .p1-rich, .p1-list__items) {
+  max-inline-size: var(--cc-measure);
+}
+.cc-root.cc-root .p1-hero__copy:is([data-align="left"], [data-align="right"]) {
+  max-inline-size: var(--cc-hero-copy);
+}
+.cc-root.cc-root .p1-hero__desc {
+  max-inline-size: var(--cc-measure);
+}
+
 /* Full-width hero copy should start at the left edge, not shrink-wrap and centre. */
 .cc-root.cc-root .p1-hero__fullimg-content {
   inline-size: 100%;

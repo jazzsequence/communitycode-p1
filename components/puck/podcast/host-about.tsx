@@ -1,29 +1,70 @@
+import type { ReactNode } from "react";
+import ReactMarkdown from "react-markdown";
+import { richtextLinkField } from "@/lib/rich-link-field";
+import { RichValue } from "@/lib/rich";
 import { site } from "@/content/site";
 import { GuestAvatar } from "@/components/podcast/guest-avatar";
-import { safeImageUrl, safeLinks, type LabelledLink } from "@/lib/safe-link";
+import { isExternalHref, safeHref, safeImageUrl, safeLinks, type LabelledLink } from "@/lib/safe-link";
 import "@/components/podcast/chrome-blocks.css";
 
 interface HostAboutProps {
   name?: string;
   role?: string;
-  bio?: string;
+  /** HTML from the rich-text field, a live node while editing inline, or a legacy plain/Markdown string. */
+  bio?: unknown;
   image?: string;
   imageAlt?: string;
   links?: LabelledLink[];
   layout?: "left" | "right";
 }
 
-/** Blank-line separated paragraphs, rendered as text (never HTML). */
-export function bioParagraphs(bio: string | undefined): string[] {
-  return (bio ?? "")
-    .split(/\r?\n\s*\r?\n/)
-    .map((p) => p.trim())
-    .filter(Boolean);
+/**
+ * The bio is a rich-text field (select text, use the link button), like the Paragraph block. Pages saved
+ * before that hold a plain/Markdown string, so a string that is not stored rich-text HTML (a leading block
+ * tag, which the editor always writes) is still rendered as Markdown below.
+ */
+const RICH_HTML = /^\s*<(p|ul|ol|h[1-6]|blockquote|div)[\s>]/i;
+
+/**
+ * Legacy bios are Markdown, limited to what a bio needs: paragraphs, **bold**, *italic*,
+ * `code` and [links](https://...). react-markdown builds React elements (no
+ * dangerouslySetInnerHTML) and shows raw HTML as text, so a pasted `<script>` is inert.
+ * Every link goes through `safeHref`, so `javascript:` and friends render as plain text.
+ */
+const BIO_ELEMENTS = ["p", "strong", "em", "code", "a", "br"];
+
+function BioMarkdown({ bio }: { bio: string }) {
+  return (
+    <ReactMarkdown
+      allowedElements={BIO_ELEMENTS}
+      unwrapDisallowed
+      urlTransform={(url) => safeHref(url) ?? ""}
+      components={{
+        // A single newline inside a paragraph stays a line break, as the plain-text bio did.
+        p: ({ children }) => (
+          <p className="cc-prose" style={{ whiteSpace: "pre-line" }}>
+            {children}
+          </p>
+        ),
+        a: ({ href, children }) =>
+          href ? (
+            <a href={href} {...(isExternalHref(href) ? { rel: "noopener noreferrer" } : {})}>
+              {children}
+            </a>
+          ) : (
+            <>{children}</>
+          ),
+      }}
+    >
+      {bio}
+    </ReactMarkdown>
+  );
 }
 
 export function HostAbout({ name = "", role, bio, image, imageAlt, links, layout = "left" }: HostAboutProps) {
   const src = safeImageUrl(image);
-  const paragraphs = bioParagraphs(bio);
+  const isNode = bio != null && typeof bio !== "string";
+  const bioText = typeof bio === "string" ? bio.trim() : "";
   const safe = safeLinks(links);
   const displayName = name.trim();
 
@@ -36,11 +77,11 @@ export function HostAbout({ name = "", role, bio, image, imageAlt, links, layout
         <div className="cc-stack">
           {role?.trim() ? <p className="cc-eyebrow" style={{ margin: 0 }}>{role}</p> : null}
           {displayName ? <h2 style={{ fontSize: "var(--cc-text-xl)" }}>{displayName}</h2> : null}
-          {paragraphs.map((p, i) => (
-            <p key={i} className="cc-prose" style={{ whiteSpace: "pre-line" }}>
-              {p}
-            </p>
-          ))}
+          {isNode || RICH_HTML.test(bioText) ? (
+            <RichValue value={isNode ? (bio as ReactNode) : bioText} className="cc-prose" />
+          ) : bioText ? (
+            <BioMarkdown bio={bioText} />
+          ) : null}
           {safe.length ? (
             <ul className="cc-host-links">
               {safe.map((l, i) => (
@@ -63,7 +104,8 @@ export const hostAboutBlock = {
   fields: {
     name: { type: "text" as const, label: "Name" },
     role: { type: "text" as const, label: "Role / subtitle" },
-    bio: { type: "textarea" as const, label: "Bio (plain text; blank line between paragraphs)" },
+    // The same rich-text field as the Paragraph block: Remove link, Clear formatting, typed Markdown links.
+    bio: { ...richtextLinkField, label: "Bio (type [words](https://…) to link them)" },
     // Must stay named `image` so P1's media picker attaches.
     image: { type: "text" as const, label: "Photo" },
     imageAlt: { type: "text" as const, label: "Photo description (leave empty if the name is enough)" },
@@ -89,7 +131,7 @@ export const hostAboutBlock = {
   defaultProps: {
     name: "Host name",
     role: `Host of ${site.name}`,
-    bio: "Replace this with a short bio.\n\nSeparate paragraphs with a blank line.",
+    bio: "<p>Replace this with a short bio.</p>",
     image: "",
     imageAlt: "",
     links: [] as LabelledLink[],

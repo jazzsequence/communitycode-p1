@@ -48,6 +48,11 @@ describe("WordPress feed + REST join (real fixtures)", () => {
     expect(e36?.showNotesHtml).toContain("Jacquie on Sessionize");
   });
 
+  it("uses the featured image, never the feed's square show cover", () => {
+    expect(episodes.every((e) => e.artworkUrl === null || /video-thumb|thumb|banner|communitycode-/.test(e.artworkUrl))).toBe(true);
+    expect(episodes.some((e) => e.artworkUrl?.includes("community-code-show-artwork"))).toBe(false);
+  });
+
   it("strips the WordPress 'appeared first on' footer and unsafe markup", () => {
     for (const e of episodes) {
       expect(e.showNotesHtml ?? "").not.toMatch(/appeared first on/i);

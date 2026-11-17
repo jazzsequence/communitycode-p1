@@ -1,7 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { formatDuration } from "@/lib/format";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
+import { site } from "@/content/site";
+import { formatDateShort, formatDuration } from "@/lib/format";
+import { safeImageUrl } from "@/lib/safe-link";
+import { PlayerIcon } from "./player-icons";
 import { publishPlayerState, registerPlayer, useEpisode, type EpisodeEndpoints } from "./player-context";
 
 /**
@@ -13,12 +16,35 @@ import { publishPlayerState, registerPlayer, useEpisode, type EpisodeEndpoints }
  *   so keyboard and screen reader behaviour comes from the platform.
  * - The seek slider carries aria-valuetext ("1:02 of 43:28"); the visible time is
  *   not a live region, so `timeupdate` is never announced.
- * - The only live region speaks on load failure.
+ * - The only live region speaks on load failure (and "Link copied").
+ *
+ * Layout mirrors the show.fm player (cover + title, waveform, round controls) so
+ * episodes look the same whichever player they get. The waveform is decorative:
+ * a deterministic shape seeded from the title, not the audio, because decoding a
+ * cross-origin MP3 in the browser just to draw bars is not worth it. The real
+ * control is the (visually hidden) range input laid over it.
  */
 
 export const SKIP_BACK_SECONDS = 15;
 export const SKIP_FORWARD_SECONDS = 30;
 export const SPEEDS = [0.75, 1, 1.25, 1.5, 2] as const;
+const BARS = 240;
+
+/** Stable 0..1 heights from a string: same episode, same shape, no hydration mismatch. */
+export function waveformBars(seed: string, count = BARS): number[] {
+  let h = 2166136261;
+  for (const ch of seed) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  const rand = () => {
+    h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0;
+    h = Math.imul(h ^ (h >>> 13), 3266489909) >>> 0;
+    return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+  };
+  let prev = 0.5;
+  return Array.from({ length: count }, () => {
+    prev = prev * 0.6 + rand() * 0.4; // smoothed, so it reads as speech rather than noise
+    return 0.18 + prev * 0.82;
+  });
+}
 
 /** Only https links are rendered from upstream data (no `javascript:` URLs). */
 function httpsUrl(raw: string | undefined | null): string | null {
@@ -38,17 +64,23 @@ export interface AudioPlayerProps {
   /** Used until the audio reports its real duration. */
   durationHint?: number | null;
   youtubeUrl?: string;
+  /** ISO date shown in the byline next to the show name. */
+  publishedAt?: string;
+  /** Square cover; defaults to the site logo. */
+  coverUrl?: string;
 }
 
-export function AudioPlayer({ src, title, channelKey, durationHint, youtubeUrl }: AudioPlayerProps) {
+export function AudioPlayer({ src, title, channelKey, durationHint, youtubeUrl, publishedAt, coverUrl }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
   const [time, setTime] = useState(0);
   const [duration, setDuration] = useState(durationHint && durationHint > 0 ? durationHint : 0);
   const [rate, setRate] = useState(1);
+  const [muted, setMuted] = useState(false);
   const [failed, setFailed] = useState(false);
-  const speedId = useId();
+  const [notice, setNotice] = useState("");
   const seekId = useId();
+  const bars = useMemo(() => waveformBars(title), [title]);
 
   const sync = useCallback(() => {
     const a = audioRef.current;
@@ -102,23 +134,41 @@ export function AudioPlayer({ src, title, channelKey, durationHint, youtubeUrl }
     else a.pause();
   };
 
-  const onRate = (value: string) => {
-    const next = Number(value);
-    if (!SPEEDS.includes(next as (typeof SPEEDS)[number])) return;
+  // One button that steps through the speeds, like show.fm's, instead of a <select>.
+  const cycleRate = () => {
+    const next = SPEEDS[(SPEEDS.indexOf(rate as (typeof SPEEDS)[number]) + 1) % SPEEDS.length];
     setRate(next);
     if (audioRef.current) audioRef.current.playbackRate = next;
   };
 
+  const toggleMute = () => {
+    const next = !muted;
+    setMuted(next);
+    if (audioRef.current) audioRef.current.muted = next;
+  };
+
+  const share = async () => {
+    const url = window.location.href;
+    try {
+      if (navigator.share) await navigator.share({ title, url });
+      else {
+        await navigator.clipboard.writeText(url);
+        setNotice("Link copied");
+        setTimeout(() => setNotice(""), 3000);
+      }
+    } catch {
+      // Dismissing the share sheet rejects; nothing to report.
+    }
+  };
+
   const yt = httpsUrl(youtubeUrl);
+  const cover = safeImageUrl(coverUrl || site.logo);
   const shownTime = Math.floor(duration > 0 ? Math.min(time, duration) : time);
+  const played = duration > 0 ? Math.min(1, time / duration) : 0;
+  const byline = [site.name, publishedAt ? formatDateShort(publishedAt) : ""].filter(Boolean).join(" · ");
 
   return (
-    <div
-      className="cc-card"
-      role="group"
-      aria-label={`Audio player: ${title}`}
-      style={{ padding: "var(--cc-space-4)", display: "grid", gap: "var(--cc-space-3)" }}
-    >
+    <div className="cc-card cc-player" role="group" aria-label={`Audio player: ${title}`}>
       <audio
         ref={audioRef}
         src={src}
@@ -134,59 +184,34 @@ export function AudioPlayer({ src, title, channelKey, durationHint, youtubeUrl }
         onError={() => setFailed(true)}
       />
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "var(--cc-space-3)", alignItems: "center" }}>
-        <button
-          type="button"
-          className="cc-btn"
-          aria-label={`Back ${SKIP_BACK_SECONDS} seconds`}
-          onClick={() => seekTo(time - SKIP_BACK_SECONDS)}
-        >
-          <span aria-hidden="true">-{SKIP_BACK_SECONDS}s</span>
-        </button>
-        <button type="button" className="cc-btn cc-btn--primary" onClick={toggle} style={{ minWidth: "6.5rem" }}>
-          {playing ? "Pause" : "Play"}
-        </button>
-        <button
-          type="button"
-          className="cc-btn"
-          aria-label={`Forward ${SKIP_FORWARD_SECONDS} seconds`}
-          onClick={() => seekTo(time + SKIP_FORWARD_SECONDS)}
-        >
-          <span aria-hidden="true">+{SKIP_FORWARD_SECONDS}s</span>
-        </button>
-
-        <div style={{ display: "flex", alignItems: "center", gap: "var(--cc-space-2)" }}>
-          <label htmlFor={speedId} className="cc-muted">
-            Speed
-          </label>
-          <select
-            id={speedId}
-            className="cc-field"
-            style={{ width: "auto" }}
-            value={String(rate)}
-            onChange={(e) => onRate(e.target.value)}
-          >
-            {SPEEDS.map((s) => (
-              <option key={s} value={String(s)}>
-                {s}x
-              </option>
-            ))}
-          </select>
+      <div className="cc-player__head">
+        {cover ? <img className="cc-player__cover" src={cover} alt="" /> : null}
+        <div className="cc-player__meta">
+          <p className="cc-player__title">{title}</p>
+          {byline ? <p className="cc-player__byline">{byline}</p> : null}
         </div>
-
-        {yt ? (
-          <a className="cc-btn" href={yt} target="_blank" rel="noopener noreferrer">
-            Watch on YouTube<span className="cc-sr-only"> (opens in a new tab)</span>
+        <div className="cc-player__tools">
+          <a className="cc-player__icon" href={src} download target="_blank" rel="noopener noreferrer" aria-label="Download episode">
+            <PlayerIcon name="download" />
           </a>
-        ) : null}
+          <button type="button" className="cc-player__icon" onClick={share} aria-label="Share episode">
+            <PlayerIcon name="share" />
+          </button>
+        </div>
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "var(--cc-space-3)" }}>
+      <div className="cc-player__wave">
+        <div className="cc-player__bars" aria-hidden="true">
+          {bars.map((h, i) => (
+            <span key={i} data-played={i / bars.length < played ? "" : undefined} style={{ height: `${Math.round(h * 100)}%` }} />
+          ))}
+        </div>
         <label htmlFor={seekId} className="cc-sr-only">
           Seek
         </label>
         <input
           id={seekId}
+          className="cc-player__seek"
           type="range"
           min={0}
           max={duration > 0 ? duration : 0}
@@ -195,17 +220,46 @@ export function AudioPlayer({ src, title, channelKey, durationHint, youtubeUrl }
           disabled={!(duration > 0)}
           aria-valuetext={`${formatDuration(shownTime)} of ${formatDuration(duration)}`}
           onChange={(e) => seekTo(Number(e.target.value))}
-          style={{ flex: 1, minHeight: "2.75rem", accentColor: "var(--cc-accent)" }}
         />
-        <span className="cc-muted" aria-hidden="true" style={{ fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>
-          {formatDuration(shownTime)} / {formatDuration(duration)}
-        </span>
       </div>
 
-      {/* Quiet by design: only a load failure is announced. */}
+      {/* The slider is the accessible time; these are for sighted users. */}
+      <div className="cc-player__times" aria-hidden="true">
+        <span>{formatDuration(shownTime)}</span>
+        <span>{formatDuration(duration)}</span>
+      </div>
+
+      <div className="cc-player__controls">
+        <button type="button" className="cc-player__skip" aria-label={`Back ${SKIP_BACK_SECONDS} seconds`} onClick={() => seekTo(time - SKIP_BACK_SECONDS)}>
+          <PlayerIcon name="back" seconds={SKIP_BACK_SECONDS} />
+        </button>
+        <button type="button" className="cc-player__play" aria-label={playing ? "Pause" : "Play"} onClick={toggle}>
+          <PlayerIcon name={playing ? "pause" : "play"} />
+        </button>
+        <button type="button" className="cc-player__skip" aria-label={`Forward ${SKIP_FORWARD_SECONDS} seconds`} onClick={() => seekTo(time + SKIP_FORWARD_SECONDS)}>
+          <PlayerIcon name="forward" seconds={SKIP_FORWARD_SECONDS} />
+        </button>
+        <span className="cc-player__spacer" />
+        <button type="button" className="cc-player__speed" aria-label={`Playback speed ${rate}x. Change speed`} onClick={cycleRate}>
+          {rate}×
+        </button>
+        <button type="button" className="cc-player__icon" aria-label={muted ? "Unmute" : "Mute"} aria-pressed={muted} onClick={toggleMute}>
+          <PlayerIcon name={muted ? "muted" : "volume"} />
+        </button>
+      </div>
+
+      {yt ? (
+        <p className="cc-player__foot">
+          <a href={yt} target="_blank" rel="noopener noreferrer">
+            Watch on YouTube<span className="cc-sr-only"> (opens in a new tab)</span>
+          </a>
+        </p>
+      ) : null}
+
+      {/* Quiet by design: only a load failure (or a copied link) is announced. */}
       <div role="status" aria-live="polite">
         {failed ? (
-          <p style={{ margin: 0, color: "var(--cc-danger)" }}>
+          <p className="cc-player__error">
             This audio could not be loaded.{" "}
             <a href={src} target="_blank" rel="noopener noreferrer">
               Open the file directly<span className="cc-sr-only"> (opens in a new tab)</span>
@@ -213,6 +267,7 @@ export function AudioPlayer({ src, title, channelKey, durationHint, youtubeUrl }
             .
           </p>
         ) : null}
+        {notice ? <span className="cc-sr-only">{notice}</span> : null}
       </div>
     </div>
   );
@@ -244,6 +299,7 @@ export function EpisodePlayerView({ episodeSlug, ...endpoints }: { episodeSlug?:
         channelKey={e.slug}
         durationHint={e.durationSeconds}
         youtubeUrl={e.links.youtube}
+        publishedAt={e.publishedAt}
       />
     );
   }

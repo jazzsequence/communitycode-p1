@@ -6,7 +6,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "One 8pt-based scale (`--cc-space-1` … `-9`), and a layout contract of three numbers that place content on the page: `--cc-gutter` (16 / 24 / 40px), `--cc-section-y` (48 / 64 / 96px) and `--cc-block-y` (12 / 16px), with content capped at `--cc-content` (72rem) or `--cc-narrow` (48rem). Every top-level block, podcast or P1 kit, follows it. Turn on **Layout guides** in the toolbar: each block's text must touch the magenta lines.",
+          "One 8pt-based scale (`--cc-space-1` … `-9`), and a layout contract of three numbers that place content on the page: `--cc-gutter` (16 / 24 / 40px), `--cc-section-y` (48 / 64 / 96px) and `--cc-block-y` (12 / 16px), with content capped at `--cc-content` (72rem) or `--cc-narrow` (56rem). Every top-level block, podcast or P1 kit, follows it. Turn on **Layout guides** in the toolbar: each block's text must touch the magenta lines.",
       },
     },
   },

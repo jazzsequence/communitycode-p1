@@ -37,6 +37,8 @@ const file = siteConfig.site;
 
 export const site = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || file.name || "Podcast",
+  /** Header mark (path or https URL). Empty = no mark. */
+  logo: process.env.NEXT_PUBLIC_SITE_LOGO ?? file.logo ?? "",
   tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE ?? file.tagline ?? "",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? file.url ?? "",
   /** The podcast RSS feed subscribers use. Empty = no RSS link. */

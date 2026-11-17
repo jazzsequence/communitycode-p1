@@ -2,7 +2,7 @@
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeAll, beforeEach, describe, expect, it } from "vitest";
-import { AudioPlayer } from "@/components/podcast/audio-player";
+import { AudioPlayer, waveformBars } from "@/components/podcast/audio-player";
 import { seekPlayer } from "@/components/podcast/player-context";
 import { installMediaMock, pauseSpy, playSpy } from "./helpers/media";
 
@@ -41,9 +41,9 @@ describe("AudioPlayer", () => {
 
   it("is operable from the keyboard", async () => {
     setup();
-    await userEvent.tab(); // back 15
-    await userEvent.tab(); // play
-    expect(document.activeElement).toBe(screen.getByRole("button", { name: "Play" }));
+    const play = screen.getByRole("button", { name: "Play" });
+    for (let i = 0; i < 10 && document.activeElement !== play; i++) await userEvent.tab();
+    expect(document.activeElement).toBe(play);
     await userEvent.keyboard("{Enter}");
     expect(screen.getByRole("button", { name: "Pause" })).toBeTruthy();
   });
@@ -87,10 +87,16 @@ describe("AudioPlayer", () => {
 
   it("changes playback speed", async () => {
     const { container } = setup();
-    const select = screen.getByLabelText("Speed") as HTMLSelectElement;
-    expect(Array.from(select.options).map((o) => o.value)).toEqual(["0.75", "1", "1.25", "1.5", "2"]);
-    await userEvent.selectOptions(select, "1.5");
-    expect(audioOf(container).playbackRate).toBe(1.5);
+    const speed = () => screen.getByRole("button", { name: /Playback speed/ });
+    expect(speed().textContent).toBe("1×");
+    // One button steps through 0.75, 1, 1.25, 1.5, 2 and wraps.
+    const seen: number[] = [];
+    for (let i = 0; i < 5; i++) {
+      await userEvent.click(speed());
+      seen.push(audioOf(container).playbackRate);
+    }
+    expect(seen).toEqual([1.25, 1.5, 2, 0.75, 1]);
+    expect(speed().getAttribute("aria-label")).toBe("Playback speed 1x. Change speed");
   });
 
   it("shows the current time without announcing every timeupdate", () => {
@@ -104,7 +110,20 @@ describe("AudioPlayer", () => {
     expect(slider().getAttribute("aria-valuetext")).toBe("0:05 of 43:28");
     expect(live.textContent).toBe("");
     // The visible readout is hidden from AT; the slider is the accessible time.
-    expect(screen.getByText("0:05 / 43:28").getAttribute("aria-hidden")).toBe("true");
+    expect(screen.getByText("0:05").parentElement?.getAttribute("aria-hidden")).toBe("true");
+  });
+
+  it("mutes and unmutes", async () => {
+    const { container } = setup();
+    await userEvent.click(screen.getByRole("button", { name: "Mute" }));
+    expect(audioOf(container).muted).toBe(true);
+    expect(screen.getByRole("button", { name: "Unmute" }).getAttribute("aria-pressed")).toBe("true");
+  });
+
+  it("offers a download and a byline with the date", () => {
+    setup({ publishedAt: "2026-10-14T12:00:00.000Z" });
+    expect(screen.getByRole("link", { name: "Download episode" }).getAttribute("href")).toBe("https://example.test/a.mp3");
+    expect(screen.getByText(/Oct 14, 2026/)).toBeTruthy();
   });
 
   it("announces a load failure and offers the file", () => {
@@ -136,5 +155,11 @@ describe("AudioPlayer", () => {
     const { container } = setup({ channelKey: "audio-test-2" });
     act(() => seekPlayer("somebody-else", 99));
     expect(audioOf(container).currentTime).toBe(0);
+  });
+
+  it("draws the same waveform for the same episode, and a different one for another", () => {
+    expect(waveformBars("Ep 1")).toEqual(waveformBars("Ep 1"));
+    expect(waveformBars("Ep 1")).not.toEqual(waveformBars("Ep 2"));
+    expect(waveformBars("Ep 1").every((h) => h > 0 && h <= 1)).toBe(true);
   });
 });
