@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { Editor } from "@tiptap/core";
 import { Document } from "@tiptap/extension-document";
 import { Link } from "@tiptap/extension-link";
@@ -83,6 +83,20 @@ describe("richtextLinkField", () => {
   it("disables the button when nothing is selected and there is no link to edit", () => {
     const editor = makeEditor("<p>hello world</p>");
     open(editor, 3, 3);
+    expect((screen.getByTitle("Link") as HTMLButtonElement).disabled).toBe(true);
+  });
+
+  it("enables the button when the selection changes after the menu rendered (Puck does not re-render it)", () => {
+    const editor = makeEditor("<p>hello world</p>");
+    open(editor, 3, 3);
+    expect((screen.getByTitle("Link") as HTMLButtonElement).disabled).toBe(true);
+    act(() => {
+      editor.commands.setTextSelection({ from: 1, to: 6 });
+    });
+    expect((screen.getByTitle("Link") as HTMLButtonElement).disabled).toBe(false);
+    act(() => {
+      editor.commands.setTextSelection({ from: 3, to: 3 });
+    });
     expect((screen.getByTitle("Link") as HTMLButtonElement).disabled).toBe(true);
   });
 

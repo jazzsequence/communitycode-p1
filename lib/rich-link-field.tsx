@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import type { Field } from "@puckeditor/core";
 import { RichTextMenu } from "@puckeditor/core";
 import { richtextField } from "@pantheon-systems/puck-css/fields";
@@ -103,6 +103,16 @@ function LinkForm({ editor, onDone }: { editor: EditorLike; onDone: () => void }
 /** The toolbar, plus the address form when the Link button is open. Hooks live here, not in Puck's callbacks. */
 function LinkMenu({ editor, withLists }: { editor: MenuProps["editor"]; withLists: boolean }) {
   const [open, setOpen] = useState(false);
+  // Puck only re-renders this menu when its own selector state changes (bold, lists...), not when the
+  // selection moves, so "is there a selection?" would go stale and leave the button disabled.
+  const [, refresh] = useReducer((n: number) => n + 1, 0);
+  useEffect(() => {
+    if (!editor) return;
+    editor.on("transaction", refresh);
+    return () => {
+      editor.off("transaction", refresh);
+    };
+  }, [editor]);
   const active = !!editor?.isActive("link");
   return (
     <>
