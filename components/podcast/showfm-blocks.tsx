@@ -42,11 +42,11 @@ function ResolvedPlayer({ playerMode, episodeSlug, episodesEndpoint, episodeEndp
   } else if (!lookup.episode.audio) {
     body = <p className="cc-muted">There is no audio for this episode yet.</p>;
   } else if (shouldUseShowfmPlayer(lookup.episode, playerMode)) {
-    body = <ShowfmPlayer episode={lookup.episode} {...embed} />;
+    body = <ShowfmPlayer episode={lookup.episode} channelKey={lookup.episode.slug} {...embed} />;
   } else {
     const e = lookup.episode;
     body = (
-      <AudioPlayer src={e.audio?.url ?? ""} title={e.title} channelKey={e.slug} durationHint={e.durationSeconds} youtubeUrl={e.links.youtube} />
+      <AudioPlayer src={e.audio?.url ?? ""} title={e.title} channelKey={e.slug} durationHint={e.durationSeconds} youtubeUrl={e.links.youtube} publishedAt={e.publishedAt} />
     );
   }
   return <div className="cc-container cc-section">{body}</div>;

@@ -8,13 +8,13 @@ import { SHOWFM_UUID, showfmEpisode, wordpressEpisode } from "./helpers/showfm-e
 const html = (e: typeof showfmEpisode) => renderToStaticMarkup(<EpisodeDetail episode={e} />);
 
 describe("EpisodeDetail with show.fm", () => {
-  it("renders the show.fm player and transcript, with the fallbacks in the server HTML", () => {
+  it("renders the show.fm player with the native transcript (one transcript format for every episode)", () => {
     const out = html(showfmEpisode);
     expect(out).toContain(`<showfm-player episode="${SHOWFM_UUID}"`);
     expect(out).toContain(`min-height:${PLAYER_MIN_HEIGHTS.standard.branded}px`);
     expect(out).toContain('<a href="https://show.fm/community-code/e/episode-36">');
     expect(out).toMatch(/<audio controls="" preload="none" src="https:\/\/m\.cdn\.media\//);
-    expect(out).toContain("<showfm-transcript");
+    expect(out).not.toContain("<showfm-transcript");
     expect(out).toContain("Transcript</h2>");
     // The native widgets are not rendered alongside.
     expect(out).not.toContain('aria-label="Audio player:');

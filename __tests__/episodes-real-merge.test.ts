@@ -28,6 +28,13 @@ describe("merging the real show.fm import with the real WordPress archive", () =
     expect(merged.filter((e) => e.origin !== "showfm")).toEqual([]);
   });
 
+  it("uses the WordPress featured image for every episode, not show.fm's square cover", () => {
+    const wpImage = new Map(wp.map((e) => [e.slug, e.artworkUrl]));
+    expect(merged.filter((e) => e.artworkUrl !== wpImage.get(e.slug))).toEqual([]);
+    expect(merged.filter((e) => !e.artworkUrl)).toEqual([]);
+    expect(merged.some((e) => /show\.fm|m\.cdn\.media/.test(e.artworkUrl ?? ""))).toBe(false);
+  });
+
   it("keeps the WordPress slug, never show.fm's random-suffixed one", () => {
     const wpSlugs = new Set(wp.map((e) => e.slug));
     expect(merged.every((e) => wpSlugs.has(e.slug))).toBe(true);

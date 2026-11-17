@@ -1,7 +1,7 @@
 # communitycode-p1
 
 A P1 (Pantheon's AI-native web composition layer) frontend for the **Community + Code** podcast
-(communitycode.dev). Next.js 16 App Router + Puck blocks, scaffolded from
+(communitycode.dev). Next.js 16 (16.4.6+: 16.4.4 and below carry GHSA-mfr8-8qww-v76h) App Router + Puck blocks, scaffolded from
 `@pantheon-systems/create-p1-starter-kit` 0.25.0. It is a *virtual interface for the real show*, not a
 copy: WordPress stays the CMS (episodes, uploads, blog) and show.fm is wired in as an episode source.
 
@@ -50,6 +50,11 @@ Run lint, tsc, tests and build before presenting changes.
   - show.fm's imported `description` is the flattened show-notes link list + "appeared first on" footer, and
     `show_notes_html` is empty, so **WordPress owns editorial text** (description, show notes); show.fm owns
     identity and media. Its public `people` are empty, so guests still come from WordPress titles.
+- **`Episode.artworkUrl` is the WordPress featured image (a 16:9 video thumbnail), never the podcast cover.** show.fm
+  gives every episode the square show cover (`artwork.own: false`) and the feed has `itunes:image`; both are the wrong
+  shape, so `showfm.ts` only keeps artwork flagged `own`, the WordPress parser drops the feed fallback, and
+  `mergeEpisode` prefers WordPress. Missing means `null` (a placeholder), not a wrong-shaped image. Every episode image
+  uses `.cc-episode-img` (16:9) so card, hero and detail agree.
 - **Both sources are needed for one episode.** REST has no audio/season/duration (PowerPress keeps them out of
   it); the feed has no show notes HTML/slug. Joined on permalink.
 - **communitycode.dev is behind Pantheon next-gen GCDN bot protection.** Unknown clients get a 403 managed
@@ -77,6 +82,23 @@ Run lint, tsc, tests and build before presenting changes.
   overrides them (they are registry-owned and `shadcn add` overwrites edits). A stray margin on a kit block is fixed there.
   Blocks add no outer margin of their own, and a block nested in Columns/Container adds no gutter. Use the `--cc-space-*`
   scale; no raw rem/px spacing. Check with the Storybook **Layout guides** toolbar toggle.
+- **The header shows the `<&>` mark** (`site.config.ts` `site.logo`, file in `public/images/`; white on transparent, so it
+  only reads on the dark theme). A blank `logo` field on the Site Header block means "the site logo", because saved
+  pages carry `logo: ""` from before it existed. The mark is the WordPress favicon, trimmed.
+- **The native player copies the show.fm player's layout** (`components/podcast/audio-player.tsx`, `.cc-player*` in
+  `podcast.css`): cover, title, waveform, round controls, speed button. The waveform is decorative (seeded from the
+  title, not the audio); the real control is a visually hidden range input over it, so keyboard and screen readers get a
+  normal slider. Keep it in step if show.fm's player changes.
+- **One transcript format for every episode: the native `TranscriptViewer`** (search, timestamps, follow along), including
+  show.fm-hosted ones. `shouldUseShowfmTranscript` is true only for an explicit `source: showfm`. `<showfm-player>` has no
+  public seek/time API, so `useShowfmChannel` (in `showfm-player.tsx`) reads the `<audio>` in its OPEN shadow root and
+  publishes it onto the player channel. That is an internal detail: it is best effort, and if the audio is not found the
+  transcript just has no seek buttons. Verified in Chrome (click a timestamp, the show.fm audio seeks and plays); re-check
+  after a `@showfm/embed` upgrade.
+- **Text width comes from `--cc-measure` (100ch), `--cc-narrow` (56rem) and `--cc-hero-copy` (48rem).** The kit hardcodes
+  65ch / 35rem, so `layout-contract.css` (2c) overrides it; change the tokens, not the kit.
+- **The Host / About bio is Markdown** (`react-markdown`, allow-list: paragraphs, bold, italic, code, links; URLs through
+  `safeHref`, raw HTML shown as text). Not `richtext`: it would have broken saved plain-text bios.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
@@ -156,7 +178,8 @@ registered by `npm run blocks:sync` (do not edit between the `p1-blocks` markers
 Built, tested and committed on `feat/podcast-frontend`. Verified against the live site (production build):
 every `/api/*` route and `/episodes/[slug]`; 38 episodes, 36 guests, 1408 transcript cues, secrets absent from
 every response. **Not verified: anything visual** (layout, contrast, focus, real audio playback, the Puck
-editor at `/p1`); nobody has looked at it in a browser.
+editor at `/p1`); nobody has looked at it in a browser. (Since then: header logo, 16:9 episode cards/detail and the native player were
+checked in Chrome on a dev server; real audio playback and the show.fm embed's upgrade still were not.)
 
 | Area | Where |
 |---|---|
@@ -185,4 +208,6 @@ Known gaps / decisions pending:
 - **show.fm import bug (reported separately): every imported episode guid keeps a literal `&#038;`** where
   WordPress's feed has `&` (an undecoded XML character reference), so guids differ from the WordPress feed for
   all 38 episodes. Do not switch Apple/Spotify to the show.fm feed or redirect the old one until show.fm fixes it.
+- **Search is planned, not built:** `docs/search-plan.md` (the site's ElasticPress autosuggest endpoint works server-side
+  with the plugin's own query template and the episode ES documents include `transcript_content`; custom queries get 403).
 - Not done, each needs an explicit go-ahead: P1 site, GitHub repo, Pantheon front-end site, secrets, deploy.

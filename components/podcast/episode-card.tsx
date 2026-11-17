@@ -67,15 +67,9 @@ export function EpisodeCardView({
     <>
         {episode.artworkUrl ? (
 
-          <img
-            src={episode.artworkUrl}
-            alt=""
-            loading="lazy"
-            decoding="async"
-            style={{ width: "100%", aspectRatio: "1 / 1", objectFit: "cover", display: "block", background: "var(--cc-surface-2)" }}
-          />
+          <img className="cc-episode-img" src={episode.artworkUrl} alt="" loading="lazy" decoding="async" />
         ) : (
-          <div aria-hidden="true" style={{ width: "100%", aspectRatio: "1 / 1", background: "var(--cc-surface-2)" }} />
+          <div className="cc-episode-img" aria-hidden="true" />
         )}
         <div style={{ display: "flex", flexDirection: "column", gap: "var(--cc-space-2)", padding: "var(--cc-space-4)", flex: 1 }}>
           <p className="cc-eyebrow" style={{ margin: 0 }}>

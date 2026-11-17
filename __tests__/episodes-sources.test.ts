@@ -26,6 +26,13 @@ const json = (body: unknown, status = 200) =>
 afterEach(() => vi.unstubAllGlobals());
 
 describe("show.fm adapter", () => {
+  it("ignores the show cover every episode inherits, and keeps an episode's own artwork", () => {
+    expect(mapEpisode({ ...wire, artwork: { url: "https://cdn.show.fm/cover.png", own: false } }).artworkUrl).toBeNull();
+    expect(mapEpisode({ ...wire, artwork: { url: "https://cdn.show.fm/own.png", own: true } }).artworkUrl).toBe(
+      "https://cdn.show.fm/own.png",
+    );
+  });
+
   it("maps the public payload, including guests and transcript", () => {
     const e = mapEpisode(wire);
     expect(e).toMatchObject({

@@ -78,8 +78,10 @@ describe("mode selection", () => {
     expect(shouldUseShowfmPlayer({ ...wordpressEpisode, id: SHOWFM_UUID }, "showfm")).toBe(true);
     expect(shouldUseShowfmPlayer({ ...showfmEpisode, audio: null }, "showfm")).toBe(false);
   });
-  it("transcript: auto follows canOfferShowfmTranscript, showfm needs a UUID and a transcript", () => {
-    expect(shouldUseShowfmTranscript(showfmEpisode, "auto")).toBe(true);
+  it("transcript: auto is always the native one, showfm (explicit) needs a UUID and a transcript", () => {
+    expect(shouldUseShowfmTranscript(showfmEpisode, "auto")).toBe(false);
+    expect(shouldUseShowfmTranscript(showfmEpisode, undefined)).toBe(false);
+    expect(shouldUseShowfmTranscript(showfmEpisode, "showfm")).toBe(true);
     expect(shouldUseShowfmTranscript(wordpressEpisode, "auto")).toBe(false);
     expect(shouldUseShowfmTranscript(showfmEpisode, "native")).toBe(false);
     expect(shouldUseShowfmTranscript({ ...showfmEpisode, transcript: null }, "showfm")).toBe(false);

@@ -187,7 +187,7 @@ export function EpisodeArchiveRender(props: Partial<EpisodeArchiveProps> & { id?
       {loadingFirst ? (
         <div className="cc-grid" aria-hidden="true" data-testid="episode-skeleton">
           {Array.from({ length: SKELETON_COUNT }, (_, i) => (
-            <div key={i} className="cc-card" style={{ aspectRatio: "3 / 4", background: "var(--cc-surface-2)" }} />
+            <div key={i} className="cc-card" style={{ aspectRatio: "4 / 5", background: "var(--cc-surface-2)" }} />
           ))}
         </div>
       ) : null}

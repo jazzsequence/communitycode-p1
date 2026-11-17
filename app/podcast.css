@@ -81,8 +81,9 @@
   --cc-section-y: var(--cc-space-7);
   --cc-block-y: var(--cc-space-3);
   --cc-content: 72rem; /* content width, excluding the gutter */
-  --cc-narrow: 48rem; /* reading width for FAQs, callouts, forms */
-  --cc-measure: 68ch;
+  --cc-narrow: 56rem; /* reading width for FAQs, callouts, forms */
+  --cc-measure: 100ch; /* body text line length; the kit's 65ch left wide screens mostly empty */
+  --cc-hero-copy: 48rem; /* hero headline + description column */
   --cc-radius: 0.75rem;
   --cc-radius-sm: 0.5rem;
 
@@ -273,6 +274,178 @@
   border: 1px solid var(--cc-border);
   border-radius: var(--cc-radius);
   overflow: hidden;
+}
+
+/* An episode's image is its 16:9 featured thumbnail; one class so every block agrees. */
+.cc-episode-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--cc-surface-2);
+}
+
+/* --- native audio player ---------------------------------------------------
+ * Laid out like the show.fm player (cover + title, waveform, round controls) so
+ * an episode looks the same under either one. Tokens only; 44px hit areas.
+ */
+.cc-player {
+  display: grid;
+  gap: var(--cc-space-3);
+  padding: var(--cc-space-4);
+}
+.cc-player__head {
+  display: flex;
+  align-items: center;
+  gap: var(--cc-space-3);
+}
+.cc-player__cover {
+  flex: none;
+  width: 3.375rem;
+  height: 3.375rem;
+  object-fit: contain;
+  padding: var(--cc-space-1);
+  border-radius: var(--cc-radius-sm);
+  background: var(--cc-bg); /* the mark is white-on-transparent, so it needs a dark tile */
+}
+.cc-player__meta {
+  flex: 1;
+  min-width: 0;
+}
+.cc-player__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: var(--cc-text-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cc-player__byline {
+  margin: 0;
+  color: var(--cc-muted);
+  font-size: var(--cc-text-xs);
+}
+.cc-player__tools {
+  display: flex;
+  gap: var(--cc-space-1);
+}
+.cc-player__icon,
+.cc-player__skip,
+.cc-player__speed,
+.cc-player__play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--cc-muted);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.cc-player__icon {
+  font-size: 1.375rem;
+  border-radius: 999px;
+}
+.cc-player__skip {
+  font-size: 1.75rem;
+  border-radius: 999px;
+}
+.cc-player__icon:hover,
+.cc-player__skip:hover {
+  color: var(--cc-text);
+}
+.cc-player__speed {
+  min-width: 2.75rem;
+  padding-inline: var(--cc-space-2);
+  border: 1px solid var(--cc-border-strong);
+  border-radius: var(--cc-radius-sm);
+  font-size: var(--cc-text-xs);
+  font-variant-numeric: tabular-nums;
+}
+.cc-player__speed:hover {
+  color: var(--cc-text);
+  border-color: var(--cc-accent);
+}
+.cc-player__play {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: var(--cc-accent);
+  color: var(--cc-accent-ink);
+  font-size: 1.375rem;
+  box-shadow: 0 0 1.25rem color-mix(in srgb, var(--cc-accent) 35%, transparent);
+}
+.cc-player__play:hover {
+  background: var(--cc-accent-hover);
+}
+
+/* The bars are decorative; the range input over them is the real, focusable seek control. */
+.cc-player__wave {
+  position: relative;
+  height: 3rem;
+  margin-top: var(--cc-space-2);
+  border-radius: var(--cc-radius-sm);
+}
+.cc-player__wave:has(.cc-player__seek:focus-visible) {
+  outline: 2px solid var(--cc-focus);
+  outline-offset: 2px;
+}
+.cc-player__bars {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  height: 100%;
+}
+.cc-player__bars span {
+  flex: 1;
+  min-width: 1px;
+  border-radius: 1px;
+  background: var(--cc-border);
+}
+.cc-player__bars span[data-played] {
+  background: var(--cc-accent);
+}
+.cc-player__seek {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.cc-player__seek:disabled {
+  cursor: default;
+}
+.cc-player__times {
+  display: flex;
+  justify-content: space-between;
+  color: var(--cc-muted);
+  font-size: var(--cc-text-xs);
+  font-variant-numeric: tabular-nums;
+}
+.cc-player__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--cc-space-2);
+}
+.cc-player__spacer {
+  flex: 1;
+}
+.cc-player__foot {
+  margin: 0;
+  padding-top: var(--cc-space-2);
+  border-top: 1px solid var(--cc-border);
+  text-align: right;
+  font-size: var(--cc-text-xs);
+}
+.cc-player__error {
+  margin: 0;
+  color: var(--cc-danger);
 }
 
 .cc-btn {

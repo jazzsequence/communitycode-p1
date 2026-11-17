@@ -44,6 +44,10 @@ export interface Episode {
   explicit: boolean;
   durationSeconds: number | null;
   audio: EpisodeAudio | null;
+  /**
+   * The episode's own image: the WordPress featured image, a 16:9 video thumbnail.
+   * Never the podcast cover (square), so null rather than a wrong-shaped fallback.
+   */
   artworkUrl: string | null;
   guests: Guest[];
   /** WebVTT (or other) transcript URL. Fetched server-side, see `transcript.ts`. */

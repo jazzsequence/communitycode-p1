@@ -96,7 +96,8 @@ export function mapEpisode(w: WireEpisode, showNotesHtml: string | null = null):
     audio: w.audio?.url
       ? { url: w.audio.url, contentType: w.audio.content_type, sizeBytes: w.audio.size_bytes }
       : null,
-    artworkUrl: w.artwork?.url ?? null,
+    // `own: false` is the podcast cover inherited by every episode (square, wrong shape here).
+    artworkUrl: w.artwork?.own ? (w.artwork.url ?? null) : null,
     guests: (w.people ?? []).map((p) => ({ name: p.name, role: p.role, photoUrl: p.photo_url ?? null })),
     transcript: w.transcript,
     links: { listen: w.links?.listen, embed: w.links?.embed },
