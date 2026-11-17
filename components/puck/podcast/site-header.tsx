@@ -13,7 +13,7 @@ export const siteHeaderBlock = {
   fields: {
     siteName: { type: "text" as const, label: "Site name" },
     // Named `logo` so P1's media picker attaches. Optional; the name stays as link text.
-    logo: { type: "text" as const, label: "Logo image (optional)" },
+    logo: { type: "text" as const, label: "Logo image (blank = site logo)" },
     links: {
       type: "array" as const,
       label: "Navigation links",

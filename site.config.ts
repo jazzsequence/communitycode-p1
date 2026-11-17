@@ -18,6 +18,8 @@ export interface SiteConfig {
   site: {
     name: string;
     tagline?: string;
+    /** Header mark: a path under public/ or an https URL. Empty = the name alone. */
+    logo?: string;
     /** Canonical origin, e.g. "https://www.example.com". Empty = relative URLs. */
     url?: string;
     /** The RSS feed subscribers use. Empty = no RSS link. */
@@ -41,6 +43,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   site: {
     name: "Community + Code",
+    logo: "/images/community-code-logo.png",
     tagline: "A podcast about the people behind the commits",
     feedUrl: "https://communitycode.dev/episodes/feed/episodes/",
     appleUrl: "https://podcasts.apple.com/us/podcast/community-+-code/id1813475905",
