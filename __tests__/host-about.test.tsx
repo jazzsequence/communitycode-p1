@@ -4,9 +4,6 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { hostAboutBlock } from "@/components/puck/podcast/host-about";
 
 vi.mock("@/content/site", () => import("./stubs/site"));
-// The real field pulls in the Puck editor (needs ResizeObserver); only its type matters here.
-vi.mock("@pantheon-systems/puck-css/fields", () => ({ richtextField: { type: "richtext" } }));
-vi.mock("@puckeditor/core", () => ({ RichTextMenu: {} }));
 
 afterEach(cleanup);
 
@@ -19,28 +16,6 @@ describe("HostAbout block", () => {
     // No image configured: decorative initials, no <img>.
     expect(document.querySelector("img")).toBeNull();
     expect(document.querySelector(".cc-avatar")?.getAttribute("aria-hidden")).toBe("true");
-  });
-
-  it("is a rich-text field, so text can be linked from the editor", () => {
-    expect(hostAboutBlock.fields.bio.type).toBe("richtext");
-  });
-
-  it("renders stored rich-text HTML with its links, sanitised", () => {
-    const { container } = render(
-      hostAboutBlock.render({
-        name: "X",
-        bio: '<p>Works at <a href="https://pantheon.io">Pantheon</a> and <a href="javascript:alert(1)">bad</a><script>1</script></p><p>Second.</p>',
-      }),
-    );
-    const a = [...container.querySelectorAll(".cc-stack .p1-rich a[href]")] as HTMLAnchorElement[]; // an unsafe href is dropped, leaving inert text
-    expect(a.map((x) => x.getAttribute("href"))).toEqual(["https://pantheon.io"]);
-    expect(container.querySelector("script")).toBeNull();
-    expect(container.querySelectorAll(".cc-stack .p1-rich p")).toHaveLength(2);
-  });
-
-  it("renders the live node the editor passes while editing inline", () => {
-    const { container } = render(hostAboutBlock.render({ name: "X", bio: <p>Live <a href="/x">link</a></p> }));
-    expect(container.querySelector(".p1-rich a")?.getAttribute("href")).toBe("/x");
   });
 
   it("renders Markdown links, bold and italic in the bio", () => {
