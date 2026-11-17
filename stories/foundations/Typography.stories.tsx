@@ -6,7 +6,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Victor Mono for headings and code, Source Sans 3 for everything you read at length, both carried over from the live site. Mono glyphs are wide, so the heading scale tops out lower than a proportional face would (`--cc-text-2xl` is 2.75rem at most) and headings use weight 600 with -0.02em tracking. Body measure is capped at 68ch.",
+          "Victor Mono for headings and code, Source Sans 3 for everything you read at length, both carried over from the live site. Mono glyphs are wide, so the heading scale tops out lower than a proportional face would (`--cc-text-2xl` is 2.75rem at most) and headings use weight 600 with -0.02em tracking. Body measure is capped at 100ch (`--cc-measure`), wide on purpose: narrower columns left wide screens mostly empty.",
       },
     },
   },
