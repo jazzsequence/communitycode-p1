@@ -6,6 +6,7 @@ import { hostAboutBlock } from "@/components/puck/podcast/host-about";
 vi.mock("@/content/site", () => import("./stubs/site"));
 // The real field pulls in the Puck editor (needs ResizeObserver); only its type matters here.
 vi.mock("@pantheon-systems/puck-css/fields", () => ({ richtextField: { type: "richtext" } }));
+vi.mock("@puckeditor/core", () => ({ RichTextMenu: {} }));
 
 afterEach(cleanup);
 

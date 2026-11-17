@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
-import { richtextField } from "@pantheon-systems/puck-css/fields";
+import { richtextLinkField } from "@/lib/rich-link-field";
 import { RichValue } from "@/lib/rich";
 import { site } from "@/content/site";
 import { GuestAvatar } from "@/components/podcast/guest-avatar";
@@ -104,8 +104,8 @@ export const hostAboutBlock = {
   fields: {
     name: { type: "text" as const, label: "Name" },
     role: { type: "text" as const, label: "Role / subtitle" },
-    // Rich text: select words and use the link button to link them, as in the Paragraph block.
-    bio: { ...richtextField, label: "Bio" },
+    // Rich text: select words and use the link button to link them.
+    bio: { ...richtextLinkField, label: "Bio" },
     // Must stay named `image` so P1's media picker attaches.
     image: { type: "text" as const, label: "Photo" },
     imageAlt: { type: "text" as const, label: "Photo description (leave empty if the name is enough)" },
