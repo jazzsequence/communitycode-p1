@@ -97,8 +97,12 @@ Run lint, tsc, tests and build before presenting changes.
   after a `@showfm/embed` upgrade.
 - **Text width comes from `--cc-measure` (100ch), `--cc-narrow` (56rem) and `--cc-hero-copy` (48rem).** The kit hardcodes
   65ch / 35rem, so `layout-contract.css` (2c) overrides it; change the tokens, not the kit.
-- **The Host / About bio is Markdown** (`react-markdown`, allow-list: paragraphs, bold, italic, code, links; URLs through
-  `safeHref`, raw HTML shown as text). Not `richtext`: it would have broken saved plain-text bios.
+- **The Host / About bio uses the same rich-text field as the Paragraph** (`richtextLinkField`, see the next note), rendered
+  through `RichValue` (sanitised). A bio saved before that holds a plain/Markdown string; one without a leading block tag still
+  renders through `react-markdown` (allow-list: p, strong, em, code, a; URLs through `safeHref`, raw HTML as text), but it shows
+  as raw `[text](url)` inside the rich editor, so convert saved bios to HTML when you touch them. The `links` list is separate:
+  it renders buttons *under* the bio, it is not how inline text gets linked. Vitest stubs `ResizeObserver`
+  (`__tests__/stubs/setup.ts`) because the field imports the Puck editor.
 - **The kit Paragraph's rich-text toolbar is replaced** (`lib/rich-link-field.tsx`, swapped in `puck.config.tsx`, not in the
   kit file `shadcn add` overwrites). The kit's has no way to remove a link or clear formatting, so this adds **Remove link**
   and **Clear formatting** buttons and turns typed `[words](https://…)` into a link (address through `safeHref`). Buttons

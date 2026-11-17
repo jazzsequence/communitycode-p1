@@ -17,6 +17,7 @@ export default defineConfig({
   },
   test: {
     environment: "node",
+    setupFiles: ["./__tests__/stubs/setup.ts"],
     // Inlining below means the first test to import puck-css pays for Vite
     // transforming that whole graph — seconds on a cold machine, and the default
     // 5s timeout fails it on slower CI runners while every later test in the file
