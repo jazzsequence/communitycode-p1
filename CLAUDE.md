@@ -97,8 +97,11 @@ Run lint, tsc, tests and build before presenting changes.
   after a `@showfm/embed` upgrade.
 - **Text width comes from `--cc-measure` (100ch), `--cc-narrow` (56rem) and `--cc-hero-copy` (48rem).** The kit hardcodes
   65ch / 35rem, so `layout-contract.css` (2c) overrides it; change the tokens, not the kit.
-- **The Host / About bio is Markdown** (`react-markdown`, allow-list: paragraphs, bold, italic, code, links; URLs through
-  `safeHref`, raw HTML shown as text). Not `richtext`: it would have broken saved plain-text bios.
+- **The Host / About bio is a rich-text field** (`richtextField`, like the kit Paragraph: select text, use the link button),
+  rendered through `RichValue` (sanitised). Pages saved before that hold a plain/Markdown string; a string without a leading
+  block tag still renders through `react-markdown` (allow-list: p, strong, em, code, a; URLs through `safeHref`, raw HTML as
+  text). The `links` list is separate: it renders buttons *under* the bio, it is not how inline text gets linked.
+  Vitest stubs `ResizeObserver` (`__tests__/stubs/setup.ts`) because puck-css fields import the editor.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
