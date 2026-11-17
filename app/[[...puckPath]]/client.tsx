@@ -226,23 +226,6 @@ export function Client({
       <RenderClient config={config} data={data} />
       {localization && <LocaleSuggestion />}
       {pageMetadata && <P1EditWidget route={pageMetadata.route} />}
-      {pageMetadata && (
-        <footer className="mt-16 border-t border-gray-200 py-4 text-center text-sm text-gray-500">
-          Rendered with{" "}
-          <span className="font-medium">
-            {pageMetadata.documentName || pageMetadata.route}
-          </span>{" "}
-          from{" "}
-          <span className="font-medium">
-            {pageMetadata.pageType === "page" && "page"}
-            {pageMetadata.pageType === "template" && "page template"}
-            {pageMetadata.pageType === "override" && "page template override"}
-            {!pageMetadata.pageType && "page"}
-          </span>{" "}
-          at route{" "}
-          <span className="font-mono text-xs">{pageMetadata.route}</span>
-        </footer>
-      )}
     </>
   );
 }
