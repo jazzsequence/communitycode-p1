@@ -121,6 +121,11 @@ Run lint, tsc, tests and build before presenting changes.
   overflows its frame at any height and always shows a scrollbar; `.cc-booking-clip` (chrome-blocks.css) widens the frame past an
   overflow-hidden wrapper to clip the track on mouse devices. Do not use `scrolling="no"`: the time-slot/form steps and phones need it. Scheduling
   and the guest's details never pass through this site. The live site's /be-a-guest uses a Ninja Forms form, not show.fm.
+- **The favicon is the communitycode.dev one** (the WordPress site icon, white on transparent): `app/icon.png` (192px) and
+  `app/apple-icon.png` (180px) are Next file conventions, so every root layout (site, `/episodes`, `/blog`, editor) gets the
+  `<link>` tags; `public/favicon.ico` (32px) is the fallback for browsers that ask for `/favicon.ico`. They are copies of
+  `communitycode.dev/app/uploads/2025/04/cropped-community-code-logo-favicon-white-1-*.png` (found in that site's `<link rel="icon">`
+  tags): re-copy them if the WordPress icon changes. White on transparent only reads on a dark tab bar, same as the header mark.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
@@ -206,7 +211,7 @@ checked in Chrome on a dev server; real audio playback and the show.fm embed's u
 | Area | Where |
 |---|---|
 | Episode data (merge, filters, params) | `lib/episodes/`, `app/api/episodes/**` |
-| Blog (headless WordPress REST) | `lib/posts.ts`, `app/api/posts` |
+| Blog (headless WordPress REST). Cards link to `/blog/[slug]`, which renders the post body here (`loadPostBySlug`, sanitised with the show-notes allow-list: YouTube-only iframes); a slug WordPress doesn't have is a 404, an upstream failure is a 500, not a 404. Links inside a post body still point at the WordPress host. | `lib/posts.ts`, `app/api/posts`, `app/blog/[slug]`, `components/podcast/post-detail.tsx` |
 | Transcripts (server-side VTT, SSRF-guarded) | `lib/transcript.ts`, `app/api/episodes/[slug]/transcript` |
 | Guests (aggregated; host roles filtered in the block) | `lib/guests.ts`, `app/api/guests` |
 | Newsletter (**501 until `NEWSLETTER_SECRET` is set; the endpoint is in `site.config.ts`**; the MailPoet endpoint exists in the WordPress repo, written from MailPoet's source but never run against a real signup) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
@@ -216,8 +221,8 @@ checked in Chrome on a dev server; real audio playback and the show.fm embed's u
 | Blocks | `components/puck/podcast/*` (13), client bodies in `components/podcast/*` |
 
 Known gaps / decisions pending:
-- No `/blog/[slug]` route: blog cards link out to the post on the WordPress host. The nav's `/blog`, `/about`,
-  `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor).
+- The nav's `/blog`, `/about`, `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor). `/blog/[slug]` is code
+  (below), so a P1 page at `/blog` is the archive and each post renders on this site.
 - Skip link target: P1 pages have no `<main id="main-content">`; the root can't wrap it without putting the
   header inside `<main>`.
 - **Player:** show.fm-hosted episodes use `<showfm-player>` and `<showfm-transcript>` from the vendor's

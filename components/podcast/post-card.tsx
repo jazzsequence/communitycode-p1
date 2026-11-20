@@ -1,10 +1,12 @@
 import type { CSSProperties } from "react";
+import { DEFAULT_LINKS, expandTemplate } from "@/lib/block-config";
 import { formatDate } from "@/lib/format";
 import type { Post } from "@/lib/posts";
 
 /**
- * One blog post. The card links to the post's own permalink (`post.link`); there
- * is no in-app post route.
+ * One blog post. The card links to the in-app post page (`DEFAULT_LINKS.post`, app/blog/[slug]), which
+ * renders the post here. `post.link` (the WordPress permalink) is only the fallback for a post with no
+ * usable slug.
  *
  * Styling is `cc-*` classes plus token-based inline styles, because
  * app/podcast.css has no post-card rules. Focus rings come from the global
@@ -12,15 +14,6 @@ import type { Post } from "@/lib/posts";
  */
 
 export type PostLayout = "grid" | "list";
-
-/** "(on example.com)" for screen readers: the link leaves this site. */
-function hostOf(link: string): string {
-  try {
-    return new URL(link).hostname;
-  } catch {
-    return "";
-  }
-}
 
 interface Props {
   post: Post;
@@ -40,7 +33,7 @@ const imageStyle: CSSProperties = {
 export function PostCard({ post, layout, showImage, showExcerpt }: Props) {
   const isList = layout === "list";
   const image = showImage && post.imageUrl;
-  const host = hostOf(post.link);
+  const href = expandTemplate(DEFAULT_LINKS.post, { slug: post.slug }) ?? post.link;
   const date = post.publishedAt ? formatDate(post.publishedAt) : "";
 
   return (
@@ -53,8 +46,7 @@ export function PostCard({ post, layout, showImage, showExcerpt }: Props) {
         // A second link to the same place is noise for keyboard and screen
         // reader users, so the image link is skipped by both.
         <a
-          href={post.link}
-          rel="noopener noreferrer"
+          href={href}
           tabIndex={-1}
           aria-hidden="true"
           style={isList ? { flex: "0 1 16rem", minWidth: "min(100%, 12rem)" } : undefined}
@@ -73,9 +65,8 @@ export function PostCard({ post, layout, showImage, showExcerpt }: Props) {
           </p>
         ) : null}
         <h3 style={{ fontSize: "var(--cc-text-lg)" }}>
-          <a href={post.link} rel="noopener noreferrer" style={{ color: "var(--cc-text)" }}>
+          <a href={href} style={{ color: "var(--cc-text)" }}>
             {post.title}
-            {host ? <span className="cc-sr-only"> (on {host})</span> : null}
           </a>
         </h3>
         {showExcerpt && post.excerpt ? (
