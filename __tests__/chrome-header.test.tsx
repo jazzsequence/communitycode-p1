@@ -74,6 +74,21 @@ describe("SiteHeaderView", () => {
   });
 
   describe("mobile menu", () => {
+    it("is an icon (hamburger, then a cross), not a word, and still named \"Menu\" for assistive tech", () => {
+      render(<SiteHeaderView />);
+      const btn = screen.getByRole("button", { name: "Menu" });
+      expect(btn.textContent).toBe(""); // no visible "Menu" text
+      expect(btn.getAttribute("aria-label")).toBe("Menu");
+      const svg = btn.querySelector("svg");
+      expect(svg?.getAttribute("aria-hidden")).toBe("true"); // decorative: the name and aria-expanded say it all
+      const closed = svg?.querySelector("path")?.getAttribute("d");
+      expect(closed?.match(/M/g)).toHaveLength(3); // three bars
+      fireEvent.click(btn);
+      const open = btn.querySelector("svg path")?.getAttribute("d");
+      expect(open?.match(/M/g)).toHaveLength(2); // a cross
+      expect(open).not.toBe(closed);
+    });
+
     it("is a real button wired to the nav with aria-expanded", () => {
       render(<SiteHeaderView />);
       const btn = screen.getByRole("button", { name: "Menu" });

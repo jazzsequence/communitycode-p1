@@ -84,11 +84,16 @@ export function SiteHeaderView({
           ref={toggleRef}
           type="button"
           className="cc-btn cc-chrome-toggle"
+          aria-label="Menu"
           aria-expanded={open}
           aria-controls={navId}
           onClick={() => setOpen((o) => !o)}
         >
-          Menu
+          {/* Hamburger, or a cross while open. Decorative: the button's name is "Menu" and
+              aria-expanded carries the state, so the icon adds nothing for a screen reader. */}
+          <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" focusable="false">
+            {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+          </svg>
         </button>
         <nav id={navId} className="cc-chrome-nav" aria-label="Primary">
           <ChromeNavList links={links} onNavigate={() => setOpen(false)} />
