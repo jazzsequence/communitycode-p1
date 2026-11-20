@@ -32,7 +32,7 @@ export interface SiteConfig {
   /** The WordPress site that is the CMS (episodes, uploads, blog). Empty baseUrl = disabled. */
   wordpress?: { baseUrl?: string; feedPath?: string; userAgent?: string };
   /** show.fm as an episode source. Empty podcastSlug = disabled. */
-  showfm?: { podcastSlug?: string; apiBase?: string };
+  showfm?: { podcastSlug?: string; apiBase?: string; bookingUrl?: string };
   /**
    * Where the form routes forward to (server-side). The matching *_SECRET
    * must also be set, or the route answers 501.
@@ -61,6 +61,8 @@ export const siteConfig: SiteConfig = {
   },
   showfm: {
     podcastSlug: "communitycode",
+    // The public guest-booking page (show.fm > Booking links). Default for the Booking Embed block.
+    bookingUrl: "https://book.show.fm/communitycode/guest-recording",
   },
   forms: {
     contactEndpoint: "https://communitycode.dev/wp-json/community-code/v1/contact",

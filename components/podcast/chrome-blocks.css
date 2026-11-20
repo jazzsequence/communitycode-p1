@@ -309,3 +309,24 @@
   align-items: center;
   min-height: 2.75rem;
 }
+
+/* Booking Embed: show.fm's booking page cannot be auto-sized (no resize message) and overflows any frame by ~6px,
+   so the frame has a fixed height per layout and scrolling="no" (the page scrolls, not the frame). Measured page
+   heights: stacked (frame < 1024px wide) 1210-1282px, two-column (>= 1024px) 722-811px; the details step after
+   "Confirm" was not measured, hence the headroom. 1024px is show.fm's own breakpoint. */
+.cc-booking-clip {
+  container-type: inline-size;
+  overflow: hidden;
+  border-radius: var(--cc-radius-sm);
+}
+.cc-booking-clip iframe {
+  display: block;
+  inline-size: 100%;
+  block-size: 1350px;
+  border: 0;
+}
+@container (min-width: 1024px) {
+  .cc-booking-clip iframe {
+    block-size: 960px;
+  }
+}

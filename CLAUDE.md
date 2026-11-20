@@ -112,6 +112,21 @@ Run lint, tsc, tests and build before presenting changes.
   with the locked family). It works through the `editor` Puck passes to the menu instead. Puck does not re-render the menu
   when only the selection moves, so the menu subscribes to the editor itself. Tests build a real tiptap editor from Puck's own
   packages; the toolbar only really proves out in the P1 editor, so re-check it there after a Puck upgrade.
+- **The Booking Embed block frames show.fm's public booking page** (`components/puck/podcast/booking-embed.tsx`; default URL is
+  `showfm.bookingUrl` in `site.config.ts`). `@showfm/embed` has no booking element, so it is an https-only `<iframe>` plus a
+  fallback link. The page is the vendor's: it keeps its own colours (it follows the visitor's system light/dark, with its own
+  toggle) and takes no theme/accent URL options that I could find, and a cross-origin frame cannot be styled from here. So the frame sits in
+  a `cc-card` and the iframe is `color-scheme: dark` (in Chrome that makes the page pick its dark theme on "System"; checked, but not in
+  Safari/Firefox, and a visitor who picked Light in its toggle still gets light). The vendor page cannot be auto-sized (no resize message) and
+  is `min-height: 100vh` plus ~6px, so in any frame it overflows and shows its own scrollbar inside the page scroll. Measured (page
+  scrollHeight by frame width): stacked below **1024px** (show.fm's own breakpoint) 1210-1282px, two-column at 1024px+ 722px (811px
+  with a time picked), and only 675px stacked once a date is picked. So `.cc-booking-clip` (chrome-blocks.css) gives the frame a fixed
+  height per layout (1350px stacked, 960px two-column, via a container query at 1024px) and the iframe has `scrolling="no"` so the
+  wheel always scrolls the page. Cost: after a date is picked the frame is taller than the content (empty vendor background). **The
+  details step after "Confirm <time>" was not measured** (it would make a real booking); the headroom is a guess, so re-check it if
+  the form looks cut off. There is deliberately no editor height field. A scrollbar-track clip (widening the frame) was tried first and
+  did not fix the nested scroll. Scheduling
+  and the guest's details never pass through this site. The live site's /be-a-guest uses a Ninja Forms form, not show.fm.
 - **The favicon is the communitycode.dev one** (the WordPress site icon, white on transparent): `app/icon.png` (192px) and
   `app/apple-icon.png` (180px) are Next file conventions, so every root layout (site, `/episodes`, `/blog`, editor) gets the
   `<link>` tags; `public/favicon.ico` (32px) is the fallback for browsers that ask for `/favicon.ico`. They are copies of
