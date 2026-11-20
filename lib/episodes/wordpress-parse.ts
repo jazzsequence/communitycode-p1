@@ -44,6 +44,8 @@ export interface RestEpisode {
   excerpt?: { rendered?: string };
   content?: { rendered?: string };
   meta?: { youtube_url?: string };
+  /** Yoast SEO's resolved meta description (a custom one if the editor wrote it, else Yoast's own fallback). */
+  yoast_head_json?: { description?: string };
   _embedded?: { "wp:featuredmedia"?: { source_url?: string }[]; "wp:term"?: unknown };
 }
 
@@ -115,7 +117,13 @@ export function mapFeedItem(item: FeedItem, rest: RestEpisode | undefined): Epis
     id: postId ? `wp-${postId}` : `wp-${slugFromLink(link)}`,
     slug: rest?.slug ?? slugFromLink(link),
     title,
-    description: toPlainText(rest?.excerpt?.rendered) || cleanDescription(toPlainText(item.description)).slice(0, 280),
+    // The Yoast SEO meta description is the one the editor wrote for search and sharing, so it wins over the
+    // excerpt (which is auto-trimmed and often just the first lines of the post). An episode Yoast has nothing
+    // for falls back to the excerpt, then the feed text.
+    description:
+      toPlainText(rest?.yoast_head_json?.description) ||
+      toPlainText(rest?.excerpt?.rendered) ||
+      cleanDescription(toPlainText(item.description)).slice(0, 280),
     showNotesHtml: sanitizeShowNotes(showNotesSource),
     publishedAt:
       publishedAt && !Number.isNaN(publishedAt.getTime()) ? publishedAt.toISOString() : new Date(0).toISOString(),

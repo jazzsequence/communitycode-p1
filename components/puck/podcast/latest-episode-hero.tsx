@@ -125,7 +125,7 @@ export function LatestEpisodeHeroRender(props: Partial<LatestEpisodeHeroProps> &
           {showDescription && episode.description ? (
             <p
               className="cc-muted"
-              style={{ display: "-webkit-box", WebkitLineClamp: 5, WebkitBoxOrient: "vertical", overflow: "hidden", maxWidth: "var(--cc-measure)" }}
+              style={{ maxWidth: "var(--cc-measure)" }}
             >
               {episode.description}
             </p>

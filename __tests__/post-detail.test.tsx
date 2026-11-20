@@ -41,7 +41,7 @@ describe("PostDetailView", () => {
   });
 
   it("builds a description and JSON-LD from the post", () => {
-    expect(postMetaDescription(detail({ excerpt: "x".repeat(300) })).length).toBeLessThanOrEqual(160);
+    expect(postMetaDescription(detail({ excerpt: "x".repeat(300) }))).toBe("x".repeat(300));
     expect(postMetaDescription(detail({ excerpt: "" }))).toBe("A post");
     expect(buildPostJsonLd(detail())).toMatchObject({ "@type": "BlogPosting", headline: "A post", author: { name: "Chris" } });
   });

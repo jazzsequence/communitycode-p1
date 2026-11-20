@@ -140,6 +140,16 @@ Run lint, typecheck, tests and build before presenting changes. **CI (`.github/w
 - **The episode page's transcript is collapsed by default**: a native `<details class="cc-disclosure">` (heading inside the summary),
   so it works without script and find-in-page opens it. The viewer is mounted (it fetches the cues once) but not shown. The
   `TranscriptViewer` *block* on P1 pages is unchanged (always open).
+- **An episode's description is Yoast's meta description, not the WordPress excerpt** (`yoast_head_json.description` on the REST
+  `episodes` item; it is the resolved value: a custom one if the editor wrote it, else Yoast's template). Order: Yoast, then the excerpt,
+  then the feed text. It is fetched with the nested `_fields=yoast_head_json.description`, never the whole object (its schema graph is
+  ~235 KB for 39 episodes vs 9 KB). The same string feeds the cards, the episode page, the `<meta name="description">`/Open Graph and
+  JSON-LD, and the text search. Blog posts still use their excerpt. An episode Yoast has nothing for falls back, so its text is
+  whatever the excerpt/feed gives (episode 29: the music credits; episode 9: a link list): fix those in WordPress (Yoast meta
+  description or excerpt), not here.
+  **The description is never truncated for display**: no line clamp on the episode cards or the hero, and the page meta/Open Graph text is
+  the full string (a 160-char cut used to be applied). The only cut left is `.slice(0, 280)` on the *feed-text fallback* (raw show notes,
+  not a description), which only applies when Yoast and the excerpt are both empty.
 - **`proxy.ts` is Next 16's name for `middleware.ts`** (the starter kit shipped the old name, which warns on every build). It wraps the
   P1 SDK's request handling (`createP1Middleware`, whose own name is unchanged) and runs on Node, not the edge runtime. Do not rename it
   back: the file name and the `proxy` export are both what Next looks for.

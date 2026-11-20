@@ -19,8 +19,8 @@ export function postCanonicalUrl(post: Pick<PostDetail, "slug">): string {
 }
 
 export function postMetaDescription(post: Pick<PostDetail, "excerpt" | "title">): string {
-  const text = (post.excerpt || post.title).replace(/\s+/g, " ").trim();
-  return text.length > 160 ? `${text.slice(0, 157).trimEnd()}...` : text;
+  // Verbatim (whitespace collapsed), not cut: see episodeMetaDescription.
+  return (post.excerpt || post.title).replace(/\s+/g, " ").trim();
 }
 
 /** schema.org BlogPosting. */
