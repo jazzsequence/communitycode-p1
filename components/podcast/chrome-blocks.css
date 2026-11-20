@@ -310,23 +310,23 @@
   min-height: 2.75rem;
 }
 
-/* Booking Embed: show.fm's page overflows its frame by ~6px at any height, so it always shows a scrollbar.
-   Widen the frame past an overflow-hidden wrapper so the track is clipped; scrolling still works. Only for
-   pointer: fine, because touch scrollbars overlay and do not take width (and the extra width would crop the
-   page's own side padding on a phone). 1.125rem is a little over the widest classic scrollbar (17px). */
+/* Booking Embed: show.fm's booking page cannot be auto-sized (no resize message) and overflows any frame by ~6px,
+   so the frame has a fixed height per layout and scrolling="no" (the page scrolls, not the frame). Measured page
+   heights: stacked (frame < 1024px wide) 1210-1282px, two-column (>= 1024px) 722-811px; the details step after
+   "Confirm" was not measured, hence the headroom. 1024px is show.fm's own breakpoint. */
 .cc-booking-clip {
-  --cc-booking-bar: 1.125rem;
+  container-type: inline-size;
   overflow: hidden;
   border-radius: var(--cc-radius-sm);
 }
 .cc-booking-clip iframe {
   display: block;
   inline-size: 100%;
+  block-size: 1350px;
   border: 0;
 }
-@media (pointer: fine) {
+@container (min-width: 1024px) {
   .cc-booking-clip iframe {
-    inline-size: calc(100% + 2 * var(--cc-booking-bar));
-    margin-inline: calc(-1 * var(--cc-booking-bar));
+    block-size: 960px;
   }
 }

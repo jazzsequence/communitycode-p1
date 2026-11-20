@@ -36,12 +36,14 @@ describe("BookingEmbed", () => {
     expect(screen.getByRole("note").textContent).toMatch(/isn.t available/i);
   });
 
-  it("clamps the height", () => {
-    const small = render(<BookingEmbed url="https://a.example/x" height={10} />);
-    expect(small.container.querySelector("iframe")!.style.blockSize).toBe("400px");
-    small.unmount();
-    const big = render(<BookingEmbed url="https://a.example/x" height={99999} />);
-    expect(big.container.querySelector("iframe")!.style.blockSize).toBe("1600px");
+  it("turns the frame's own scrolling off so the wheel scrolls the page", () => {
+    const { container } = render(<BookingEmbed url="https://a.example/x" />);
+    expect(container.querySelector("iframe")!.getAttribute("scrolling")).toBe("no");
+  });
+
+  it("has no editor height field: the vendor's layout decides it", () => {
+    expect(bookingEmbedBlock.fields).not.toHaveProperty("height");
+    expect(bookingEmbedBlock.defaultProps).not.toHaveProperty("height");
   });
 
   it("defaults to the booking link in site.config.ts", () => {

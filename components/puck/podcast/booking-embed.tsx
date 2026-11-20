@@ -17,18 +17,20 @@ import "@/components/podcast/chrome-blocks.css";
  * toggle still gets light. The site is always dark, so this is the closest match short of show.fm
  * offering theme options.
  *
- * Scrollbar: the booking page is `min-height: 100vh` plus ~6px, so inside a frame it overflows by 6px
- * at ANY frame height and always shows a scrollbar; a taller frame cannot fix that. It also needs real
- * scrolling (time slots, the details form, narrow screens), so `scrolling="no"` would cut content off.
- * The frame is instead widened past a clipping wrapper so its scrollbar track falls outside (mouse
- * devices only; touch scrollbars overlay). Cosmetic: if it stops working the scrollbar just shows.
+ * Height / scrolling: a cross-origin frame cannot be sized to its content (the page sends no resize
+ * message), and the page is `min-height: 100vh` plus ~6px, so in any frame it overflows and shows its own
+ * scrollbar inside the page's scroll. Measured (see CLAUDE.md): it is stacked and 1210-1282px tall
+ * below a 1024px frame width, two-column and 722-811px at 1024px and up, and 675px stacked once a date is
+ * picked. So the frame gets a fixed height per layout, with headroom (`.cc-booking-clip` in
+ * chrome-blocks.css: switches at 1024px), and `scrolling="no"` so the wheel always scrolls the page. The
+ * cost: after a date is picked the frame is taller than the content (empty vendor background). The step
+ * after "Confirm <time>" (the guest's details) was NOT measured, to avoid making a real booking.
  */
 
 interface BookingEmbedProps {
   heading?: string;
   description?: string;
   url?: string;
-  height?: number;
   linkLabel?: string;
 }
 
@@ -43,12 +45,7 @@ export function frameUrl(input: unknown): string | null {
   }
 }
 
-const clampHeight = (h: unknown) => {
-  const n = Number(h);
-  return Number.isFinite(n) ? Math.min(1600, Math.max(400, Math.round(n))) : 760;
-};
-
-export function BookingEmbed({ heading, description, url, height, linkLabel }: BookingEmbedProps) {
+export function BookingEmbed({ heading, description, url, linkLabel }: BookingEmbedProps) {
   const src = frameUrl(url);
   const title = heading?.trim() || "Book a recording";
   return (
@@ -59,14 +56,15 @@ export function BookingEmbed({ heading, description, url, height, linkLabel }: B
         {src ? (
           <>
             <div className="cc-card" style={{ padding: "var(--cc-space-3)" }}>
-              {/* .cc-booking-clip hides the frame's scrollbar track (see chrome-blocks.css) but not scrolling. */}
+              {/* Height per layout comes from .cc-booking-clip (chrome-blocks.css). */}
               <div className="cc-booking-clip">
                 <iframe
                   src={src}
                   title={title}
                   loading="lazy"
+                  scrolling="no"
                   referrerPolicy="strict-origin-when-cross-origin"
-                  style={{ blockSize: `${clampHeight(height)}px`, colorScheme: "dark" }}
+                  style={{ colorScheme: "dark" }}
                 />
               </div>
             </div>
@@ -90,14 +88,12 @@ export const bookingEmbedBlock = {
     heading: { type: "text" as const, label: "Heading" },
     description: { type: "textarea" as const, label: "Intro text" },
     url: { type: "text" as const, label: "Booking page (https://, from show.fm > Booking links)" },
-    height: { type: "number" as const, label: "Frame height (px, 400-1600)", min: 400, max: 1600 },
     linkLabel: { type: "text" as const, label: "Fallback link text" },
   },
   defaultProps: {
     heading: "Book a recording",
     description: "",
     url: siteConfig.showfm?.bookingUrl ?? "",
-    height: 760,
     linkLabel: "Open the booking page in a new tab",
   },
   render: ({ id: _id, ...props }: BookingEmbedProps & { id?: string }) => <BookingEmbed {...props} />,
