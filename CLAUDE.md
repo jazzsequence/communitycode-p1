@@ -140,6 +140,9 @@ Run lint, typecheck, tests and build before presenting changes. **CI (`.github/w
 - **The episode page's transcript is collapsed by default**: a native `<details class="cc-disclosure">` (heading inside the summary),
   so it works without script and find-in-page opens it. The viewer is mounted (it fetches the cues once) but not shown. The
   `TranscriptViewer` *block* on P1 pages is unchanged (always open).
+- **`proxy.ts` is Next 16's name for `middleware.ts`** (the starter kit shipped the old name, which warns on every build). It wraps the
+  P1 SDK's request handling (`createP1Middleware`, whose own name is unchanged) and runs on Node, not the edge runtime. Do not rename it
+  back: the file name and the `proxy` export are both what Next looks for.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
