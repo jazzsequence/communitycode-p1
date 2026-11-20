@@ -1,0 +1,41 @@
+# Runs the same checks as a local run (CLAUDE.md "Commands") on every pull request and on main, so a
+# green PR means the tests actually ran and passed, not that someone said they did.
+#
+# CI has no .env.local and no secrets: the unit tests mock the network and the build must succeed without
+# them. If the build ever needs a value to compile, give it a harmless placeholder here, never a real secret.
+#
+# To make a red check block merging: Settings > Branches > branch protection rule for `main` >
+# "Require status checks to pass" > select "Lint, typecheck, test, build" (a repo admin, in the browser).
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A newer push to the same PR supersedes a running older one.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint, typecheck, test, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      # Last: it is the slowest, and `next build` type-checks and prerenders, which catches what unit tests miss.
+      - run: npm run build

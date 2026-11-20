@@ -14,7 +14,7 @@
     "storybook": "storybook dev -p 6006",
     "sync:registry": "tsx scripts/sync-puck-registry.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@fontsource-variable/source-sans-3": "^5.3.1",
