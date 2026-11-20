@@ -18,6 +18,7 @@ export const showfmEpisode: Episode = {
   audio: { url: "https://m.cdn.media/ep/36.mp3", contentType: "audio/mpeg", sizeBytes: 1 },
   artworkUrl: null,
   guests: [],
+  tags: [],
   transcript: { url: "https://m.cdn.media/ep/36.vtt", type: "text/vtt" },
   links: { listen: "https://show.fm/community-code/e/episode-36", youtube: "https://youtu.be/x" },
   origin: "showfm",

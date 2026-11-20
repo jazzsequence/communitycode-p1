@@ -25,6 +25,7 @@ function ep(slug: string, publishedAt: string, guests: Guest[], extra: Partial<E
     audio: null,
     artworkUrl: null,
     guests,
+    tags: [],
     transcript: null,
     links: {},
     origin: "wordpress",

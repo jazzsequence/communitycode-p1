@@ -78,6 +78,8 @@ export function mergeEpisode(showfm: Episode, wp: Episode): Episode {
     durationSeconds: showfm.durationSeconds ?? wp.durationSeconds,
     audio: showfm.audio ?? wp.audio,
     artworkUrl: wp.artworkUrl ?? showfm.artworkUrl,
+    // show.fm has none, and its [] would otherwise overwrite WordPress's tags in the spread above.
+    tags: wp.tags.length ? wp.tags : showfm.tags,
     transcript: showfm.transcript ?? wp.transcript,
     season: showfm.season ?? wp.season,
     number: showfm.number ?? wp.number,

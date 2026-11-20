@@ -34,6 +34,8 @@ describe("mapPost against the real WordPress snapshot", () => {
       imageUrl:
         "https://communitycode.dev/app/uploads/2026/10/communitycode-video-thumb-jacquie-capur-768x432.png",
       authorName: "chris",
+      // This snapshot predates `_embed=wp:term`, so it carries no terms. Tag mapping is tested in tags.test.tsx.
+      tags: [],
     });
   });
 
@@ -70,6 +72,7 @@ describe("mapPost edge cases", () => {
       link: "https://wp.example.com/2026/01/a-post/",
       imageUrl: null,
       authorName: null,
+      tags: [],
     });
   });
 
@@ -147,7 +150,7 @@ describe("buildPostsUrl / loadPosts", () => {
     const url = new URL(buildPostsUrl(cfg, { page: 2, perPage: 5, search: "wp cli", categories: [3, 4] }));
     expect(url.pathname).toBe("/wp-json/wp/v2/posts");
     expect(url.searchParams.get("_fields")?.split(",")).toContain("_links");
-    expect(url.searchParams.get("_embed")).toBe("author,wp:featuredmedia");
+    expect(url.searchParams.get("_embed")).toBe("author,wp:featuredmedia,wp:term");
     expect(url.searchParams.get("page")).toBe("2");
     expect(url.searchParams.get("per_page")).toBe("5");
     expect(url.searchParams.get("search")).toBe("wp cli");

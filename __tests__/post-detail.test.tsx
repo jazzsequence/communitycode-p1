@@ -20,6 +20,7 @@ const detail = (over: Partial<PostDetail> = {}): PostDetail => ({
   link: "https://wp.example.com/2026/10/a-post/",
   imageUrl: "https://wp.example.com/img.png",
   authorName: "Chris",
+  tags: [{ name: "community", slug: "community" }, { name: "open source", slug: "open-source" }],
   contentHtml: "<p>Hello <a href=\"https://example.com\">world</a></p>",
   ...over,
 });

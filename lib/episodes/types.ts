@@ -4,6 +4,8 @@
  * `EpisodeSource`.
  */
 
+import type { Tag } from "@/lib/tags";
+
 export type EpisodeType = "full" | "trailer" | "bonus";
 
 /** Which backend produced the episode. Surfaced in the UI so a demo can show
@@ -50,6 +52,8 @@ export interface Episode {
    */
   artworkUrl: string | null;
   guests: Guest[];
+  /** Editorial tags from WordPress (`post_tag`); [] when there are none. show.fm has none, so WordPress owns this. */
+  tags: Tag[];
   /** WebVTT (or other) transcript URL. Fetched server-side, see `transcript.ts`. */
   transcript: { url: string; type: string } | null;
   links: {

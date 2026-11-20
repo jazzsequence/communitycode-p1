@@ -132,6 +132,14 @@ Run lint, tsc, tests and build before presenting changes.
   `<link>` tags; `public/favicon.ico` (32px) is the fallback for browsers that ask for `/favicon.ico`. They are copies of
   `communitycode.dev/app/uploads/2025/04/cropped-community-code-logo-favicon-white-1-*.png` (found in that site's `<link rel="icon">`
   tags): re-copy them if the WordPress icon changes. White on transparent only reads on a dark tab bar, same as the header mark.
+- **Tags (`post_tag`) come from WordPress for both episodes and posts** (`lib/tags.ts` `mapTags`, from `_embed=wp:term`; the embed
+  returns categories in the same array, so it filters by taxonomy). They show as plain pills (`TagList`) on episode/post cards and
+  on the single pages, and as `keywords` in the JSON-LD. Not links: there is no tag archive page, and the episode card is one big link.
+  show.fm has no tags, so `mergeEpisode` takes WordPress's (`tags` is spread over by show.fm's `[]` otherwise). The hero block, the
+  text search and tag filtering do not use tags yet. The real-data posts fixture predates the embed, so it has none.
+- **The episode page's transcript is collapsed by default**: a native `<details class="cc-disclosure">` (heading inside the summary),
+  so it works without script and find-in-page opens it. The viewer is mounted (it fetches the cues once) but not shown. The
+  `TranscriptViewer` *block* on P1 pages is unchanged (always open).
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host

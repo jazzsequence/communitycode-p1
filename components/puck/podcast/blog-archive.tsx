@@ -21,7 +21,8 @@ import { DEFAULT_ENDPOINTS, safeUrl } from "@/lib/block-config";
  *   GET <endpoint>?page=N&per_page=N  (appended with `&` if it already has `?`)
  *   200 { posts: Post[], page: number, totalPages: number }
  *     Post = { id: number, slug, title, excerpt (plain text), publishedAt (ISO),
- *              link (http/https URL), imageUrl: string|null, authorName: string|null }
+ *              link (http/https URL), imageUrl: string|null, authorName: string|null,
+ *              tags: { name, slug }[] }
  *   501 means "not configured": the block shows a message instead of an error.
  *   Anything else non-2xx shows the error state with Retry.
  */
