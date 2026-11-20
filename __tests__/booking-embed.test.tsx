@@ -22,7 +22,8 @@ describe("BookingEmbed", () => {
     expect(frame.getAttribute("title")).toBe("Be a guest");
     expect(frame.getAttribute("loading")).toBe("lazy");
     // Site-coloured card around the vendor's page, and the dark theme asked for.
-    expect(frame.parentElement?.classList.contains("cc-card")).toBe(true);
+    expect(frame.parentElement?.classList.contains("cc-booking-clip")).toBe(true);
+    expect(frame.parentElement?.parentElement?.classList.contains("cc-card")).toBe(true);
     expect(frame.style.colorScheme).toBe("dark");
     const link = screen.getByRole("link", { name: /booking page/i });
     expect(link.getAttribute("href")).toBe("https://book.show.fm/a/b");

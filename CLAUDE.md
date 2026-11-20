@@ -117,7 +117,9 @@ Run lint, tsc, tests and build before presenting changes.
   fallback link. The page is the vendor's: it keeps its own colours (it follows the visitor's system light/dark, with its own
   toggle) and takes no theme/accent URL options that I could find, and a cross-origin frame cannot be styled from here. So the frame sits in
   a `cc-card` and the iframe is `color-scheme: dark` (in Chrome that makes the page pick its dark theme on "System"; checked, but not in
-  Safari/Firefox, and a visitor who picked Light in its toggle still gets light). Scheduling
+  Safari/Firefox, and a visitor who picked Light in its toggle still gets light). The vendor page is `min-height: 100vh` plus ~6px, so it
+  overflows its frame at any height and always shows a scrollbar; `.cc-booking-clip` (chrome-blocks.css) widens the frame past an
+  overflow-hidden wrapper to clip the track on mouse devices. Do not use `scrolling="no"`: the time-slot/form steps and phones need it. Scheduling
   and the guest's details never pass through this site. The live site's /be-a-guest uses a Ninja Forms form, not show.fm.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).

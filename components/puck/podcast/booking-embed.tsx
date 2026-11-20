@@ -16,6 +16,12 @@ import "@/components/podcast/chrome-blocks.css";
  * property set to `light` turned it light on a dark system); a visitor who chose Light in its own
  * toggle still gets light. The site is always dark, so this is the closest match short of show.fm
  * offering theme options.
+ *
+ * Scrollbar: the booking page is `min-height: 100vh` plus ~6px, so inside a frame it overflows by 6px
+ * at ANY frame height and always shows a scrollbar; a taller frame cannot fix that. It also needs real
+ * scrolling (time slots, the details form, narrow screens), so `scrolling="no"` would cut content off.
+ * The frame is instead widened past a clipping wrapper so its scrollbar track falls outside (mouse
+ * devices only; touch scrollbars overlay). Cosmetic: if it stops working the scrollbar just shows.
  */
 
 interface BookingEmbedProps {
@@ -53,20 +59,16 @@ export function BookingEmbed({ heading, description, url, height, linkLabel }: B
         {src ? (
           <>
             <div className="cc-card" style={{ padding: "var(--cc-space-3)" }}>
-              <iframe
-                src={src}
-                title={title}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                style={{
-                  display: "block",
-                  inlineSize: "100%",
-                  blockSize: `${clampHeight(height)}px`,
-                  border: 0,
-                  borderRadius: "var(--cc-radius-sm)",
-                  colorScheme: "dark",
-                }}
-              />
+              {/* .cc-booking-clip hides the frame's scrollbar track (see chrome-blocks.css) but not scrolling. */}
+              <div className="cc-booking-clip">
+                <iframe
+                  src={src}
+                  title={title}
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{ blockSize: `${clampHeight(height)}px`, colorScheme: "dark" }}
+                />
+              </div>
             </div>
             <p className="cc-prose">
               <a href={src} rel="noopener noreferrer" target="_blank">
