@@ -132,6 +132,9 @@ Run lint, typecheck, tests and build before presenting changes. **CI (`.github/w
   `<link>` tags; `public/favicon.ico` (32px) is the fallback for browsers that ask for `/favicon.ico`. They are copies of
   `communitycode.dev/app/uploads/2025/04/cropped-community-code-logo-favicon-white-1-*.png` (found in that site's `<link rel="icon">`
   tags): re-copy them if the WordPress icon changes. White on transparent only reads on a dark tab bar, same as the header mark.
+- **`proxy.ts` is Next 16's name for `middleware.ts`** (the starter kit shipped the old name, which warns on every build). It wraps the
+  P1 SDK's request handling (`createP1Middleware`, whose own name is unchanged) and runs on Node, not the edge runtime. Do not rename it
+  back: the file name and the `proxy` export are both what Next looks for.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
