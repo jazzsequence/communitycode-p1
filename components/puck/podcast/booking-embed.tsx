@@ -9,6 +9,13 @@ import "@/components/podcast/chrome-blocks.css";
  * through this site. https only, so a saved `javascript:` or `http:` value renders the fallback link
  * (or nothing) instead of a frame. The link under the frame is for visitors whose browser or
  * extensions block frames.
+ *
+ * Colours: the booking page has its own palette and a cross-origin frame cannot be styled from here, so
+ * the frame sits in a `cc-card` (site surface and border) and the iframe is `color-scheme: dark`. In
+ * Chrome that makes the page pick its dark theme while its toggle is on "System" (checked: the same
+ * property set to `light` turned it light on a dark system); a visitor who chose Light in its own
+ * toggle still gets light. The site is always dark, so this is the closest match short of show.fm
+ * offering theme options.
  */
 
 interface BookingEmbedProps {
@@ -45,13 +52,22 @@ export function BookingEmbed({ heading, description, url, height, linkLabel }: B
         {description?.trim() ? <p className="cc-prose">{description}</p> : null}
         {src ? (
           <>
-            <iframe
-              src={src}
-              title={title}
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              style={{ inlineSize: "100%", blockSize: `${clampHeight(height)}px`, border: 0, borderRadius: "var(--cc-radius, 0.75rem)", background: "var(--cc-surface, transparent)" }}
-            />
+            <div className="cc-card" style={{ padding: "var(--cc-space-3)" }}>
+              <iframe
+                src={src}
+                title={title}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                style={{
+                  display: "block",
+                  inlineSize: "100%",
+                  blockSize: `${clampHeight(height)}px`,
+                  border: 0,
+                  borderRadius: "var(--cc-radius-sm)",
+                  colorScheme: "dark",
+                }}
+              />
+            </div>
             <p className="cc-prose">
               <a href={src} rel="noopener noreferrer" target="_blank">
                 {linkLabel?.trim() || "Open the booking page in a new tab"}

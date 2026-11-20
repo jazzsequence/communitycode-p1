@@ -115,7 +115,9 @@ Run lint, tsc, tests and build before presenting changes.
 - **The Booking Embed block frames show.fm's public booking page** (`components/puck/podcast/booking-embed.tsx`; default URL is
   `showfm.bookingUrl` in `site.config.ts`). `@showfm/embed` has no booking element, so it is an https-only `<iframe>` plus a
   fallback link. The page is the vendor's: it keeps its own colours (it follows the visitor's system light/dark, with its own
-  toggle) and takes no theme/accent URL options that I could find, and a cross-origin frame cannot be styled from here. Scheduling
+  toggle) and takes no theme/accent URL options that I could find, and a cross-origin frame cannot be styled from here. So the frame sits in
+  a `cc-card` and the iframe is `color-scheme: dark` (in Chrome that makes the page pick its dark theme on "System"; checked, but not in
+  Safari/Firefox, and a visitor who picked Light in its toggle still gets light). Scheduling
   and the guest's details never pass through this site. The live site's /be-a-guest uses a Ninja Forms form, not show.fm.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
