@@ -32,14 +32,24 @@ vi.mock("@puckeditor/core", () => {
 });
 vi.mock("@pantheon-systems/puck-css/fields", () => ({ richtextField: { type: "richtext", options: { textAlign: false } } }));
 
-afterEach(cleanup);
+// Every editor must be destroyed: ProseMirror keeps a DOM observer with a pending timer, and one left alive
+// can fire after the jsdom environment is torn down ("document is not defined", an unhandled error that fails
+// the whole run on a slower machine, such as CI, even though every test passed).
+const editors: Editor[] = [];
+afterEach(() => {
+  cleanup();
+  editors.splice(0).forEach((e) => e.destroy());
+});
 
-const makeEditor = (html: string) =>
-  new Editor({
+const makeEditor = (html: string) => {
+  const editor = new Editor({
     element: document.createElement("div"),
     extensions: [Document, Paragraph, Text, Bold, Link.configure({ openOnClick: false })],
     content: html,
   });
+  editors.push(editor);
+  return editor;
+};
 
 function show(editor: Editor) {
   const Menu = richtextLinkField.renderMenu!;

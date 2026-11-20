@@ -14,11 +14,11 @@ Node **24** (`nvm use 24`). npm, not pnpm.
 | `npm run dev` | Dev server (editor at `/p1`). Use `npx next dev -p <port>` if 3000 is taken. |
 | `npm run build` | Production build. Do not run it while a dev server is up: they share `.next`. |
 | `npm run lint` | ESLint |
-| `npx tsc --noEmit` | Typecheck |
+| `npm run typecheck` | Typecheck (`next typegen && tsc --noEmit`: the gitignored `next-env.d.ts` that image/CSS imports need only exists after a Next command has run, so a bare `tsc` fails on a fresh clone) |
 | `npm test` | Vitest (`npx vitest run <file>` for one) |
 | `npm run storybook` | Design-system workshop on :6006 (`npm run build-storybook` to build). Independent of `.next`, so it can run beside `dev`/`build`. |
 
-Run lint, tsc, tests and build before presenting changes.
+Run lint, typecheck, tests and build before presenting changes. **CI (`.github/workflows/ci.yml`) runs exactly these on every pull request and on `main`** (clean checkout, no `.env.local`), so the PR's check, not anyone's say-so, is the evidence they pass.
 
 ## Where things live
 
