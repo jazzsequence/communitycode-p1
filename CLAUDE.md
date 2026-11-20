@@ -112,6 +112,11 @@ Run lint, tsc, tests and build before presenting changes.
   with the locked family). It works through the `editor` Puck passes to the menu instead. Puck does not re-render the menu
   when only the selection moves, so the menu subscribes to the editor itself. Tests build a real tiptap editor from Puck's own
   packages; the toolbar only really proves out in the P1 editor, so re-check it there after a Puck upgrade.
+- **The favicon is the communitycode.dev one** (the WordPress site icon, white on transparent): `app/icon.png` (192px) and
+  `app/apple-icon.png` (180px) are Next file conventions, so every root layout (site, `/episodes`, `/blog`, editor) gets the
+  `<link>` tags; `public/favicon.ico` (32px) is the fallback for browsers that ask for `/favicon.ico`. They are copies of
+  `communitycode.dev/app/uploads/2025/04/cropped-community-code-logo-favicon-white-1-*.png` (found in that site's `<link rel="icon">`
+  tags): re-copy them if the WordPress icon changes. White on transparent only reads on a dark tab bar, same as the header mark.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
