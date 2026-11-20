@@ -140,6 +140,13 @@ Run lint, typecheck, tests and build before presenting changes. **CI (`.github/w
 - **The episode page's transcript is collapsed by default**: a native `<details class="cc-disclosure">` (heading inside the summary),
   so it works without script and find-in-page opens it. The viewer is mounted (it fetches the cues once) but not shown. The
   `TranscriptViewer` *block* on P1 pages is unchanged (always open).
+- **An episode's description is Yoast's meta description, not the WordPress excerpt** (`yoast_head_json.description` on the REST
+  `episodes` item; it is the resolved value: a custom one if the editor wrote it, else Yoast's template). Order: Yoast, then the excerpt,
+  then the feed text. It is fetched with the nested `_fields=yoast_head_json.description`, never the whole object (its schema graph is
+  ~235 KB for 39 episodes vs 9 KB). The same string feeds the cards, the episode page, the `<meta name="description">`/Open Graph and
+  JSON-LD, and the text search. Blog posts still use their excerpt. An episode Yoast has nothing for falls back, so its text is
+  whatever the excerpt/feed gives (episode 29: the music credits; episode 9: a link list): fix those in WordPress (Yoast meta
+  description or excerpt), not here.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host

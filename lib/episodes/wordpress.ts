@@ -75,7 +75,8 @@ export async function wpFetch(cfg: WordPressConfig, url: string, accept: string)
 export async function loadWordPressEpisodes(cfg = wordPressConfigFromEnv()): Promise<Episode[]> {
   const bust = cacheBust();
   // `_links` must be listed: WordPress only embeds when it is in `_fields`.
-  const restFields = "id,slug,link,title,excerpt,content,meta,_links,_embedded";
+  // `yoast_head_json.description` only: the whole Yoast object carries the schema graph (~235 KB for 39 episodes, 9 KB without).
+  const restFields = "id,slug,link,title,excerpt,content,meta,yoast_head_json.description,_links,_embedded";
   const [feedRes, restRes] = await Promise.all([
     wpFetch(cfg, `${cfg.baseUrl}${cfg.feedPath}?cb=${bust}`, "application/rss+xml, application/xml"),
     wpFetch(
