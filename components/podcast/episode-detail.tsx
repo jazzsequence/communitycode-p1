@@ -27,8 +27,9 @@ export function episodeCanonicalUrl(episode: Pick<Episode, "slug">): string {
 }
 
 export function episodeMetaDescription(episode: Pick<Episode, "description" | "title">): string {
-  const text = (episode.description || episode.title).replace(/\s+/g, " ").trim();
-  return text.length > 160 ? `${text.slice(0, 157).trimEnd()}...` : text;
+  // Verbatim (whitespace collapsed): the Yoast description is already written to meta-description length, and
+  // cutting it would change what the editor wrote. Search engines shorten what they show on their own.
+  return (episode.description || episode.title).replace(/\s+/g, " ").trim();
 }
 
 /** ISO 8601 duration, "PT43M28S". */

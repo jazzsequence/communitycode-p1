@@ -147,6 +147,9 @@ Run lint, typecheck, tests and build before presenting changes. **CI (`.github/w
   JSON-LD, and the text search. Blog posts still use their excerpt. An episode Yoast has nothing for falls back, so its text is
   whatever the excerpt/feed gives (episode 29: the music credits; episode 9: a link list): fix those in WordPress (Yoast meta
   description or excerpt), not here.
+  **The description is never truncated for display**: no line clamp on the episode cards or the hero, and the page meta/Open Graph text is
+  the full string (a 160-char cut used to be applied). The only cut left is `.slice(0, 280)` on the *feed-text fallback* (raw show notes,
+  not a description), which only applies when Yoast and the excerpt are both empty.
 - **`proxy.ts` is Next 16's name for `middleware.ts`** (the starter kit shipped the old name, which warns on every build). It wraps the
   P1 SDK's request handling (`createP1Middleware`, whose own name is unchanged) and runs on Node, not the edge runtime. Do not rename it
   back: the file name and the `proxy` export are both what Next looks for.

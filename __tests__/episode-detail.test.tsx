@@ -124,8 +124,10 @@ describe("helpers", () => {
     expect(JSON.parse(JSON.stringify(ld))).not.toHaveProperty("actor");
   });
 
-  it("meta description is trimmed to 160 chars", () => {
-    expect(episodeMetaDescription({ title: "t", description: "word ".repeat(100) }).length).toBeLessThanOrEqual(160);
+  it("meta description is the full description, never cut", () => {
+    const long = "A long description that goes on. ".repeat(20).trim();
+    expect(episodeMetaDescription({ title: "t", description: long })).toBe(long);
+    expect(episodeMetaDescription({ title: "t", description: "two\n  lines" })).toBe("two lines");
     expect(episodeMetaDescription({ title: "Fallback", description: "" })).toBe("Fallback");
   });
 

@@ -20,14 +20,6 @@ export function episodeHref(
   return safe || null;
 }
 
-const clamp2: CSSProperties = {
-  display: "-webkit-box",
-  WebkitLineClamp: 2,
-  WebkitBoxOrient: "vertical",
-  overflow: "hidden",
-  margin: 0,
-};
-
 const metaRow: CSSProperties = {
   display: "flex",
   flexWrap: "wrap",
@@ -90,7 +82,7 @@ export function EpisodeCardView({
             </p>
           ) : null}
           {episode.description ? (
-            <p className="cc-muted" style={{ ...clamp2, fontSize: "var(--cc-text-sm)" }}>
+            <p className="cc-muted" style={{ margin: 0, fontSize: "var(--cc-text-sm)" }}>
               {episode.description}
             </p>
           ) : null}
