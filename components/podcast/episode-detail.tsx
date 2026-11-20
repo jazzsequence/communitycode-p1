@@ -1,6 +1,7 @@
 import { SiteFooterView, SiteHeaderView } from "@/components/podcast/chrome";
 import { AudioPlayer } from "@/components/podcast/audio-player";
 import { ShowfmPlayer } from "@/components/podcast/showfm-player";
+import { TagList } from "@/components/podcast/tag-list";
 import { TranscriptViewer } from "@/components/podcast/transcript-view";
 import { site } from "@/content/site";
 import { DEFAULT_LINKS, expandTemplate } from "@/lib/block-config";
@@ -56,6 +57,7 @@ export function buildEpisodeJsonLd(episode: Episode): Record<string, unknown> {
     associatedMedia: episode.audio
       ? { "@type": "AudioObject", contentUrl: episode.audio.url, encodingFormat: episode.audio.contentType ?? "audio/mpeg" }
       : undefined,
+    keywords: episode.tags.length ? episode.tags.map((t) => t.name).join(", ") : undefined,
     actor: episode.guests.length ? episode.guests.map((g) => ({ "@type": "Person", name: g.name })) : undefined,
     partOfSeries: { "@type": "PodcastSeries", name: site.name, url: site.url || undefined },
   };
@@ -122,6 +124,7 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
                     {episode.description}
                   </p>
                 ) : null}
+                <TagList tags={episode.tags} />
               </div>
               {episode.artworkUrl ? (
                 // Decorative: the title is the adjacent heading. A plain <img> keeps
@@ -171,11 +174,20 @@ export function EpisodeDetail({ episode }: { episode: Episode }) {
 
             {episode.transcript ? (
               <section aria-labelledby="transcript-heading" style={{ marginTop: "var(--cc-space-6)" }}>
-                <h2 id="transcript-heading" style={{ fontSize: "var(--cc-text-xl)", marginBottom: "var(--cc-space-4)" }}>
-                  Transcript
-                </h2>
-                {/* One transcript format for every episode; the show.fm player drives it through the player channel. */}
-                <TranscriptViewer slug={episode.slug} />
+                {/* Collapsed by default: it is long, and most visitors came to listen or read the notes. A native
+                    <details> keeps it keyboard-operable with no script, and the browser's find-in-page opens it when
+                    a search matches text inside. The viewer stays mounted (it loads the cues once), just not shown. */}
+                <details className="cc-disclosure">
+                  <summary>
+                    <h2 id="transcript-heading" style={{ fontSize: "var(--cc-text-xl)" }}>
+                      Transcript
+                    </h2>
+                  </summary>
+                  <div className="cc-disclosure-body">
+                    {/* One transcript format for every episode; the show.fm player drives it through the player channel. */}
+                    <TranscriptViewer slug={episode.slug} />
+                  </div>
+                </details>
               </section>
             ) : null}
           </div>

@@ -17,9 +17,9 @@ import photo from "./placeholder-photo.svg";
 export const PLACEHOLDER_IMAGE: string = typeof photo === "string" ? photo : photo.src;
 
 const extraPosts: Post[] = [
-  { id: 4, slug: "recording-remote", title: "Recording a podcast remotely without losing your mind", excerpt: "Mics, latency, local recording, and why I stopped trusting the call's built-in recorder.", publishedAt: "2026-05-14T12:00:00Z", link: "https://example.invalid/recording-remote", imageUrl: null, authorName: "Chris Reynolds" },
-  { id: 5, slug: "guest-prep", title: "How we prep guests (and how we don't)", excerpt: "A short brief, no scripts, and one question we always ask first.", publishedAt: "2026-04-02T12:00:00Z", link: "https://example.invalid/guest-prep", imageUrl: null, authorName: null },
-  { id: 6, slug: "transcripts-matter", title: "Why every episode gets a transcript", excerpt: "Accessibility first, search second, and a surprising number of people who just prefer to read.", publishedAt: "2026-02-19T12:00:00Z", link: "https://example.invalid/transcripts-matter", imageUrl: null, authorName: "Chris Reynolds" },
+  { id: 4, slug: "recording-remote", title: "Recording a podcast remotely without losing your mind", excerpt: "Mics, latency, local recording, and why I stopped trusting the call's built-in recorder.", publishedAt: "2026-05-14T12:00:00Z", link: "https://example.invalid/recording-remote", imageUrl: null, authorName: "Chris Reynolds", tags: [{ name: "community", slug: "community" }, { name: "wordpress", slug: "wordpress" }] },
+  { id: 5, slug: "guest-prep", title: "How we prep guests (and how we don't)", excerpt: "A short brief, no scripts, and one question we always ask first.", publishedAt: "2026-04-02T12:00:00Z", link: "https://example.invalid/guest-prep", imageUrl: null, authorName: null, tags: [{ name: "open source", slug: "open-source" }, { name: "devrel", slug: "devrel" }, { name: "speaking", slug: "speaking" }] },
+  { id: 6, slug: "transcripts-matter", title: "Why every episode gets a transcript", excerpt: "Accessibility first, search second, and a surprising number of people who just prefer to read.", publishedAt: "2026-02-19T12:00:00Z", link: "https://example.invalid/transcripts-matter", imageUrl: null, authorName: "Chris Reynolds", tags: [{ name: "podcast", slug: "podcast" }] },
 ];
 
 export const allPosts: Post[] = [...posts, ...extraPosts];
@@ -53,6 +53,8 @@ export const longPost: Post = {
   link: "https://example.invalid/long",
   imageUrl: null,
   authorName: "Chris Reynolds",
+  // Many tags, to see the pills wrap.
+  tags: ["community", "wordpress", "open source", "devrel", "speaking", "events", "podcasting", "accessibility"].map((name) => ({ name, slug: name.replace(/ /g, "-") })),
 };
 
 /** `/api/episodes?q=` : filter the fixture episodes by title/description/guest, like the real route. */

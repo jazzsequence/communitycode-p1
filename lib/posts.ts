@@ -1,5 +1,6 @@
 import "server-only";
 import { sanitizeShowNotes, toPlainText } from "@/lib/episodes/sanitize";
+import { mapTags, type Tag } from "@/lib/tags";
 import { wordPressConfigFromEnv, wpFetch, type WordPressConfig } from "@/lib/episodes/wordpress";
 
 /**
@@ -23,6 +24,8 @@ export interface Post {
   link: string;
   imageUrl: string | null;
   authorName: string | null;
+  /** Editorial tags (`post_tag`); [] when there are none. */
+  tags: Tag[];
 }
 
 /** One post with its body, for the post page. Never sent through /api/posts (cards do not need it). */
@@ -72,6 +75,7 @@ export interface RawPost {
   _embedded?: {
     "wp:featuredmedia"?: (RawMedia | undefined)[];
     author?: (RawAuthor | undefined)[];
+    "wp:term"?: unknown;
   };
 }
 
@@ -133,6 +137,7 @@ export function mapPost(raw: RawPost): Post | null {
     link,
     imageUrl: pickImage(raw._embedded?.["wp:featuredmedia"]?.[0]),
     authorName: author || null,
+    tags: mapTags(raw._embedded?.["wp:term"]),
   };
 }
 
@@ -190,7 +195,7 @@ export function buildPostsUrl(cfg: WordPressConfig, q: PostsQuery): string {
   const params = new URLSearchParams({
     per_page: String(q.perPage),
     page: String(q.page),
-    _embed: "author,wp:featuredmedia",
+    _embed: "author,wp:featuredmedia,wp:term",
     _fields: FIELDS,
   });
   if (q.search) params.set("search", q.search);
@@ -235,7 +240,7 @@ export function buildPostBySlugUrl(cfg: WordPressConfig, slug: string): string {
   const params = new URLSearchParams({
     slug,
     per_page: "1",
-    _embed: "author,wp:featuredmedia",
+    _embed: "author,wp:featuredmedia,wp:term",
     _fields: `${FIELDS},content`,
   });
   return `${cfg.baseUrl}/wp-json/wp/v2/posts?${params.toString()}`;

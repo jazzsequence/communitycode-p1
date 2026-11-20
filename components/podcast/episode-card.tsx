@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import type { EpisodeCard as EpisodeCardData } from "@/lib/episodes/dto";
 import { DEFAULT_LINKS, expandTemplate, safeUrl } from "@/lib/block-config";
+import { TagList } from "@/components/podcast/tag-list";
 import { formatDate, formatDuration, formatEpisodeLabel } from "@/lib/format";
 
 /**
@@ -93,6 +94,7 @@ export function EpisodeCardView({
               {episode.description}
             </p>
           ) : null}
+          <TagList tags={episode.tags} />
         </div>
     </>
   );

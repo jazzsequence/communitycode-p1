@@ -26,6 +26,7 @@ const base: Episode = {
   audio: { url: "https://communitycode.dev/a.mp3", contentType: "audio/mpeg", sizeBytes: 1 },
   artworkUrl: "https://communitycode.dev/art.png",
   guests: [{ name: "Jacquie Capur", role: "Guest", photoUrl: null }],
+  tags: [{ name: "community", slug: "community" }, { name: "open source", slug: "open-source" }],
   transcript: { url: "https://communitycode.dev/t.vtt", type: "text/vtt" },
   links: { youtube: "https://youtu.be/x" },
   origin: "wordpress",
@@ -54,6 +55,9 @@ describe("EpisodeDetail", () => {
     expect(out).toContain('class="cc-prose"');
     expect(out).toContain('<a href="https://example.com"');
     expect(out).toContain("Transcript</h2>");
+    // Collapsed by default: a <details> with no `open` attribute, the heading inside its summary.
+    expect(out).toMatch(/<details class="cc-disclosure"><summary><h2 id="transcript-heading"[^>]*>Transcript<\/h2><\/summary>/);
+    expect(out).not.toMatch(/<details[^>]*\bopen\b/);
     expect(out).toContain("<header"); // site chrome
     expect(out).toContain("<footer");
   });

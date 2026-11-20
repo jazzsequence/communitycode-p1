@@ -99,6 +99,8 @@ export function mapEpisode(w: WireEpisode, showNotesHtml: string | null = null):
     // `own: false` is the podcast cover inherited by every episode (square, wrong shape here).
     artworkUrl: w.artwork?.own ? (w.artwork.url ?? null) : null,
     guests: (w.people ?? []).map((p) => ({ name: p.name, role: p.role, photoUrl: p.photo_url ?? null })),
+    // show.fm has no tags; WordPress supplies them on a merged episode.
+    tags: [],
     transcript: w.transcript,
     links: { listen: w.links?.listen, embed: w.links?.embed },
     origin: "showfm",

@@ -16,6 +16,7 @@ const base = {
   artworkUrl: null,
   transcript: null,
   links: {},
+  tags: [] as { name: string; slug: string }[],
   origin: "wordpress" as const,
 };
 
@@ -32,6 +33,7 @@ export const episodes: EpisodeCard[] = [
     number: 36,
     durationSeconds: 3425,
     guests: [{ name: "Jacquie Capur", role: "Guest", photoUrl: null }],
+    tags: [{ name: "community", slug: "community" }, { name: "devrel", slug: "devrel" }, { name: "speaking", slug: "speaking" }, { name: "ai", slug: "ai" }],
     audio: { url: "https://example.invalid/ep36.mp3", contentType: "audio/mpeg", sizeBytes: null },
   },
   {
@@ -119,9 +121,9 @@ export const guests: AggregatedGuest[] = [
 export const guestsResponse: GuestsResponse = { guests };
 
 export const posts: Post[] = [
-  { id: 1, slug: "why-we-moved-hosting", title: "Why the show moved hosting", excerpt: "A look at what changed behind the scenes, and what stayed the same.", publishedAt: "2026-10-02T12:00:00Z", link: "https://example.invalid/why-we-moved-hosting", imageUrl: null, authorName: "Chris Reynolds" },
-  { id: 2, slug: "season-two-notes", title: "Season two, in notes", excerpt: "Things I learned recording a second season.", publishedAt: "2026-08-12T12:00:00Z", link: "https://example.invalid/season-two-notes", imageUrl: null, authorName: "Chris Reynolds" },
-  { id: 3, slug: "community-is-a-practice", title: "Community is a practice", excerpt: "Notes on showing up consistently.", publishedAt: "2026-06-20T12:00:00Z", link: "https://example.invalid/community-is-a-practice", imageUrl: null, authorName: "Chris Reynolds" },
+  { id: 1, slug: "why-we-moved-hosting", title: "Why the show moved hosting", excerpt: "A look at what changed behind the scenes, and what stayed the same.", publishedAt: "2026-10-02T12:00:00Z", link: "https://example.invalid/why-we-moved-hosting", imageUrl: null, authorName: "Chris Reynolds", tags: [{ name: "community", slug: "community" }, { name: "wordpress", slug: "wordpress" }] },
+  { id: 2, slug: "season-two-notes", title: "Season two, in notes", excerpt: "Things I learned recording a second season.", publishedAt: "2026-08-12T12:00:00Z", link: "https://example.invalid/season-two-notes", imageUrl: null, authorName: "Chris Reynolds", tags: [{ name: "open source", slug: "open-source" }, { name: "devrel", slug: "devrel" }, { name: "speaking", slug: "speaking" }] },
+  { id: 3, slug: "community-is-a-practice", title: "Community is a practice", excerpt: "Notes on showing up consistently.", publishedAt: "2026-06-20T12:00:00Z", link: "https://example.invalid/community-is-a-practice", imageUrl: null, authorName: "Chris Reynolds", tags: [{ name: "podcast", slug: "podcast" }] },
 ];
 export const postsResponse: PostsResponse = { posts, page: 1, totalPages: 1 };
 

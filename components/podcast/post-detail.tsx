@@ -1,5 +1,6 @@
 import { SiteFooterView, SiteHeaderView } from "@/components/podcast/chrome";
 import { safeJsonLd } from "@/components/podcast/episode-detail";
+import { TagList } from "@/components/podcast/tag-list";
 import { site } from "@/content/site";
 import { DEFAULT_LINKS, expandTemplate } from "@/lib/block-config";
 import { formatDate } from "@/lib/format";
@@ -32,6 +33,7 @@ export function buildPostJsonLd(post: PostDetail): Record<string, unknown> {
     description: post.excerpt || undefined,
     datePublished: post.publishedAt || undefined,
     image: post.imageUrl ?? undefined,
+    keywords: post.tags.length ? post.tags.map((t) => t.name).join(", ") : undefined,
     author: post.authorName ? { "@type": "Person", name: post.authorName } : undefined,
     publisher: { "@type": "Organization", name: site.name, url: site.url || undefined },
   };
@@ -66,6 +68,7 @@ export function PostDetailView({ post }: { post: PostDetail }) {
                 {date && post.authorName ? <span aria-hidden="true">·</span> : null}
                 {post.authorName ? <span>By {post.authorName}</span> : null}
               </p>
+              <TagList tags={post.tags} />
             </header>
 
             {post.imageUrl ? (

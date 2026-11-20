@@ -80,7 +80,7 @@ export async function loadWordPressEpisodes(cfg = wordPressConfigFromEnv()): Pro
     wpFetch(cfg, `${cfg.baseUrl}${cfg.feedPath}?cb=${bust}`, "application/rss+xml, application/xml"),
     wpFetch(
       cfg,
-      `${cfg.baseUrl}/wp-json/wp/v2/episodes?per_page=100&_embed=wp:featuredmedia&_fields=${restFields}&cb=${bust}`,
+      `${cfg.baseUrl}/wp-json/wp/v2/episodes?per_page=100&_embed=wp:featuredmedia,wp:term&_fields=${restFields}&cb=${bust}`,
       "application/json",
     ),
   ]);

@@ -499,6 +499,52 @@
   color: var(--cc-muted);
 }
 
+/* A native <details> disclosure (the episode transcript). The whole summary row is the 44px+ target. */
+.cc-disclosure > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--cc-space-3);
+  min-height: 2.75rem;
+  cursor: pointer;
+  list-style: none;
+}
+.cc-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.cc-disclosure > summary::before {
+  content: "";
+  flex: none;
+  inline-size: 0.6rem;
+  block-size: 0.6rem;
+  border-inline-end: 2px solid var(--cc-muted);
+  border-block-end: 2px solid var(--cc-muted);
+  transform: rotate(-45deg);
+  transition: transform 150ms ease;
+}
+.cc-disclosure[open] > summary::before {
+  transform: rotate(45deg);
+}
+.cc-disclosure > summary h2 {
+  margin: 0;
+}
+.cc-disclosure-body {
+  margin-top: var(--cc-space-4);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cc-disclosure > summary::before {
+    transition: none;
+  }
+}
+
+.cc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cc-space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .cc-field {
   width: 100%;
   min-height: 2.75rem;

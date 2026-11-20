@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { TagList } from "@/components/podcast/tag-list";
 import { DEFAULT_LINKS, expandTemplate } from "@/lib/block-config";
 import { formatDate } from "@/lib/format";
 import type { Post } from "@/lib/posts";
@@ -74,6 +75,7 @@ export function PostCard({ post, layout, showImage, showExcerpt }: Props) {
             {post.excerpt}
           </p>
         ) : null}
+        <TagList tags={post.tags} />
       </div>
     </article>
   );

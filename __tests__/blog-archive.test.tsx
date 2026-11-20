@@ -14,6 +14,7 @@ const post = (id: number, over: Partial<Post> = {}): Post => ({
   link: `https://example.com/2026/10/post-${id}/`,
   imageUrl: `https://example.com/app/uploads/p${id}.png`,
   authorName: "chris",
+  tags: [],
   ...over,
 });
 

@@ -22,6 +22,7 @@ function ep(n: number, over: Partial<EpisodeCard> = {}): EpisodeCard {
     audio: null,
     artworkUrl: `https://img.test/${n}.jpg`,
     guests: [{ name: `Guest ${n}`, role: null, photoUrl: null }],
+    tags: [],
     transcript: null,
     links: {},
     origin: "wordpress",

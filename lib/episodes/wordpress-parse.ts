@@ -1,4 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
+import { mapTags } from "@/lib/tags";
 import { episodeNumberFromTitle, parseGuestsFromTitle } from "./guest";
 import { cleanDescription, sanitizeShowNotes, toPlainText } from "./sanitize";
 import type { Episode, EpisodeType } from "./types";
@@ -43,7 +44,7 @@ export interface RestEpisode {
   excerpt?: { rendered?: string };
   content?: { rendered?: string };
   meta?: { youtube_url?: string };
-  _embedded?: { "wp:featuredmedia"?: { source_url?: string }[] };
+  _embedded?: { "wp:featuredmedia"?: { source_url?: string }[]; "wp:term"?: unknown };
 }
 
 const parser = new XMLParser({
@@ -133,6 +134,7 @@ export function mapFeedItem(item: FeedItem, rest: RestEpisode | undefined): Epis
     // The featured image (16:9 video thumbnail), never the feed's square show cover.
     artworkUrl: rest?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? null,
     guests: parseGuestsFromTitle(title),
+    tags: mapTags(rest?._embedded?.["wp:term"]),
     transcript: transcript?.["@_url"]
       ? { url: transcript["@_url"], type: transcript["@_type"] ?? "text/vtt" }
       : null,
