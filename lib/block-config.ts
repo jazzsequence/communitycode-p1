@@ -29,6 +29,8 @@ export const DEFAULT_ENDPOINTS = {
 export const DEFAULT_LINKS = {
   /** Where an episode card/hero links. Placeholders: {slug} {id} {season} {number} */
   episode: "/episodes/{slug}",
+  /** Where a blog card links: the in-app post page (app/blog/[slug]). Placeholder: {slug} */
+  post: "/blog/{slug}",
 } as const;
 
 /**

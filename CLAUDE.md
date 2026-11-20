@@ -197,7 +197,7 @@ checked in Chrome on a dev server; real audio playback and the show.fm embed's u
 | Area | Where |
 |---|---|
 | Episode data (merge, filters, params) | `lib/episodes/`, `app/api/episodes/**` |
-| Blog (headless WordPress REST) | `lib/posts.ts`, `app/api/posts` |
+| Blog (headless WordPress REST). Cards link to `/blog/[slug]`, which renders the post body here (`loadPostBySlug`, sanitised with the show-notes allow-list: YouTube-only iframes); a slug WordPress doesn't have is a 404, an upstream failure is a 500, not a 404. Links inside a post body still point at the WordPress host. | `lib/posts.ts`, `app/api/posts`, `app/blog/[slug]`, `components/podcast/post-detail.tsx` |
 | Transcripts (server-side VTT, SSRF-guarded) | `lib/transcript.ts`, `app/api/episodes/[slug]/transcript` |
 | Guests (aggregated; host roles filtered in the block) | `lib/guests.ts`, `app/api/guests` |
 | Newsletter (**501 until `NEWSLETTER_SECRET` is set; the endpoint is in `site.config.ts`**; the MailPoet endpoint exists in the WordPress repo, written from MailPoet's source but never run against a real signup) | `app/api/newsletter`, `docs/newsletter-mailpoet.md` |
@@ -207,8 +207,8 @@ checked in Chrome on a dev server; real audio playback and the show.fm embed's u
 | Blocks | `components/puck/podcast/*` (13), client bodies in `components/podcast/*` |
 
 Known gaps / decisions pending:
-- No `/blog/[slug]` route: blog cards link out to the post on the WordPress host. The nav's `/blog`, `/about`,
-  `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor).
+- The nav's `/blog`, `/about`, `/be-a-guest`, `/subscribe` need P1 pages (create them in the editor). `/blog/[slug]` is code
+  (below), so a P1 page at `/blog` is the archive and each post renders on this site.
 - Skip link target: P1 pages have no `<main id="main-content">`; the root can't wrap it without putting the
   header inside `<main>`.
 - **Player:** show.fm-hosted episodes use `<showfm-player>` and `<showfm-transcript>` from the vendor's

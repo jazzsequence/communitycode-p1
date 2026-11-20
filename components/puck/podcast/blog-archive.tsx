@@ -15,7 +15,7 @@ import { DEFAULT_ENDPOINTS, safeUrl } from "@/lib/block-config";
  * (tens of posts, not thousands). New items get focus so keyboard and screen
  * reader users land on what was just added.
  *
- * Cards link to each post's own `link`; there is no in-app post route.
+ * Cards link to the in-app post page (app/blog/[slug]), not to WordPress.
  *
  * Endpoint contract (the `endpoint` field; default DEFAULT_ENDPOINTS.posts):
  *   GET <endpoint>?page=N&per_page=N  (appended with `&` if it already has `?`)
