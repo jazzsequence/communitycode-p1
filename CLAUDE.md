@@ -112,6 +112,11 @@ Run lint, tsc, tests and build before presenting changes.
   with the locked family). It works through the `editor` Puck passes to the menu instead. Puck does not re-render the menu
   when only the selection moves, so the menu subscribes to the editor itself. Tests build a real tiptap editor from Puck's own
   packages; the toolbar only really proves out in the P1 editor, so re-check it there after a Puck upgrade.
+- **The Booking Embed block frames show.fm's public booking page** (`components/puck/podcast/booking-embed.tsx`; default URL is
+  `showfm.bookingUrl` in `site.config.ts`). `@showfm/embed` has no booking element, so it is an https-only `<iframe>` plus a
+  fallback link. The page is the vendor's: it keeps its own colours (it follows the visitor's system light/dark, with its own
+  toggle) and takes no theme/accent URL options that I could find, and a cross-origin frame cannot be styled from here. Scheduling
+  and the guest's details never pass through this site. The live site's /be-a-guest uses a Ninja Forms form, not show.fm.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
