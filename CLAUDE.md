@@ -147,6 +147,9 @@ Run lint, typecheck, tests and build before presenting changes. **CI (`.github/w
   JSON-LD, and the text search. Blog posts still use their excerpt. An episode Yoast has nothing for falls back, so its text is
   whatever the excerpt/feed gives (episode 29: the music credits; episode 9: a link list): fix those in WordPress (Yoast meta
   description or excerpt), not here.
+- **`proxy.ts` is Next 16's name for `middleware.ts`** (the starter kit shipped the old name, which warns on every build). It wraps the
+  P1 SDK's request handling (`createP1Middleware`, whose own name is unchanged) and runs on Node, not the edge runtime. Do not rename it
+  back: the file name and the `proxy` export are both what Next looks for.
 - **Prose links keep a persistent dotted underline**; UI links use the live site's underline-on-intent. Link colour vs body
   colour is ~1.4:1, so colour alone cannot carry an inline link (WCAG 1.4.1).
 - **Design tokens are scoped to `.cc-root`** (set in `components/puck/root.tsx`), not `<body>`: Puck copies host
