@@ -40,7 +40,7 @@ afterEach(() => {
 });
 
 describe("BlogArchive", () => {
-  it("shows a loading state, then cards linking to example.com", async () => {
+  it("shows a loading state, then cards linking to the on-site post page", async () => {
     const d = deferred<Response>();
     fetchMock.mockReturnValueOnce(d.promise);
     render(<BlogArchiveView {...props} />);
@@ -48,8 +48,10 @@ describe("BlogArchive", () => {
 
     d.resolve(ok([post(1), post(2)], 1, 1));
     const link = await screen.findByRole("link", { name: /Post 1/ });
-    expect(link.getAttribute("href")).toBe("https://example.com/2026/10/post-1/");
-    expect(link.getAttribute("rel")).toBe("noopener noreferrer");
+    // The post is rendered here (app/blog/[slug]), not on the WordPress host.
+    expect(link.getAttribute("href")).toBe("/blog/post-1");
+    expect(link.getAttribute("rel")).toBeNull();
+    expect(link.getAttribute("target")).toBeNull();
     expect(screen.queryByText("Loading posts…")).toBeNull();
     expect(screen.getByRole("heading", { level: 2, name: "From the blog" })).toBeTruthy();
     expect(screen.getAllByText("October 16, 2026", { selector: "time" })[0].getAttribute("datetime")).toBe(
@@ -60,13 +62,20 @@ describe("BlogArchive", () => {
     expect(screen.queryByRole("button", { name: /load more/i })).toBeNull();
   });
 
-  it("every external link carries rel=noopener noreferrer", async () => {
+  it("no card links off the site", async () => {
     fetchMock.mockResolvedValueOnce(ok([post(1), post(2)], 1, 1));
     const { container } = render(<BlogArchiveView {...props} />);
     await screen.findByText("Post 1");
     const anchors = container.querySelectorAll("a");
     expect(anchors.length).toBeGreaterThan(0);
-    anchors.forEach((a) => expect(a.getAttribute("rel")).toBe("noopener noreferrer"));
+    anchors.forEach((a) => expect(a.getAttribute("href")).toMatch(/^\/blog\/post-\d+$/));
+  });
+
+  it("falls back to the WordPress permalink only when a post has no slug", async () => {
+    fetchMock.mockResolvedValueOnce(ok([post(1, { slug: "" })], 1, 1));
+    render(<BlogArchiveView {...props} />);
+    const link = await screen.findByRole("link", { name: /Post 1/ });
+    expect(link.getAttribute("href")).toBe("https://example.com/2026/10/post-1/");
   });
 
   it("honours showImages / showExcerpts and hides the decorative image link from assistive tech", async () => {

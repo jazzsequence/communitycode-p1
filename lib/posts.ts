@@ -1,5 +1,5 @@
 import "server-only";
-import { toPlainText } from "@/lib/episodes/sanitize";
+import { sanitizeShowNotes, toPlainText } from "@/lib/episodes/sanitize";
 import { wordPressConfigFromEnv, wpFetch, type WordPressConfig } from "@/lib/episodes/wordpress";
 
 /**
@@ -23,6 +23,12 @@ export interface Post {
   link: string;
   imageUrl: string | null;
   authorName: string | null;
+}
+
+/** One post with its body, for the post page. Never sent through /api/posts (cards do not need it). */
+export interface PostDetail extends Post {
+  /** Sanitised HTML (`sanitizeShowNotes`: the same allow-list as show notes, YouTube-only iframes). May be "". */
+  contentHtml: string;
 }
 
 export interface PostsResponse {
@@ -62,6 +68,7 @@ export interface RawPost {
   date_gmt?: string;
   title?: { rendered?: string };
   excerpt?: { rendered?: string };
+  content?: { rendered?: string };
   _embedded?: {
     "wp:featuredmedia"?: (RawMedia | undefined)[];
     author?: (RawAuthor | undefined)[];
@@ -127,6 +134,13 @@ export function mapPost(raw: RawPost): Post | null {
     imageUrl: pickImage(raw._embedded?.["wp:featuredmedia"]?.[0]),
     authorName: author || null,
   };
+}
+
+/** `mapPost` plus the sanitised body. Null for the same malformed items. */
+export function mapPostDetail(raw: RawPost): PostDetail | null {
+  const post = mapPost(raw);
+  if (!post) return null;
+  return { ...post, contentHtml: sanitizeShowNotes(raw.content?.rendered) ?? "" };
 }
 
 export function mapPosts(raw: unknown): Post[] {
@@ -213,4 +227,31 @@ export async function loadPosts(
     page: q.page,
     totalPages: headerInt(res, "X-WP-TotalPages"),
   };
+}
+
+// --- one post (the post page) ----------------------------------------------
+
+export function buildPostBySlugUrl(cfg: WordPressConfig, slug: string): string {
+  const params = new URLSearchParams({
+    slug,
+    per_page: "1",
+    _embed: "author,wp:featuredmedia",
+    _fields: `${FIELDS},content`,
+  });
+  return `${cfg.baseUrl}/wp-json/wp/v2/posts?${params.toString()}`;
+}
+
+/**
+ * The post with this slug, or null when WordPress has none (a mistyped or removed slug is a 404 for the
+ * visitor, not an outage). Throws ConfigError when WordPress isn't configured and Error on a real
+ * upstream failure, so the page can tell "missing" from "broken".
+ */
+export async function loadPostBySlug(
+  slug: string,
+  cfg: WordPressConfig = wordPressConfigFromEnv(),
+): Promise<PostDetail | null> {
+  const res = await wpFetch(cfg, buildPostBySlugUrl(cfg, slug), "application/json");
+  const body: unknown = await res.json();
+  if (!Array.isArray(body)) throw new Error("WordPress posts response was not a list");
+  return body.length ? mapPostDetail(body[0] as RawPost) : null;
 }
